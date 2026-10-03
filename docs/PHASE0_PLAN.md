@@ -94,6 +94,11 @@
 执行代理在 `phase0/linux-validation` 独立 worktree 负责服务器依赖、容量、实际 CPU / GPU 验证。
 批次完成后继续安排具备前提的下一项工作，不将交接作为默认停止点。
 
+Linux / CUDA 批次现已通过主审并集成：独立环境、CPU / 单卡 smoke、65 项 Linux 测试及 Ruff
+通过；八张卡均已枚举，实际训练只使用一个明确 UUID。容量和进程退出证据见
+[Linux 报告](PHASE0_LINUX_REPORT.md)及[追加主审结论](PHASE0_REVIEW.md)。
+本地与服务器运行证据保持原始提交归属，后续文档同步不冒充重新执行。
+
 免费来源已完成 5,132 行原始响应的完整 Parquet / DuckDB 读取，覆盖 2010–2023 各年份小样本，
 并以官方公告核对一次
 沪深 300 调样的全部 18 个进出代码，见 [数据核验报告](PHASE0_DATA_PROBE_REPORT.md)。

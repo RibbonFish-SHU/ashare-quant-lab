@@ -20,8 +20,8 @@ Arrow、DuckDB 和 PyTorch 的已发布二进制轮子，最终以实际调用�
 | pytest / ruff | 8.4.1 / 0.12.2 | 有针对性的行为测试及静态检查 |
 
 `uv.lock` 锁定完整传递依赖及下载摘要，`pyproject.toml` 约束 Python 3.11。
-uv **0.12.17** 用于本轮环境解析与安装。Linux 的 cu118 源是针对现有驱动 535.261.03 的兼容候选，
-不能把锁文件解析成功当作 Linux / CUDA 运行验收；以最终执行报告为准。
+uv **0.12.17** 用于本轮环境解析与安装。Linux torch 2.7.1+cu118 已在驱动 535.261.03、
+Ubuntu 20.04.6 / glibc 2.31 上通过 CPU 与单卡实际调用，见 [Linux 报告](PHASE0_LINUX_REPORT.md)。
 
 本地没有全局 uv 时，本轮实际引导命令如下。3.14 只用于隔离安装包管理器，不承载研究依赖：
 
@@ -65,28 +65,39 @@ Windows 中文目录已验证：LightGBM 原生 `save_model(path)` 无法写入�
 ## 服务器与 GPU
 
 运行前检查实际挂载、空间、inode / 配额、CPU / 内存 / 进程、GPU 使用情况及预约依据。
-本轮设备枚举仅证明能查询八个 UUID；不能证明 GPU 已分配、八卡独立训练验收完成或允许抢占。
-主代理尚未确认预约规则时禁止 GPU smoke，也不把空闲瞬间等同于无预约。
+用户于 2026-10-03 明确本项目可以使用当前空闲卡。每次运行仍需即时复查并选定完整 UUID；
+当前已有八卡枚举与单卡三步训练证据，不能将其写成八卡并行训练验收。
 
 已安装兼容环境后，`ashare-lab devices` 只读枚举。GPU 执行接口要求完整 UUID 与资源确认：
 
 ```bash
-# 仅在主代理已确认资源归属且重新检查空间 / 当前任务后使用；本轮并未据此运行。
+# 使用本项目独立环境，并在重新检查空间 / 当前任务后选择空闲 UUID。
 .venv/bin/ashare-lab devices
 .venv/bin/ashare-lab smoke --gpu GPU-<实际完整UUID> --allocation-confirmed
 ```
 
 入口在导入 PyTorch 前设置 `CUDA_VISIBLE_DEVICES`，拒绝计算利用率非零、超过 64 MiB 已用显存
 或存在计算进程的设备，再要求仅有一张可用 CUDA 卡。这个即时检查不是跨项目预约锁，
-`--allocation-confirmed` 只能表明外部资源归属已被确认，不能用于绕过主代理的暂停决定。
+`--allocation-confirmed` 表明本次使用符合已确认的资源规则，不能保证其他任务随后不会占用该卡。
 
 服务器直连 PyPI / GitHub / PyTorch 源本轮发生 TLS 连接重置；不要把连接失败误报成包不存在。
 必要时在本地下载校验过的轮子和 Python，再通过 SSH 传输，不带凭证、不借用旧项目环境。
-下载前计算压缩包、解压环境、缓存与余量的峰值。当前 CUDA 环境待容量及资源条件确认，未传输大型包。
+下载前计算压缩包、解压环境、缓存与余量的峰值。本轮已通过本地官方发行包校验、离线传输及
+受容量门槛约束的安装；准备 / 安装 / GPU 包装脚本和实际参数见 Linux 报告。
 服务器执行源码必须先提交，再通过真实 origin 或 Git bundle 同步并核对 SHA；不在服务器临时改代码。
+
+现存已验证环境为：
+
+```text
+/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python
+```
+
+它依赖同一 worktree 内 `.cache/phase0-linux/interpreter/python/`，安装包源码对应 `277d577`。
+服务器主 checkout 的源码同步不会自动更新该已安装 wheel。后续运行新版本时显式核对源码 / 安装版本，
+复用兼容依赖并安装对应项目 wheel；在保存环境和独有产物前不要删除此 worktree。
 
 ## 未完成验收
 
-本地 synthetic 工程通过不代表 Phase 0 整体完成。真实数据读取、历史成员与状态覆盖、
-正式复权 / 标签口径、冻结时间划分，以及获分配单卡训练另行验收。
+本地 / Linux synthetic 工程、单卡验证和 5,132 行真实 raw 读取已通过。完整历史成员与状态覆盖、
+可用时间依据、正式复权 / 标签口径及冻结时间划分仍按 Phase 1 推进；原始快照不自动具有研究资格。
 数据源公开能力与限制见 [DATA_SOURCE_DECISION.md](DATA_SOURCE_DECISION.md)。

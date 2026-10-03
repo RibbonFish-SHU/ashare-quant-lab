@@ -1,7 +1,7 @@
 # ashare-quant-lab
 
-A 股日频研究工程。当前为 Phase 0：供应商无关的数据契约、时间边界、可复现运行入口和依赖 smoke。
-合成样例只验证工程行为，尚未验收真实数据、回测或正式策略。
+A 股日频研究工程。已验证本地 / Linux 环境、数据契约、CPU / 单卡 GPU smoke 和真实原始样本读取；
+当前推进 Phase 1 免费来源采集、适配与质量审核。历史 PIT、回测和正式策略尚未验收。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
@@ -20,6 +20,7 @@ uv run --frozen --extra dev ashare-lab smoke --config configs/smoke.toml
 - [安装、执行、故障和资源说明](docs/RUNBOOK.md)
 - [本轮执行报告与验收缺口](docs/PHASE0_EXECUTION_REPORT.md)
 - [主代理审阅结论与修复验收](docs/PHASE0_REVIEW.md)
+- [Linux 环境、容量及单卡 GPU 实测](docs/PHASE0_LINUX_REPORT.md)
 - [数据源决策与未冻结时间划分](docs/DATA_SOURCE_DECISION.md)
 - [免费来源实测与真实原始数据读取](docs/PHASE0_DATA_PROBE_REPORT.md)
 - [Phase 1 采集、适配与质量审核任务](docs/PHASE1_PLAN.md)

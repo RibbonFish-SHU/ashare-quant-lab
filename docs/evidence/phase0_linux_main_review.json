@@ -1,0 +1,41 @@
+{
+  "reviewed_at_utc": "2026-10-03T08:45:47.479190+00:00",
+  "reviewer": "ashare-main",
+  "reviewed_commit": "df197ce9edd3e6c98179482896bd6e49a9d7ff97",
+  "run_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+  "evidence_files_verified_against_git": 22,
+  "runs": [
+    {
+      "kind": "cpu",
+      "source_files_verified": 42,
+      "status": "passed",
+      "started_at": "2026-10-03T08:21:11.238796+00:00",
+      "finished_at": "2026-10-03T08:21:26.346141+00:00"
+    },
+    {
+      "kind": "gpu",
+      "source_files_verified": 42,
+      "status": "passed",
+      "started_at": "2026-10-03T08:22:27.336319+00:00",
+      "finished_at": "2026-10-03T08:22:33.846783+00:00"
+    }
+  ],
+  "installed_source_files_verified": 10,
+  "dependency_versions_match": 198,
+  "installation_steps_exit_zero": 8,
+  "selected_gpu_uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+  "enumerated_unique_gpus": 8,
+  "gpu_exit_code": 0,
+  "all_observed_compute_processes_belong_to_selected_gpu_and_run": true,
+  "final_reported_free_bytes": 12882972672,
+  "final_reported_project_allocated_bytes": 6936887296,
+  "main_and_linux_changed_files_overlap": [],
+  "acceptance": "Linux installation and synthetic CPU/single-GPU engineering validation accepted",
+  "limits": [
+    "No model training on real data or strategy backtest.",
+    "Eight devices enumerated; actual training validated on one UUID, not all-eight concurrent workloads.",
+    "Capacity is a recorded snapshot and must be rechecked before future allocation.",
+    "Full historical PIT and trading-status validation belongs to the ongoing data phase."
+  ],
+  "review_note": "Initial reviewer check used dictionary indexing on positional GPU process rows and raised TypeError. Corrected to the documented pid,gpu_uuid,used_memory columns; this is not a workload failure."
+}
