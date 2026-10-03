@@ -44,7 +44,12 @@ def audit(tables, records, issues, *, acquisition_complete, events=()):
             }
         )
 
-    check("acquisition", "pass" if acquisition_complete else "fail", len(records))
+    check(
+        "acquisition",
+        "pass" if acquisition_complete else "fail",
+        len(records),
+        count_basis="successful unique queries; includes successful zero-row responses",
+    )
     check(
         "typed_conversion",
         "fail"

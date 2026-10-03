@@ -1,6 +1,6 @@
 """Verified raw references -> immutable candidates -> machine-readable quality gate."""
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 import json
 from pathlib import Path
 
@@ -43,11 +43,11 @@ def build(run_paths, output, *, project_root, event_path=None):
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
     records = {}
-    acquisition_complete = True
+    planned = {}
     run_info = []
     for path in run_paths:
-        values, complete, run = load_run(path)
-        acquisition_complete &= complete
+        values, _, run = load_run(path)
+        planned.update({query_id(q): q for q in run["plan"]["queries"]})
         for record in values:
             key = record["query_id"]
             if key in records and records[key]["raw_locator"] != record["raw_locator"]:
@@ -71,13 +71,32 @@ def build(run_paths, output, *, project_root, event_path=None):
     events = (
         json.loads(Path(event_path).read_text(encoding="utf-8"))["events"] if event_path else []
     )
+    missing = sorted(planned.keys() - records.keys())
+    planned_by_api = Counter(q["api"] for q in planned.values())
+    successful_by_api = Counter(q["api"] for q in records.values())
     report = audit(
         tables,
         list(records.values()),
         issues,
-        acquisition_complete=acquisition_complete,
+        acquisition_complete=not missing,
         events=events,
     )
+    report["acquisition_coverage"] = {
+        "count_basis": "unique source/SDK/API/parameter query IDs across input runs",
+        "planned_queries": len(planned),
+        "successful_queries": len(records),
+        "missing_queries": len(missing),
+        "successful_fraction": len(records) / len(planned) if planned else None,
+        "by_api": {
+            api: {
+                "planned": count,
+                "successful": successful_by_api[api],
+                "missing": count - successful_by_api[api],
+            }
+            for api, count in sorted(planned_by_api.items())
+        },
+        "missing_query_ids": missing,
+    }
     manifest = {
         "schema_version": VERSION,
         "data_kind": "real_candidate",

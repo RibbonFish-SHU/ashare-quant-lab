@@ -330,6 +330,36 @@ def test_offline_reuse_resume_roundtrip_and_tamper_rejection(tmp_path, monkeypat
         cached_records([tmp_path / "raw"])
 
 
+def test_partial_acquisition_counts_missing_requests_and_deduplicates_runs(tmp_path, monkeypatch):
+    monkeypatch.setattr("ashare_lab.data.collect.code_identity", lambda p: {"commit": "test"})
+    monkeypatch.setattr("ashare_lab.data.pipeline.code_identity", lambda p: {"commit": "test"})
+    archive(tmp_path / "raw", bar())
+    missing = {"api": "query_stock_basic", "parameters": {"code": "sh.600000"}}
+    plan = tmp_path / "plan.json"
+    save_json(plan, {"queries": [validate_query(bar()), missing]})
+    run = collect(
+        plan,
+        tmp_path / "run",
+        [tmp_path / "raw"],
+        project_root=tmp_path,
+        access_state=tmp_path / "access",
+        offline=True,
+    )
+    assert run["status"] == "incomplete"
+    run_path = tmp_path / "run/run.json"
+    _, report = build([run_path, run_path], tmp_path / "candidates", project_root=tmp_path)
+    coverage = report["acquisition_coverage"]
+    assert coverage["planned_queries"] == 2
+    assert coverage["successful_queries"] == 1
+    assert coverage["missing_queries"] == 1
+    assert coverage["successful_fraction"] == 0.5
+    assert coverage["missing_query_ids"] == [query_id(missing)]
+    assert coverage["by_api"]["query_stock_basic"] == {"planned": 1, "successful": 0, "missing": 1}
+    check = next(c for c in report["checks"] if c["name"] == "acquisition")
+    assert check["status"] == "fail" and check["count"] == 1
+    assert check["count_basis"].startswith("successful unique queries")
+
+
 def test_corrupt_tabular_response_still_archived(tmp_path):
     r = bar()
     r["rows"][0].pop()
