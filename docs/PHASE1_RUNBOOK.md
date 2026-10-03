@@ -2,6 +2,8 @@
 
 使用已验收的 Python 3.11.16 研究环境，工作目录为独立 Phase 1 worktree。
 主仓库的 raw 捕获可只读复用。以下路径是本轮实际布局；新输出目录必须不存在。
+2026-10-03 本次采集已收到 BaoStock `10001011` 黑名单错误；共享限制状态和账本保留。
+目前仅执行离线重放，不能据这些历史命令自动恢复网络采集。恢复条件由主代理协调确认。
 
 ```powershell
 $phase1Python = 'E:\量化\ashare-quant-lab\.venv\Scripts\python.exe'
@@ -16,12 +18,23 @@ $env:PYTHONIOENCODING = 'utf-8'
 代表计划由 `plan-reuse --raw-root <root> --output <new.json>` 生成，精确复用 56 个原始成功请求。
 `build` 返回 2 是预期研究门槛：查看 quality.json 的 fail / unverified，不能只看进程退出。
 
+以下是已执行的在线采集方式，保留供审阅；当前来源受限，不再执行：
+
 ```powershell
 & $phase1Python -m ashare_lab.data.cli collect --plan configs/phase1-membership-2023.json --output datasets/raw/phase1-membership-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel
 & $phase1Python -m ashare_lab.data.cli plan-2023 securities --run datasets/raw/phase1-membership-2023/run.json --events configs/csi-events-2023.json --output .cache/phase1/plans/securities-2023.json
 & $phase1Python -m ashare_lab.data.cli collect --plan .cache/phase1/plans/securities-2023.json --output datasets/raw/phase1-securities-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel --batch-size 20
-& $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-representative/run.json --run datasets/raw/phase1-membership-2023/run.json --run datasets/raw/phase1-securities-2023/run.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-2023
 ```
+
+最新 2023 离线候选构建如下。此输出目录已存在，重放时改用新的目录；不混入代表集内的早年样本。
+
+```powershell
+& $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-membership-2023/run.json --run datasets/raw/phase1-securities-2023/run.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-2023-partial-v2-coverage
+```
+
+实际输出 75,271 行，返回 2；质量报告明确 1,403 个计划请求中 1,002 个成功、401 个未完成。
+证券部分为 943/1,344；缺失请求 ID 在 `quality.json` 的 `acquisition_coverage` 中，完整参数在 raw run
+的 `plan.queries` 中。56 个合法零行响应与 400 个未执行请求、1 个未成功请求分开计数。
 
 年覆盖是已观察 / 已公告代码的并集，不是已认证历史股票池。周度查询发现变化候选，还需公告。
 生成并集时包含已核对公告中的股票，避免供应商陈旧快照遗漏年初应有股票。

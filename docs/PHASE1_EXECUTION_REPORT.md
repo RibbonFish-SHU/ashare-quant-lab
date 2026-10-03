@@ -1,70 +1,166 @@
 # Phase 1 执行报告
 
-日期：2026-10-03；执行：ashare-experiment。工作分支 `phase1/data-pipeline`，从 `cb7556a` 建立；
+日期：2026-10-03；执行：ashare-experiment。分支 `phase1/data-pipeline`，基于 `cb7556a`；
 worktree：`E:\量化\ashare-quant-lab\.cache\worktrees\phase1-data`。
-主代理拥有 main 集成与服务器主 checkout；本报告批次没有修改这些位置，也没有合并新的 main。
+CLI、代表样本闭环和 2023 年部分覆盖已完成，真实来源访问受限后停止网络采集并完成离线审核。
+**证券请求成功 943/1,344，未完成 401；最终候选 75,271 行，研究资格仍为 false。**
+主代理负责 main 集成与来源后续决定。本批没有合并 main、推送或同步服务器，Linux/GPU 验收未重跑。
 
-## 第一批：CLI、候选转换和代表样本
+## 实现、版本和检查
 
-实现提交 **b72d41aafb8defdce4d339e985d283390b936469**。
-提供明确日期 / API 的计划生成、串行受控采集、精确请求缓存复用、不可覆盖 raw attempt、候选转换、
-Parquet / DuckDB 逐项读回和机器可读质量门槛。命令见 [PHASE1_RUNBOOK.md](PHASE1_RUNBOOK.md)，
-语义见 [PHASE1_DATA_CONTRACT.md](PHASE1_DATA_CONTRACT.md)。
+- `b72d41a`：可运行 CLI、精确缓存复用、不可覆盖 raw attempt、纯转换和质量检查。
+- `6ee283d` / `8cf15f6`：代表闭环、2022 年末基准及 2023 年末官方事件。
+- `c63f92c`：中文 Git 路径解码修复；最多 20 个查询在一个解释器内依次连接，逐项保留 receipt。
+- `202ea36`：持久来源限制、独立日历完整性与覆盖边界检查。
+- `b68a280`：2023 周度成员及官方公告核对证据。
+- `fa9f1f6`：候选 schema v2，日级非交易标志伴随成交改为待核实，不改原值。
+- **`f4e523c6d685ca57984f63cc0d9431b391ea16f9`**：明确计划 / 成功 / 缺失请求覆盖；最终离线构建在该 clean 提交上执行。
 
-沿用本地 Python 3.11.16、pandas 2.2.3、PyArrow 19.0.1、DuckDB 1.3.2；
-来源 wheel 为 BaoStock 0.9.4，52,424 字节，SHA-256
+最终 **111 项测试通过（2.48 秒），Ruff 通过**。测试不接触网络；覆盖真实已发现的日期、税后文本、
+累计因子、停牌歧义、分页失败、断点复用、限制状态、中文账本路径，以及部分采集不能伪装完整覆盖。
+日志：`artifacts/phase1-checks/coverage-pytest.txt`、`coverage-ruff.txt`；早期检查和失败证据均保留。
+本轮没有更改运行库、uv.lock 或既有研究环境，不重复模型 / CUDA 兼容性验收。
+
+实际版本为 Python **3.11.16**、pandas **2.2.3**、PyArrow **19.0.1**、DuckDB **1.3.2**、
+pytest **8.4.1**、Ruff **0.12.2**。BaoStock **0.9.4** 从官方 wheel 加载，不安装到研究环境；
+wheel 大小 52,424 字节，SHA-256：
 `0bf71c6069ab5890ff3596632f9c3f8f1fbc6bfcac582c2f9d6a5c11ab2cfaf8`。
-来源依赖单独 hash 锁定，不安装 / 升级现有研究环境；uv.lock 未改。
+来源锁见 `requirements/source-baostock.txt`。入口与命令见 [PHASE1_RUNBOOK.md](PHASE1_RUNBOOK.md)，
+转换语义见 [PHASE1_DATA_CONTRACT.md](PHASE1_DATA_CONTRACT.md)。
 
-- 全部 **102 项测试通过（1.85 秒）**，Ruff 通过。含 42 项来源管道测试和基线 60 项既有测试。
-  初次针对测试发现指数代码误放行、复用 raw 缺 query_id 两项实现错误，已修复后通过；
-  最终检查原日志位于 `artifacts/phase1-checks/`，未覆盖 Phase 0 或 Linux/GPU 证据。
-- 代表闭环在 clean b72d41a 上执行：**56 个精确请求全部复用，0 个网络查询，5,132 行**。
-  八种表的候选行数：成员 4,800、日历 147、行情 104、因子 4、分红 2、基本信息 1、ST 74、停牌名单 0。
-- 所有候选 Parquet / DuckDB 逐值读回通过，canonical reader 拒绝读取；转换问题 0、查询内重复 0、
-  重叠观测共同字段矛盾 0。零行停牌名单保留，不能据此宣称无停牌。
-- `collect` 返回 0；`build` 和官方基准检查返回 **2**，表示研究门槛阻止。这是实际质量结果，
-  不是策略表现或研究资格通过。
+## 代表样本与 2023 实际覆盖
 
-紧凑证据：[phase1_representative.json](evidence/phase1_representative.json)。
-完整 raw run：`datasets/raw/phase1-representative/run.json`；候选 / 质量报告：
-`datasets/candidates/phase1-representative/`。原 56 份捕获仍在主仓库 `datasets/raw/baostock`，只读引用并校验摘要。
+第一批在 clean `b72d41a` 上只读复用主仓库 `datasets/raw/baostock` 的 **56 个精确成功请求、5,132 行**，
+没有网络请求。八表行数为成员 4,800、日历 147、行情 104、因子 4、分红 2、基本信息 1、ST 74、
+停牌名单 0；合法零行不能据此证明无停牌。所有 Parquet / DuckDB 完整读回通过，canonical reader 拒绝。
+证据：[phase1_representative.json](evidence/phase1_representative.json)。该代表集不混入 2023 年覆盖统计。
 
-## 年初成分：已复现的供应商错误
+2023 日历 / 成员 run 全部 **59 请求成功**，其中 56 新抓、3 精确复用，共 **17,469 行**：
+日历 369 行（2023 全年及 2022 年末 4 日），57 个成员快照各 300 个唯一代码，共 17,100 行。
+证券计划采用观察到及公告列明的 **336 个代码并集**，不是认证后的 PIT 股票池。
 
-中证 [公告 14497](https://www.csindex.com.cn/#/about/newsDetail?id=14497)发布日期 2022-11-25，
-正文第一张沪深 300 表列出 15 只替换，2022-12-09 收市后生效。
-原件 JSON SHA-256：`651104e9e2950ad741f41392e0b1cfef1b006c2f41caffb1cc34bd0823b796d6`。
-公告附件是 XLSX，初下载扩展名误标 PDF 后已按文件签名及官方名称改为 XLSX；
-沪深 300 核对使用正文表，不依赖该附件。
+| API / 数据 | 计划请求 | 成功请求 | 未完成 | 成功行数 |
+| --- | ---: | ---: | ---: | ---: |
+| 交易日历 | 2 | 2 | 0 | 369 |
+| 沪深 300 成员快照 | 57 | 57 | 0 | 17,100 |
+| 证券基本信息 | 336 | 236 | 100 | 236 |
+| 未复权日线 | 336 | 236 | 100 | 57,096 |
+| 分红实施信息 | 336 | 236 | 100 | 228 |
+| 复权因子 | 336 | 235 | 101 | 242 |
+| 合计 | **1,403** | **1,002** | **401** | **75,271** |
 
-BaoStock **2023-01-03** 返回 300 个唯一代码、updateDate=2022-08-01；
-与公告逐代码比较后，**15 只应调入全部缺失，15 只应调出全部仍在**。
-这是成员集合本身的错误，不能只标“日期偏旧但 300 只形状通过”。
-原始快照不改写为已修复，当前候选仍失败；已核对公告的进出代码可加入后续采集并集，
-避免陈旧名单导致连行情采集也遗漏这些股票。
+证券 run 的 **943 个成功逻辑请求**为 941 新抓、2 复用。其中分红 28 个、因子 28 个为合法零行成功。
+401 个未完成分为 **400 个未执行、1 个返回限制错误且未成功**。另有 1 个受控中止产生的登录失败
+attempt，后来成功恢复；不能重复计成一个缺失逻辑请求。证券 run 共保留 945 条 attempt / 复用记录。
+完整计划参数、全部未完成 ID 和请求原件分别在 raw run 与最终候选 `quality.json` 中。
 
-可重放命令：
+## 实际访问阻碍及恢复记录
 
-```powershell
-& $phase1Python scripts/verify_csi_baseline.py --announcement datasets/raw/csi/phase1-baseline/announcement-14497.json --events configs/csi-events-2023.json --run datasets/raw/phase1-representative/run.json --output <新的证据文件.json>
-```
+**2026-10-03T09:56:06.420024Z**，`sz.000895` 的 2023 全年 `query_adjust_factor` 返回
+**`10001011` / “黑名单用户，请与管理员联系”**。采集停止，退出 2；没有重试限制错误、换身份、换端点或联系供应商。
+错误原件 SHA-256：`3ab7918a83ae644e7cd1a598133a754e65ff87f80aaaa3833d864edc0de2de19`。
+其完整路径与 query ID 见 [phase1_2023_partial.json](evidence/phase1_2023_partial.json)。
 
-逐代码结果与 raw 定位：[phase1_baseline_2023.json](evidence/phase1_baseline_2023.json)。
-2023 年 6 月公告 14796 的 9 进 9 出仍与既有前后快照完全一致。
-两次选定事件不能证明完整年初 300 只基准、全部临时调样或逐日成员时点。
+本采集器账本累计 **1,998 次 wire send**（含登录及分页）。官方页面写明每日不超过 50,000 次且不可并发，
+但这个项目计数不代表服务端匿名总额度，不能据此推断限制原因、共享出口总用量或解封时刻。
+失败后依据原件建立持久 `source-restriction.json`；新代码的离线回归测试确认后续在线缺缓存请求
+被本地阻止，精确离线复用仍可继续。未为验证限制再发真实请求，不设自动探测 / 解封定时器。
 
-## 仍未通过的事项与后续执行
+必须保留主仓库共享 `.cache/phase1/source-access/` 的限制文件、OS 锁文件和 `wire-ledger.json`。
+后续需要主代理协调服务恢复依据，或决定替代免费来源的范围；在此之前不继续 BaoStock 在线采集。
 
-代表范围未提供全部日历区间和各证券基本信息，因此相关项明确 unverified。
-600747 在 outDate 当日缺量且价格沿用仍保留为候选边界问题；完整 ST/*ST 与涨跌停价、
-公司行为完整算法及修订历史、历史发布时间和 vintage 均未验收。
-税后文本、所有公司行为日期与累计因子字段均保留，未压入 Phase 0 简化 actions。
+中文路径修复前，Git 子进程输出按系统默认编码解码，导致账本落在 `E:\閲忓寲\...`。
+已核对归属后停止本任务单个 worker（PID 73840），原采集器退出 2 并保存 **286 个成功请求**；
+将已有 **682 次 send** 的账本原样迁到正确位置，迁移前后 SHA-256 完全相同，没有重置预算。
+只清理了已确认归属本任务的旧账本叶目录，未清理他人文件。
+先前清理命令遇到 PowerShell 参数集错误，在删除前停止；随后使用已验证的绝对路径完成。
+原件与命令记录保留于 `controlled-worker-stop.json`、`wire-ledger-before-path-fix.json`、
+`access-ledger-migration.json`、`access-ledger-cleanup.json`，均在 `artifacts/phase1-checks/`。
 
-下一步执行已准备的 59 个日历 / 周度成员 / 调样边界请求（精确旧请求复用），再按已观察和已公告
-代码并集采集 2023 年基本信息、未复权日线、分红及因子。该步骤由执行代理继续，不等待新一轮用户催促。
-2024–2025 行情、模型、回测、券商、交易和风控均不在本批范围。
+## 官方成分核对
 
-第一批采集 / 测试进程均已退出，代表闭环没有网络子进程；本地解释器与所有产物保留。
-后续 Phase 1 采集进程仍归执行代理；服务器 Linux 环境 / worktree 及既有产物不动、不重跑。
-工具 shell 的 HERDR_ENV 为空，未伪造上下文或从外部操作 Herdr pane；通过本分支报告交付主代理审阅。
+中证 [公告 14497](https://www.csindex.com.cn/#/about/newsDetail?id=14497)于 **2022-11-25** 发布，
+正文第一张沪深 300 表为 **15 换 15**，**2022-12-09 收市后**生效、首个交易日 12-12。
+原正文 JSON SHA-256：`651104e9e2950ad741f41392e0b1cfef1b006c2f41caffb1cc34bd0823b796d6`。
+核对使用正文表；附件最初扩展名误标 PDF，已依据签名和官方名称改为 XLSX，原内容没有改变。
+
+BaoStock **2023-01-03** 返回 updateDate=2022-08-01；与公告逐代码比较，**15 只应调入全部缺失，
+15 只应调出全部仍在**。相同陈旧集合在周度样本中持续到 **2023-03-13**，**03-20** 才观察到
+与旧公告完全相同的 15 换 15。不能将它标成 3 月真实调样，也不推断两采样点之间每一天的状态。
+因此 300 只形状通过不能解决年初成员错误，原快照和失败结果没有改写。
+
+- 公告 **14796**：2023-06-09 收市后、06-12 首个交易日，9 换 9，与前后边界快照全部吻合。
+- 公告 **15044**：2023-11-24 发布，12-08 收市后、12-11 首个交易日，14 换 14，与边界快照全部吻合。
+- 官方索引第 32–50 页筛出 349 条 2023 公告；三份宽泛临时调样公告 14599 / 14651 / 14722 的
+  XLSX 全工作表文本未找到沪深 300 基础指数。仅是已查范围，不能声称公告档案或全部临时事件完整。
+  14599 附件的创建日期晚于公告日期，历史附件修订风险保留。
+
+三份选择性事件保存于 `configs/csi-events-2023.json`，不是完整历史事件库。
+最终官方检查 **14 项失败比较**包括 13 个陈旧快照的事后成员核对，以及 2022 年末边界的精确差分。
+证据：[phase1_baseline_2023.json](evidence/phase1_baseline_2023.json)、
+[phase1_membership_2023.json](evidence/phase1_membership_2023.json)。
+官方原件和提取存于 `datasets/raw/csi/phase1-baseline/`、`phase1-2023-review/`；原件摘要可复核。
+
+## 候选 v2 与质量结论
+
+`688065.SH` 在 **2023-06-15** 返回 tradestatus=0，但成交量 **353,426 股**、金额 **19,589,785.9900 元**，
+OHLC 分别为 55.04 / 55.80 / 54.76 / 55.53。v1 直接判“整日停牌却成交”过度解释了日级标志。
+上交所接口列有当天的控股股东筹划事项停牌公告；交易日历记录自 **06-16 起连续停牌**，
+但记录更新时间为 06-21，不能回填为 06-16 已知。公告 PDF URL 返回 HTML challenge，原响应保留，
+没有绕过挑战或取得可读 PDF；公告接口 ADDDATE 也不当作已认证的历史发布时间。
+**具体日内起止仍未证实。**
+
+因此候选 schema 显式由 v1 升为 **baostock-candidate-v2**：该行改为
+`record_status=needs_review`、`trade_observation=non_active_with_reported_trades`，转换检查为 unverified。
+没有改成 active / 可成交，也没有修改成交量或价格。回归测试固定真实案例和保留值；
+证据见 [phase1_halt_review.json](evidence/phase1_halt_review.json)。
+
+最终离线核对全部 **75,271 行**：v1→最终 v2 仅上述一行的两项分类改变，其余所有 typed 值、
+raw 文本与行定位相同。v1 原产物保留；v2→新增覆盖统计版本的 **6 份 Parquet 和转换问题文件逐字节相同**，
+质量报告只新增采集覆盖元数据。所有目录中 manifest 声明的文件摘要均核对通过。
+
+最终质量结果为 fail、`formal_research_gate=blocked`、`research_eligible=false`，CLI 返回 **2**。
+全部表 Parquet / DuckDB 完整读回通过，canonical reader 按预期拒绝。工程通过与研究资格分开记录：
+
+- 查询内重复、跨请求共同字段矛盾、已取得请求的日历缺失项、开市缺行、闭市行情和 IPO 前行情均为 0。
+  **行情检查只覆盖已取得的 236 个证券请求，不代表计划中的 336 个全部通过。**
+- 18 行源非正常交易标志中，13 行缺量、4 行零量、1 行伴随成交，分别保留。
+- ST 观察 0 不能证明完整 ST/*ST 历史；涨跌停价、完整日内停复牌和执行资格仍未核实。
+- outDate 首个退市自然日语义未确认；代表样本 600747 的边界问题保留。
+- 分红的预案 / 实施、登记 / 除权 / 派息 / 红股上市日期分别保留，税后原文不强转固定税率。
+  因子保留累计语义，不充当本次拆股倍数；历史算法与修订风险未核实。
+- 75,271 行的历史发布时间 / available time 未证明，保持空值及 unknown_historical_vintage。
+  当前捕获时点不是历史可用时点，周度快照和两次吻合调样不证明严格 PIT。
+
+## 关键产物、空间和进程归属
+
+最终紧凑证据：[phase1_2023_partial.json](evidence/phase1_2023_partial.json)，包含 run / 产物摘要、
+实际版本、失败定位、分 API 请求覆盖、逐值比较、检查日志摘要、空间测量和已知进程退出核验。
+完整产物位于以下忽略目录，交接后仍保留：
+
+| 位置 | 内容 |
+| --- | --- |
+| `datasets/raw/phase1-representative/` | 原 56 个成功请求的只读复用清单 |
+| `datasets/raw/phase1-membership-2023/` | 59 个完整日历 / 成员请求 |
+| `datasets/raw/phase1-securities-2023/` | 943 个成功请求和全部失败 / 控制中止证据 |
+| `datasets/candidates/phase1-2023-partial/` | 保留的原 v1 产物，clean b68a280 |
+| `datasets/candidates/phase1-2023-partial-v2/` | 保留的初次 v2 产物，clean fa9f1f6 |
+| `datasets/candidates/phase1-2023-partial-v2-coverage/` | 最终 v2 / 覆盖报告，clean f4e523c |
+| `datasets/raw/sse/phase1-halt-review/` | 停牌接口原件、HTML challenge 和定位 |
+| `.cache/phase1/plans/securities-2023.json` | 336 代码 / 1,344 请求的完整计划 |
+| `.cache/phase1/final_offline_audit.py` | 本次离线产物摘要 / 逐值比较脚本 |
+| `artifacts/phase1-checks/` | 所有检查、构建、采集、限制与恢复日志 |
+
+最终审核时测得本 worktree raw **42,792,086 B**、全部候选 **12,927,906 B**；连同本轮计划 / 审核脚本、
+当时已有检查日志及共享限制目录，保留范围合计 **56,022,739 B**。这些是逻辑文件字节，
+不含原有环境 / wheel、共享 Phase 0 原始数据及源码；峰值磁盘 / 内存没有连续采样，不声称精确峰值。
+当时 E 盘可用 **1,509,824,782,336 B**；此后仅新增小型审核输出与本报告，没有新增服务器环境或数据。
+
+只读核验本任务已知采集 PID **57092、66572、59448** 及受控停止的 worker **73840** 均不存在；
+采集 / 构建 / 检查均已退出，没有常驻或轮询进程。原始产物、限制状态和 worktree 继续由执行代理保管，
+解释器和服务器既有 Linux worktree / 环境全部保留；主代理可审阅并协调集成，未接管任何其他项目进程。
+
+待完成验收：401 个证券请求、年初完整基准及临时成员事件覆盖、日内停牌语义、公司行为和历史可用性。
+这些缺口不升级为训练 / 回测结果。本批未获取 2024–2025 行情，未训练、回测或触及交易 / 风控。
+当前工具 shell 的 `HERDR_ENV` 为空；未从外部控制 pane，也未声称已向 `w8:p1` 实际送达。
+本分支报告和当前对话作为交接载体，待主代理审阅。
