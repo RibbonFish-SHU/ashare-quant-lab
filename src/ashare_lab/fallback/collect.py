@@ -279,7 +279,13 @@ def collect(plan_path, output, *, project_root):
                 if restriction.exists():
                     run["status"], stop = "stopped_on_source_restriction", True
                     break
-                time.sleep(max(0, 1 - (time.time() - ledger.get("last_request_start_epoch", 0))))
+                # Child import/startup time varies. Wait after its exit so wire attempts
+                # cannot approach closer than one second despite different startup costs.
+                previous = max(
+                    ledger.get("last_request_start_epoch", 0),
+                    ledger.get("last_request_finished_epoch", 0),
+                )
+                time.sleep(max(0, 1 - (time.time() - previous)))
                 token = uuid.uuid4().hex
                 directory = output / "attempts" / key / token
                 directory.mkdir(parents=True)
@@ -312,6 +318,9 @@ def collect(plan_path, output, *, project_root):
                         exit_code = result.returncode
                     except subprocess.TimeoutExpired:
                         timed_out, exit_code = True, -1
+                ledger["last_request_finished_epoch"] = time.time()
+                ledger["requests"][-1]["worker_finished_at_utc"] = utc_now()
+                save_json(ledger_path, ledger)
                 metadata_path, response_path = (
                     directory / "metadata.json",
                     directory / "response.bin",
