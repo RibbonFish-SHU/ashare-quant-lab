@@ -1,0 +1,173 @@
+{
+  "schema_version": "official-resume-event-review-v1",
+  "research_eligible": false,
+  "recorded_at_utc": "2026-10-03T15:58:59.290364+00:00",
+  "request_count": 2,
+  "retries": 0,
+  "scope": "one existing halt anomaly; no quotes acquired",
+  "symbol": "688065.SH",
+  "notice_number": "2023-020",
+  "announcement_id": "1217133087",
+  "source_url": "https://static.cninfo.com.cn/finalpage/2023-06-26/1217133087.PDF",
+  "pdf_bytes": 193767,
+  "pdf_sha256": "03d0b3e8076db23a1da481ba78faf5dd4d0ff3725a0cbb778fe1842d7b1d9716",
+  "pdf_pages": 2,
+  "rendered_pages_reviewed": [
+    1,
+    2
+  ],
+  "effective_date": "2023-06-26",
+  "effective_session": "morning_open",
+  "previous_halt_start_confirmed": "2023-06-15 afternoon_open",
+  "full_halt_open_dates_from_retained_calendar": [
+    "2023-06-16",
+    "2023-06-19",
+    "2023-06-20",
+    "2023-06-21"
+  ],
+  "source_announcement_time": 1687708800000,
+  "source_announcement_time_shanghai": "2023-06-26T00:00:00+08:00",
+  "historical_available_time": null,
+  "time_precision": "source_date_label_not_exact_publish_time",
+  "observed_at_utc": "2026-10-03T15:56:42.074906+00:00",
+  "daily_references": [
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-14",
+      "source_trading_active": true,
+      "volume_shares": 758428,
+      "record_status": "valid_candidate",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 107
+    },
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-15",
+      "source_trading_active": false,
+      "volume_shares": 353426,
+      "record_status": "needs_review",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 108
+    },
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-16",
+      "source_trading_active": false,
+      "volume_shares": 0,
+      "record_status": "valid_candidate",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 109
+    },
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-19",
+      "source_trading_active": false,
+      "volume_shares": 0,
+      "record_status": "valid_candidate",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 110
+    },
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-20",
+      "source_trading_active": false,
+      "volume_shares": 0,
+      "record_status": "valid_candidate",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 111
+    },
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-21",
+      "source_trading_active": false,
+      "volume_shares": 0,
+      "record_status": "valid_candidate",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 112
+    },
+    {
+      "symbol": "688065.SH",
+      "event_date": "2023-06-26",
+      "source_trading_active": true,
+      "volume_shares": 8046605,
+      "record_status": "valid_candidate",
+      "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+      "row_number": 113
+    }
+  ],
+  "limits": [
+    "The notice declares resumption; no live market or intraday execution test was performed.",
+    "The June 26 announcement cannot close the halt in a June 15 as-of query.",
+    "Source midnight label cannot certify availability before morning execution.",
+    "Session anchors are retained; wall-clock times require separately verified historical trading hours.",
+    "Original signatures and source inconsistencies remain unchanged."
+  ],
+  "local_read_failures": [
+    "An initial PowerShell inline Python text extraction lost string quotes and failed with SyntaxError; a UTF-8 script then read the existing PDF without network retry.",
+    "Poppler reported missing Symbol/ArialUnicode display fonts; both rendered pages were visually checked and relevant text was legible."
+  ],
+  "artifacts": [
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/1217133087.metadata.json",
+      "bytes": 607,
+      "sha256": "d18054ecbd26b5605df7ed97764a996bb78f9cd3870f66e7cd9bb4937a765f68"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/1217133087.pdf",
+      "bytes": 193767,
+      "sha256": "03d0b3e8076db23a1da481ba78faf5dd4d0ff3725a0cbb778fe1842d7b1d9716"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/688065-resume-search.bin",
+      "bytes": 806,
+      "sha256": "2e5525541365b0ffa6600563ec218f8245c2e0a4a7eca610e6a07771a9477c4f"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/688065-resume-search.metadata.json",
+      "bytes": 860,
+      "sha256": "03b1c32439d476209f51f2ee2fee52e4eb8f48fb0fc2809776472106517bd023"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/extracted.json",
+      "bytes": 3756,
+      "sha256": "105f974931fe75a2852e15a5ab632b29cc8e20eb2e10759e6e2e39c7a362311d"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/page-1.png",
+      "bytes": 253200,
+      "sha256": "ecf199e94b5910e21da746d9180c5bf49ea432c0e1e5b3cb66453fa9b65d5ff5"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/page-2.png",
+      "bytes": 121920,
+      "sha256": "a1d2f240d805b3adc0ecbc832559d088bedf61a2c06d75f2949ddb8c9d0c423a"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/calendar.parquet",
+      "bytes": 11083,
+      "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+      "bytes": 3903548,
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+    },
+    {
+      "path": "docs/evidence/phase1_trading_state_probe.json",
+      "bytes": 9198,
+      "sha256": "7128a4cb24fb1449fd9fb3975d3cd6028a184fa6f64caba377fd295ea3fbc24f"
+    },
+    {
+      "path": ".cache/phase1/main-review/audit_resume_event.py",
+      "bytes": 4005,
+      "sha256": "73111017d2f0bc22da495b49a98050f0f8d714f9dcf704bfeb39e7076b1e9355"
+    }
+  ]
+}
