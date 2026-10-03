@@ -232,6 +232,51 @@
       "file": "datasets/raw/baostock_documentation/20261003-phase0-probe/official-indexData.md",
       "bytes": 5367,
       "sha256": "f1eb5fd6433fab60f8a126d75b1a5b2577578bd6cffae32d3c4ab826c25cb8fd"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/dividInfo.md",
+      "method": "POST",
+      "request_body": {},
+      "retrieved_on": "2026-10-03",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-actions/official-dividInfo.md",
+      "bytes": 4047,
+      "sha256": "b3b60b2044899f35aefc40ddca023a69883204ba55d5754049e7fc8593a6f2a1"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/factorInfo.md",
+      "method": "POST",
+      "request_body": {},
+      "retrieved_on": "2026-10-03",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-actions/official-factorInfo.md",
+      "bytes": 2789,
+      "sha256": "6820224b59a62b5e96b3347e0342263f0f9fb448a00a5c4ce1e61d2857b8984b"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/stockBasic.md",
+      "method": "POST",
+      "request_body": {},
+      "retrieved_on": "2026-10-03",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-actions/official-stockBasic.md",
+      "bytes": 2114,
+      "sha256": "f8d5ba4ff8f3f664dc7f3fa8205a03e7827aa025044f16e4aa41aa5d3f0f70c8"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/hs300Stock.md",
+      "method": "POST",
+      "request_body": {},
+      "retrieved_on": "2026-10-03",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-actions/official-hs300Stock.md",
+      "bytes": 1575,
+      "sha256": "2268a45d87eada069bc5977dba5c7e8769130e13dad6cf7ed1e73dda32bcff13"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/modifyRecord.md",
+      "method": "POST",
+      "request_body": {},
+      "retrieved_on": "2026-10-03",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-actions/official-modifyRecord.md",
+      "bytes": 7286,
+      "sha256": "3c6a08854e08356f7c3a7f05a153374c314e300845e21fc2dd516b3f6eca0912"
     }
   ],
   "limitations": [
@@ -239,7 +284,11 @@
     "Historical publication times and vintage revisions remain unverified.",
     "Two empty volume/amount fields on the sampled delisting date are preserved.",
     "Empty suspended-list response does not establish absence of suspensions.",
-    "No historical price or membership query at/after 2024-01-01; no holdout returns or model scores."
+    "No historical price or membership query at/after 2024-01-01; no holdout returns or model scores.",
+    "Some start-of-year membership snapshots return stale update dates; compare actual sets with official year-end changes before accepting the baseline.",
+    "Official revision history documents later edits to historical data; current snapshots are not original historical vintages.",
+    "Dividend proposals, implementation notices, record dates, ex dates, payment dates and bonus-share trading dates are distinct.",
+    "After-tax cash can be a text expression with alternatives, and cumulative adjustment factors are not event split multipliers."
   ],
   "annual_coverage_probe": {
     "dataset": "datasets/raw/baostock/20261003-phase0-coverage",
@@ -405,6 +454,108 @@
     "scope": "small calendar, membership and one liquid stock sample per year; not full-history validation",
     "execution_seconds": 17.188
   },
-  "combined_raw_rows": 5123,
-  "combined_complete_raw_tables": 52
+  "combined_raw_rows": 5132,
+  "combined_complete_raw_tables": 56,
+  "archive_batches": [
+    {
+      "dataset": "datasets/raw/baostock/20261003-phase0-probe",
+      "manifest_sha256": "17f1583afc323ee5260e7154ef2277839f80458a493e94fd323945a585e91c24",
+      "archived_at_utc": "2026-10-03T08:03:21.391007+00:00",
+      "raw_rows": 1318,
+      "capture_attempts": 15,
+      "complete_raw_tables": 14,
+      "preserved_failed_attempts": 1
+    },
+    {
+      "dataset": "datasets/raw/baostock/20261003-phase0-coverage",
+      "manifest_sha256": "b46b0c1edbf6183859c4d7cac994a4196fe32c9c6a024f8243411b7de72025e5",
+      "archived_at_utc": "2026-10-03T08:14:39.685936+00:00",
+      "raw_rows": 3805,
+      "capture_attempts": 38,
+      "complete_raw_tables": 38,
+      "preserved_failed_attempts": 0
+    },
+    {
+      "dataset": "datasets/raw/baostock/20261003-phase0-actions",
+      "manifest_sha256": "82296b77770f6e667735adf6fb016bf301ec83038e32c30c0afad13a27de37c7",
+      "archived_at_utc": "2026-10-03T08:22:10.546864+00:00",
+      "raw_rows": 2,
+      "capture_attempts": 2,
+      "complete_raw_tables": 2,
+      "preserved_failed_attempts": 0
+    },
+    {
+      "dataset": "datasets/raw/baostock/20261003-phase0-factor-definition",
+      "manifest_sha256": "56a38f3e75fe81ed0f4e6262fd776baaf482c507ec1683657a7932d3554c1bdf",
+      "archived_at_utc": "2026-10-03T08:24:43.060173+00:00",
+      "raw_rows": 7,
+      "capture_attempts": 2,
+      "complete_raw_tables": 2,
+      "preserved_failed_attempts": 0
+    }
+  ],
+  "combined_capture_attempts": 57,
+  "corporate_action_samples": [
+    {
+      "code": "sh.600000",
+      "dividPreNoticeDate": "",
+      "dividAgmPumDate": "2010-04-29",
+      "dividPlanAnnounceDate": "2010-04-07",
+      "dividPlanDate": "2010-06-04",
+      "dividRegistDate": "2010-06-09",
+      "dividOperateDate": "2010-06-10",
+      "dividPayDate": "2010-06-18",
+      "dividStockMarketDate": "2010-06-11",
+      "dividCashPsBeforeTax": "0.15",
+      "dividCashPsAfterTax": "0.105",
+      "dividStocksPs": "0.300000",
+      "dividCashStock": "10转0送3派1.5元（含税，扣税后1.05元）",
+      "dividReserveToStockPs": "0.000000"
+    },
+    {
+      "code": "sh.600000",
+      "dividPreNoticeDate": "",
+      "dividAgmPumDate": "2023-06-29",
+      "dividPlanAnnounceDate": "2023-04-19",
+      "dividPlanDate": "2023-07-13",
+      "dividRegistDate": "2023-07-20",
+      "dividOperateDate": "2023-07-21",
+      "dividPayDate": "2023-07-21",
+      "dividStockMarketDate": "",
+      "dividCashPsBeforeTax": "0.32",
+      "dividCashPsAfterTax": "0.288或0.32",
+      "dividStocksPs": "0.000000",
+      "dividCashStock": "10派3.2元（含税，扣税后2.88或3.2元）",
+      "dividReserveToStockPs": ""
+    }
+  ],
+  "factor_definition_check": {
+    "instrument": "sh.600000",
+    "ex_date": "2023-07-21",
+    "previous_back_factor": "11.434431",
+    "back_factor": "11.949786",
+    "back_factor_ratio": "1.045070454314692178386489017",
+    "previous_close": "7.4200",
+    "ex_date_preclose": "7.1000",
+    "price_ratio": "1.045070422535211267605633803",
+    "absolute_ratio_difference": "3.1779480910780855214E-8",
+    "gross_cash_difference": "0.3200",
+    "scope": "one cash dividend event and cumulative factor semantics; no strategy return",
+    "full_factor_algorithm_verified": false
+  },
+  "stale_membership_observations": [
+    {
+      "requested_date": "2022-01-04",
+      "update_date": "2021-11-15",
+      "members": 300,
+      "membership_correctness": "unverified"
+    },
+    {
+      "requested_date": "2023-01-03",
+      "update_date": "2022-08-01",
+      "members": 300,
+      "membership_correctness": "unverified"
+    }
+  ],
+  "last_appended_at_utc": "2026-10-03T08:39:35.927878+00:00"
 }
