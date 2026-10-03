@@ -1,0 +1,188 @@
+{
+  "recorded_at_utc": "2026-10-03T15:18:11.854285+00:00",
+  "kind": "reference-integration-main-acceptance-v1",
+  "implementation_source": "03566ca30972f1fc680f35adab1091c8caf0b797",
+  "research_eligible": false,
+  "builds": [
+    {
+      "group": "first10",
+      "rows": 2420,
+      "ipo_reference_count": 10,
+      "compared_rows": 10,
+      "compared_ohlc_values": 40,
+      "uncovered_symbols": 9,
+      "bytes_identical_to_old_parquet": true,
+      "capture_identities_unchanged": true,
+      "all_manifest_and_reference_hashes_verified": true,
+      "unknown_volume_units": [
+        {
+          "provider": "tencent",
+          "symbol": "000938.SZ"
+        }
+      ],
+      "files": [
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-first10-evidence/bars.parquet",
+          "bytes": 226610,
+          "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-first10-evidence/conversion-issues.json",
+          "bytes": 4,
+          "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-first10-evidence/manifest.json",
+          "bytes": 46776,
+          "sha256": "b0ac04e31b3d4ed1063438f676005b6d75c7729987ec85463ae1badf161afe2c"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-first10-evidence/quality.json",
+          "bytes": 48893,
+          "sha256": "b2835179f03be5c4f6753ab7c44c9c4f78b27b55cb49cfd4ce904796f5d794bd"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-first10-evidence/reference-evidence.json",
+          "bytes": 172713,
+          "sha256": "f6c8acec17933b3e262b0a9b3591d96fd1a697258e80464dbe260559d77fc7bc"
+        }
+      ]
+    },
+    {
+      "group": "remaining90",
+      "rows": 21780,
+      "ipo_reference_count": 90,
+      "compared_rows": 5,
+      "compared_ohlc_values": 20,
+      "uncovered_symbols": 89,
+      "bytes_identical_to_old_parquet": true,
+      "capture_identities_unchanged": true,
+      "all_manifest_and_reference_hashes_verified": true,
+      "unknown_volume_units": [
+        {
+          "provider": "tencent",
+          "symbol": "300308.SZ"
+        }
+      ],
+      "files": [
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-remaining90-evidence/bars.parquet",
+          "bytes": 1852847,
+          "sha256": "8db14e4281f93f3ce7bed89d730cc755e2993f938d490ca4b7bc48bd81679004"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-remaining90-evidence/conversion-issues.json",
+          "bytes": 4,
+          "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-remaining90-evidence/manifest.json",
+          "bytes": 154141,
+          "sha256": "9598b045ce817e4d9f040173381a101488e5f682706cb429c8406274163fa3cf"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-remaining90-evidence/quality.json",
+          "bytes": 167682,
+          "sha256": "51ec38698eec97ce044cb82978a115094246c31fe76bcd57039cf5b402967fcd"
+        },
+        {
+          "path": ".cache/worktrees/phase1-evidence-integration/datasets/candidates/eastmoney-2023-remaining90-evidence/reference-evidence.json",
+          "bytes": 172713,
+          "sha256": "f6c8acec17933b3e262b0a9b3591d96fd1a697258e80464dbe260559d77fc7bc"
+        }
+      ]
+    }
+  ],
+  "independent_negative_checks": {
+    "disjoint_january_row_compared_rows": 0,
+    "modified_december_close_detected_differences": 1,
+    "preipo_bar_status": "fail",
+    "test_module_import_from_main_cwd": "pass"
+  },
+  "protected_files_rehashed": 470,
+  "protected_files_unchanged": true,
+  "test_evidence": {
+    "full_suite": "254 passed in 10.25s",
+    "ruff": "passed",
+    "format": "5 modified Python files passed",
+    "reused_because_source_and_tests_unchanged": true,
+    "artifacts": [
+      {
+        "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration-checks/full.txt",
+        "bytes": 346,
+        "sha256": "e94a5788d8002dbba903ba6d7fdfb1244e6e025c3bc3d72800a017a69fc110f8"
+      },
+      {
+        "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration-checks/ruff.txt",
+        "bytes": 19,
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      {
+        "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration-checks/format.txt",
+        "bytes": 26,
+        "sha256": "f114d83b30c5c657ee43a847a45bafccaea255d82673feb87c26d252c61e29c1"
+      },
+      {
+        "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration-checks/main-cwd.txt",
+        "bytes": 101,
+        "sha256": "481221218d57a2fa4192983e831017767cc14c3a8220c2306f705a08fa98728d"
+      },
+      {
+        "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration-checks/targeted.txt",
+        "bytes": 183,
+        "sha256": "63444103308b228e5b064c7af228d4c8b3c450fa8b1c4c6517d4ba903f990c01"
+      },
+      {
+        "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration-checks/execution.json",
+        "bytes": 2951,
+        "sha256": "37f7db03f5a6e8907a36d7db05ce1846fcb0949014873d4fe7725316caba48ca"
+      }
+    ]
+  },
+  "execution_evidence": [
+    {
+      "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration/execution.json",
+      "bytes": 11597,
+      "sha256": "a3a7278ad96f3a708efc3c47a46647558cae208d770050c6e0ae6ff4cbca8639"
+    },
+    {
+      "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration/protected-before.json",
+      "bytes": 168804,
+      "sha256": "d40b1d1be2636067ce53fc77c829ec774f2c244d27c445bb7f892f3997540671"
+    },
+    {
+      "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration/protected-after.json",
+      "bytes": 168804,
+      "sha256": "d40b1d1be2636067ce53fc77c829ec774f2c244d27c445bb7f892f3997540671"
+    },
+    {
+      "path": ".cache/worktrees/phase1-evidence-integration/artifacts/reference-integration/process-exit.json",
+      "bytes": 440,
+      "sha256": "1ddb4c3d896258ab363c445a5bcfa0ecaba5d36991998f72210524c49d2c8bfe"
+    }
+  ],
+  "initial_findings": [
+    {
+      "path": ".cache/phase1/main-review/reference-integration-first-findings.json",
+      "bytes": 2806,
+      "sha256": "5dce103c45ea19fbab0de5db20070957da63906e75ba2645ff5169c0bef91d83"
+    },
+    {
+      "path": ".cache/phase1/main-review/reference-integration-checkout-finding.json",
+      "bytes": 322,
+      "sha256": "b20448967046a7f768b3302b7f691d822bea474afe2ceb0219947c49ad343d34"
+    }
+  ],
+  "main_audit_script": {
+    "path": ".cache/phase1/main-review/accept_reference_integration.py",
+    "bytes": 8956,
+    "sha256": "814e8b42f8a129668c0dbafe84fcb23d294c55bd698ce0a761416b19ee88aa31"
+  },
+  "limitations": [
+    "CLI exits 2 intentionally because formal research eligibility remains blocked, not because storage/build failed.",
+    "IPO observations do not certify delisting or historical availability.",
+    "Tencent independent price overlap is only 15 rows/60 OHLC across 2 of 100 new securities; volume units remain unknown.",
+    "Public community dataset checks are separate main-agent evidence and do not automatically enter these candidate builds.",
+    "No old raw/candidate/manifest or source restriction state was changed; no extra collection, model, backtest or server execution was performed by this acceptance."
+  ]
+}
