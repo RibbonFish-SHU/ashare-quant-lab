@@ -53,12 +53,14 @@ run.json、events.jsonl 和 work/<attempt>/worker.log；不要自动反复恢复
 ## 独立补充来源
 
 东方财富补充日线使用独立的 `ashare_lab.fallback.cli`、来源锁 / 账本及候选 schema，
-不使用上述 BaoStock 在线命令。首批十只已完成；实际输出位于
+不使用上述 BaoStock 在线命令。首批十只与剩余九十只均已完成；实际输出位于
 `.cache/worktrees/phase1-source-fallback/datasets/`，原件和候选均保留。
 入口与错误语义见[补充行情契约](PHASE1_FALLBACK_CONTRACT.md)，
-运行记录见[执行报告](PHASE1_FALLBACK_REPORT.md)。
+运行记录见[首批报告](PHASE1_FALLBACK_REPORT.md)和[续采报告](PHASE1_FALLBACK_CONTINUATION_REPORT.md)。
 
 `probe` / `build` 退出 2 仍表示研究资格未满足，不是存储损坏。
-已成功首十只无需重新联网；后续只按[固定 90 只续采任务](PHASE1_FALLBACK_CONTINUATION_PLAN.md)
-生成新的有身份验证的计划与独立目录。腾讯小样本和深交所上市日期由主代理单独做来源审计，
+两批已成功记录无需重新联网。`plan-continuation` 的固定范围与复用约束见
+[90 只续采任务](PHASE1_FALLBACK_CONTINUATION_PLAN.md)，
+质量 / 覆盖及实际节流结果见[补充行情主审](PHASE1_FALLBACK_REVIEW.md)。
+腾讯小样本和深交所上市日期由主代理单独做来源审计，
 原件与边界见[核对记录](PHASE1_METADATA_AND_CROSSCHECK.md)。

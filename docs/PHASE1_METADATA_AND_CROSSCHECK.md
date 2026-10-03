@@ -43,3 +43,8 @@
 证据：[phase1_pilot_independent_crosscheck.json](evidence/phase1_pilot_independent_crosscheck.json)。
 原件：`datasets/raw/tencent/20261003-pilot-crosscheck/`。成功样本的原始字段 Parquet 读回通过；
 腾讯新证券的成交量单位仍未认证，不用它消除量额精度缺口。
+
+剩余九十只到齐后，执行代理复用已留存的腾讯 300308 样本，与新东方财富候选核对
+2023-07-18、19、20、21、24 共五行；主代理独立复核 **20 个 OHLC 值全部一致**。
+按显示单位换算的金额最大差 45 元，腾讯该证券量单位仍未知。这次复核没有新增网络请求。
+记录见[续采主审证据](evidence/phase1_continuation_main_acceptance.json)。
