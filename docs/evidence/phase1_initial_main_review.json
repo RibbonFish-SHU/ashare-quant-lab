@@ -1,0 +1,35 @@
+{
+  "reviewed_at_utc": "2026-10-03T11:58:40.759255+00:00",
+  "reviewed_commit": "bf62ad3bc28e3661ff10ca45852d592b61dbb2d9",
+  "runs": [
+    {
+      "run": ".cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\run.json",
+      "successful_references_verified": 59,
+      "unique_successful_queries": 59,
+      "legacy_references": 3,
+      "original_run_sha256": "189690b1687355f28c26a3272c9186efdf7545b194aafd3610eb04e8b5cb5e35"
+    },
+    {
+      "run": ".cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\run.json",
+      "successful_references_verified": 943,
+      "unique_successful_queries": 943,
+      "legacy_references": 2,
+      "original_run_sha256": "a4f5aad865370ea56f56bb7fa4151bdaeb7cb02f5ad69fec5e5a9efac98941df"
+    }
+  ],
+  "candidate_commit": "f4e523c6d685ca57984f63cc0d9431b391ea16f9",
+  "source_files_match_git_lf": 17,
+  "source_files_match_git_crlf": 47,
+  "candidate_files_verified": 9,
+  "candidate_rows": 75271,
+  "planned_queries": 1403,
+  "successful_queries": 1002,
+  "missing_queries": 401,
+  "raw_status_contradictions_in_actual_snapshot": 0,
+  "research_eligible": false,
+  "review_findings": [
+    "Contradictory run metadata can promote failed raw; fixture reproduced, actual data checked separately.",
+    "Embedded plan is not bound during load_run; repair requested."
+  ],
+  "status": "awaiting_integrity_fixes"
+}

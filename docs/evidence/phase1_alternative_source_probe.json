@@ -1,0 +1,771 @@
+{
+  "captured_on": "2026-10-03",
+  "verified_at_utc": "2026-10-03T12:01:17.442390+00:00",
+  "research_eligible": false,
+  "scope": "independent public-provider sample validation; no strategy calculations",
+  "baseline": {
+    "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-partial-v2-coverage/bars.parquet",
+    "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+  },
+  "probe_script": {
+    "path": ".cache/phase1/source-alternatives/compare_samples.py",
+    "sha256": "fd5a4f8ce0baaaed51a7ab5be74a86f3c01eaff9189ba0762cf56c4afd297bf3"
+  },
+  "http_market_requests": 7,
+  "raw_bar_rows": 54,
+  "rows_in_requested_intervals": 33,
+  "overlapping_bar_comparisons": 28,
+  "ohlc_values_compared": 112,
+  "ohlc_values_different": 0,
+  "max_scaled_volume_difference_shares": "44.00",
+  "max_amount_difference_by_provider_cny": {
+    "tencent": "49.510000000000",
+    "eastmoney": "0.400000000000"
+  },
+  "raw_manifests": [
+    {
+      "path": "datasets/raw/tencent/20261003-phase1-probe/manifest.json",
+      "sha256": "1d87a23ef4cea9169fce8e53ece320d4e5d1afcb8e10da434b321f3fadcc7bb9"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-phase1-probe/manifest.json",
+      "sha256": "fb4ae0bd52ebb08b5be5ee079c23a3d60313a280f8a4ab6e22074d57d51bb283"
+    }
+  ],
+  "samples": [
+    {
+      "provider": "tencent",
+      "symbol": "600000.SH",
+      "requested_start": "2023-07-18",
+      "requested_end": "2023-07-24",
+      "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600000%2Cday%2C2023-07-18%2C2023-07-24%2C10%2C&r=0.8205512681390605",
+      "captured_at_utc": "2026-10-03T11:53:50.946561+00:00",
+      "response_path": "datasets/raw/tencent/20261003-phase1-probe/sh600000-july-response.txt",
+      "response_sha256": "08fd34c1db2de87e37fc4c3af97240157623947a5cee1fe0694fceb9ce217a03",
+      "metadata_sha256": "3278ada34507e4ae49ff0764863aebd59dffc76db35f55df2bb8c1a5900f33a2",
+      "raw_bar_rows": 10,
+      "rows_in_requested_interval": 5,
+      "comparisons": [
+        {
+          "date": "2023-07-18",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "120266.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 12026567,
+          "scaled_volume_difference_shares": "33.00",
+          "amount_raw": "8889.52",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "88895175.310000000000",
+          "scaled_amount_difference_cny": "24.690000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-19",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "181896.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 18189577,
+          "scaled_volume_difference_shares": "23.00",
+          "amount_raw": "13467.70",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "134677036.160000000000",
+          "scaled_amount_difference_cny": "-36.160000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-20",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "266868.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 26686817,
+          "scaled_volume_difference_shares": "-17.00",
+          "amount_raw": "19850.33",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "198503271.400000000000",
+          "scaled_amount_difference_cny": "28.600000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-21",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "276614.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 27661416,
+          "scaled_volume_difference_shares": "-16.00",
+          "amount_raw": "19681.40",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "196813979.240000000000",
+          "scaled_amount_difference_cny": "20.760000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-24",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "258402.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 25840210,
+          "scaled_volume_difference_shares": "-10.00",
+          "amount_raw": "18407.24",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "184072421.960000000000",
+          "scaled_amount_difference_cny": "-21.960000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        }
+      ]
+    },
+    {
+      "provider": "tencent",
+      "symbol": "688065.SH",
+      "requested_start": "2023-06-12",
+      "requested_end": "2023-06-20",
+      "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh688065%2Cday%2C2023-06-12%2C2023-06-20%2C10%2C&r=0.8205512681390605",
+      "captured_at_utc": "2026-10-03T11:55:10.916118+00:00",
+      "response_path": "datasets/raw/tencent/20261003-phase1-probe/sh688065-2023-06-12.response.txt",
+      "response_sha256": "b9157e06d855260e4779ae1a98d5056072d03f48920905cb27c849912cb4c83c",
+      "metadata_sha256": "f863fddc717ba3e4e7540d1ece6e685eebb75a9e9d956afe3203c6dd983fa018",
+      "raw_bar_rows": 10,
+      "rows_in_requested_interval": 4,
+      "comparisons": [
+        {
+          "date": "2023-06-12",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "890520.00",
+          "sample_volume_scale": "1",
+          "reference_volume_shares": 890520,
+          "scaled_volume_difference_shares": "0.00",
+          "amount_raw": "4895.23",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "48952280.640000000000",
+          "scaled_amount_difference_cny": "19.360000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-06-13",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "876405.00",
+          "sample_volume_scale": "1",
+          "reference_volume_shares": 876405,
+          "scaled_volume_difference_shares": "0.00",
+          "amount_raw": "4823.84",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "48238432.270000000000",
+          "scaled_amount_difference_cny": "-32.270000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-06-14",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "758428.00",
+          "sample_volume_scale": "1",
+          "reference_volume_shares": 758428,
+          "scaled_volume_difference_shares": "0.00",
+          "amount_raw": "4196.04",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "41960419.340000000000",
+          "scaled_amount_difference_cny": "-19.340000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-06-15",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "353426.00",
+          "sample_volume_scale": "1",
+          "reference_volume_shares": 353426,
+          "scaled_volume_difference_shares": "0.00",
+          "amount_raw": "1958.98",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "19589785.990000000000",
+          "scaled_amount_difference_cny": "14.010000000000",
+          "reference_trade_status": false,
+          "reference_record_status": "needs_review"
+        }
+      ]
+    },
+    {
+      "provider": "tencent",
+      "symbol": "000001.SZ",
+      "requested_start": "2023-07-18",
+      "requested_end": "2023-07-24",
+      "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sz000001%2Cday%2C2023-07-18%2C2023-07-24%2C10%2C&r=0.8205512681390605",
+      "captured_at_utc": "2026-10-03T11:55:12.112208+00:00",
+      "response_path": "datasets/raw/tencent/20261003-phase1-probe/sz000001-2023-07-18.response.txt",
+      "response_sha256": "607c5b5976c60b9766fea2200f0c74260db405c6517187d5bcbb95e513444a3b",
+      "metadata_sha256": "16811e842d05a5ec6865c0040a120b343588a154e3c7ac272103636b055711de",
+      "raw_bar_rows": 10,
+      "rows_in_requested_interval": 5,
+      "comparisons": [
+        {
+          "date": "2023-07-18",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "471966.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 47196618,
+          "scaled_volume_difference_shares": "-18.00",
+          "amount_raw": "53129.98",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "531299772.680000000000",
+          "scaled_amount_difference_cny": "27.320000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-19",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "382196.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 38219596,
+          "scaled_volume_difference_shares": "4.00",
+          "amount_raw": "43077.13",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "430771279.030000000000",
+          "scaled_amount_difference_cny": "20.970000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-20",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "554070.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 55406957,
+          "scaled_volume_difference_shares": "43.00",
+          "amount_raw": "62969.61",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "629696111.290000000000",
+          "scaled_amount_difference_cny": "-11.290000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-21",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "377103.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 37710256,
+          "scaled_volume_difference_shares": "44.00",
+          "amount_raw": "42737.60",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "427375950.490000000000",
+          "scaled_amount_difference_cny": "49.510000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-24",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "426852.00",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 42685218,
+          "scaled_volume_difference_shares": "-18.00",
+          "amount_raw": "48071.34",
+          "sample_amount_scale": "10000",
+          "reference_amount_cny": "480713395.700000000000",
+          "scaled_amount_difference_cny": "4.300000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        }
+      ]
+    },
+    {
+      "provider": "tencent",
+      "symbol": "300308.SZ",
+      "requested_start": "2023-07-18",
+      "requested_end": "2023-07-24",
+      "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sz300308%2Cday%2C2023-07-18%2C2023-07-24%2C10%2C&r=0.8205512681390605",
+      "captured_at_utc": "2026-10-03T11:55:13.347040+00:00",
+      "response_path": "datasets/raw/tencent/20261003-phase1-probe/sz300308-2023-07-18.response.txt",
+      "response_sha256": "ff36581f2130dfbea9db3e54103ca74fa19b05290fc71e0085f360b44c34eab7",
+      "metadata_sha256": "422b505a5d40d2ac59c4aad0284432a8079160c5761dbbb6b6e3765a3715ae38",
+      "raw_bar_rows": 10,
+      "rows_in_requested_interval": 5,
+      "comparisons": []
+    },
+    {
+      "provider": "eastmoney",
+      "symbol": "000001.SZ",
+      "requested_start": "2023-07-18",
+      "requested_end": "2023-07-24",
+      "url": "https://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=0&secid=0.000001&beg=20230718&end=20230724",
+      "captured_at_utc": "2026-10-03T11:56:00.829825+00:00",
+      "response_path": "datasets/raw/eastmoney/20261003-phase1-probe/000001-20230718.response.txt",
+      "response_sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+      "metadata_sha256": "74be2db372ae9869be1d18cf06e57f5f80bd3e0ece01588965dbb25d3a36ba2a",
+      "raw_bar_rows": 5,
+      "rows_in_requested_interval": 5,
+      "comparisons": [
+        {
+          "date": "2023-07-18",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "471966",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 47196618,
+          "scaled_volume_difference_shares": "-18",
+          "amount_raw": "531299772.68",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "531299772.680000000000",
+          "scaled_amount_difference_cny": "0E-12",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-19",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "382196",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 38219596,
+          "scaled_volume_difference_shares": "4",
+          "amount_raw": "430771279.03",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "430771279.030000000000",
+          "scaled_amount_difference_cny": "0E-12",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-20",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "554070",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 55406957,
+          "scaled_volume_difference_shares": "43",
+          "amount_raw": "629696111.29",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "629696111.290000000000",
+          "scaled_amount_difference_cny": "0E-12",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-21",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "377103",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 37710256,
+          "scaled_volume_difference_shares": "44",
+          "amount_raw": "427375950.49",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "427375950.490000000000",
+          "scaled_amount_difference_cny": "0E-12",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-24",
+          "reference_query_id": "5487da31eab6b0f105092d412e03d4464d48e3cc0aeef80c39c3f30a2eb4f18b",
+          "reference_raw_sha256": "e456172e3c294b6ee97f4c56433bac08d020e1cbced274c7b3daa3fa1103257f",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "426852",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 42685218,
+          "scaled_volume_difference_shares": "-18",
+          "amount_raw": "480713395.70",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "480713395.700000000000",
+          "scaled_amount_difference_cny": "0E-12",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        }
+      ]
+    },
+    {
+      "provider": "eastmoney",
+      "symbol": "688065.SH",
+      "requested_start": "2023-06-12",
+      "requested_end": "2023-06-20",
+      "url": "https://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=0&secid=1.688065&beg=20230612&end=20230620",
+      "captured_at_utc": "2026-10-03T11:55:59.671496+00:00",
+      "response_path": "datasets/raw/eastmoney/20261003-phase1-probe/688065-20230612.response.txt",
+      "response_sha256": "55fb3ffdb86691ff4f56a46edc4626fff9386274775af50b254556b83d15a3d5",
+      "metadata_sha256": "8b5b1347b1d0939d515273f830898dd88f2e17a13d12a885340086919a51f518",
+      "raw_bar_rows": 4,
+      "rows_in_requested_interval": 4,
+      "comparisons": [
+        {
+          "date": "2023-06-12",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "8905",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 890520,
+          "scaled_volume_difference_shares": "-20",
+          "amount_raw": "48952281.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "48952280.640000000000",
+          "scaled_amount_difference_cny": "0.360000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-06-13",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "8764",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 876405,
+          "scaled_volume_difference_shares": "-5",
+          "amount_raw": "48238432.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "48238432.270000000000",
+          "scaled_amount_difference_cny": "-0.270000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-06-14",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "7584",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 758428,
+          "scaled_volume_difference_shares": "-28",
+          "amount_raw": "41960419.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "41960419.340000000000",
+          "scaled_amount_difference_cny": "-0.340000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-06-15",
+          "reference_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "3534",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 353426,
+          "scaled_volume_difference_shares": "-26",
+          "amount_raw": "19589786.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "19589785.990000000000",
+          "scaled_amount_difference_cny": "0.010000000000",
+          "reference_trade_status": false,
+          "reference_record_status": "needs_review"
+        }
+      ]
+    },
+    {
+      "provider": "eastmoney",
+      "symbol": "600000.SH",
+      "requested_start": "2023-07-18",
+      "requested_end": "2023-07-24",
+      "url": "https://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=0&secid=1.600000&beg=20230718&end=20230724",
+      "captured_at_utc": "2026-10-03T11:55:14.447001+00:00",
+      "response_path": "datasets/raw/eastmoney/20261003-phase1-probe/sh600000-july-response.txt",
+      "response_sha256": "15f76cfd22e72e8684600bdbd863fe5c8a942fc9184472ff791f7afaa50eef9b",
+      "metadata_sha256": "6cfe89f5e51adaf2aba8c679f776e190cea65d2823f5f6bda79bc74037fa2333",
+      "raw_bar_rows": 5,
+      "rows_in_requested_interval": 5,
+      "comparisons": [
+        {
+          "date": "2023-07-18",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "120266",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 12026567,
+          "scaled_volume_difference_shares": "33",
+          "amount_raw": "88895175.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "88895175.310000000000",
+          "scaled_amount_difference_cny": "-0.310000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-19",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "181896",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 18189577,
+          "scaled_volume_difference_shares": "23",
+          "amount_raw": "134677036.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "134677036.160000000000",
+          "scaled_amount_difference_cny": "-0.160000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-20",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "266868",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 26686817,
+          "scaled_volume_difference_shares": "-17",
+          "amount_raw": "198503271.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "198503271.400000000000",
+          "scaled_amount_difference_cny": "-0.400000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-21",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "276614",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 27661416,
+          "scaled_volume_difference_shares": "-16",
+          "amount_raw": "196813979.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "196813979.240000000000",
+          "scaled_amount_difference_cny": "-0.240000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        },
+        {
+          "date": "2023-07-24",
+          "reference_query_id": "90c5f74f4b28f333afd8465926fd6ba7e69e7e38d8fde71db70fc8e81d0b84b1",
+          "reference_raw_sha256": "0b3e12f5d1729966e36238f25ef3694edd8afe61eae76de5c9e962e753f116ea",
+          "ohlc_differences": {
+            "open": "0E-12",
+            "close": "0E-12",
+            "high": "0E-12",
+            "low": "0E-12"
+          },
+          "volume_raw": "258402",
+          "sample_volume_scale": "100",
+          "reference_volume_shares": 25840210,
+          "scaled_volume_difference_shares": "-10",
+          "amount_raw": "184072422.00",
+          "sample_amount_scale": "1",
+          "reference_amount_cny": "184072421.960000000000",
+          "scaled_amount_difference_cny": "0.040000000000",
+          "reference_trade_status": true,
+          "reference_record_status": "valid_candidate"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Only seven bounded requests; full-year and whole-universe coverage unverified.",
+    "Missing rows do not establish suspensions; source APIs do not provide complete ST or trading-eligibility history.",
+    "Returned current names/quotes are not historical features and were not used in comparisons.",
+    "Quotes and current documentation do not establish historical publication or revision vintages.",
+    "Volume and amount precision differ; rounded lot counts must not be presented as exact share counts.",
+    "Tencent response ignores requested start in these samples; extra earlier rows retained as raw and excluded from comparisons.",
+    "No new BaoStock request, account change, or attempt to clear its source restriction."
+  ],
+  "source_documentation": [
+    {
+      "url": "https://akshare.akfamily.xyz/data/stock/stock.html",
+      "captured_at_utc": "2026-10-03T11:51:43.760399+00:00",
+      "sha256": "4d2c3204e2476ef9cd434621de217fcdf94308fc4659d83e8183f81c838d93b1",
+      "bytes": 3285546,
+      "path": ".cache/phase1/source-alternatives/akshare-stock-docs.html",
+      "metadata_path": ".cache/phase1/source-alternatives/akshare-stock-docs-metadata.json",
+      "metadata_sha256": "04363f02a22887779f8bade256bff201eaeae9eacc1d09af9bf2379f6c66906d"
+    },
+    {
+      "url": "https://api.github.com/repos/akfamily/akshare/git/blobs/3d27d0f17e3df4ba3f6307716ea65cb98c19ef1c",
+      "git_blob_sha": "3d27d0f17e3df4ba3f6307716ea65cb98c19ef1c",
+      "tree_sha": "fac1e50ebf9b907960d6aab4c3df658559689f39",
+      "captured_at_utc": "2026-10-03T11:53:06.730973+00:00",
+      "sha256": "aa9199665d356ba3a054297004e349d3926fa83026abfd2d50c4b7f832226d84",
+      "bytes": 4843,
+      "path": ".cache/phase1/source-alternatives/stock_hist_tx.py",
+      "metadata_path": ".cache/phase1/source-alternatives/stock_hist_tx.metadata.json",
+      "metadata_sha256": "b0153d7ef9cc9a8a658f15ff6f898e270c10f114abfa3ae8f2c246d9dee33a6f"
+    },
+    {
+      "url": "https://api.github.com/repos/akfamily/akshare/git/blobs/eee3667df6fea86e76bef4b0874502d11bc4946d",
+      "git_blob_sha": "eee3667df6fea86e76bef4b0874502d11bc4946d",
+      "tree_sha": "fac1e50ebf9b907960d6aab4c3df658559689f39",
+      "captured_at_utc": "2026-10-03T11:53:07.523613+00:00",
+      "sha256": "d2a4c09d55d9362c8c7e58ec82f78d198cf6d2c2daf004033eef42ded915050d",
+      "bytes": 65445,
+      "path": ".cache/phase1/source-alternatives/stock_hist_em.py",
+      "metadata_path": ".cache/phase1/source-alternatives/stock_hist_em.metadata.json",
+      "metadata_sha256": "7e9479e34de19350367f388fcc5869bd26a3f187445cce5a40a85bc3defc0690"
+    }
+  ]
+}
