@@ -1,0 +1,51 @@
+{
+  "indexed_at_utc": "2026-10-03T09:23:11.788675+00:00",
+  "documents": [
+    {
+      "path": "datasets\\raw\\csi\\phase1-baseline\\announcement-14497.json",
+      "sha256": "651104e9e2950ad741f41392e0b1cfef1b006c2f41caffb1cc34bd0823b796d6",
+      "bytes": 50144
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-baseline\\attachment-2385.xlsx",
+      "sha256": "acbf06876606a980fd65c3e3185b7725634ad7530f4fa83ee1d3a3963ee23490",
+      "bytes": 673136
+    },
+    {
+      "path": "datasets\\raw\\source_documents\\phase1-rules\\baostock-access-rules-extract.txt",
+      "sha256": "2205c315f6b7936f3a38cbb70091998fa03c69191f8a9f314ac32c766d68d849",
+      "bytes": 2894
+    },
+    {
+      "path": "datasets\\raw\\source_documents\\phase1-rules\\csi-initial-list.json",
+      "sha256": "ff5b6ed0707f7880c730865a97200fed756ba5184459a0e2671505cf446e588f",
+      "bytes": 12335
+    },
+    {
+      "path": "datasets\\raw\\source_documents\\phase1-rules\\csi-page50.json",
+      "sha256": "4f49e3bd424b939f9415c7f42c26ec50d3c126299182b7c2633b800f12b07faa",
+      "bytes": 3835
+    },
+    {
+      "path": "datasets\\raw\\source_documents\\phase1-rules\\csi-page51.json",
+      "sha256": "5f88055afba72adbe08bbab7c14c287f5f0b095d69bab4516ac743fa634ee68b",
+      "bytes": 3956
+    },
+    {
+      "path": "datasets\\raw\\source_documents\\phase1-rules\\dataExplain.md",
+      "sha256": "bcea92bddcafbf3aaadbf0483a9631433b9efbcb1c84b22c2cf30e53cfa58751",
+      "bytes": 181371
+    },
+    {
+      "path": "datasets\\raw\\source_documents\\phase1-rules\\pythonAPI.md",
+      "sha256": "0437dafc182f56094876bb2d15e5045b60c15ab5322ea0b716925ef61a1c0f4a",
+      "bytes": 72580
+    }
+  ],
+  "official_api": "https://www.csindex.com.cn/csindex-home/announcement/queryAnnouncementById?id=14497",
+  "rules_url": "https://www.baostock.com/blacklist",
+  "rules_text": "Daily API calls <= 50000; no concurrent connections.",
+  "api_docs": "POST https://www.baostock.com/helpdocs/api/markdown/<filename>, JSON {}",
+  "observation_limit": "Initial document downloads did not capture HTTP response headers or separate request timestamps; this index proves current file bytes, not a historical publication vintage.",
+  "attachment_note": "attachment-2385.xlsx was identified by PK zip signature and official filename; not used for CSI300 first inline table."
+}
