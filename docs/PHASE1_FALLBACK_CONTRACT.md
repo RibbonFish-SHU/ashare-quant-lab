@@ -28,6 +28,14 @@ HTTP 200 或有效 body 都不能晋升失败 / 运行中元数据。worker 自�
 采集和读取时重新验证选择与边界。run 保存独立原计划文件及摘要，不能通过删改嵌入计划
 隐藏未完成请求。新来源自己的成功 / 缺失表不抵扣 BaoStock 的 401 个历史未完成请求。
 
+主代理授权剩余 90 只续采后，新增独立 `plan-continuation` 入口，生成
+`fallback-continuation-plan-v1`，配套 `public-http-run-v2`；原 pilot plan / run 版本和
+最多十只门禁保留。新计划绑定原 BaoStock run / 原计划及首批 run / 原计划四份文件摘要，
+重新核验首批十份权威 raw 后才排除已成功请求。首批必须为原 pilot 版本、完整十次成功，
+且对应同一缺失 100 个日线的原计划；续采固定剩余 90 只、字典序、2023 全年未复权。
+嵌入计划、排除集合、计数、来源、年份、原件身份或状态变化均拒绝。续采复用原采集锁、
+节流和停止策略，跨批计数仅为东方财富 `(10 + 续采成功数) / 100`。
+
 唯一联网实现为已核对东方财富固定端点，日频 `klt=101`、未复权 `fqt=0`，
 请求全为 2023-01-01 至 2023-12-31。腾讯仅复用离线 probe。不会调用包装器的当前行情
 或后续年份默认查询。本批不发出 BaoStock 请求。
@@ -74,6 +82,7 @@ BaoStock 的 `source-access/` 不变。只有本执行代理拥有本批采集�
 ```text
 python -m ashare_lab.fallback.cli probe --source-root <main> --reference <既有候选目录> --output <新目录>
 python -m ashare_lab.fallback.cli plan --baostock-run <原run> --original-plan <保留原计划> --output <新计划> --limit 10
+python -m ashare_lab.fallback.cli plan-continuation --baostock-run <原run> --original-plan <保留原计划> --pilot-run <首批run> --pilot-plan <首批原计划> --output <续采计划>
 python -m ashare_lab.fallback.cli collect --plan <新计划> --output <独立raw目录>
 python -m ashare_lab.fallback.cli build --run <独立raw目录/run.json> --reference <既有候选目录> --output <新目录>
 ```

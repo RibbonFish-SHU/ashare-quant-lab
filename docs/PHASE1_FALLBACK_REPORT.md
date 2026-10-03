@@ -121,6 +121,11 @@ CLI 用时 **11.145565 秒**：10 次尝试 / 10 只证券 / 10 次 HTTP 200，�
 任务本地记录脚本保留在 `.cache/phase1/fallback_execute.py` 与 `fallback_evidence.py`，
 不属于研究运行库。日志不覆盖，所有原始成功及先验失败证据保留。
 
+本地诊断曾用未指定 UTF-8 的 `Path.read_text()` 读取含中文绝对路径的计划，导致路径乱码和
+`FileNotFoundError`；显式指定 UTF-8 后验证通过。这发生在本地检查阶段，没有发出 HTTP，
+不能记作供应商失败。续采准备时一次 `rg` 搜索也引用了不存在的测试文件及未经展开的通配符；
+改用实际文件列表后继续，同样只是本地工具命令错误。首批真实供应商结果仍为十次 HTTP 200。
+
 ## 资源、进程和未完成验收
 
 本批 raw、两份候选和独立状态目录合计 **594,378 字节**，未清理任何原件或他人文件。
@@ -145,3 +150,26 @@ BaoStock 的 `source-restriction.json`、`wire-ledger.json`、原证券 run 和�
 本分支源码、采集与产物由执行代理负责并保留；主代理接手审阅、集成和下一范围决策。
 当前工具环境 `HERDR_ENV` 为空，未调用 Herdr 外部控制、未伪造上下文；通过当前对话及本报告交接，
 不向其他 pane 发送消息。旧 worktree、环境及全部有效证据保持完整。
+
+## 补充传输边界复核
+
+收到新的传输复现交接后，在 `6acd140` 上离线核对主代理保留的
+`fallback-short-body-d_o1unac` 和 `fallback-provenance-017ifohr`。
+两份旧复现记录的源码摘要与当前源文件不同；Content-Length 和失败 metadata 修复已在
+`2bb40e4`，本次没有修改生产源码、测试或重新采集。
+
+以已保存的真实 573 字节 / 5 行 body 模拟 HTTP：声明 583 字节时返回
+`incomplete_transfer`、`transfer_complete=false`，原始 body 保留，候选读取拒绝；
+声明恰好 573 字节以及无 Content-Length 的正常 EOF 两种完整响应均返回 complete，
+读取 5 行。模拟连接重置返回可重试的 `transport_error`，失败 metadata 仍无法晋升。
+原先接受 5 行的失败元数据 fixture 现按 `HTTP raw is not a complete successful response` 拒绝。
+
+13 项相关回归通过（35 deselected，0.29 秒），涵盖有限重试、challenge 停止、失败清单、
+旧格式例外及传输长度；沿用未变化源码的 186 项完整测试和 Ruff 证据。
+既有保守策略不变：`transport_error` / `worker_timeout` 最多两次尝试；
+`incomplete_transfer` 拒绝并终止，不在此次复核中自动扩大重试范围。
+
+source-state 证据见 [phase1_fallback_transfer_recheck.json](evidence/phase1_fallback_transfer_recheck.json)。
+10 份受保护 fixture / 原件 / 原 run / 两个来源账本前后摘要相同；联网请求 0，
+生产来源状态文件未写入，无待运行采集进程。离线输出保留在
+`artifacts/fallback-transfer-recheck/`，任务脚本位于 `.cache/phase1/recheck_transfer.py`。

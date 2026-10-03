@@ -1,0 +1,250 @@
+{
+  "schema_version": "fallback-transfer-recheck-v1",
+  "verified_at_utc": "2026-10-03T12:58:59.034293+00:00",
+  "scope": "Offline replay using retained real response bytes and simulated transport only",
+  "online_requests": 0,
+  "research_eligible": false,
+  "source_state": {
+    "checkout_commit": "6acd140398d47bbd495148d275ea9b19e407588d",
+    "production_change_in_this_recheck": false,
+    "content_length_fix_commit": "2bb40e42bc1fc7c506d6c2389cbbb98d3a13340d",
+    "files": [
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\src\\ashare_lab\\fallback\\collect.py",
+        "sha256": "c1ed5a786090a37c456faab41f31a07e7778884751daccb14b6247f22dedb406",
+        "bytes": 16506
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\src\\ashare_lab\\fallback\\pipeline.py",
+        "sha256": "3a335db9e0cfa97853133074b219784bb14ce2d1a22f0c1ca4298d357f1bbb33",
+        "bytes": 24927
+      }
+    ],
+    "old_reproduction_collect_sha256": "00d94eabd661506662c9cbdb2ea11b8e8f33788eeff744c369baaa67de3ffe27",
+    "old_reproduction_pipeline_sha256": "97a026bd6cb881e94fa72b924b5b5772ff7c88f5fe2d1709a5358708db360802"
+  },
+  "cases": [
+    {
+      "case": "short_declared_body",
+      "classification": "incomplete_transfer",
+      "transfer_complete": false,
+      "declared_length": "583",
+      "received_length": 573,
+      "body_preserved": true,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\short_declared_body\\metadata.json",
+        "sha256": "986864dccc69db64b93ef60bb18278f5ae448109724dc50b9e5e93b1e37e1154",
+        "bytes": 1429
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\short_declared_body\\response.bin",
+        "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+        "bytes": 573
+      },
+      "loader_accepted": false,
+      "rejection": "HTTP raw is not a complete successful response"
+    },
+    {
+      "case": "complete_declared_body",
+      "classification": "complete",
+      "transfer_complete": true,
+      "declared_length": "573",
+      "received_length": 573,
+      "body_preserved": true,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\complete_declared_body\\metadata.json",
+        "sha256": "126e3dbead49890b93947c4d9d01a794b36d055c002276ae6fd3984227fa821f",
+        "bytes": 1354
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\complete_declared_body\\response.bin",
+        "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+        "bytes": 573
+      },
+      "loader_accepted": true,
+      "rows": 5
+    },
+    {
+      "case": "complete_without_content_length",
+      "classification": "complete",
+      "transfer_complete": true,
+      "declared_length": null,
+      "received_length": 573,
+      "body_preserved": true,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\complete_without_content_length\\metadata.json",
+        "sha256": "8ed4c0256b94c364d00a42aa8a40b8378077ec5c5d90b0babfe324e140d47dc1",
+        "bytes": 1321
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\complete_without_content_length\\response.bin",
+        "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+        "bytes": 573
+      },
+      "loader_accepted": true,
+      "rows": 5
+    },
+    {
+      "case": "retryable_transport_error",
+      "classification": "transport_error",
+      "transfer_complete": false,
+      "declared_length": null,
+      "received_length": 0,
+      "body_preserved": false,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\retryable_transport_error\\metadata.json",
+        "sha256": "b7e8e371291694d65668054c5381bb1f537487f53007c37908dc6133bcbfa353",
+        "bytes": 1408
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\retryable_transport_error\\response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "loader_accepted": false,
+      "rejection": "HTTP raw is not a complete successful response"
+    }
+  ],
+  "failed_metadata": {
+    "old_accepted_rows": 5,
+    "current_rejection": "HTTP raw is not a complete successful response",
+    "fixture": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-provenance-017ifohr\\metadata.json",
+      "sha256": "f1e0d0cf2624dea838c2ef75724ec557e93c9ab01433183d437083c20cad9642",
+      "bytes": 1701
+    }
+  },
+  "retry_policy": {
+    "retryable_statuses": [
+      "transport_error",
+      "worker_timeout"
+    ],
+    "max_attempts_per_request": 2,
+    "incomplete_transfer": "terminal by existing conservative policy; not promoted or retried automatically",
+    "production_source_state_touched": false
+  },
+  "protected_before": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-short-body-d_o1unac\\metadata.json",
+      "sha256": "091dfc8139497779113236710449b8d2cd083c422410435f356c196f82ce496d",
+      "bytes": 1354
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-short-body-d_o1unac\\reproduction.json",
+      "sha256": "648da20fd6de2a9f3f5cb528e71d788b3726d6420aaff0b3c6d0bf1b5fa05a83",
+      "bytes": 374
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-short-body-d_o1unac\\response.bin",
+      "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+      "bytes": 573
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-provenance-017ifohr\\metadata.json",
+      "sha256": "f1e0d0cf2624dea838c2ef75724ec557e93c9ab01433183d437083c20cad9642",
+      "bytes": 1701
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-provenance-017ifohr\\reproduction.json",
+      "sha256": "7b36ddbd8368d061526aac94917d315842d977b066e694aac45f9b0b1707e323",
+      "bytes": 441
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\000001-20230718.response.txt",
+      "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+      "bytes": 573
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json",
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+      "bytes": 938
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json",
+      "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+      "bytes": 145
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\eastmoney-source-access\\wire-ledger.json",
+      "sha256": "dff6bfad760d436ba668bf055d79f197bc3217247174d9bdda514863b6f4c3ed",
+      "bytes": 3628
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+      "sha256": "8cc5edf4013ce072c73dd568e457607ece3611b33a446820b53eaeb72acb4083",
+      "bytes": 25971
+    }
+  ],
+  "protected_after": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-short-body-d_o1unac\\metadata.json",
+      "sha256": "091dfc8139497779113236710449b8d2cd083c422410435f356c196f82ce496d",
+      "bytes": 1354
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-short-body-d_o1unac\\reproduction.json",
+      "sha256": "648da20fd6de2a9f3f5cb528e71d788b3726d6420aaff0b3c6d0bf1b5fa05a83",
+      "bytes": 374
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-short-body-d_o1unac\\response.bin",
+      "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+      "bytes": 573
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-provenance-017ifohr\\metadata.json",
+      "sha256": "f1e0d0cf2624dea838c2ef75724ec557e93c9ab01433183d437083c20cad9642",
+      "bytes": 1701
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-provenance-017ifohr\\reproduction.json",
+      "sha256": "7b36ddbd8368d061526aac94917d315842d977b066e694aac45f9b0b1707e323",
+      "bytes": 441
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\000001-20230718.response.txt",
+      "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+      "bytes": 573
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json",
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+      "bytes": 938
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json",
+      "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+      "bytes": 145
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\eastmoney-source-access\\wire-ledger.json",
+      "sha256": "dff6bfad760d436ba668bf055d79f197bc3217247174d9bdda514863b6f4c3ed",
+      "bytes": 3628
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+      "sha256": "8cc5edf4013ce072c73dd568e457607ece3611b33a446820b53eaeb72acb4083",
+      "bytes": 25971
+    }
+  ],
+  "protected_unchanged": true,
+  "regression": {
+    "command": "python -m pytest -q tests/test_fallback.py -k \"fetch_and_offline_loader or transport_retries or challenge_stops or valid_body_cannot or complete_entry or complete_raw_loads\"",
+    "result": "13 passed, 35 deselected in 0.29s",
+    "exit_code": 0,
+    "log": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\targeted.txt",
+      "sha256": "fd08a78ad295803e93b207fa2528cac076eb3397451ea194acea179320906539"
+    }
+  },
+  "reused_verification": {
+    "commit": "3b5c9fe636c6df16f65f8450551d744059d2973d",
+    "full": "186 passed in 4.10s",
+    "ruff": "passed",
+    "reason": "Production source and tests unchanged; targeted fixture recheck only."
+  },
+  "raw_result": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-transfer-recheck\\result.json",
+    "sha256": "bd13784bbcc3094cdf4ca55aacca82a120ac68fde0f6adadd68b5a9a8017e548"
+  }
+}
