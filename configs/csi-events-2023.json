@@ -79,6 +79,49 @@
         "603882.SH",
         "688169.SH"
       ]
+    },
+    {
+      "id": "csi-15044",
+      "source_url": "https://www.csindex.com.cn/#/about/newsDetail?id=15044",
+      "source_sha256": "1ccc9012bcb5e539c662232dd26cd7cc17c98923621e2a1970ef4d5bb1fa6ded",
+      "source_artifact": "csi-20231124-adjustments.pdf",
+      "extraction": "first PDF page, text extraction and rendered page visually checked; 14 CSI300 replacements",
+      "publish_date": "2023-11-24",
+      "publish_precision": "day",
+      "effective_after_close_date": "2023-12-08",
+      "first_trading_date": "2023-12-11",
+      "added": [
+        "000999.SZ",
+        "002603.SZ",
+        "300308.SZ",
+        "301269.SZ",
+        "600023.SH",
+        "600372.SH",
+        "600489.SH",
+        "600515.SH",
+        "600938.SH",
+        "601059.SH",
+        "601916.SH",
+        "688041.SH",
+        "688256.SH",
+        "688271.SH"
+      ],
+      "removed": [
+        "000723.SZ",
+        "002064.SZ",
+        "002120.SZ",
+        "002414.SZ",
+        "002756.SZ",
+        "300207.SZ",
+        "300601.SZ",
+        "300769.SZ",
+        "600383.SH",
+        "600763.SH",
+        "600884.SH",
+        "601216.SH",
+        "603185.SH",
+        "688005.SH"
+      ]
     }
   ]
 }
