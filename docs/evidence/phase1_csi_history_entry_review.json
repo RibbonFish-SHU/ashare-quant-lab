@@ -1,0 +1,89 @@
+{
+  "reviewed_at_utc": "2026-10-03T12:34:57.145043+00:00",
+  "research_eligible": false,
+  "request_count": 5,
+  "pages": [
+    "https://www.csindex.com.cn/#/indices/family/detail?indexCode=000300",
+    "https://www.csindex.com.cn/#/dataService/indexConstituent"
+  ],
+  "files": [
+    {
+      "path": ".cache/phase1/csi-history-discovery/000300-material-links.json",
+      "sha256": "709033787153989586a4b76929ebdce3d38971b14c08bd94a69853e1efd5a7f4",
+      "bytes": 7087
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/000300-material-links.metadata.json",
+      "sha256": "377713d068e73e5004365716fd079e07041a255f78d3091c773953fda9f86803",
+      "bytes": 272
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/app.3d50b32e.js",
+      "sha256": "b9137d56b66ae34b1ae0410157deee44ba0658e4b8ed89d0decb5856eae92aad",
+      "bytes": 978869
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/app.3d50b32e.metadata.json",
+      "sha256": "7765f991aec519248200271430352dded877113672d56c6352e640375ab05b05",
+      "bytes": 299
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/chunk-11a97808.d4db8a3b.js",
+      "sha256": "20980bec46a780ad4135156ad931174f51d622803465ac9cbd4399df853c92d8",
+      "bytes": 160689
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/chunk-11a97808.d4db8a3b.metadata.json",
+      "sha256": "8a0e58db39f7c35682e67f17a00b2cc4781d198613a56fec40c232f2b2c83351",
+      "bytes": 241
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/chunk-6af41558.b383b8cb.js",
+      "sha256": "102121a3f8726caa4f00d7fab6434ff8072b367ba878a03fc1e88bf94f8098dc",
+      "bytes": 16208
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/chunk-6af41558.b383b8cb.metadata.json",
+      "sha256": "f2f725ea92c65ef17f0480c6433d8cb5fbe9decb6d753543ca6c63f0890d164c",
+      "bytes": 240
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/index-request.json",
+      "sha256": "17b784318db81304d3232c6cd09d20545c6629366893ed36e983e6b03206bed0",
+      "bytes": 269
+    },
+    {
+      "path": ".cache/phase1/csi-history-discovery/index.html",
+      "sha256": "d65b5e33ef4659694ecea86585a5cc48ddd24c5327efce4442b6a9f2e9e5f6a9",
+      "bytes": 19563
+    }
+  ],
+  "observed_constituent_links": {
+    "样本权重": [
+      {
+        "fileName": "000300closeweight",
+        "filePath": "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/file/autofile/closeweight/000300closeweight.xls?20261003183229",
+        "fileType": "xls"
+      }
+    ],
+    "样本列表": [
+      {
+        "fileName": "000300cons",
+        "filePath": "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/file/autofile/cons/000300cons.xls",
+        "fileType": "xls"
+      }
+    ]
+  },
+  "frontend_query_excerpts": {
+    "detail_material_query": "getRelativeMaterial:function(){var e=this,t=\"zh\"==this.$i18n.locale?2:1,a={fileLang:t,indexCode:this.indexCode};this.materialList=[],Object(h[\"I\"])(a).then((function(t){if(200!=t.code)throw t;var a=t.data;for(var i in a)if(a[i]){var n={fileName:e.$t(st[i]),fileType:a[i][0][\"fileType\"],filePath:a[i][0][\"filePath\"]};\"指数单张\"==i&&a[i].length>1&&(n.others=a[i].slice(1)),e.materialList.push(n)}})).catch((function(e){console.log(e)}))},getRelativeProduct:function(){var e=this;this.relativeProductParams.",
+    "constituent_search_query": "searchSample:function(){var t=this;this.loading=!0;var e={searchInput:this.sampleInfo,pageNum:this.pagination.current,pageSize:this.pagination.pageSize,sortField:this.sorter.sortField,sortOrder:this.sorter.sortOrder};Object(s[\"o\"])(e).then((function(e){if(200!=e.code)throw e;t.result=e.data,t.pagination.total=e.total})).catch().finally((function(e){t.loading=!1,t.tableVisible=!0}))},onInputFocus:function(){this.sRcodeList.length>0?this.visible=!0:this.visible=!1},onInputClear:function(){this.res",
+    "date_label_query": "queryDate:function(){var t=this;p.a.get(\"/csindex-home/indexInfo/index-sample-information-trade-date-new\").then((function(e){t.updateDate=e.data?e.data+\"\":\"\"})).catch((function(t){console.error(\"indexConstituent:\",t)}))},changeURLArg:function(t,e){var n=location.href.split(\"?\")[0]+\"?\".concat(t,\"=\").concat(e);history.replaceState(null,null,n)},handleClick:function(t){this.clearTimeoutId&&clearTimeout(this.clearTimeoutId),this.visible=!1;var e=\"zh\"==this.$i18n.locale?\"securityName\":\"securityNameEn"
+  },
+  "observations": [
+    "Detail-page material requests use fileLang and indexCode, with no historical date parameter in the observed function.",
+    "Observed constituent search uses searchInput, pageNum, pageSize, sortField and sortOrder; date is a separate update label.",
+    "Material metadata links to unversioned 000300cons.xls and a closeweight URL carrying a current cache timestamp. The files were not downloaded."
+  ],
+  "conclusion": "These observed public entry points did not supply a date-qualified January 2023 full constituent archive. This does not prove no other official or licensed historical channel exists.",
+  "market_quote_requests": 0
+}
