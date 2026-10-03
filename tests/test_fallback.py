@@ -589,3 +589,24 @@ def test_transport_retries_are_bounded_and_do_not_skip_to_another_security(tmp_p
     assert len({e["query_id"] for e in result["attempts"]}) == 1
     collector.collect(plan, tmp_path / "run", project_root=tmp_path)
     assert len(calls) == 2
+
+
+def test_next_worker_waits_one_second_after_previous_completion(tmp_path, monkeypatch):
+    plan = configure_fake_collector(tmp_path, monkeypatch)
+    now, starts, finished = [10.0], [], []
+    monkeypatch.setattr(collector.time, "time", lambda: now[0])
+    monkeypatch.setattr(
+        collector.time, "sleep", lambda seconds: now.__setitem__(0, now[0] + seconds)
+    )
+
+    def worker(*args, **kwargs):
+        starts.append(now[0])
+        now[0] += 0.6 if len(starts) == 1 else 0.1
+        result = successful_worker(*args, **kwargs)
+        finished.append(now[0])
+        return result
+
+    monkeypatch.setattr(collector.subprocess, "run", worker)
+    result = collector.collect(plan, tmp_path / "run", project_root=tmp_path)
+    assert result["status"] == "complete"
+    assert starts[1] - finished[0] >= 1.0
