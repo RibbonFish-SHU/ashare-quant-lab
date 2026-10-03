@@ -45,6 +45,7 @@ def main():
     parser.add_argument("--announcement", type=Path, required=True)
     parser.add_argument("--events", type=Path, required=True)
     parser.add_argument("--run", type=Path, required=True)
+    parser.add_argument("--original-plan", type=Path, action="append", default=[])
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists():
@@ -59,11 +60,13 @@ def main():
     tables.feed(doc["content"])
     pairs = [r for r in tables.tables[0] if len(r) == 4 and len(r[0]) == 6 and r[0].isdigit()]
     assert len(pairs) == 15
+
     def as_symbol(number):
         return symbol(("sh." if number.startswith("6") else "sz.") + number)
+
     removed, added = {as_symbol(r[0]) for r in pairs}, {as_symbol(r[2]) for r in pairs}
     assert removed == set(event["removed"]) and added == set(event["added"])
-    records, _, _ = load_run(args.run)
+    records, _, _ = load_run(args.run, original_plans=args.original_plan)
     record = next(
         r
         for r in records

@@ -33,6 +33,7 @@ def main(argv=None):
     p.add_argument("stage", choices=("membership", "securities"))
     p.add_argument("--run", type=Path, action="append", default=[])
     p.add_argument("--events", type=Path)
+    p.add_argument("--original-plan", type=Path, action="append", default=[])
     p.add_argument("--output", type=Path, required=True)
     p = commands.add_parser("collect")
     p.add_argument("--plan", type=Path, required=True)
@@ -48,6 +49,7 @@ def main(argv=None):
     p.add_argument("--run", type=Path, action="append", required=True)
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--events", type=Path)
+    p.add_argument("--original-plan", type=Path, action="append", default=[])
     args = parser.parse_args(argv)
     root = args.project_root.resolve()
     if args.command.startswith("plan-"):
@@ -56,7 +58,7 @@ def main(argv=None):
         elif args.stage == "membership":
             value = membership_2023()
         else:
-            value = securities_2023(args.run, args.events)
+            value = securities_2023(args.run, args.events, original_plans=args.original_plan)
         write_plan(args.output, value)
         print(json.dumps({"plan": str(args.output), "queries": len(value["queries"])}))
         return 0
@@ -84,7 +86,13 @@ def main(argv=None):
             )
         )
         return 0 if result["status"] == "complete" else 2
-    _, quality = build(args.run, args.output, project_root=root, event_path=args.events)
+    _, quality = build(
+        args.run,
+        args.output,
+        project_root=root,
+        event_path=args.events,
+        original_plans=args.original_plan,
+    )
     print(
         json.dumps(
             {

@@ -55,10 +55,10 @@ def membership_2023():
     )
 
 
-def securities_2023(runs, events_path=None):
+def securities_2023(runs, events_path=None, *, original_plans=()):
     codes = set()
     for path in runs:
-        records, complete, _ = load_run(path)
+        records, complete, _ = load_run(path, original_plans=original_plans)
         if not complete:
             raise ValueError("finish membership collection before planning its union")
         for record in records:

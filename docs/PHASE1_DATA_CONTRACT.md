@@ -25,9 +25,24 @@
 - run 保存计划原文内容及文件摘要、代码提交 / dirty 状态 / 文件摘要、进程 PID 和每次执行参数。
   独立 attempt 不覆盖；恢复仅复用精确 API + 参数 + 来源 + SDK 匹配且校验通过的成功记录。
   失败历史留在 run 中；候选构建只选每个逻辑查询的成功记录，不将失败计成空返回。
+- 新 run 使用 `source-run-v2`，以独立的 `plan.original.json` 保存输入计划的原始字节；
+  `plan_sha256` / `plan_binding` 核对该副本，随后逐项验证嵌入计划相同。计划不允许空查询或重复查询。
+  旧 `source-run-v1` 没有独立副本，读取必须显式提供已保留原计划（CLI 可重复传 `--original-plan`）；
+  原文件字节摘要与 run 既有摘要匹配、解析内容与嵌入计划相同后才能使用。不猜测文件，不重写旧 run。
+  只保留语义相同但字节不同的文件不足以核实旧摘要，需找回原件。候选 manifest 记录实际绑定路径 / 摘要。
+  此绑定用于核验本项目保留的计划原件，不是供应商签名，也不证明同时篡改全部证据时的真实性。
+- `load_run`、缓存复用和 `collect` 恢复共用权威 raw 验证。新 raw 必须 source=baostock、SDK=0.9.4、
+  status=complete、error_code="0" 且无异常；相邻原始归档 manifest、响应摘要和表结构也须通过。
+  run entry 的 API、参数、来源、SDK、错误码、行数及已有采集元数据不得与 raw 矛盾。失败 / 部分响应
+  不因 entry 写 complete 或 reused 而晋升。合法零行仍可成功；历史失败 attempt 保留但不计入成功。
+  恢复验证在改写 run 或启动 worker 前完成；同查询的冲突捕获不能静默选最后一份。
 - Phase 0 旧归档校验 capture 与 Parquet 摘要后复用。一个旧 followup capture 未自带 SDK 名称，
   依据已审阅的 Phase 0 脚本 / 报告显式记为 `sdk_basis=phase0_report_and_script`；其传输完整性记为
   `legacy_not_instrumented`，不伪称通过新采集器的逐次 send 检查。
+  该缺失身份例外只适用于已核实的原捕获摘要
+  `f9e751c1de6fcae1d9e5a96054baeb7ee30777f66d5ff6acd1a9ce474e2cfe49`，不对未知旧捕获默认补齐身份。
+  旧 capture 的 error_code / exception / 如有的 status、原 archive 的完成状态、参数、行数、
+  Parquet 摘要及逐值内容一并核对；旧 manifest 不能盖过 capture 的错误码。无逐次分页检查的历史限制仍保留。
 - 允许查询的日期为 2010–2023，必须显式 ISO 日期。2023 计划只为当前开发批次；2022 年末成员 /
   日历只用于验收年初基准。日线固定 daily、未复权；不提供默认 today 或封存行情的入口。
 

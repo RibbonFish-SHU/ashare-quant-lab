@@ -12,7 +12,7 @@ $phase1Wheel = 'E:\量化\ashare-quant-lab\.cache\phase0\data-probe\baostock-0.9
 $env:PYTHONPATH = 'src'
 $env:PYTHONIOENCODING = 'utf-8'
 & $phase1Python -m ashare_lab.data.cli collect --plan configs/phase1-representative.json --output datasets/raw/phase1-representative --reuse-root $phase1Raw --offline
-& $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-representative/run.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-representative
+& $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-representative/run.json --original-plan configs/phase1-representative.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-representative
 ```
 
 代表计划由 `plan-reuse --raw-root <root> --output <new.json>` 生成，精确复用 56 个原始成功请求。
@@ -22,19 +22,23 @@ $env:PYTHONIOENCODING = 'utf-8'
 
 ```powershell
 & $phase1Python -m ashare_lab.data.cli collect --plan configs/phase1-membership-2023.json --output datasets/raw/phase1-membership-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel
-& $phase1Python -m ashare_lab.data.cli plan-2023 securities --run datasets/raw/phase1-membership-2023/run.json --events configs/csi-events-2023.json --output .cache/phase1/plans/securities-2023.json
+& $phase1Python -m ashare_lab.data.cli plan-2023 securities --run datasets/raw/phase1-membership-2023/run.json --original-plan configs/phase1-membership-2023.json --events configs/csi-events-2023.json --output .cache/phase1/plans/securities-2023.json
 & $phase1Python -m ashare_lab.data.cli collect --plan .cache/phase1/plans/securities-2023.json --output datasets/raw/phase1-securities-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel --batch-size 20
 ```
 
 最新 2023 离线候选构建如下。此输出目录已存在，重放时改用新的目录；不混入代表集内的早年样本。
 
 ```powershell
-& $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-membership-2023/run.json --run datasets/raw/phase1-securities-2023/run.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-2023-partial-v2-coverage
+& $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-membership-2023/run.json --run datasets/raw/phase1-securities-2023/run.json --original-plan configs/phase1-membership-2023.json --original-plan .cache/phase1/plans/securities-2023.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-2023-provenance-verified
 ```
 
 实际输出 75,271 行，返回 2；质量报告明确 1,403 个计划请求中 1,002 个成功、401 个未完成。
 证券部分为 943/1,344；缺失请求 ID 在 `quality.json` 的 `acquisition_coverage` 中，完整参数在 raw run
 的 `plan.queries` 中。56 个合法零行响应与 400 个未执行请求、1 个未成功请求分开计数。
+
+旧 v1 run 必须显式提供原计划，其文件摘要和嵌入内容均验证后才读取；上面命令保留了本轮原件路径。
+新采集使用 v2 run 和同目录原计划副本，无需额外参数。复制 / 归档新 run 时须一起保留
+`plan.original.json`。`verify_csi_baseline.py` 也支持 `--original-plan configs/phase1-representative.json`。
 
 年覆盖是已观察 / 已公告代码的并集，不是已认证历史股票池。周度查询发现变化候选，还需公告。
 生成并集时包含已核对公告中的股票，避免供应商陈旧快照遗漏年初应有股票。

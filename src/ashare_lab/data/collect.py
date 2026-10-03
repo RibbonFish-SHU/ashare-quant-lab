@@ -10,8 +10,10 @@ import time
 import uuid
 
 from ashare_lab.runtime import code_identity
-from .queries import query_id, validate_query
-from .raw import archive_attempt, cached_records, digest, read_reference, save_json, utc_now
+from .binding import snapshot_plan, validate_plan
+from .pipeline import load_run
+from .queries import query_id
+from .raw import archive_attempt, cached_records, digest, save_json, successful_entry, utc_now
 
 
 @contextmanager
@@ -176,7 +178,7 @@ def collect(
 ):
     plan_path, output = Path(plan_path), Path(output).resolve()
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
-    queries = [validate_query(q) for q in plan["queries"]]
+    queries = validate_plan(plan)
     ids = [query_id(q) for q in queries]
     if len(set(ids)) != len(ids):
         raise ValueError("plan contains duplicate provider requests")
@@ -194,16 +196,19 @@ def collect(
     path = output / "run.json"
     with source_lock(access_state):
         if path.exists():
-            run = json.loads(path.read_text(encoding="utf-8"))
+            verified, _, run = load_run(path, original_plans=[plan_path])
             if run["plan_sha256"] != digest(plan_path):
                 raise ValueError("cannot resume with a different plan")
         else:
+            verified = []
+            binding = snapshot_plan(plan_path, output)
             run = {
-                "schema_version": "source-run-v1",
+                "schema_version": "source-run-v2",
                 "data_kind": "real_raw",
                 "research_eligible": False,
                 "started_at_utc": utc_now(),
-                "plan_sha256": digest(plan_path),
+                "plan_sha256": binding["sha256"],
+                "plan_binding": binding,
                 "plan": plan,
                 "queries": [],
                 "access_rule_url": "https://www.baostock.com/blacklist",
@@ -233,10 +238,7 @@ def collect(
             }
         )
         cache = cached_records([*reuse_roots, output])
-        done = {r["query_id"] for r in run["queries"] if r["status"] in {"complete", "reused"}}
-        for entry in run["queries"]:
-            if entry["status"] in {"complete", "reused"}:
-                read_reference(entry["raw_locator"])
+        done = {r["query_id"] for r in verified}
         run["status"] = "running"
 
         def log(event, **data):
@@ -282,6 +284,7 @@ def collect(
                 key = entry["query_id"]
                 attempts[key] = attempts.get(key, 0) + 1
                 if entry["status"] == "complete":
+                    successful_entry(entry)
                     done.add(key)
             save_json(path, run)
             failure = next((e for e in entries if e["status"] != "complete"), None)
