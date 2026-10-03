@@ -1,0 +1,335 @@
+{
+  "verified_at_utc": "2026-10-03T12:42:47.808479+00:00",
+  "implementation_commit": "2bb40e42bc1fc7c506d6c2389cbbb98d3a13340d",
+  "scope": "Independent main-agent offline recheck of two constructed pre-review failures. No HTTP requests.",
+  "failed_metadata_rejection": "HTTP raw is not a complete successful response",
+  "failed_metadata_fixture": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-provenance-017ifohr\\metadata.json",
+  "short_transfer": {
+    "classification": "incomplete_transfer",
+    "transfer_complete": false,
+    "received_bytes": 573,
+    "declared_bytes": 583,
+    "body_preserved": true,
+    "fixture_directory": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\fallback-fixed-2s3vchq8"
+  },
+  "research_eligible": false,
+  "integration": {
+    "merge_commit": "1fac791bf6674d1eba0c8d3bd5217a774d320c69",
+    "pytest": "190 passed in 4.27s",
+    "ruff": "All checks passed; 42 files already formatted",
+    "commands": [
+      ".venv/Scripts/python.exe -m pytest -q",
+      ".venv/Scripts/ruff.exe check .",
+      ".venv/Scripts/ruff.exe format --check ."
+    ],
+    "online_collection_covered_by_this_record": false
+  },
+  "pilot_artifact_review": {
+    "verified_at_utc": "2026-10-03T12:51:49.934162+00:00",
+    "reviewer_source_commit": "1fac791bf6674d1eba0c8d3bd5217a774d320c69",
+    "audit_script_sha256": "9d0a4225dcfec42553b91ea63426ec25de1377aacd3203923ed078e9bb5ed8f7",
+    "scope": "Offline read and comparison of retained artifacts; no HTTP, model, server or GPU calls.",
+    "run_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+    "run_sha256": "8cc5edf4013ce072c73dd568e457607ece3611b33a446820b53eaeb72acb4083",
+    "plan_sha256": "ff10586e24213fa69f1744704ab62ff95205579851c6ee60c2b73cb9ddb102b9",
+    "source_commit": "2bb40e42bc1fc7c506d6c2389cbbb98d3a13340d",
+    "planned": 10,
+    "successful": 10,
+    "attempts": 10,
+    "missing": 0,
+    "rows": 2420,
+    "raw_to_parquet_verified_numeric_values": 14520,
+    "rows_per_symbol": {
+      "000938.SZ": 242,
+      "000963.SZ": 242,
+      "000977.SZ": 242,
+      "000983.SZ": 242,
+      "000999.SZ": 242,
+      "001289.SZ": 242,
+      "001979.SZ": 242,
+      "002001.SZ": 242,
+      "002007.SZ": 242,
+      "002008.SZ": 242
+    },
+    "raw_captures": [
+      {
+        "query_id": "54f40fd51bb2551265cf8ae3d0b12bae7782e1e1f36669b0c400201b70e790b6",
+        "bytes": 19233,
+        "rows": 242,
+        "metadata_sha256": "b830d71908ba3f8ce5bed3a31232fc00410f8afc3f850471cd06b31844ef5758",
+        "response_sha256": "a8364c643482f318d702773541d6ea0bcacc54ab68bd2a35a162a9492b849928"
+      },
+      {
+        "query_id": "811f16a72ac85572672a0370c69b6424fc65be0af651f29f0e83923f4f39c645",
+        "bytes": 18918,
+        "rows": 242,
+        "metadata_sha256": "493fece165fc11d427a64ff51f030defd3cd6693c972f90d1e9e6bee09673ee5",
+        "response_sha256": "022d18e1e38713b5496d6f8ecd6d5591e92905ba91a23094f2d7bbd65ca9b1c0"
+      },
+      {
+        "query_id": "0c645edc462bc5c88bf0668f11e15cddf751fa69fa82f7920561639ed3ed3066",
+        "bytes": 19489,
+        "rows": 242,
+        "metadata_sha256": "f45f1c656e8b474de040e37a436ef0f3c001305554bff04ab2fba79d43c354ea",
+        "response_sha256": "5fe55f8b64c514a6b01f8cbb3ae3aeed12e6cb2000ed840c4b74c9b898562b79"
+      },
+      {
+        "query_id": "d021bf747ef9b20fae4abb7427f1af4896a8009c00fc0fe81066d7325488e6dd",
+        "bytes": 18621,
+        "rows": 242,
+        "metadata_sha256": "16fb281a95528d848c9d45f6bd1ef135a8aaf43ba3ea12043a74de8a9dd32da0",
+        "response_sha256": "d71430734a3b3b1f65167827134a963c768ba05d785ade9a1630b68619a153b0"
+      },
+      {
+        "query_id": "edfe7f7f1d21c2e2b4e48269f537176d388713919e59f0ee861ba597b9d35b99",
+        "bytes": 18900,
+        "rows": 242,
+        "metadata_sha256": "f22b12fec77a2f84bfb8daf8619ac97347f1726b2ec161d352512c08e4c56ac3",
+        "response_sha256": "0d33f8816e688d52b3cec3be54ab0b0caaa3ced39bed4b58ce82d58833cce569"
+      },
+      {
+        "query_id": "815687fde7ee611ddfa7c9b4c9f6b985fe99e036cbb0fcd47487a62b90dac461",
+        "bytes": 18662,
+        "rows": 242,
+        "metadata_sha256": "1829e33bab53556e47b49c350dda4c9dc6d25c70f49e76afb532d1f343b66635",
+        "response_sha256": "dbf49739b2b4f23ab6f3e6b15ee40e2379ab04eba2c935b04442e218bb79af1b"
+      },
+      {
+        "query_id": "b81129f35e50c05d62f7db6ede2415d5ea40bf66e9c6fc81461e10d91c16d682",
+        "bytes": 19024,
+        "rows": 242,
+        "metadata_sha256": "633c77a834ca4a8ad9da812fa1542b55e76b72d0d361562dba0650b52a30212b",
+        "response_sha256": "56ae68c3c30e6dea33ad9c41f9e24f6f058a3b8feb0e08fcff72028276a8970c"
+      },
+      {
+        "query_id": "d9250245047e37797a51d8d5b57390547bcd3e40bb7b2f6f9175b31b5c42277d",
+        "bytes": 18902,
+        "rows": 242,
+        "metadata_sha256": "9ca827adaa987eda2837957590dc7585d68258e1fa76adb4005aa0f856553f95",
+        "response_sha256": "a218f727d3c913a9f8ee9e73b720f742739723bfa2d2208f6851f379e8d70582"
+      },
+      {
+        "query_id": "885d8c8c473dd6796ff53f7500fb4aa1b26b83c47ad6a13fd9f112422409bd6b",
+        "bytes": 18908,
+        "rows": 242,
+        "metadata_sha256": "79b578ba4fde415cfe69db81ac7a4252c58f900abb7a28e3ad47db3b9aa5a60a",
+        "response_sha256": "77790d4d79291ba4ba102ae2aa54cd037dc954ac77ca1fea2f842c9dbeed1061"
+      },
+      {
+        "query_id": "5f68d6c2565ac65afe252eeddb21d1eddf9c0f481bbfcb18821370e848fc5862",
+        "bytes": 18996,
+        "rows": 242,
+        "metadata_sha256": "79934e0a8de82d183b23b822a7510a1267ee6873d325d6ae171ccab4ee084333",
+        "response_sha256": "48f85b8bb8bea68d32273d23127041c909f144d3cd90cdff2058030c7037773c"
+      }
+    ],
+    "artifacts": {
+      "fallback-seven-probes": {
+        "directory": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes",
+        "manifest_sha256": "7d2eb665589ad77ba4ffde9ac82eb2910349e78348275c41e6688adc29e9af96",
+        "files": {
+          "bars.parquet": "d18773db3f7614b080eb911a93be1f25a116cac075bf4354a025877426cf9722",
+          "conversion-issues.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+          "quality.json": "6b2d15a33bdcf0fbfe30bf18fa80b3ff69d8f08d28199880c833d09dfd8db5a4"
+        },
+        "rows": 54,
+        "interval_rows": 33,
+        "parquet_duckdb_values_identical": true,
+        "checks": [
+          {
+            "name": "typed_conversion",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "duplicate_dates",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "response_order",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "outside_requested_interval",
+            "status": "unverified",
+            "count": 21
+          },
+          {
+            "name": "calendar_reference_coverage",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "calendar_missing_rows",
+            "status": "unverified",
+            "count": 6
+          },
+          {
+            "name": "listing_metadata",
+            "status": "unverified",
+            "count": 4
+          },
+          {
+            "name": "bars_on_closed_days",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "listing_boundaries",
+            "status": "unverified",
+            "count": 0
+          },
+          {
+            "name": "successful_empty_responses",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "cross_source_differences",
+            "status": "unverified",
+            "count": 47
+          },
+          {
+            "name": "historical_availability_and_execution",
+            "status": "unverified",
+            "count": 54
+          },
+          {
+            "name": "volume_and_amount_precision",
+            "status": "unverified",
+            "count": 54
+          }
+        ]
+      },
+      "eastmoney-2023-first10": {
+        "directory": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10",
+        "manifest_sha256": "9a56a71dc05b5f5bc887069b4774606a5ed626cf7bdd6f2d90cfaab038c90b14",
+        "files": {
+          "bars.parquet": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6",
+          "conversion-issues.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+          "quality.json": "33be9db5482a5759a061789812d529e71072182fe9f6bf4fa834f8aa1f5acb2a"
+        },
+        "rows": 2420,
+        "interval_rows": 2420,
+        "parquet_duckdb_values_identical": true,
+        "checks": [
+          {
+            "name": "typed_conversion",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "duplicate_dates",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "response_order",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "outside_requested_interval",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "calendar_reference_coverage",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "calendar_missing_rows",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "listing_metadata",
+            "status": "unverified",
+            "count": 10
+          },
+          {
+            "name": "bars_on_closed_days",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "listing_boundaries",
+            "status": "unverified",
+            "count": 0
+          },
+          {
+            "name": "successful_empty_responses",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "cross_source_differences",
+            "status": "unverified",
+            "count": 0
+          },
+          {
+            "name": "historical_availability_and_execution",
+            "status": "unverified",
+            "count": 2420
+          },
+          {
+            "name": "volume_and_amount_precision",
+            "status": "unverified",
+            "count": 2420
+          }
+        ]
+      }
+    },
+    "seven_probe_comparisons": 28,
+    "seven_probe_ohlc_equal_values": 112,
+    "request_start_intervals_seconds": [
+      1.0249,
+      0.995887,
+      1.005814,
+      1.011302,
+      0.989708,
+      1.00363,
+      1.002482,
+      1.000253,
+      1.00263
+    ],
+    "minimum_request_start_interval_seconds": 0.989708,
+    "pilot_one_second_start_interval_met": false,
+    "protected_inputs_unchanged": {
+      "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json": {
+        "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+        "bytes": 938
+      },
+      "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json": {
+        "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+        "bytes": 145
+      },
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\run.json": {
+        "sha256": "a4f5aad865370ea56f56bb7fa4151bdaeb7cb02f5ad69fec5e5a9efac98941df",
+        "bytes": 1678779
+      },
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json": {
+        "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df",
+        "bytes": 281838
+      }
+    },
+    "baostock_project_sends_unchanged": 1998,
+    "recorded_process_exit_evidence_sha256": "a389fda038f661da45ff0e5031369cbcbe8a00f0e31bd718837c96665f0d9d82",
+    "recorded_processes_exited": true,
+    "research_eligible": false
+  },
+  "post_pilot_spacing_fix": {
+    "implementation_commit": "3b5c9fe636c6df16f65f8450551d744059d2973d",
+    "merge_commit": "bb38f11dfaba13b4b2df7d213ab9ef63060e32ed",
+    "affected_tests": "48 passed in 0.59s",
+    "ruff": "All checks passed; 2 files already formatted",
+    "pilot_rerun": false
+  },
+  "review_tooling_notes": [
+    "Initial offline audit draft used DuckDB to_arrow_table unavailable in pinned version; changed to fetch_arrow_table.",
+    "PowerShell process-exit.json has UTF-8 BOM; audit reader switched to utf-8-sig. Neither issue changes raw captures or production code."
+  ]
+}
