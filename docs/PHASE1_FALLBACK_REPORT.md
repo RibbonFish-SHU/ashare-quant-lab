@@ -145,3 +145,26 @@ BaoStock 的 `source-restriction.json`、`wire-ledger.json`、原证券 run 和�
 本分支源码、采集与产物由执行代理负责并保留；主代理接手审阅、集成和下一范围决策。
 当前工具环境 `HERDR_ENV` 为空，未调用 Herdr 外部控制、未伪造上下文；通过当前对话及本报告交接，
 不向其他 pane 发送消息。旧 worktree、环境及全部有效证据保持完整。
+
+## 补充传输边界复核
+
+收到新的传输复现交接后，在 `6acd140` 上离线核对主代理保留的
+`fallback-short-body-d_o1unac` 和 `fallback-provenance-017ifohr`。
+两份旧复现记录的源码摘要与当前源文件不同；Content-Length 和失败 metadata 修复已在
+`2bb40e4`，本次没有修改生产源码、测试或重新采集。
+
+以已保存的真实 573 字节 / 5 行 body 模拟 HTTP：声明 583 字节时返回
+`incomplete_transfer`、`transfer_complete=false`，原始 body 保留，候选读取拒绝；
+声明恰好 573 字节以及无 Content-Length 的正常 EOF 两种完整响应均返回 complete，
+读取 5 行。模拟连接重置返回可重试的 `transport_error`，失败 metadata 仍无法晋升。
+原先接受 5 行的失败元数据 fixture 现按 `HTTP raw is not a complete successful response` 拒绝。
+
+13 项相关回归通过（35 deselected，0.29 秒），涵盖有限重试、challenge 停止、失败清单、
+旧格式例外及传输长度；沿用未变化源码的 186 项完整测试和 Ruff 证据。
+既有保守策略不变：`transport_error` / `worker_timeout` 最多两次尝试；
+`incomplete_transfer` 拒绝并终止，不在此次复核中自动扩大重试范围。
+
+source-state 证据见 [phase1_fallback_transfer_recheck.json](evidence/phase1_fallback_transfer_recheck.json)。
+10 份受保护 fixture / 原件 / 原 run / 两个来源账本前后摘要相同；联网请求 0，
+生产来源状态文件未写入，无待运行采集进程。离线输出保留在
+`artifacts/fallback-transfer-recheck/`，任务脚本位于 `.cache/phase1/recheck_transfer.py`。
