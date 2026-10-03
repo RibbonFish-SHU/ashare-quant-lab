@@ -1,0 +1,410 @@
+{
+  "observed_at_utc": "2026-10-03T08:05:40.297480+00:00",
+  "scope": "free-source capability and complete raw reads; no model or strategy execution",
+  "provider": "baostock",
+  "sdk": "0.9.4",
+  "sdk_wheel_sha256": "0bf71c6069ab5890ff3596632f9c3f8f1fbc6bfcac582c2f9d6a5c11ab2cfaf8",
+  "dataset": "datasets/raw/baostock/20261003-phase0-probe",
+  "manifest_sha256": "17f1583afc323ee5260e7154ef2277839f80458a493e94fd323945a585e91c24",
+  "raw_rows": 1318,
+  "capture_attempts": 15,
+  "complete_raw_tables": 14,
+  "preserved_failed_attempts": 1,
+  "canonical_reader_rejects_raw": true,
+  "research_eligible": false,
+  "parquet_and_duckdb_all_rows_equal_raw_responses": true,
+  "queries": [
+    {
+      "name": "members_2010",
+      "parameters": {
+        "date": "2010-01-04"
+      },
+      "rows": 300,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "members_2016",
+      "parameters": {
+        "date": "2016-01-04"
+      },
+      "rows": 300,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "members_2023_before",
+      "parameters": {
+        "date": "2023-06-09"
+      },
+      "rows": 300,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "members_2023_after",
+      "parameters": {
+        "date": "2023-06-12"
+      },
+      "rows": 300,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "calendar_2010",
+      "parameters": {
+        "start_date": "2010-01-01",
+        "end_date": "2010-01-10"
+      },
+      "rows": 10,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "calendar_2023",
+      "parameters": {
+        "start_date": "2023-06-08",
+        "end_date": "2023-06-14"
+      },
+      "rows": 7,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "bars_2010",
+      "parameters": {
+        "code": "sh.600000",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "start_date": "2010-01-04",
+        "end_date": "2010-01-08",
+        "frequency": "d",
+        "adjustflag": "3"
+      },
+      "rows": 5,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "bars_2023",
+      "parameters": {
+        "code": "sh.600000",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "start_date": "2023-06-08",
+        "end_date": "2023-06-14",
+        "frequency": "d",
+        "adjustflag": "3"
+      },
+      "rows": 5,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "factors_2010",
+      "parameters": {
+        "code": "sh.600000",
+        "start_date": "2010-01-01",
+        "end_date": "2010-12-31"
+      },
+      "rows": 1,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "factors_2023",
+      "parameters": {
+        "code": "sh.600000",
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31"
+      },
+      "rows": 1,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "delisted_security",
+      "parameters": {
+        "code": "sh.600747"
+      },
+      "rows": 1,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "st_2023",
+      "parameters": {
+        "date": "2023-06-09"
+      },
+      "rows": 0,
+      "status": "provider_or_probe_error_preserved",
+      "empty_strings": null
+    },
+    {
+      "name": "st_2023",
+      "parameters": {
+        "date": "2023-06-09"
+      },
+      "rows": 74,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "suspended_2023",
+      "parameters": {
+        "date": "2023-06-09"
+      },
+      "rows": 0,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 0
+    },
+    {
+      "name": "delisted_bars_2019",
+      "parameters": {
+        "code": "sh.600747",
+        "fields": "date,code,open,high,low,close,volume,amount,tradestatus,isST",
+        "start_date": "2019-11-25",
+        "end_date": "2019-12-13",
+        "frequency": "d",
+        "adjustflag": "3"
+      },
+      "rows": 14,
+      "status": "complete_raw_read_verified",
+      "empty_strings": 2
+    }
+  ],
+  "csi_2023_june_cross_check": {
+    "notice_id": 14796,
+    "publication_date": "2023-05-26",
+    "effective_at_text": "2023-06-09 after market close",
+    "first_effective_trading_date": "2023-06-12",
+    "removed": [
+      "002008",
+      "002032",
+      "002600",
+      "002602",
+      "300529",
+      "300595",
+      "601966",
+      "603882",
+      "688169"
+    ],
+    "added": [
+      "000617",
+      "000983",
+      "600732",
+      "600754",
+      "600875",
+      "601607",
+      "601699",
+      "601872",
+      "688223"
+    ],
+    "all_18_codes_match": true,
+    "pdf_page": 1,
+    "page_visually_checked": true
+  },
+  "sources": [
+    {
+      "url": "https://www.csindex.com.cn/csindex-home/announcement/queryAnnouncementById?id=14796&lang=cn",
+      "file": "datasets/raw/csi/20261003-phase0-probe/csi-announcement-14796.json",
+      "bytes": 2503,
+      "sha256": "a722b06558df6541a4cef2477bf7ece1df1e77ce9dafbbd62877ea68ad7b6fdb"
+    },
+    {
+      "url": "https://oss-ch.csindex.com.cn/notice/20230526172747-附件：部分指数样本调整名单.pdf",
+      "file": "datasets/raw/csi/20261003-phase0-probe/csi-20230526-adjustments.pdf",
+      "bytes": 773545,
+      "sha256": "5b6b0487112108e6bf6c962add3092e149683c2f7e7b3bbf72c404ec7f017354"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/home.md",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-probe/official-home.md",
+      "bytes": 10165,
+      "sha256": "5df532ba388c9d0dec4736453b79c77e15da7df98caca60683f3eaf9150b919e"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/stockKData.md",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-probe/official-stockKData.md",
+      "bytes": 12485,
+      "sha256": "2a6db3b24ab21a199aa17bd949dfbe545d3279007bea1664854f9b7c20542aac"
+    },
+    {
+      "url": "https://www.baostock.com/helpdocs/api/markdown/indexData.md",
+      "file": "datasets/raw/baostock_documentation/20261003-phase0-probe/official-indexData.md",
+      "bytes": 5367,
+      "sha256": "f1eb5fd6433fab60f8a126d75b1a5b2577578bd6cffae32d3c4ab826c25cb8fd"
+    }
+  ],
+  "limitations": [
+    "Weekly provider membership snapshots do not establish every daily effective change.",
+    "Historical publication times and vintage revisions remain unverified.",
+    "Two empty volume/amount fields on the sampled delisting date are preserved.",
+    "Empty suspended-list response does not establish absence of suspensions.",
+    "No historical price or membership query at/after 2024-01-01; no holdout returns or model scores."
+  ],
+  "annual_coverage_probe": {
+    "dataset": "datasets/raw/baostock/20261003-phase0-coverage",
+    "manifest_sha256": "b46b0c1edbf6183859c4d7cac994a4196fe32c9c6a024f8243411b7de72025e5",
+    "raw_rows": 3805,
+    "complete_raw_tables": 38,
+    "years": [
+      {
+        "year": 2010,
+        "members": 300,
+        "requested_member_date": "2010-01-04",
+        "returned_member_update_dates": [
+          "2010-01-04"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2011,
+        "members": 300,
+        "requested_member_date": "2011-01-04",
+        "returned_member_update_dates": [
+          "2011-01-03"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2012,
+        "members": 300,
+        "requested_member_date": "2012-01-04",
+        "returned_member_update_dates": [
+          "2012-01-02"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2013,
+        "members": 300,
+        "requested_member_date": "2013-01-04",
+        "returned_member_update_dates": [
+          "2012-12-31"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2014,
+        "members": 300,
+        "requested_member_date": "2014-01-02",
+        "returned_member_update_dates": [
+          "2013-12-30"
+        ],
+        "sample_bars": 7,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2015,
+        "members": 300,
+        "requested_member_date": "2015-01-05",
+        "returned_member_update_dates": [
+          "2015-01-05"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2016,
+        "members": 300,
+        "requested_member_date": "2016-01-04",
+        "returned_member_update_dates": [
+          "2016-01-04"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2017,
+        "members": 300,
+        "requested_member_date": "2017-01-03",
+        "returned_member_update_dates": [
+          "2017-01-02"
+        ],
+        "sample_bars": 6,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2018,
+        "members": 300,
+        "requested_member_date": "2018-01-02",
+        "returned_member_update_dates": [
+          "2018-01-01"
+        ],
+        "sample_bars": 7,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2019,
+        "members": 300,
+        "requested_member_date": "2019-01-02",
+        "returned_member_update_dates": [
+          "2018-12-24"
+        ],
+        "sample_bars": 7,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2020,
+        "members": 300,
+        "requested_member_date": "2020-01-02",
+        "returned_member_update_dates": [
+          "2019-12-30"
+        ],
+        "sample_bars": 7,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2021,
+        "members": 300,
+        "requested_member_date": "2021-01-04",
+        "returned_member_update_dates": [
+          "2021-01-04"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2022,
+        "members": 300,
+        "requested_member_date": "2022-01-04",
+        "returned_member_update_dates": [
+          "2021-11-15"
+        ],
+        "sample_bars": 5,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      },
+      {
+        "year": 2023,
+        "members": 300,
+        "requested_member_date": "2023-01-03",
+        "returned_member_update_dates": [
+          "2022-08-01"
+        ],
+        "sample_bars": 6,
+        "sample_calendar_days": 10,
+        "all_sample_open_dates_present": true
+      }
+    ],
+    "scope": "small calendar, membership and one liquid stock sample per year; not full-history validation",
+    "execution_seconds": 17.188
+  },
+  "combined_raw_rows": 5123,
+  "combined_complete_raw_tables": 52
+}
