@@ -1,0 +1,1055 @@
+{
+  "schema_version": "fallback-execution-evidence-v1",
+  "created_at_utc": "2026-10-03T12:51:18.909374+00:00",
+  "research_eligible": false,
+  "owner": "ashare-experiment=w8:p2",
+  "branch": "phase1/source-fallback",
+  "run_commit": "2bb40e42bc1fc7c506d6c2389cbbb98d3a13340d",
+  "post_run_timing_fix_commit": "3b5c9fe636c6df16f65f8450551d744059d2973d",
+  "initial_checks": {
+    "targeted": "47 passed in 0.49s",
+    "full": "185 passed in 3.72s",
+    "ruff": "passed"
+  },
+  "post_run_timing_checks": {
+    "before_fix": "1 failed, 47 deselected",
+    "targeted": "3 passed, 45 deselected in 0.32s",
+    "full": "186 passed in 4.10s",
+    "ruff": "passed"
+  },
+  "pre_review_reproduction": "6 failed, 24 deselected before metadata/quality correction",
+  "check_logs": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\full-after-timing.txt",
+      "bytes": 530,
+      "sha256": "486afbeda9d39e6e572d285659da30136566eb56f60c55db22af0cfc34615346"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\full.txt",
+      "bytes": 530,
+      "sha256": "0d26e7baadddf81e7575c92c4386ef0f717420fa723c41a47a86f1b941a80669"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\prereview-before.txt",
+      "bytes": 13260,
+      "sha256": "dcb94b48c4fa90789ed90c1ea7445e0afd1f49d210d06d031de392562b7d8e9b"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\ruff-after-timing.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\targeted-final.txt",
+      "bytes": 204,
+      "sha256": "f2acf3265e338699af4a1191a6aa8adc2757bad1837651917e171f05d8128ffd"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\targeted-first.txt",
+      "bytes": 204,
+      "sha256": "d59e75115f864e8b8dd8d297bf1bfaa9651ed3a69c690a4488b12b8694a0cdcf"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\timing-after.txt",
+      "bytes": 232,
+      "sha256": "f582bd0a9d954e8b149ad0b21c318ebf5460be960811820c3a6ff7b6b9296009"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-checks\\timing-before.txt",
+      "bytes": 3934,
+      "sha256": "994c8780d5926d3de3c5fcc0aba00e47da7afcea719eb121a4c6fd48fea3ca2e"
+    }
+  ],
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+    "dependencies": {
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1",
+      "duckdb": "1.3.2",
+      "pytest": "8.4.1",
+      "ruff": "0.12.2"
+    }
+  },
+  "task": {
+    "path": "E:\\量化\\ashare-quant-lab\\docs\\PHASE1_SOURCE_FALLBACK_PLAN.md",
+    "sha256": "22d0f34566bd79822d116cd9d0a6a79aec3bab9508c678a891237cf6a9c30729"
+  },
+  "execution_record": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-batch\\execution.json",
+    "bytes": 16325,
+    "sha256": "430356d980f90d4ce396b9344d40e9c691b759f6affb2825542eac9bc2719680"
+  },
+  "commands": [
+    {
+      "command": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.fallback.cli",
+        "probe",
+        "--source-root",
+        "E:\\量化\\ashare-quant-lab",
+        "--reference",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified",
+        "--output",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback",
+      "started_at_utc": "2026-10-03T12:42:50.673931+00:00",
+      "wrapper_pid": 31000,
+      "cli_pid": 57848,
+      "exit_code": 2,
+      "finished_at_utc": "2026-10-03T12:42:52.349546+00:00",
+      "elapsed_seconds": 1.6758963000029325,
+      "log_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-batch\\probe.log",
+      "log_sha256": "c97f496468654056da00cee9612e2ac6f2a434cee1573aae7a272845c3e85027"
+    },
+    {
+      "command": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.fallback.cli",
+        "plan",
+        "--baostock-run",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\run.json",
+        "--original-plan",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json",
+        "--output",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\.cache\\phase1\\plans\\eastmoney-missing-2023-first10.json",
+        "--limit",
+        "10"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback",
+      "started_at_utc": "2026-10-03T12:43:15.584364+00:00",
+      "wrapper_pid": 74268,
+      "cli_pid": 67308,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-03T12:43:17.031958+00:00",
+      "elapsed_seconds": 1.4475409000297077,
+      "log_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-batch\\plan.log",
+      "log_sha256": "32d3d1bc8161c43505a0c84210c926847a8ecce975dd8a3ac707f80eb159fb01"
+    },
+    {
+      "command": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.fallback.cli",
+        "collect",
+        "--plan",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\.cache\\phase1\\plans\\eastmoney-missing-2023-first10.json",
+        "--output",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback",
+      "started_at_utc": "2026-10-03T12:44:12.919522+00:00",
+      "wrapper_pid": 70904,
+      "cli_pid": 42192,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-03T12:44:24.065184+00:00",
+      "elapsed_seconds": 11.145564700011164,
+      "log_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-batch\\collect.log",
+      "log_sha256": "bafcbe61cc148cea39fed90a97740880cdf97ecf260f88bd1faf4fecf0649d9f"
+    },
+    {
+      "command": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.fallback.cli",
+        "build",
+        "--run",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+        "--reference",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified",
+        "--output",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback",
+      "started_at_utc": "2026-10-03T12:44:49.145951+00:00",
+      "wrapper_pid": 9312,
+      "cli_pid": 67224,
+      "exit_code": 2,
+      "finished_at_utc": "2026-10-03T12:44:51.751333+00:00",
+      "elapsed_seconds": 2.6060803000000305,
+      "log_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-batch\\build.log",
+      "log_sha256": "f2dea77e4c2bf734d3ff50a60821a1d391d69bf26537d7af60377bcdb86cfcc8"
+    }
+  ],
+  "probe": {
+    "manifest": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes\\manifest.json",
+      "bytes": 16645,
+      "sha256": "7d2eb665589ad77ba4ffde9ac82eb2910349e78348275c41e6688adc29e9af96"
+    },
+    "files": [
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes\\bars.parquet",
+        "bytes": 18598,
+        "sha256": "d18773db3f7614b080eb911a93be1f25a116cac075bf4354a025877426cf9722"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes\\conversion-issues.json",
+        "bytes": 4,
+        "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes\\quality.json",
+        "bytes": 55780,
+        "sha256": "6b2d15a33bdcf0fbfe30bf18fa80b3ff69d8f08d28199880c833d09dfd8db5a4"
+      }
+    ],
+    "source_commit": "2bb40e42bc1fc7c506d6c2389cbbb98d3a13340d",
+    "source_clean": true,
+    "source_files_sha256_count": 76,
+    "raw_rows": 54,
+    "interval_rows": 33,
+    "status": "unverified",
+    "research_eligible": false,
+    "acquisition": {
+      "scope": "seven explicitly archived probe captures",
+      "online_requests": 0,
+      "successful_captures": 7
+    },
+    "coverage": [
+      {
+        "query_id": "225bebad9b13e582b7a34bfefbabb1d3e38d6e4d6c57feb1c58259ec07ccba5b",
+        "symbol": "600000.SH",
+        "provider": "tencent",
+        "raw_rows": 10,
+        "interval_rows": 5,
+        "calendar_open_dates": 5,
+        "missing_dates": 0,
+        "first_returned": "2023-07-18",
+        "last_returned": "2023-07-24"
+      },
+      {
+        "query_id": "a01b8bbd324098091518d9bf75238447a45d4d1f6bdf84e20e936565546d9f53",
+        "symbol": "688065.SH",
+        "provider": "tencent",
+        "raw_rows": 10,
+        "interval_rows": 4,
+        "calendar_open_dates": 7,
+        "missing_dates": 3,
+        "first_returned": "2023-06-12",
+        "last_returned": "2023-06-15"
+      },
+      {
+        "query_id": "95668faad7d5d2a5f8931370ec8c69d9a66998e858a1902c17eb69f9d2e9b93f",
+        "symbol": "000001.SZ",
+        "provider": "tencent",
+        "raw_rows": 10,
+        "interval_rows": 5,
+        "calendar_open_dates": 5,
+        "missing_dates": 0,
+        "first_returned": "2023-07-18",
+        "last_returned": "2023-07-24"
+      },
+      {
+        "query_id": "afbc83ed0cdb4f1019664b4a9c6ee7d941965d7af8454c0b17f73dd375c153ec",
+        "symbol": "300308.SZ",
+        "provider": "tencent",
+        "raw_rows": 10,
+        "interval_rows": 5,
+        "calendar_open_dates": 5,
+        "missing_dates": 0,
+        "first_returned": "2023-07-18",
+        "last_returned": "2023-07-24"
+      },
+      {
+        "query_id": "7e3029ccf5a00f9897e8828a0005784fe4feb86b46eea6e080dcb8c850e6a96a",
+        "symbol": "000001.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 5,
+        "interval_rows": 5,
+        "calendar_open_dates": 5,
+        "missing_dates": 0,
+        "first_returned": "2023-07-18",
+        "last_returned": "2023-07-24"
+      },
+      {
+        "query_id": "47a07844da1c6e25bbed31d091a18662d8712aa8034a11a1566dd190c5dff4cd",
+        "symbol": "688065.SH",
+        "provider": "eastmoney",
+        "raw_rows": 4,
+        "interval_rows": 4,
+        "calendar_open_dates": 7,
+        "missing_dates": 3,
+        "first_returned": "2023-06-12",
+        "last_returned": "2023-06-15"
+      },
+      {
+        "query_id": "a653a99ce045a96ae570fa4e49562c29b1ad6b923f65f4a607ebde0b8097b3e6",
+        "symbol": "600000.SH",
+        "provider": "eastmoney",
+        "raw_rows": 5,
+        "interval_rows": 5,
+        "calendar_open_dates": 5,
+        "missing_dates": 0,
+        "first_returned": "2023-07-18",
+        "last_returned": "2023-07-24"
+      }
+    ],
+    "quality_checks": [
+      {
+        "name": "typed_conversion",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "duplicate_dates",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "response_order",
+        "status": "pass",
+        "count": 0,
+        "query_ids": []
+      },
+      {
+        "name": "outside_requested_interval",
+        "status": "unverified",
+        "count": 21,
+        "unexpected_rows": 0,
+        "disposition": "retained; excluded from interval coverage and cross-source comparisons"
+      },
+      {
+        "name": "calendar_reference_coverage",
+        "status": "pass",
+        "count": 0,
+        "query_ids": []
+      },
+      {
+        "name": "calendar_missing_rows",
+        "status": "unverified",
+        "count": 6
+      },
+      {
+        "name": "listing_metadata",
+        "status": "unverified",
+        "count": 4,
+        "symbols": [
+          "000001.SZ",
+          "300308.SZ",
+          "600000.SH",
+          "688065.SH"
+        ],
+        "missing_ipo_symbols": [
+          "300308.SZ"
+        ],
+        "reason": "basic row presence does not verify unknown IPO/out dates or delisting-date semantics"
+      },
+      {
+        "name": "bars_on_closed_days",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "listing_boundaries",
+        "status": "unverified",
+        "count": 0
+      },
+      {
+        "name": "successful_empty_responses",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "cross_source_differences",
+        "status": "unverified",
+        "count": 47,
+        "compared_rows": 28,
+        "compared_fields": {
+          "open": 28,
+          "close": 28,
+          "high": 28,
+          "low": 28,
+          "volume_scaled_shares": 28,
+          "amount_scaled_cny": 28
+        },
+        "interval_rows_without_complete_comparison": 5,
+        "untested_query_ids": [
+          "afbc83ed0cdb4f1019664b4a9c6ee7d941965d7af8454c0b17f73dd375c153ec"
+        ],
+        "note": "display precision differs; no source silently overrides another"
+      },
+      {
+        "name": "historical_availability_and_execution",
+        "status": "unverified",
+        "count": 54,
+        "reason": "vintage, ST, suspension intervals, limits, preclose and execution unknown"
+      },
+      {
+        "name": "volume_and_amount_precision",
+        "status": "unverified",
+        "count": 54,
+        "unknown_volume_units": 10,
+        "reason": "scaled displayed quantities are not exact executions; lexical decimals do not establish rounding"
+      }
+    ],
+    "compared_rows": 28,
+    "ohlc_fields_compared": 112,
+    "ohlc_fields_differing": 0,
+    "max_abs_display_volume_difference_shares": "44.00",
+    "max_abs_display_amount_difference_cny": {
+      "eastmoney": "0.400000000000",
+      "tencent": "49.510000000000"
+    },
+    "parquet_roundtrip": true,
+    "duckdb_roundtrip": true,
+    "canonical_reader_rejected": true,
+    "capture_and_file_digests_rechecked": true
+  },
+  "pilot": {
+    "manifest": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10\\manifest.json",
+      "bytes": 22889,
+      "sha256": "9a56a71dc05b5f5bc887069b4774606a5ed626cf7bdd6f2d90cfaab038c90b14"
+    },
+    "files": [
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10\\bars.parquet",
+        "bytes": 226610,
+        "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10\\conversion-issues.json",
+        "bytes": 4,
+        "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10\\quality.json",
+        "bytes": 7503,
+        "sha256": "33be9db5482a5759a061789812d529e71072182fe9f6bf4fa834f8aa1f5acb2a"
+      }
+    ],
+    "source_commit": "2bb40e42bc1fc7c506d6c2389cbbb98d3a13340d",
+    "source_clean": true,
+    "source_files_sha256_count": 76,
+    "raw_rows": 2420,
+    "interval_rows": 2420,
+    "status": "unverified",
+    "research_eligible": false,
+    "acquisition": {
+      "planned": 10,
+      "successful": 10,
+      "missing": 0,
+      "status": "complete",
+      "scope": "Eastmoney pilot only; original BaoStock 401 remains unchanged"
+    },
+    "coverage": [
+      {
+        "query_id": "54f40fd51bb2551265cf8ae3d0b12bae7782e1e1f36669b0c400201b70e790b6",
+        "symbol": "000938.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "811f16a72ac85572672a0370c69b6424fc65be0af651f29f0e83923f4f39c645",
+        "symbol": "000963.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "0c645edc462bc5c88bf0668f11e15cddf751fa69fa82f7920561639ed3ed3066",
+        "symbol": "000977.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "d021bf747ef9b20fae4abb7427f1af4896a8009c00fc0fe81066d7325488e6dd",
+        "symbol": "000983.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "edfe7f7f1d21c2e2b4e48269f537176d388713919e59f0ee861ba597b9d35b99",
+        "symbol": "000999.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "815687fde7ee611ddfa7c9b4c9f6b985fe99e036cbb0fcd47487a62b90dac461",
+        "symbol": "001289.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "b81129f35e50c05d62f7db6ede2415d5ea40bf66e9c6fc81461e10d91c16d682",
+        "symbol": "001979.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "d9250245047e37797a51d8d5b57390547bcd3e40bb7b2f6f9175b31b5c42277d",
+        "symbol": "002001.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "885d8c8c473dd6796ff53f7500fb4aa1b26b83c47ad6a13fd9f112422409bd6b",
+        "symbol": "002007.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      },
+      {
+        "query_id": "5f68d6c2565ac65afe252eeddb21d1eddf9c0f481bbfcb18821370e848fc5862",
+        "symbol": "002008.SZ",
+        "provider": "eastmoney",
+        "raw_rows": 242,
+        "interval_rows": 242,
+        "calendar_open_dates": 242,
+        "missing_dates": 0,
+        "first_returned": "2023-01-03",
+        "last_returned": "2023-12-29"
+      }
+    ],
+    "quality_checks": [
+      {
+        "name": "typed_conversion",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "duplicate_dates",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "response_order",
+        "status": "pass",
+        "count": 0,
+        "query_ids": []
+      },
+      {
+        "name": "outside_requested_interval",
+        "status": "pass",
+        "count": 0,
+        "unexpected_rows": 0,
+        "disposition": "retained; excluded from interval coverage and cross-source comparisons"
+      },
+      {
+        "name": "calendar_reference_coverage",
+        "status": "pass",
+        "count": 0,
+        "query_ids": []
+      },
+      {
+        "name": "calendar_missing_rows",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "listing_metadata",
+        "status": "unverified",
+        "count": 10,
+        "symbols": [
+          "000938.SZ",
+          "000963.SZ",
+          "000977.SZ",
+          "000983.SZ",
+          "000999.SZ",
+          "001289.SZ",
+          "001979.SZ",
+          "002001.SZ",
+          "002007.SZ",
+          "002008.SZ"
+        ],
+        "missing_ipo_symbols": [
+          "000938.SZ",
+          "000963.SZ",
+          "000977.SZ",
+          "000983.SZ",
+          "000999.SZ",
+          "001289.SZ",
+          "001979.SZ",
+          "002001.SZ",
+          "002007.SZ",
+          "002008.SZ"
+        ],
+        "reason": "basic row presence does not verify unknown IPO/out dates or delisting-date semantics"
+      },
+      {
+        "name": "bars_on_closed_days",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "listing_boundaries",
+        "status": "unverified",
+        "count": 0
+      },
+      {
+        "name": "successful_empty_responses",
+        "status": "pass",
+        "count": 0
+      },
+      {
+        "name": "cross_source_differences",
+        "status": "unverified",
+        "count": 0,
+        "compared_rows": 0,
+        "compared_fields": {},
+        "interval_rows_without_complete_comparison": 2420,
+        "untested_query_ids": [
+          "0c645edc462bc5c88bf0668f11e15cddf751fa69fa82f7920561639ed3ed3066",
+          "54f40fd51bb2551265cf8ae3d0b12bae7782e1e1f36669b0c400201b70e790b6",
+          "5f68d6c2565ac65afe252eeddb21d1eddf9c0f481bbfcb18821370e848fc5862",
+          "811f16a72ac85572672a0370c69b6424fc65be0af651f29f0e83923f4f39c645",
+          "815687fde7ee611ddfa7c9b4c9f6b985fe99e036cbb0fcd47487a62b90dac461",
+          "885d8c8c473dd6796ff53f7500fb4aa1b26b83c47ad6a13fd9f112422409bd6b",
+          "b81129f35e50c05d62f7db6ede2415d5ea40bf66e9c6fc81461e10d91c16d682",
+          "d021bf747ef9b20fae4abb7427f1af4896a8009c00fc0fe81066d7325488e6dd",
+          "d9250245047e37797a51d8d5b57390547bcd3e40bb7b2f6f9175b31b5c42277d",
+          "edfe7f7f1d21c2e2b4e48269f537176d388713919e59f0ee861ba597b9d35b99"
+        ],
+        "note": "display precision differs; no source silently overrides another"
+      },
+      {
+        "name": "historical_availability_and_execution",
+        "status": "unverified",
+        "count": 2420,
+        "reason": "vintage, ST, suspension intervals, limits, preclose and execution unknown"
+      },
+      {
+        "name": "volume_and_amount_precision",
+        "status": "unverified",
+        "count": 2420,
+        "unknown_volume_units": 0,
+        "reason": "scaled displayed quantities are not exact executions; lexical decimals do not establish rounding"
+      }
+    ],
+    "compared_rows": 0,
+    "ohlc_fields_compared": 0,
+    "ohlc_fields_differing": 0,
+    "max_abs_display_volume_difference_shares": null,
+    "max_abs_display_amount_difference_cny": {},
+    "parquet_roundtrip": true,
+    "duckdb_roundtrip": true,
+    "canonical_reader_rejected": true,
+    "capture_and_file_digests_rechecked": true
+  },
+  "plan": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\.cache\\phase1\\plans\\eastmoney-missing-2023-first10.json",
+    "bytes": 6502,
+    "sha256": "ff10586e24213fa69f1744704ab62ff95205579851c6ee60c2b73cb9ddb102b9"
+  },
+  "original_plan_copy": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\plan.original.json",
+    "bytes": 6502,
+    "sha256": "ff10586e24213fa69f1744704ab62ff95205579851c6ee60c2b73cb9ddb102b9"
+  },
+  "run": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+    "bytes": 25971,
+    "sha256": "8cc5edf4013ce072c73dd568e457607ece3611b33a446820b53eaeb72acb4083"
+  },
+  "wire_ledger": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\eastmoney-source-access\\wire-ledger.json",
+    "bytes": 3628,
+    "sha256": "dff6bfad760d436ba668bf055d79f197bc3217247174d9bdda514863b6f4c3ed"
+  },
+  "captures": [
+    {
+      "query_id": "54f40fd51bb2551265cf8ae3d0b12bae7782e1e1f36669b0c400201b70e790b6",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\54f40fd51bb2551265cf8ae3d0b12bae7782e1e1f36669b0c400201b70e790b6\\52fdae25b7fe459abab8de3b3e302952\\metadata.json",
+        "bytes": 1740,
+        "sha256": "b830d71908ba3f8ce5bed3a31232fc00410f8afc3f850471cd06b31844ef5758"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\54f40fd51bb2551265cf8ae3d0b12bae7782e1e1f36669b0c400201b70e790b6\\52fdae25b7fe459abab8de3b3e302952\\response.bin",
+        "bytes": 19233,
+        "sha256": "a8364c643482f318d702773541d6ea0bcacc54ab68bd2a35a162a9492b849928"
+      },
+      "worker_pid": 21780,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:14.744073+00:00",
+      "captured_at_utc": "2026-10-03T12:44:14.827270+00:00"
+    },
+    {
+      "query_id": "811f16a72ac85572672a0370c69b6424fc65be0af651f29f0e83923f4f39c645",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\811f16a72ac85572672a0370c69b6424fc65be0af651f29f0e83923f4f39c645\\11020f50b1674e2e82b5bd677caa8126\\metadata.json",
+        "bytes": 1740,
+        "sha256": "493fece165fc11d427a64ff51f030defd3cd6693c972f90d1e9e6bee09673ee5"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\811f16a72ac85572672a0370c69b6424fc65be0af651f29f0e83923f4f39c645\\11020f50b1674e2e82b5bd677caa8126\\response.bin",
+        "bytes": 18918,
+        "sha256": "022d18e1e38713b5496d6f8ecd6d5591e92905ba91a23094f2d7bbd65ca9b1c0"
+      },
+      "worker_pid": 73664,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:15.768973+00:00",
+      "captured_at_utc": "2026-10-03T12:44:15.854530+00:00"
+    },
+    {
+      "query_id": "0c645edc462bc5c88bf0668f11e15cddf751fa69fa82f7920561639ed3ed3066",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\0c645edc462bc5c88bf0668f11e15cddf751fa69fa82f7920561639ed3ed3066\\339826afb5784c34af8b5e1faeeedd68\\metadata.json",
+        "bytes": 1740,
+        "sha256": "f45f1c656e8b474de040e37a436ef0f3c001305554bff04ab2fba79d43c354ea"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\0c645edc462bc5c88bf0668f11e15cddf751fa69fa82f7920561639ed3ed3066\\339826afb5784c34af8b5e1faeeedd68\\response.bin",
+        "bytes": 19489,
+        "sha256": "5fe55f8b64c514a6b01f8cbb3ae3aeed12e6cb2000ed840c4b74c9b898562b79"
+      },
+      "worker_pid": 74872,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:16.764860+00:00",
+      "captured_at_utc": "2026-10-03T12:44:16.953064+00:00"
+    },
+    {
+      "query_id": "d021bf747ef9b20fae4abb7427f1af4896a8009c00fc0fe81066d7325488e6dd",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\d021bf747ef9b20fae4abb7427f1af4896a8009c00fc0fe81066d7325488e6dd\\06012fa3625e4475997358c155530242\\metadata.json",
+        "bytes": 1740,
+        "sha256": "16fb281a95528d848c9d45f6bd1ef135a8aaf43ba3ea12043a74de8a9dd32da0"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\d021bf747ef9b20fae4abb7427f1af4896a8009c00fc0fe81066d7325488e6dd\\06012fa3625e4475997358c155530242\\response.bin",
+        "bytes": 18621,
+        "sha256": "d71430734a3b3b1f65167827134a963c768ba05d785ade9a1630b68619a153b0"
+      },
+      "worker_pid": 73500,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:17.770674+00:00",
+      "captured_at_utc": "2026-10-03T12:44:17.890063+00:00"
+    },
+    {
+      "query_id": "edfe7f7f1d21c2e2b4e48269f537176d388713919e59f0ee861ba597b9d35b99",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\edfe7f7f1d21c2e2b4e48269f537176d388713919e59f0ee861ba597b9d35b99\\41d9de0840ff4f1ba8f89f46f5779c88\\metadata.json",
+        "bytes": 1740,
+        "sha256": "f22b12fec77a2f84bfb8daf8619ac97347f1726b2ec161d352512c08e4c56ac3"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\edfe7f7f1d21c2e2b4e48269f537176d388713919e59f0ee861ba597b9d35b99\\41d9de0840ff4f1ba8f89f46f5779c88\\response.bin",
+        "bytes": 18900,
+        "sha256": "0d33f8816e688d52b3cec3be54ab0b0caaa3ced39bed4b58ce82d58833cce569"
+      },
+      "worker_pid": 11892,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:18.781976+00:00",
+      "captured_at_utc": "2026-10-03T12:44:18.896624+00:00"
+    },
+    {
+      "query_id": "815687fde7ee611ddfa7c9b4c9f6b985fe99e036cbb0fcd47487a62b90dac461",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\815687fde7ee611ddfa7c9b4c9f6b985fe99e036cbb0fcd47487a62b90dac461\\0041ae5ed9d543a9bffd955aa3ef90e3\\metadata.json",
+        "bytes": 1740,
+        "sha256": "1829e33bab53556e47b49c350dda4c9dc6d25c70f49e76afb532d1f343b66635"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\815687fde7ee611ddfa7c9b4c9f6b985fe99e036cbb0fcd47487a62b90dac461\\0041ae5ed9d543a9bffd955aa3ef90e3\\response.bin",
+        "bytes": 18662,
+        "sha256": "dbf49739b2b4f23ab6f3e6b15ee40e2379ab04eba2c935b04442e218bb79af1b"
+      },
+      "worker_pid": 68532,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:19.771684+00:00",
+      "captured_at_utc": "2026-10-03T12:44:19.865302+00:00"
+    },
+    {
+      "query_id": "b81129f35e50c05d62f7db6ede2415d5ea40bf66e9c6fc81461e10d91c16d682",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\b81129f35e50c05d62f7db6ede2415d5ea40bf66e9c6fc81461e10d91c16d682\\0952596797444e0ab09487635aa36044\\metadata.json",
+        "bytes": 1740,
+        "sha256": "633c77a834ca4a8ad9da812fa1542b55e76b72d0d361562dba0650b52a30212b"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\b81129f35e50c05d62f7db6ede2415d5ea40bf66e9c6fc81461e10d91c16d682\\0952596797444e0ab09487635aa36044\\response.bin",
+        "bytes": 19024,
+        "sha256": "56ae68c3c30e6dea33ad9c41f9e24f6f058a3b8feb0e08fcff72028276a8970c"
+      },
+      "worker_pid": 60264,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:20.775314+00:00",
+      "captured_at_utc": "2026-10-03T12:44:20.862426+00:00"
+    },
+    {
+      "query_id": "d9250245047e37797a51d8d5b57390547bcd3e40bb7b2f6f9175b31b5c42277d",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\d9250245047e37797a51d8d5b57390547bcd3e40bb7b2f6f9175b31b5c42277d\\befd198e2bed4b8d9d4f4a1756b9e4b4\\metadata.json",
+        "bytes": 1740,
+        "sha256": "9ca827adaa987eda2837957590dc7585d68258e1fa76adb4005aa0f856553f95"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\d9250245047e37797a51d8d5b57390547bcd3e40bb7b2f6f9175b31b5c42277d\\befd198e2bed4b8d9d4f4a1756b9e4b4\\response.bin",
+        "bytes": 18902,
+        "sha256": "a218f727d3c913a9f8ee9e73b720f742739723bfa2d2208f6851f379e8d70582"
+      },
+      "worker_pid": 48720,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:21.777796+00:00",
+      "captured_at_utc": "2026-10-03T12:44:21.878134+00:00"
+    },
+    {
+      "query_id": "885d8c8c473dd6796ff53f7500fb4aa1b26b83c47ad6a13fd9f112422409bd6b",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\885d8c8c473dd6796ff53f7500fb4aa1b26b83c47ad6a13fd9f112422409bd6b\\caeaf4869624448a979348a917e0d4fd\\metadata.json",
+        "bytes": 1740,
+        "sha256": "79b578ba4fde415cfe69db81ac7a4252c58f900abb7a28e3ad47db3b9aa5a60a"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\885d8c8c473dd6796ff53f7500fb4aa1b26b83c47ad6a13fd9f112422409bd6b\\caeaf4869624448a979348a917e0d4fd\\response.bin",
+        "bytes": 18908,
+        "sha256": "77790d4d79291ba4ba102ae2aa54cd037dc954ac77ca1fea2f842c9dbeed1061"
+      },
+      "worker_pid": 54588,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:22.778049+00:00",
+      "captured_at_utc": "2026-10-03T12:44:22.887205+00:00"
+    },
+    {
+      "query_id": "5f68d6c2565ac65afe252eeddb21d1eddf9c0f481bbfcb18821370e848fc5862",
+      "entry_status": "complete",
+      "worker_exit": 0,
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\5f68d6c2565ac65afe252eeddb21d1eddf9c0f481bbfcb18821370e848fc5862\\9bd8e81d09a8425abf4fbb0c736cd128\\metadata.json",
+        "bytes": 1740,
+        "sha256": "79934e0a8de82d183b23b822a7510a1267ee6873d325d6ae171ccab4ee084333"
+      },
+      "body": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\attempts\\5f68d6c2565ac65afe252eeddb21d1eddf9c0f481bbfcb18821370e848fc5862\\9bd8e81d09a8425abf4fbb0c736cd128\\response.bin",
+        "bytes": 18996,
+        "sha256": "48f85b8bb8bea68d32273d23127041c909f144d3cd90cdff2058030c7037773c"
+      },
+      "worker_pid": 16864,
+      "status": 200,
+      "classification": "complete",
+      "transfer_complete": true,
+      "started_at_utc": "2026-10-03T12:44:23.780679+00:00",
+      "captured_at_utc": "2026-10-03T12:44:23.954626+00:00"
+    }
+  ],
+  "acquisition": {
+    "online_attempts": 10,
+    "stocks": 10,
+    "complete_attempts": 10,
+    "http_status_counts": {
+      "200": 10
+    },
+    "response_bytes": 189653,
+    "retries": 0,
+    "date_start": "2023-01-01",
+    "date_end": "2023-12-31",
+    "adjustment": "unadjusted fqt=0",
+    "source_restriction_file_present": false
+  },
+  "timing": {
+    "parent_attempt_start_intervals_seconds": [
+      1.001413,
+      1.000636,
+      1.010202,
+      1.001157,
+      1.002913,
+      1.001449,
+      1.001984,
+      1.001108,
+      1.002664
+    ],
+    "worker_capture_start_intervals_seconds": [
+      1.0249,
+      0.995887,
+      1.005814,
+      1.011302,
+      0.989708,
+      1.00363,
+      1.002482,
+      1.000253,
+      1.00263
+    ],
+    "minimum_parent_interval_seconds": 1.000636,
+    "minimum_worker_interval_seconds": 0.989708,
+    "actual_wire_send_timestamp_recorded": false,
+    "one_second_wire_spacing_verified": false,
+    "disposition": "Actual batch retained unchanged. Post-run fix waits one second after prior worker exit. Offline regression passed; no new network validation or repeat capture."
+  },
+  "protected_inputs_before": {
+    "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json": {
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+      "bytes": 938
+    },
+    "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json": {
+      "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+      "bytes": 145
+    },
+    "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\run.json": {
+      "sha256": "a4f5aad865370ea56f56bb7fa4151bdaeb7cb02f5ad69fec5e5a9efac98941df",
+      "bytes": 1678779
+    },
+    "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json": {
+      "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df",
+      "bytes": 281838
+    }
+  },
+  "protected_inputs_after": {
+    "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json": {
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+      "bytes": 938
+    },
+    "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json": {
+      "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+      "bytes": 145
+    },
+    "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\run.json": {
+      "sha256": "a4f5aad865370ea56f56bb7fa4151bdaeb7cb02f5ad69fec5e5a9efac98941df",
+      "bytes": 1678779
+    },
+    "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json": {
+      "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df",
+      "bytes": 281838
+    }
+  },
+  "protected_inputs_unchanged": true,
+  "original_baostock_missing_queries": 401,
+  "original_missing_bar_queries": 100,
+  "unrequested_original_missing_bars": 90,
+  "process_exit": {
+    "all_recorded_processes_exited": true,
+    "checked_at_utc": "2026-10-03T12:45:56.0754810Z",
+    "live": [],
+    "checked_ids": [
+      31000,
+      57848,
+      74268,
+      67308,
+      70904,
+      42192,
+      9312,
+      67224,
+      21780,
+      73664,
+      74872,
+      73500,
+      11892,
+      68532,
+      60264,
+      48720,
+      54588,
+      16864
+    ]
+  },
+  "process_exit_file": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\artifacts\\fallback-batch\\process-exit.json",
+    "bytes": 765,
+    "sha256": "a389fda038f661da45ff0e5031369cbcbe8a00f0e31bd718837c96665f0d9d82"
+  },
+  "resources": {
+    "disk_before": {
+      "total": 2048405794816,
+      "used": 538601324544,
+      "free": 1509804470272
+    },
+    "disk_after": {
+      "total": 2048405794816,
+      "used": 538602291200,
+      "free": 1509803503616
+    },
+    "retained_directory_bytes": {
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10": 242716,
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\fallback-seven-probes": 91027,
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10": 257006,
+      "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\eastmoney-source-access": 3629
+    },
+    "retained_total_bytes": 594378,
+    "peak_measured": false,
+    "cleanup": "none; raw, failures, environments and evidence retained"
+  },
+  "limits": [
+    "All ten securities lack verified IPO/out-date reference metadata.",
+    "The ten newly collected securities have zero independent overlapping reference rows; zero differences is unverified.",
+    "Displayed Eastmoney lot volume is not exact share volume; actual rounding and accuracy are unknown.",
+    "ST, suspensions, price limits, preclose, historical publication and revisions remain unknown.",
+    "This does not certify the historical membership universe or PIT eligibility.",
+    "No BaoStock, Tencent live, 2024-2025, GPU, training, backtest, server or push action in this batch."
+  ]
+}
