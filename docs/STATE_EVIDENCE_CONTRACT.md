@@ -1,0 +1,63 @@
+# 历史状态证据候选 v1
+
+入口为 `python -m ashare_lab.state_evidence.cli`。`validate` 只核对本地输入并可保存独立预检报告；
+`build` 写入此前不存在的候选目录。两者均无采集、自动安装或模型调用。
+输入选择和人工核对字段位于 `configs/state-evidence-2023.json`，路径相对显式 `--input-root`。
+`build` 要求显式 `--project-root` 指向实际加载模块的 Git worktree 根，源码与选择配置已提交且工作区干净。
+
+## 来源与校验
+
+输入逐文件绑定路径、字节数、SHA-256。范围从保留的原请求计划重算，不能仅采用汇总计数。
+旧候选的表摘要还需与原 manifest 一致；日历先核对完整自然日集合、唯一来源和日期键，再选开市日。
+原 BaoStock 日线、东方财富补充行情、社区行情保留各自的原始状态含义，不改写旧候选。
+
+深交所 XLSX 重新解析 ZIP/XML，拒绝重复/不安全成员、公式、重复/缺失单元格。
+全部单元格与保存的提取一致后，仅用 A/B/D/E 生成历史事件；C 列当前简称不进入事件或名称推断。
+选择范围内晚于 2023 年的名称元数据单列排除，不读取相应年份的行情。
+名称开始参考由原件重算，并验证原提取中没有事件的证券仍为 null。
+
+公告通过显式本地 `--pdftotext` 工具重提原 PDF，记录工具版本和可执行文件摘要；页数与全文须和已保存提取
+在仅去除空白后相同。原始代码、标题、公告编号、搜索结果 ID/附件 URL/时间、正文页与原句、落款页与原句
+全部交叉校验。事件日期和时段从正文原句解析，再核对版本化人工选择，不能只相信摘要中的通过标记。
+复牌公告重述的旧停牌不能作为新停牌。当前接入保留停牌公告落款 2022 年与正文 2023 年冲突。
+
+## 事件表与时间语义
+
+`events.parquet` 的 schema 为 `state-evidence-candidate-v1`。每条事件有稳定内容摘要 ID、证券、类别、
+生效日期、时段、来源 URL、原件摘要/定位、实际观察时间及来源时间精度。
+名称事件使用 `date_only`；停复牌必须有 `morning_open` 或 `afternoon_open`，不生成未核验的时分或零点。
+停牌与复牌各自独立保存，没有在停牌原始行上预填后来获知的结束时间。
+
+`before_contains_st` / `after_contains_st` 只诊断名称内的 ST 字符串。`certified_st` 始终 null。
+有名称事件也不证明名称连续性或事件列表完整；未观察到事件不能填非 ST，首条事件的变更前名称不向过去无限回填。
+
+`source_timestamp` 与 `source_timestamp_precision` 保存网页原时间标签；原始毫秒值和记录在 locator 中。
+`observed_at_utc` 是此次实际取得原件的时间。`available_time` 未知仍为 null，网页日期零点、公告落款和下载日期
+均不自动证明历史可用时刻。
+
+`state_at(events, symbol, event_date, session, knowledge_time=..., view="strict", policy="exclude_unknown")`
+先按事件时间与可用时间筛选，再解释名称和停复牌。严格视图要求带时区的知识时点；默认排除未知 availability。
+显式 `policy="observed_at"` 才允许未知事件在本次观察时刻之后作为保守参考，返回中记录该政策，不回填 availability。
+`view="retrospective"` 是事后参考视图，不作当时可知的承诺。相同生效时点的重复/冲突及名称链断裂不按行序解决。
+已生效但尚不可见的后来复牌不能关闭严格视图中的停牌；未来才生效的复牌也不能提前生效。
+
+## 日级参考与门禁
+
+`daily_references.parquet` 只包含所选证券的 2023 年开市日。它是事后参考网格，保存原供应商状态、量及原行定位，
+并把社区价格是否缺失单独列出。名称诊断、原供应商 isST、认证 ST、成交资格互不替代。
+`name_continuity_verified=false`、`historical_asof_certified=false`、`can_trade=null`。
+
+- 早晚两个开市锚点均有停牌参考：`full_day_halt_reference`。
+- 仅一个时段有停牌参考：`partial_day_halt_reference`；当日非零成交可与之并存。
+- 没有选定停牌证据：`no_selected_halt_reference`，不表示正常交易或无其他限制。
+- 闭市日可用纯函数查询，但不产生开市日候选行，也不计入完整停牌交易日。
+
+全日停牌参考与非零股数构成冲突并阻止成功候选；半日停牌不据此失败。日级供应商 tradestatus=0 不升级为全天停牌。
+仅有缺失行情或空查询不产生停牌/正常事件。东方财富所存越期返回和参数错误只列入失效来源诊断，采纳事件数为零。
+
+质量报告列明事件数、未知可用时点、落款冲突、重复/链冲突、每证券未覆盖开市日期、名称未知天数、原状态未知行数，
+以及完整/局部停牌与成交的核对结果。未覆盖日期不被零差异掩盖；认证状态覆盖始终为零。
+
+成功产物 manifest 为 `built_candidate`，CLI 退出 2；所有数据与质量报告继续 `research_eligible=false`，
+`formal_research_gate=blocked`。输出执行 Parquet 与 DuckDB 完整往返，并实际要求正式 `read_dataset` 拒绝。
+候选失败时保留已经产生的文件和失败 manifest；原件、旧候选与失败产物不会被覆盖。
