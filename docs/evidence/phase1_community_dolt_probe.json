@@ -1,0 +1,347 @@
+{
+  "recorded_at_utc": "2026-10-03T15:04:49.034638+00:00",
+  "kind": "public-dolthub-bounded-data-probe-v1",
+  "research_eligible": false,
+  "repository": "https://www.dolthub.com/repositories/chenditc/investment_data",
+  "branch": "master",
+  "observed_commit": "d5ouv06svuoat4193aiefibgu2fa3ose",
+  "pinning": "SQL table AS OF observed commit; API commit-ref path rejected bare hash, whose failure is retained.",
+  "requests": 13,
+  "http_status_counts": {
+    "200": 12,
+    "400": 1
+  },
+  "table_names": [
+    "bao_a_stock_eod_info",
+    "c_a_stock_eod_price",
+    "c_link_table",
+    "final_a_stock_eod_price",
+    "final_a_stock_limit",
+    "max_index_date",
+    "ts_a_stock_eod_price",
+    "ts_a_stock_list",
+    "ts_index_weight",
+    "ts_link_table",
+    "ts_trade_day_calendar",
+    "w_a_stock_eod_price",
+    "yahoo_a_stock_eod_price",
+    "yahoo_link_table"
+  ],
+  "status_probe": {
+    "symbol": "SZ000938",
+    "requested_dates": [
+      "2023-12-18",
+      "2023-12-29"
+    ],
+    "returned_rows": 0,
+    "last_available_table_date_before_2024": "2023-06-09",
+    "conclusion": "Does not fill late-2023 status/ST gap; table existence is insufficient."
+  },
+  "limit_probe": {
+    "june_5_7_rows": [
+      {
+        "symbol": "SZ300308",
+        "tradedate": "2023-06-05",
+        "pre_close": "106.7",
+        "up_limit": "117.37",
+        "down_limit": "96.03"
+      },
+      {
+        "symbol": "SZ300308",
+        "tradedate": "2023-06-06",
+        "pre_close": "111",
+        "up_limit": "122.1",
+        "down_limit": "99.9"
+      },
+      {
+        "symbol": "SZ300308",
+        "tradedate": "2023-06-07",
+        "pre_close": "107.31",
+        "up_limit": "118.04",
+        "down_limit": "96.58"
+      }
+    ],
+    "march_22_rows": [],
+    "june_formula_observed": "Returned upper/lower values are approximately pre_close * 1.1 / 0.9.",
+    "march_22_retained_market_observation": {
+      "symbol": "300308.SZ",
+      "previous_close": "36.83",
+      "high": "44.20",
+      "eastmoney_raw_sha256": "cf3084a10107ff1d5d9b126abb25b0b6470fe83989d1e98243d94a6f7e4d99e9"
+    },
+    "accepted_as_execution_limits": false,
+    "reason": "Incomplete date coverage and board-specific limit semantics remain unverified. Upstream documentation describes historically inferred/adjusted/deleted rows and there is no per-row provenance flag."
+  },
+  "membership_snapshot_dates": [
+    {
+      "trade_date": "2023-01-03",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-01-31",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-02-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-02-28",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-03-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-03-31",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-04-03",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-04-28",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-05-31",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-06-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-06-30",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-07-03",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-07-31",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-08-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-08-31",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-09-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-09-28",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-10-09",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-10-31",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-11-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-11-30",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-12-01",
+      "constituents": "300"
+    },
+    {
+      "trade_date": "2023-12-29",
+      "constituents": "300"
+    }
+  ],
+  "membership_comparisons": [
+    {
+      "date": "2023-01-03",
+      "count": 300,
+      "matches_conditional_set": true,
+      "missing": [],
+      "extra": [],
+      "weight_sum_reported_units": "99.9991",
+      "raw": {
+        "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-20230103.json",
+        "bytes": 21789,
+        "sha256": "5b5927aad55e1c9ab4fc84577716c2f9b9bfe432cec93e399f861787f92e6d4f"
+      }
+    },
+    {
+      "date": "2023-12-29",
+      "count": 300,
+      "matches_conditional_set": true,
+      "missing": [],
+      "extra": [],
+      "weight_sum_reported_units": "100.010",
+      "raw": {
+        "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-20231229.json",
+        "bytes": 21492,
+        "sha256": "c560e20ce33bea08c6095a25e524920503cc125c8650bc7edc692922af6850c6"
+      }
+    }
+  ],
+  "upstream_lineage": "Tushare weight snapshots within the same community project; not another independent official daily list.",
+  "limits": [
+    "Only metadata, explicitly bounded 2023 samples and pre-2024 coverage date were queried.",
+    "Current repository commit is a versioned snapshot of revised historical data; it does not establish historical first-publication times.",
+    "Zero status/limit rows are recorded as absent, never as active/non-ST/no-price-limit flags.",
+    "No full database clone, account/token, source-service restriction retry, model/backtest, GPU, server or external mutation was performed."
+  ],
+  "files": [
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-20230103.json",
+      "bytes": 21789,
+      "sha256": "5b5927aad55e1c9ab4fc84577716c2f9b9bfe432cec93e399f861787f92e6d4f"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-20230103.metadata.json",
+      "bytes": 924,
+      "sha256": "e9a2e3af4a169c9e79c5abe14981fd36d2eb48f62ab3640aa7132675035c2b6c"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-20231229.json",
+      "bytes": 21492,
+      "sha256": "c560e20ce33bea08c6095a25e524920503cc125c8650bc7edc692922af6850c6"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-20231229.metadata.json",
+      "bytes": 924,
+      "sha256": "810ae3fb50c4a555fafdc330133f98b77d19e8c2a6009e3895968d25d61d3618"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-snapshot-dates-2023-asof.json",
+      "bytes": 1651,
+      "sha256": "18ee084f841f122a55836bde5be91e6787e3936282a6f8c3c729e0913ffb2062"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-csi300-snapshot-dates-2023-asof.metadata.json",
+      "bytes": 1075,
+      "sha256": "4f1587645708627949b4b428bc34ab46148afda92f09a55a7cd5ea87451c1f70"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-limits-300308-2023-asof.json",
+      "bytes": 977,
+      "sha256": "0a69fa78c01ec032d17b10969f35d43a42eae0ce8d14d25a79a9b0900b340836"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-limits-300308-2023-asof.metadata.json",
+      "bytes": 1026,
+      "sha256": "7f281d396c1d8779d71d2ef2082f2933a7490fe039eb169dbe4e664d38fc5cda"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-limits-300308-20230322.json",
+      "bytes": 613,
+      "sha256": "d280cea63983039247f7ab58c133b1c78fb5a8e104f406887b5f3c89005a1f24"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-limits-300308-20230322.metadata.json",
+      "bytes": 906,
+      "sha256": "36939c0d9a5667dd62fc39d7c015d8a0817849bdc23dbdf8bc7b8e8ac1eb1cb2"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-master-commit.json",
+      "bytes": 336,
+      "sha256": "8d80844fc3941c4546d2a741bc53bed19dc0a686ac1df90de3a328591cbe8f80"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-master-commit.metadata.json",
+      "bytes": 562,
+      "sha256": "692787b6a1dbf300c28c19a44655bc2643225f2aae25aab89fc5b58dc4bc340f"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-master-tables.json",
+      "bytes": 977,
+      "sha256": "869d57ce712328927d7a1405a07e17b5a6cfc7e1ab4885a872582318964dab5b"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-master-tables.metadata.json",
+      "bytes": 480,
+      "sha256": "6b87ed6f3700a306254155d68e1c14ae495977cf21504e90070239bcb33226fd"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-schema-bao_a_stock_eod_info.json",
+      "bytes": 1786,
+      "sha256": "81b56224adce3cd28c82d4b44189fca519528c09b7aaf8de063e716cc4af9a01"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-schema-bao_a_stock_eod_info.metadata.json",
+      "bytes": 517,
+      "sha256": "4a62ecd35b5ee3d5f8ae94937543e156e839746708c9f46f6a6c200a22ebc186"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-schema-final_a_stock_limit.json",
+      "bytes": 967,
+      "sha256": "072bf51ef2befca1a2d54271fdd30659d4ec2287f28b43a5a24a70ae84212866"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-schema-final_a_stock_limit.metadata.json",
+      "bytes": 514,
+      "sha256": "39d10f0c8470a2c38b8a5d96648ac8517ce54c8b81ce3afc76c807eac195ecdb"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-schema-ts_index_weight.json",
+      "bytes": 887,
+      "sha256": "6aa2579109df41e54817b8515153b95cf75c3d5cdc131cc15238e3836909523a"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-schema-ts_index_weight.metadata.json",
+      "bytes": 506,
+      "sha256": "a4cfcc356957431f98de7daee58d5ed3c53e1a9f135ca72036a594e3d2e4bfd2"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-state-000938-2023-asof.json",
+      "bytes": 590,
+      "sha256": "1e8b30f291d8701143243bb3d6956e042a8bac52b8e3edace4c0f4360479766b"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-state-000938-2023-asof.metadata.json",
+      "bytes": 1002,
+      "sha256": "693181fe5ee6968d2728e9a5ba77912ee1843f70ada800676173f37701ec01f4"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-state-000938-2023.json",
+      "bytes": 453,
+      "sha256": "3fbc0c318c67f227ef3ca22e38fdf6df4845da8cc1fe1e3b58f3656ffa7c3a1c"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-state-000938-2023.metadata.json",
+      "bytes": 952,
+      "sha256": "9e5a66b4851baaaedc756730827f27f118d6b06bbb9feafc31c54f697a6d9ae0"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-state-last-before-2024.json",
+      "bytes": 408,
+      "sha256": "cb4918aefcc0c081f25460161b2c40459fb2c56b7258685c648c276f937ca6c2"
+    },
+    {
+      "path": "datasets/raw/dolthub/20261003-source-probe/dolt-state-last-before-2024.metadata.json",
+      "bytes": 830,
+      "sha256": "83b1d8e3b95425fc7fa2221cb4fa6567e9c0e8fd60506ba6c18fb1c904e504d2"
+    }
+  ],
+  "comparison_reference": {
+    "path": "docs/evidence/phase1_membership_conditional_reconciliation.json",
+    "bytes": 57279,
+    "sha256": "84aa36790d8dc13396c37466d867f76274212e38026fe6db1183dff8a1276958"
+  },
+  "source_fetcher": {
+    "path": ".cache/phase1/open-datasets/probe_community.py",
+    "bytes": 7080,
+    "sha256": "70086c6b2632032dd28eda14143a8ec6b65739665c40c8c4698a3d6962b1230c"
+  },
+  "processes_completed": true
+}
