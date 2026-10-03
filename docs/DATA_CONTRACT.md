@@ -33,6 +33,10 @@
 | status | source, symbol, event_date | listed_date、可空 delisted_date、is_st、is_suspended、active/suspended/delisted 状态、可空 limit_up/limit_down；未知涨跌停价保留为空，不等同可成交 |
 
 股票标识为六位代码加 `.SH` / `.SZ`。数据契约保留退市记录，未实现任何“只保留当前上市股票”的过滤。
+`delisted_date` 定义为退市在 Asia/Shanghai 生效的首个自然日（含当日），不是最后交易日：
+若 `event_date >= delisted_date`，状态必须为 `delisted`；`delisted` 状态也必须提供已生效的退市日期。
+此前的 `active` / `suspended` 状态可以保留已公告的未来 `delisted_date`，但仍遵守来源与可用时间约束，
+不能提前标为 `delisted`。未知退市日期可为空，只能配合未退市状态；供应商不同日期口径需由适配器明确转换。
 当前 actions 是工程交换格式：split 的 factor 表示新股数 / 原股数，cash_per_share 按原股数计；
 `adjustment` 的 factor 必须由供应商适配器额外给出可追溯定义。没有该定义的因子不能参与正式复权。
 配股、复杂权利变化、行动排序等正式口径尚未实现，不能用这个小样例声称复权完整。
@@ -65,6 +69,9 @@
 | 标签可用 | 2024-01-10 15:10 | 此样例假设以日线源取得退出开盘价，采用较晚的真实数据可用时间 |
 
 `next_open_window` 仅输出 signal/entry/exit/available 四个时点；不会计算股票收益或使用未来价格拟合。
+先按 signal 时点选取可见日历修订，再选择 exchange，要求这些记录有且仅有一个 source，
+最后才筛选 `is_open`。第二来源即使只包含休市日或与第一来源日期完全不重叠，也会拒绝；
+未到可用时点的来源、其他交易所的来源不参与该唯一性判断。同一 source 的不同 source_version / 修订可正常使用。
 未来日历必须已在 signal 时点公告，不能用自然日加五代替交易日索引。
 标签成熟时间由实际退出价格、公司行为等所需输入中最晚的可用时间决定，调用方提供；
 不允许早于退出时点。日线供应商无法盘中提供 open 时，不能把 09:30 自动当作标签已成熟。

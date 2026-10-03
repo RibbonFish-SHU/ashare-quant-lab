@@ -1,5 +1,5 @@
 from copy import deepcopy
-from datetime import timedelta
+from datetime import date, timedelta
 
 import pytest
 
@@ -140,3 +140,49 @@ def test_other_contracts_enforce_domains(tables, name, field, value):
     row[field] = value
     with pytest.raises(ContractError):
         validate_records(name, [row], data_kind="synthetic")
+
+
+@pytest.mark.parametrize(
+    "trading_status,delisted_date",
+    [
+        ("active", date(2024, 1, 1)),
+        ("active", date(2024, 1, 2)),
+        ("suspended", date(2024, 1, 1)),
+        ("suspended", date(2024, 1, 2)),
+        ("delisted", None),
+        ("delisted", date(2024, 1, 3)),
+    ],
+)
+def test_status_rejects_contradictory_delisting(tables, trading_status, delisted_date):
+    row = tables["status"].to_pylist()[0]
+    assert row["event_date"] == date(2024, 1, 2)
+    row.update(
+        trading_status=trading_status,
+        is_suspended=trading_status == "suspended",
+        delisted_date=delisted_date,
+    )
+    with pytest.raises(ContractError, match="delisted"):
+        validate_records("status", [row], data_kind="synthetic")
+
+
+@pytest.mark.parametrize(
+    "trading_status,delisted_date",
+    [
+        ("active", None),
+        ("suspended", None),
+        ("active", date(2024, 1, 3)),
+        ("suspended", date(2024, 1, 3)),
+        ("delisted", date(2024, 1, 1)),
+        ("delisted", date(2024, 1, 2)),
+    ],
+)
+def test_status_accepts_delisting_effective_boundary(tables, trading_status, delisted_date):
+    row = tables["status"].to_pylist()[0]
+    row.update(
+        trading_status=trading_status,
+        is_suspended=trading_status == "suspended",
+        delisted_date=delisted_date,
+    )
+    table = validate_records("status", [row], data_kind="synthetic")
+    visible = as_of("status", table, at(row["event_date"])).to_pylist()
+    assert visible == [row]

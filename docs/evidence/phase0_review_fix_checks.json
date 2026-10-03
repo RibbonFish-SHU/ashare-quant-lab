@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-10-03T06:39:01.645498+00:00",
+  "checks": [
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "............................................................             [100%]\n60 passed in 1.60s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/Scripts/ruff.exe",
+        "check",
+        "src",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/Scripts/ruff.exe",
+        "format",
+        "--check",
+        "src",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "15 files already formatted\n",
+      "stderr": ""
+    }
+  ],
+  "base_commit": "e668294bfd8d8c4a3495f8d92c44df6dbc4555e1",
+  "changed_code_sha256": {
+    "src\\ashare_lab\\contracts.py": "db9ecafed95e79610443a2e5792993f0ac4b2f7081558afddd8e640ece725e74",
+    "src\\ashare_lab\\temporal.py": "130d599a39a597aea6a83d0d5c8678b11cf01dda3e9728de580aa54015a61fd6",
+    "tests\\test_contracts.py": "7758cd9578171dd3b059d2e53d7c900962a7e01ab449dff122ae05f3243c0d85",
+    "tests\\test_temporal.py": "0f4c445b02e525182b2f82043f6892669e37b924f4f74b76d55aa1ad670cf21c"
+  }
+}

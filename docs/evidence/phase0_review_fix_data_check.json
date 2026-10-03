@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-03T06:39:00.068647+00:00",
+  "status": "passed",
+  "scope": "read-only data and time portion; no model calls",
+  "original_run": "artifacts\\experiments\\synthetic\\20261003T062541.770495Z-84e985e0",
+  "original_evidence_unchanged": true,
+  "rows": {
+    "bars": 73,
+    "calendar": 48,
+    "membership": 4,
+    "actions": 1,
+    "status": 72
+  },
+  "label_boundary_example": {
+    "signal_time": "2024-01-02 08:00:00+00:00",
+    "entry_time": "2024-01-03 01:30:00+00:00",
+    "exit_time": "2024-01-10 01:30:00+00:00",
+    "available_time": "2024-01-10 07:10:00+00:00"
+  },
+  "asof_query_matches_reference": true
+}

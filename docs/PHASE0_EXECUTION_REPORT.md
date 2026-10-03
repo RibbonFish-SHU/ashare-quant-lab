@@ -5,8 +5,8 @@
 
 ## 交付与版本
 
-实现提交：`b6cfec917cc2322c7ed1a77a66286611c1e4fce6`。
-本报告及 evidence 是其后的文档记录，不改变已验收源码。
+首次实现提交：`b6cfec917cc2322c7ed1a77a66286611c1e4fce6`。
+首次报告与 evidence 提交 `e668294` 仅记录该版本的验证；后续主审修复及新增测试见本文末节。
 主代理原有 AGENTS、PROJECT_PLAN、Phase 0 / 交接 / 数据源文档已随稳定批次保留并纳入版本。
 原始方案工作区文件的 SHA-256 仍为
 `3b2ae7232edd5c4e4156cdf4c7440b1d36c3814d257f40ec182128315777c147`。
@@ -19,7 +19,7 @@
 - CPU / GPU UUID 选择入口，预约确认前拒绝 GPU 运行；即时忙碌检查与只读设备枚举接口。
 - [运行说明](RUNBOOK.md)、[数据契约](DATA_CONTRACT.md)、有针对性的测试。
 
-## 实际验证
+## 首次批次实际验证
 
 以下检查均在本项目 `.venv` 执行，退出码为 0。测试对应实现提交中的最终源码，
 没有因生成本报告而重复运行测试。
@@ -108,3 +108,35 @@ Linux/CUDA 依赖锁已解析，但安装峰值 / 配额、Linux 运行兼容性
 仍需真实数据来源 / 权限、历史起止、状态 / 成员覆盖验收、正式标签 / 费用口径与冻结划分。
 候选 2010–2025 等区间只是主代理草案，本轮未获取任何真实行情或查看最终封存数据。
 下一步是主代理审阅工程批次并处理上述真实数据与资源依赖；不能宣布整个 Phase 0 完成。
+
+## 主审一致性修复（2026-10-03）
+
+依据主代理的 [PHASE0_REVIEW.md](PHASE0_REVIEW.md)，在 `e668294` 基础上完成两个输入一致性修复。
+主代理准备的审阅文件原样纳入本批次；本节记录执行结果，最终集成仍由主代理审阅决定。
+
+- **退市状态**：`delisted_date` 是首个已退市的上海自然日，包含生效当天。
+  当日及之后只能是 `delisted`；该状态必须提供不晚于 event_date 的退市日期。
+  已公告但尚未生效的未来退市日期仍可配合 `active` / `suspended`；既有上市日与停牌一致性检查继续适用。
+- **日历来源**：按 signal 时点取可见修订并选择 exchange 后，明确要求唯一 source，再过滤开市日。
+  两来源交替提供不重叠日期、或第二来源仅有休市日，均被拒绝。
+  其他交易所、尚不可见的来源不会干扰当前查询，同源版本修订与休市日仍合法。
+- **测试**：新增 18 个参数化 / 边界案例。修复前运行新增案例得到 8 failed、10 passed，
+  复现了 6 组矛盾退市状态及 2 组此前漏检的日历来源组合。
+  修复后这些案例全部通过，覆盖退市日前 / 当日 / 后、缺日期、未来日期，以及来源筛选的顺序和可用时间等号边界。
+
+| 实际命令 | 结果 |
+| --- | --- |
+| `.venv/Scripts/python.exe -m pytest -q tests/test_contracts.py tests/test_temporal.py -k 'delisting or calendar_source or visible_sources or single_source_calendar'` | **18 passed, 29 deselected in 0.52s** |
+| `.venv/Scripts/python.exe -m pytest -q` | **60 passed in 1.60s**，一次短完整回归 |
+| `.venv/Scripts/ruff.exe check src tests` | All checks passed |
+| `.venv/Scripts/ruff.exe format --check src tests` | 15 files already formatted |
+
+检查记录见 [本轮命令结果](evidence/phase0_review_fix_checks.json)。
+本次未改依赖、库调用、模型训练或打包配置，复用原版本的库兼容性证据，没有再次运行完整模型 smoke。
+对实际涉及的新校验路径做了一次只读数据 / 时间验证：用新契约读取原 smoke 的五表，
+比较 DuckDB 与参考 as_of、历史成员及 next-open 标签端点，结果与原始 result 一致。
+核对原成功运行与归档 evidence 的文件摘要，均未变化；
+见 [数据 / 时间检查记录](evidence/phase0_review_fix_data_check.json)。原始成功 / 失败产物继续保留。
+
+本修复没有 GPU、真实数据、网络采集或服务器执行；完整 Phase 0 的数据与资源缺口保持未验收。
+所有本轮检查已退出；修复提交仅留在本地供主代理审阅，未推送或同步服务器。

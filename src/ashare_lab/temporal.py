@@ -34,6 +34,7 @@ def next_open_window(
 ) -> LabelInterval:
     """Engineering convention: T+1 open to T+6 open = five session intervals.
 
+    The selected exchange must have one visible source, including closed dates.
     Future scheduled sessions must already be published at signal time. Actual
     execution/price availability is supplied separately, never inferred as a feature.
     """
@@ -44,14 +45,13 @@ def next_open_window(
     if type(horizon) is not int or horizon < 1:
         raise ContractError("horizon must be a positive session count")
     rows = [
-        r
-        for r in as_of("calendar", calendar, signal_time).to_pylist()
-        if r["exchange"] == exchange and r["is_open"]
+        r for r in as_of("calendar", calendar, signal_time).to_pylist() if r["exchange"] == exchange
     ]
+    if len({r["source"] for r in rows}) != 1:
+        raise ContractError("select a single calendar source for the requested exchange")
+    rows = [r for r in rows if r["is_open"]]
     rows.sort(key=lambda r: r["event_date"])
     dates = [r["event_date"] for r in rows]
-    if len(dates) != len(set(dates)):
-        raise ContractError("select a single calendar source")
     if signal_date not in dates:
         raise ContractError("signal date is not a known open session")
     index = dates.index(signal_date)

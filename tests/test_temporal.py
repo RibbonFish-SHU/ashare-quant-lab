@@ -2,7 +2,7 @@ from datetime import date, timedelta
 
 import pytest
 
-from ashare_lab.contracts import ContractError
+from ashare_lab.contracts import ContractError, validate_records
 from ashare_lab.synthetic import at, fixture, sessions
 from ashare_lab.temporal import (
     LabelInterval,
@@ -83,3 +83,84 @@ def test_inverted_time_and_transform_fit_rejected():
     with pytest.raises(ContractError, match="only nonempty training"):
         check_transform_fit([sessions()[8]], set(sessions()[:8]))
     check_transform_fit(sessions()[:5], set(sessions()[:8]))
+
+
+def fixture_window(calendar, signal_time=None):
+    return next_open_window(
+        calendar,
+        sessions()[0],
+        signal_time or at(sessions()[0]),
+        at(sessions()[6], 15, 10),
+    )
+
+
+@pytest.mark.parametrize("second_source", ["alternating_dates", "closed_day", "same_day"])
+def test_calendar_rejects_multiple_visible_sources_before_open_filter(second_source):
+    rows = fixture()["calendar"].to_pylist()
+    if second_source == "alternating_dates":
+        for row in rows:
+            if row["exchange"] == "SSE" and sessions().index(row["event_date"]) % 2:
+                row["source"] = "synthetic-other"
+    else:
+        extra = {**rows[0], "source": "synthetic-other"}
+        if second_source == "closed_day":
+            extra.update(
+                event_date=date(2024, 1, 6), is_open=False, open_time=None, close_time=None
+            )
+        rows.append(extra)
+    calendar = validate_records("calendar", rows, data_kind="synthetic")
+    with pytest.raises(ContractError, match="single calendar source"):
+        fixture_window(calendar)
+
+
+def test_calendar_source_check_ignores_other_exchange():
+    original = fixture()["calendar"]
+    rows = original.to_pylist()
+    for row in rows:
+        if row["exchange"] == "SZSE":
+            row["source"] = "synthetic-other"
+    calendar = validate_records("calendar", rows, data_kind="synthetic")
+    assert fixture_window(calendar) == fixture_window(original)
+
+
+def test_calendar_source_check_uses_availability_cutoff():
+    original = fixture()["calendar"]
+    rows = original.to_pylist()
+    available = at(sessions()[0]) + timedelta(microseconds=1)
+    rows.append(
+        {
+            **rows[0],
+            "source": "synthetic-late",
+            "publish_time": available,
+            "available_time": available,
+        }
+    )
+    calendar = validate_records("calendar", rows, data_kind="synthetic")
+    assert fixture_window(calendar) == fixture_window(original)
+    with pytest.raises(ContractError, match="single calendar source"):
+        fixture_window(calendar, signal_time=available)
+
+
+def test_single_source_calendar_accepts_closed_days_and_revisions():
+    original = fixture()["calendar"]
+    rows = original.to_pylist()
+    rows.append(
+        {
+            **rows[0],
+            "event_date": date(2024, 1, 6),
+            "is_open": False,
+            "open_time": None,
+            "close_time": None,
+        }
+    )
+    rows.append(
+        {
+            **rows[0],
+            "record_version": 2,
+            "source_version": "synthetic-v2",
+            "publish_time": at(sessions()[0], 9),
+            "available_time": at(sessions()[0], 9),
+        }
+    )
+    calendar = validate_records("calendar", rows, data_kind="synthetic")
+    assert fixture_window(calendar) == fixture_window(original)

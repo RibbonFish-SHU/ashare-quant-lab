@@ -211,6 +211,15 @@ def _validate_domain(name, row, prefix):
             raise ContractError(f"{prefix}: delisting must follow listing")
         if row["trading_status"] not in {"active", "suspended", "delisted"}:
             raise ContractError(f"{prefix}: unknown trading status")
+        # delisted_date is the first Shanghai date on which delisting is effective.
+        delisted_date = row["delisted_date"]
+        if row["trading_status"] == "delisted":
+            if delisted_date is None or delisted_date > row["event_date"]:
+                raise ContractError(
+                    f"{prefix}: delisted status requires delisted_date <= event_date"
+                )
+        elif delisted_date is not None and delisted_date <= row["event_date"]:
+            raise ContractError(f"{prefix}: status on/after delisted_date must be delisted")
         if row["is_suspended"] != (row["trading_status"] == "suspended"):
             raise ContractError(f"{prefix}: inconsistent suspension status")
         if any(row[k] is not None and row[k] <= 0 for k in ("limit_up", "limit_down")):
