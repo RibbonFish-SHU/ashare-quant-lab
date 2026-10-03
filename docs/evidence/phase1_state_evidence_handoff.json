@@ -1,0 +1,69 @@
+{
+  "schema_version": "phase1-state-evidence-handoff-v1",
+  "recorded_at_utc": "2026-10-03T17:50:18.976084+00:00",
+  "user_authorization": "???????",
+  "scope": "handoff to the existing ashare-experiment for offline historical-state evidence implementation and tests",
+  "source_base_commit": "007216cfc8f30270210732b86ba73ea9a4e42f66",
+  "herdr_env_present": false,
+  "environment_variables_fabricated": false,
+  "caller_identity_basis": "Explicit ashare-main pane and terminal identity plus live screen containing the current user message and this turn commands; no current or UI-focus routing.",
+  "main": {
+    "name": "ashare-main",
+    "pane_id": "w8:p1",
+    "terminal_id": "term_65ce8cb9a66a3f",
+    "workspace_id": "w8",
+    "tab_id": "w8:t1",
+    "cwd": "E:\\量化",
+    "foreground_process_id": 37860
+  },
+  "executor": {
+    "name": "ashare-experiment",
+    "pane_id": "w8:p2",
+    "terminal_id": "term_65ce9459e207211",
+    "workspace_id": "w8",
+    "tab_id": "w8:t1",
+    "cwd": "E:\\量化",
+    "foreground_process_id": 46616,
+    "state_before": "idle",
+    "state_after": "working",
+    "state_change_seq_after": 237
+  },
+  "prompt_calls": 1,
+  "first_delivery_observation": "Plain input composer showed [Pasted Content 1383 chars]; lifecycle remained idle.",
+  "additional_enter_count": 1,
+  "additional_enter_condition": "Only after explicitly observing the handoff still in the plain input composer.",
+  "bounded_wait": {
+    "until": "working",
+    "timeout_ms": 15000,
+    "result": "working"
+  },
+  "processing_observed": true,
+  "processing_evidence": "Executor replied that it would read task/review records, check Git, create an independent worktree, validate originals, implement event semantics and run offline tests. Visible transcript showed Get-Content command and source-document skill preparation.",
+  "read_adaptation": "Recent 55-line read while working was rejected with agent_not_idle; used visible read without scrolling or interrupting.",
+  "implementation_complete": false,
+  "candidate_build_authorized_to_start_now": false,
+  "next_review": "Stable source commit, relevant tests, bound input configuration and explicit execution-root command before candidate build.",
+  "ownership": {
+    "executor": "new phase1/state-evidence source/config/tests/processes/candidate/execution report",
+    "main": "requirements/source decisions/review/integration/user updates"
+  },
+  "other_project_agents_contacted": false,
+  "new_core_agents_started": 0,
+  "input_documents": [
+    {
+      "path": "docs/PHASE1_COMMUNITY_IMPORT_REVIEW.md",
+      "bytes": 5913,
+      "sha256": "4d247ea98ad20124d2c68b6c9b100b1ef0c4d61a5f125180469802e21921416c"
+    },
+    {
+      "path": "docs/PHASE1_STATE_EVIDENCE_PLAN.md",
+      "bytes": 4127,
+      "sha256": "975c121b74ade6fc014d63ccf423cbbabc87cf46a48a6b693cbf667b1f74021f"
+    },
+    {
+      "path": "docs/evidence/phase1_state_evidence_input_preflight.json",
+      "bytes": 9082,
+      "sha256": "686891c137cd37ffca21573491226b376e3a3211ef4b2af9123510c9cfca362d"
+    }
+  ]
+}
