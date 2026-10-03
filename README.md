@@ -2,7 +2,8 @@
 
 A 股日频研究工程。已验证本地 / Linux 环境、数据契约、CPU / 单卡 GPU smoke 和真实原始样本读取；
 Phase 1 数据管线已集成，2023 候选共 75,271 行，1,403 个计划请求中成功 1,002 个。
-BaoStock 访问受限后已停止该来源；继续核验东方财富补充行情。历史 PIT、回测和正式策略尚未验收。
+BaoStock 访问受限后已停止该来源；东方财富首十只补充日线 2,420 行已完成原件与落盘核对，
+其余 90 只正在推进。历史 PIT、回测和正式策略尚未验收，真实候选均不具有正式研究资格。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
@@ -28,5 +29,7 @@ uv run --frozen --extra dev ashare-lab smoke --config configs/smoke.toml
 - [Phase 1 运行入口与数据契约](docs/PHASE1_RUNBOOK.md)
 - [Phase 1 执行报告](docs/PHASE1_EXECUTION_REPORT.md)与[主审验收](docs/PHASE1_REVIEW.md)
 - [补充行情来源实测与下一批范围](docs/PHASE1_SOURCE_FALLBACK_PLAN.md)
+- [补充行情执行报告](docs/PHASE1_FALLBACK_REPORT.md)与[主审结果](docs/PHASE1_FALLBACK_REVIEW.md)
+- [上市日期与独立价格抽样](docs/PHASE1_METADATA_AND_CROSSCHECK.md)
 
 研究、推理、交易和风控保持隔离。当前代码仅有研究工程工具；实盘晋级依照项目方案另行确认。

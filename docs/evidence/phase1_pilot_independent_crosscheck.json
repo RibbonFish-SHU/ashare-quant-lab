@@ -1,0 +1,62 @@
+{
+  "schema_version": "public-crosscheck-audit-v1",
+  "completed_at_utc": "2026-10-03T13:04:18.751940+00:00",
+  "research_eligible": false,
+  "planned_requests": 10,
+  "attempted_requests": 2,
+  "successful_requests": 1,
+  "rows_compared": 10,
+  "ohlc_values_compared": 40,
+  "ohlc_nonzero_differences": 0,
+  "reference_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10\\bars.parquet",
+  "reference_sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6",
+  "plan_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\plan.json",
+  "plan_sha256": "7450745decde4e51086a23f0f45674c96b8d7c88fb20adcc3313d1ee57fcc526",
+  "captures_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\captures.json",
+  "captures_sha256": "0af894fbcaa6b9c2ce94be63af5fa70ed3ec7fe4ebda34468f839c37e3f14f75",
+  "comparisons_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\comparisons.json",
+  "comparisons_sha256": "3e082741e5808e27055b09e2a603550ff39af882a5d2c92ad51eb162a02043dd",
+  "raw_parquet_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\raw-bars.parquet",
+  "raw_parquet_sha256": "587f6a0a30a077254b7bea5d3f85b63c64ebd54b5ec88ee138b5cef99cd10c4d",
+  "parquet_roundtrip": true,
+  "source_audit_pid": 57728,
+  "notes": [
+    "Only historical day arrays used; attached current-quote objects excluded.",
+    "Sample comparison does not certify full-year quotes, quantities, PIT or execution states."
+  ],
+  "failed_requests": 1,
+  "not_attempted_requests": 8,
+  "unverified_pilot_securities": 9,
+  "successful_symbols": [
+    "000938.SZ"
+  ],
+  "failed_symbols": [
+    "000963.SZ"
+  ],
+  "stop_metadata": {
+    "provider": "tencent",
+    "parameters": {
+      "_var": "kline_day2023",
+      "param": "sz000963,day,2023-12-18,2023-12-29,10,",
+      "r": "0.8205512681390605"
+    },
+    "query_id": "25098454314b2df2c0f6fd9f34d940143a6231404b3cb07dbb930204062b23ad",
+    "url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sz000963%2Cday%2C2023-12-18%2C2023-12-29%2C10%2C&r=0.8205512681390605",
+    "final_url": "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sz000963%2Cday%2C2023-12-18%2C2023-12-29%2C10%2C&r=0.8205512681390605",
+    "started_at_utc": "2026-10-03T13:04:03.698482+00:00",
+    "status": null,
+    "classification": "audit_stopped",
+    "transfer_complete": false,
+    "headers": {},
+    "research_eligible": false,
+    "audit_pid": 57728,
+    "error": "URLError: <urlopen error _ssl.c:999: The handshake operation timed out>",
+    "captured_at_utc": "2026-10-03T13:04:18.708990+00:00",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stop_metadata_sha256": "a6c26afa356c9d7510a4327efa58d870228025574ac3e3532042e869e0d84c6e",
+  "process_exit_checked_at_utc": "2026-10-03T13:06:16.111621+00:00",
+  "source_audit_exited": true,
+  "provider_restriction_not_established": true
+}

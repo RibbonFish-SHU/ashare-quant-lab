@@ -1,0 +1,413 @@
+{
+  "schema_version": "official-listing-date-audit-v1",
+  "reviewed_at_utc": "2026-10-03T12:59:12.553806+00:00",
+  "research_eligible": false,
+  "source_observation": {
+    "url": "https://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx&CATALOGID=1110&TABKEY=tab1&random=0.6935816432433362",
+    "started_at_utc": "2026-10-03T12:56:39.012112+00:00",
+    "purpose": "current listing date source only; not historical universe or price data",
+    "status": 200,
+    "headers": {
+      "Server": "nginx",
+      "Date": "Sat, 03 Oct 2026 12:56:39 GMT",
+      "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=GBK",
+      "Content-Length": "545038",
+      "Connection": "close",
+      "Content-disposition": "attachment;filename=\"A¹ÉÁÐ±í.xlsx\"",
+      "X-Varnish": "311246768 306310978",
+      "Age": "38",
+      "Via": "1.1 varnish-v4",
+      "X-Cache": "cached",
+      "Accept-Ranges": "bytes",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "final_url": "https://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx&CATALOGID=1110&TABKEY=tab1&random=0.6935816432433362",
+    "transfer_complete": true,
+    "bytes": 545038,
+    "sha256": "4bc75fd1046c524b6a64787bac3fbd6ef15080776fc7bc97fd9d703b06562948",
+    "captured_at_utc": "2026-10-03T12:56:39.623052+00:00"
+  },
+  "raw_path": "datasets/raw/szse/20261003-listing-audit/a-list.bin",
+  "raw_sha256": "4bc75fd1046c524b6a64787bac3fbd6ef15080776fc7bc97fd9d703b06562948",
+  "script_sha256": "fa9dfa27bb77f74b849477b845a47015494fb6a8cfb23413ddb477e035069dfc",
+  "historical_plan": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json",
+    "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df"
+  },
+  "sheets": [
+    {
+      "name": "A股列表",
+      "rows_including_header": 2905,
+      "formula_count": 0,
+      "selected_fields": [
+        "A股代码",
+        "A股上市日期"
+      ]
+    }
+  ],
+  "current_list_rows": 2904,
+  "historical_plan_sz_codes": 134,
+  "matched_historical_codes": 134,
+  "unmatched_historical_codes": [],
+  "missing_bar_codes": 100,
+  "matched_missing_bar_codes": 100,
+  "unmatched_missing_bar_codes": [],
+  "scope": "Current official listing-date observations for codes selected by retained historical plan. Not a historical constituent, delisting, ST or suspension source.",
+  "historical_available_time": null,
+  "extract_path": "datasets/raw/szse/20261003-listing-audit/listing-date-extract.json",
+  "extract_sha256": "d052dc9dedb050a2ada3e2767c0f8aa165b87957d3d6a172f5b9aa1e6a99d4cf",
+  "comparison_reference": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\securities.parquet",
+    "sha256": "e80fc675e7b5649fd83fcb6c9c0965673b78038ca4c94158de486697f77bac4b"
+  },
+  "listing_date_comparisons": [
+    {
+      "symbol": "000001.SZ",
+      "szse_listed_date": "1991-04-03",
+      "baostock_ipo_date": "1991-04-03",
+      "same": true,
+      "baostock_raw_sha256": "a4894b109bcf1b00820e60dc99efac6787dddf25a6243e5aa80dfeddd0db1182"
+    },
+    {
+      "symbol": "000002.SZ",
+      "szse_listed_date": "1991-01-29",
+      "baostock_ipo_date": "1991-01-29",
+      "same": true,
+      "baostock_raw_sha256": "615fed893365a01e40ff56961fb6f40f0c76c981ec675560dda1cf3e55f9c2c9"
+    },
+    {
+      "symbol": "000063.SZ",
+      "szse_listed_date": "1997-11-18",
+      "baostock_ipo_date": "1997-11-18",
+      "same": true,
+      "baostock_raw_sha256": "b22252008489967c54ac959b2e397830e045ae8f84376a181a5a627ab8b9bd0e"
+    },
+    {
+      "symbol": "000066.SZ",
+      "szse_listed_date": "1997-06-26",
+      "baostock_ipo_date": "1997-06-26",
+      "same": true,
+      "baostock_raw_sha256": "1a98caa91ebb14c405a3eca92ffe2615ed70dade2593a2f65253ef7d154b788d"
+    },
+    {
+      "symbol": "000069.SZ",
+      "szse_listed_date": "1997-09-10",
+      "baostock_ipo_date": "1997-09-10",
+      "same": true,
+      "baostock_raw_sha256": "8ef7a951cd19551fba90453293240c067b00be4c3064c8eacf05c668d2fb3291"
+    },
+    {
+      "symbol": "000100.SZ",
+      "szse_listed_date": "2004-01-30",
+      "baostock_ipo_date": "2004-01-30",
+      "same": true,
+      "baostock_raw_sha256": "67eb61faa9236fe2e1a472f477883d5a1821fbc9c885759cdf7d7b61b0aa325a"
+    },
+    {
+      "symbol": "000157.SZ",
+      "szse_listed_date": "2000-10-12",
+      "baostock_ipo_date": "2000-10-12",
+      "same": true,
+      "baostock_raw_sha256": "ec837d3b3e24202b863a4d125a05ad29264da90dce03295d95cc0833754499af"
+    },
+    {
+      "symbol": "000166.SZ",
+      "szse_listed_date": "2015-01-26",
+      "baostock_ipo_date": "2015-01-26",
+      "same": true,
+      "baostock_raw_sha256": "5f3bc471aebc25a3143eb40a97a96f78494969f1f00a2db220b95cf0e502a48e"
+    },
+    {
+      "symbol": "000301.SZ",
+      "szse_listed_date": "2000-05-29",
+      "baostock_ipo_date": "2000-05-29",
+      "same": true,
+      "baostock_raw_sha256": "aacffbb531f3a082f33c8ca29e181690f8ee4af7fd2b6e8a2b500932dadbf9fb"
+    },
+    {
+      "symbol": "000333.SZ",
+      "szse_listed_date": "2013-09-18",
+      "baostock_ipo_date": "2013-09-18",
+      "same": true,
+      "baostock_raw_sha256": "22198f047701b34eaa6759c95e0dfeb29f9e44a532a9d892ea2bb9ad8756ad76"
+    },
+    {
+      "symbol": "000338.SZ",
+      "szse_listed_date": "2007-04-30",
+      "baostock_ipo_date": "2007-04-30",
+      "same": true,
+      "baostock_raw_sha256": "624ae6c3fc15a1ef1b479430a2f65fd732c9521a86657d3796e512e8be12ff85"
+    },
+    {
+      "symbol": "000408.SZ",
+      "szse_listed_date": "1996-06-28",
+      "baostock_ipo_date": "1996-06-28",
+      "same": true,
+      "baostock_raw_sha256": "faba1f88ea046c18ec02c0960fbe36baa7bec40d184c3c798fbc1cad13c79fd0"
+    },
+    {
+      "symbol": "000425.SZ",
+      "szse_listed_date": "1996-08-28",
+      "baostock_ipo_date": "1996-08-28",
+      "same": true,
+      "baostock_raw_sha256": "4aa59f9ba7e50c26e361e9b02472bd0a92387f374b1cf710b4ad2712acb61a0f"
+    },
+    {
+      "symbol": "000538.SZ",
+      "szse_listed_date": "1993-12-15",
+      "baostock_ipo_date": "1993-12-15",
+      "same": true,
+      "baostock_raw_sha256": "b2a37706e05f7ad7227f128c7bbad1993d4a8d749703063b9af1a1901ad04279"
+    },
+    {
+      "symbol": "000568.SZ",
+      "szse_listed_date": "1994-05-09",
+      "baostock_ipo_date": "1994-05-09",
+      "same": true,
+      "baostock_raw_sha256": "05815e067f9e50b173e9f072bf51bd95f840de88fe1d3f52117a8892300b4183"
+    },
+    {
+      "symbol": "000596.SZ",
+      "szse_listed_date": "1996-09-27",
+      "baostock_ipo_date": "1996-09-27",
+      "same": true,
+      "baostock_raw_sha256": "d5ce8813f3710997f9d3913423dec41f0b4e355b62dbea47a7c39b76e623f248"
+    },
+    {
+      "symbol": "000617.SZ",
+      "szse_listed_date": "1996-10-22",
+      "baostock_ipo_date": "1996-10-22",
+      "same": true,
+      "baostock_raw_sha256": "cc62f4c1d92b00edbc2bfb4a126f6266b12b19cd2e129e633d7fe8dda1c9837b"
+    },
+    {
+      "symbol": "000625.SZ",
+      "szse_listed_date": "1997-06-10",
+      "baostock_ipo_date": "1997-06-10",
+      "same": true,
+      "baostock_raw_sha256": "71e6a30a332699a8031d2091abae407e7930be149a2b7a5eabcf5f7c789c67ea"
+    },
+    {
+      "symbol": "000651.SZ",
+      "szse_listed_date": "1996-11-18",
+      "baostock_ipo_date": "1996-11-18",
+      "same": true,
+      "baostock_raw_sha256": "38c48c15d59868b1e3eff7424f0d570645eb93d00a918518aa46bdf7f65dad5e"
+    },
+    {
+      "symbol": "000661.SZ",
+      "szse_listed_date": "1996-12-18",
+      "baostock_ipo_date": "1996-12-18",
+      "same": true,
+      "baostock_raw_sha256": "e8b48fdcd7accb320c37bc4aa7548e3b59e50facaa706d4fc41a08d2441a2300"
+    },
+    {
+      "symbol": "000703.SZ",
+      "szse_listed_date": "1997-03-28",
+      "baostock_ipo_date": "1997-03-28",
+      "same": true,
+      "baostock_raw_sha256": "914d94c3b3cd406a6c1a34cc2763fd32acd194f7ed663bddbb6ac39e35379b62"
+    },
+    {
+      "symbol": "000708.SZ",
+      "szse_listed_date": "1997-03-26",
+      "baostock_ipo_date": "1997-03-26",
+      "same": true,
+      "baostock_raw_sha256": "e44f8f6a7a468c5550b76a41b7a5f2145bdafb3f93ab4f6589370d8edf2115b8"
+    },
+    {
+      "symbol": "000723.SZ",
+      "szse_listed_date": "1997-05-15",
+      "baostock_ipo_date": "1997-05-15",
+      "same": true,
+      "baostock_raw_sha256": "22ef89ac129d2e5940ec24bc90d4bb399e03e132d935d144a787aa1085e33782"
+    },
+    {
+      "symbol": "000725.SZ",
+      "szse_listed_date": "2001-01-12",
+      "baostock_ipo_date": "2001-01-12",
+      "same": true,
+      "baostock_raw_sha256": "30ef6022181c59d5d663a1cfefc8c7a053b6f81e9619e3cb6ca36d4bf3d8f76e"
+    },
+    {
+      "symbol": "000733.SZ",
+      "szse_listed_date": "1997-07-03",
+      "baostock_ipo_date": "1997-07-03",
+      "same": true,
+      "baostock_raw_sha256": "78841f09967b305db9c35b59651d01ffa844cc41243864698ae9d91997082587"
+    },
+    {
+      "symbol": "000768.SZ",
+      "szse_listed_date": "1997-06-26",
+      "baostock_ipo_date": "1997-06-26",
+      "same": true,
+      "baostock_raw_sha256": "b00700385282912bdfa2958c8abc2ab60b324396e385cad39ff0f2258fa87d28"
+    },
+    {
+      "symbol": "000776.SZ",
+      "szse_listed_date": "1997-06-11",
+      "baostock_ipo_date": "1997-06-11",
+      "same": true,
+      "baostock_raw_sha256": "48da0150a563c031a4ea4f16f6a5731610bf1a0ad2b7dc1fa2beaaabf09f38f8"
+    },
+    {
+      "symbol": "000786.SZ",
+      "szse_listed_date": "1997-06-06",
+      "baostock_ipo_date": "1997-06-06",
+      "same": true,
+      "baostock_raw_sha256": "e68777997cfba42cb19106a321e8144fc2a6950af0fbedc99d8ec77d8991dcde"
+    },
+    {
+      "symbol": "000792.SZ",
+      "szse_listed_date": "1997-09-04",
+      "baostock_ipo_date": "1997-09-04",
+      "same": true,
+      "baostock_raw_sha256": "4613463d9498defd9a5eadd607ce55aa038b58bdb542a17c6d0446ef28512a51"
+    },
+    {
+      "symbol": "000800.SZ",
+      "szse_listed_date": "1997-06-18",
+      "baostock_ipo_date": "1997-06-18",
+      "same": true,
+      "baostock_raw_sha256": "232f80deeb07ba8a8af887455c884708580dee32ab1d81a089b0c1fdffb61e87"
+    },
+    {
+      "symbol": "000858.SZ",
+      "szse_listed_date": "1998-04-27",
+      "baostock_ipo_date": "1998-04-27",
+      "same": true,
+      "baostock_raw_sha256": "5e3b05e2bc44e730ac84a710317ec78906e5c1a2b966f69dc2a712f9e83c1bb7"
+    },
+    {
+      "symbol": "000876.SZ",
+      "szse_listed_date": "1998-03-11",
+      "baostock_ipo_date": "1998-03-11",
+      "same": true,
+      "baostock_raw_sha256": "9a87b4182037ed5e757052279d2d12085d050b7da1c3fa64f12b02129bfee19b"
+    },
+    {
+      "symbol": "000877.SZ",
+      "szse_listed_date": "1999-01-07",
+      "baostock_ipo_date": "1999-01-07",
+      "same": true,
+      "baostock_raw_sha256": "7b679131a90ec22e587b8af700098ba0c1f32dc771501ce3e1d9af67688f9300"
+    },
+    {
+      "symbol": "000895.SZ",
+      "szse_listed_date": "1998-12-10",
+      "baostock_ipo_date": "1998-12-10",
+      "same": true,
+      "baostock_raw_sha256": "baa7c834cdc4ace803a2b45acb341ca94841516489cb88596fb5534df64b2311"
+    }
+  ],
+  "comparison_count": 34,
+  "mismatch_count": 0,
+  "latest_listing_date_among_missing_100": "2022-07-29",
+  "all_missing_100_listed_before_2023": true,
+  "pilot_listing_dates": [
+    {
+      "symbol": "000938.SZ",
+      "listed_date": "1999-11-04",
+      "sheet": "A股列表",
+      "row": 376,
+      "code_cell": "E376",
+      "listing_date_cell": "G376",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "000963.SZ",
+      "listed_date": "2000-01-27",
+      "sheet": "A股列表",
+      "row": 389,
+      "code_cell": "E389",
+      "listing_date_cell": "G389",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "000977.SZ",
+      "listed_date": "2000-06-08",
+      "sheet": "A股列表",
+      "row": 399,
+      "code_cell": "E399",
+      "listing_date_cell": "G399",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "000983.SZ",
+      "listed_date": "2000-07-26",
+      "sheet": "A股列表",
+      "row": 403,
+      "code_cell": "E403",
+      "listing_date_cell": "G403",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "000999.SZ",
+      "listed_date": "2000-03-09",
+      "sheet": "A股列表",
+      "row": 413,
+      "code_cell": "E413",
+      "listing_date_cell": "G413",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "001289.SZ",
+      "listed_date": "2022-01-24",
+      "sheet": "A股列表",
+      "row": 472,
+      "code_cell": "E472",
+      "listing_date_cell": "G472",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "001979.SZ",
+      "listed_date": "2015-12-30",
+      "sheet": "A股列表",
+      "row": 535,
+      "code_cell": "E535",
+      "listing_date_cell": "G535",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "002001.SZ",
+      "listed_date": "2004-06-25",
+      "sheet": "A股列表",
+      "row": 536,
+      "code_cell": "E536",
+      "listing_date_cell": "G536",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "002007.SZ",
+      "listed_date": "2004-06-25",
+      "sheet": "A股列表",
+      "row": 541,
+      "code_cell": "E541",
+      "listing_date_cell": "G541",
+      "among_100_missing_bars": true
+    },
+    {
+      "symbol": "002008.SZ",
+      "listed_date": "2004-06-25",
+      "sheet": "A股列表",
+      "row": 542,
+      "code_cell": "E542",
+      "listing_date_cell": "G542",
+      "among_100_missing_bars": true
+    }
+  ],
+  "candidate_outputs_unchanged": true,
+  "canonical_listing_status_not_inferred": true,
+  "observed_page": {
+    "path": "datasets/raw/szse/20261003-listing-audit/listing-page.bin",
+    "sha256": "ce51450c3072976fb40683cc66f48eb7bb62da260b056383f2114065502579fd"
+  },
+  "endpoint_discovery": {
+    "url": "https://api.github.com/repos/akfamily/akshare/git/blobs/9300ba0c25dda84acb99e4d93b025b692e9cbdf5",
+    "captured_at_utc": "2026-10-03T12:55:57.834082+00:00",
+    "status": 200,
+    "git_blob_sha": "9300ba0c25dda84acb99e4d93b025b692e9cbdf5",
+    "bytes": 16398,
+    "sha256": "d3288903d1e8ce7796e051bfbe651cb15aad0b29d4043277b04984f3cec72892"
+  }
+}
