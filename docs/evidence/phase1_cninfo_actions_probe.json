@@ -1,0 +1,292 @@
+{
+  "recorded_at_utc": "2026-10-03T14:32:04.782770+00:00",
+  "kind": "cninfo-official-action-limited-probe-v1",
+  "research_eligible": false,
+  "requests": [
+    {
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "method": "POST",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "10",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "000938,gssz0000938",
+        "searchkey": "权益分派实施",
+        "secid": "",
+        "category": "category_qyfpxzcs_szsh",
+        "trade": "",
+        "seDate": "2023-01-01~2023-12-31",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at": "2026-10-03T14:27:29.548346+00:00",
+      "complete": true,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "completed_at": "2026-10-03T14:27:30.015212+00:00",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114",
+      "raw_path": "datasets/raw/cninfo/20261003-actions-probe/000938-2023-distribution.bin"
+    },
+    {
+      "url": "https://static.cninfo.com.cn/finalpage/2023-05-30/1216935954.PDF",
+      "announcement_id": "1216935954",
+      "started_at": "2026-10-03T14:28:24.567037+00:00",
+      "complete": true,
+      "status": 200,
+      "content_type": "application/pdf",
+      "server_date": "Sat, 03 Oct 2026 14:28:25 GMT",
+      "bytes": 280401,
+      "sha256": "3e9580d1ed9858f7172c98d30b72452dc39458cf381969dccc53a39931a847b1",
+      "completed_at": "2026-10-03T14:28:24.874421+00:00"
+    },
+    {
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "method": "POST",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "10",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "300308,9900022016",
+        "searchkey": "权益分派实施",
+        "secid": "",
+        "category": "category_qyfpxzcs_szsh",
+        "trade": "",
+        "seDate": "2023-01-01~2023-12-31",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at": "2026-10-03T14:27:30.016264+00:00",
+      "complete": true,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "completed_at": "2026-10-03T14:27:30.191558+00:00",
+      "bytes": 829,
+      "sha256": "0786e6dc13cfc658d5c29258f86d7b157b533f2b7971a80a3f40ffbf1d475f2f",
+      "raw_path": "datasets/raw/cninfo/20261003-actions-probe/300308-2023-distribution.bin"
+    },
+    {
+      "url": "https://www.cninfo.com.cn/new/data/szse_stock.json",
+      "method": "GET",
+      "payload": null,
+      "started_at": "2026-10-03T14:27:28.980826+00:00",
+      "complete": true,
+      "status": 200,
+      "content_type": "application/json",
+      "completed_at": "2026-10-03T14:27:29.543125+00:00",
+      "bytes": 592485,
+      "sha256": "5682733958a171c9084706da8d74b8b7f96d63cfd99b932c7c7edc58f8b32b72",
+      "raw_path": "datasets/raw/cninfo/20261003-actions-probe/stock-map.bin"
+    }
+  ],
+  "scope": {
+    "stock_mapping": "Current code/orgId dictionary used only for routing; not historical universe or historical company features.",
+    "search_symbols": [
+      "000938.SZ",
+      "300308.SZ"
+    ],
+    "date_range": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "keyword": "权益分派实施",
+    "category": "category_qyfpxzcs_szsh",
+    "pages_per_symbol": 1,
+    "page_size": 10,
+    "result_counts": {
+      "000938.SZ": 0,
+      "300308.SZ": 1
+    },
+    "zero_result_interpretation": "Zero matches for this exact query, not proof of no corporate actions.",
+    "source_access": "Public anonymous website search and one public PDF; no Tushare token, account, or encrypted CNINFO data-API request."
+  },
+  "reviewed_notice": {
+    "symbol": "300308.SZ",
+    "issuer": "中际旭创股份有限公司",
+    "announcement_id": "1216935954",
+    "issuer_announcement_number": "2023-071",
+    "title": "2022年度权益分派实施公告",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2023-05-30/1216935954.PDF",
+    "pdf": {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/1216935954.pdf",
+      "bytes": 280401,
+      "sha256": "3e9580d1ed9858f7172c98d30b72452dc39458cf381969dccc53a39931a847b1"
+    },
+    "pdf_pages": 4,
+    "reporting_year": 2022,
+    "document_signed_date": "2023-05-30",
+    "website_announcement_date_shanghai": "2023-05-30",
+    "website_timestamp_ms": 1685376000000,
+    "website_timestamp_interpretation": "Shanghai midnight date label; does not prove exact first public availability at 00:00.",
+    "historical_available_time": null,
+    "historical_time_precision": "day only",
+    "shareholder_meeting_date": {
+      "value": "2023-05-18",
+      "pdf_page": 1
+    },
+    "record_date": {
+      "value": "2023-06-05",
+      "pdf_page": 3
+    },
+    "ex_date": {
+      "value": "2023-06-06",
+      "pdf_page": 3
+    },
+    "cash_payment_date": {
+      "value": "2023-06-06",
+      "scope": "CSDC Shenzhen-distributed holders; selected holders are paid directly by the issuer",
+      "pdf_page": 3
+    },
+    "gross_cash_per_10_eligible_shares_cny": {
+      "value": "2.000000",
+      "pdf_page": 2
+    },
+    "gross_cash_per_eligible_share_cny": "0.2",
+    "cash_adjustment_per_total_share_cny": {
+      "value": "0.195898",
+      "pdf_page": 1
+    },
+    "ex_price_formula": "record_date_close - 0.195898",
+    "shares_total_at_announcement": 802826238,
+    "repurchased_shares_excluded": 16465985,
+    "eligible_shares": 786360253,
+    "gross_cash_total_cny": "157272050.60",
+    "stock_bonus": false,
+    "capital_reserve_conversion": false,
+    "after_tax_amount": "Holder type and holding-period dependent; not collapsed to one cash rate.",
+    "distinct_semantics": "Eligible shareholder cash entitlement and per-total-share ex-price deduction differ because repurchased shares do not participate. Keep separate fields."
+  },
+  "community_factor_diagnostic": {
+    "source": {
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/factor.day.bin",
+      "bytes": 11420,
+      "sha256": "fcb6f2bf425bb1374f6c39ad97a9294b383e4c9a1478052f66ad7466263c9adb"
+    },
+    "previous_close_source": {
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/close.day.bin",
+      "bytes": 11420,
+      "sha256": "1baa7f0c72e85345bda8f2e69bd0061ef2af4809c3fa5654d81a5f4e7a025579"
+    },
+    "date_before": "2023-06-05",
+    "date_after": "2023-06-06",
+    "previous_close_restored": 111.20000575739341,
+    "observed_stored_factor_ratio": 1.0018083889650697,
+    "theoretical_ratio_using_total_share_cash": 1.0017647815378883,
+    "theoretical_ratio_using_eligible_share_cash": 1.0018018017083452,
+    "accepted_as_exact_action_factor": false,
+    "interpretation": "Neither expression exactly equals the stored normalized float ratio. Source normalization/rounding and underlying adjustment convention are unresolved; do not infer an authoritative action from this factor alone."
+  },
+  "visual_review": {
+    "renderer": "pdftoppm -png -r 110",
+    "pages_read": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "text_dates_amounts_and_footnotes_checked": true,
+    "renderer_messages": [
+      "No display font for Symbol",
+      "No display font for ArialUnicode"
+    ],
+    "observed_rendering": "All four pages remain legible; numerical fields and Chinese text were visually checked.",
+    "renders": [
+      {
+        "path": ".cache/phase1/open-datasets/cninfo-1216935954-1.png",
+        "bytes": 250446,
+        "sha256": "9d146333c96449576016833e15eb14a7f14e8cba6f0c5d7a6b50cdb559f98278"
+      },
+      {
+        "path": ".cache/phase1/open-datasets/cninfo-1216935954-2.png",
+        "bytes": 322436,
+        "sha256": "b9991cec67dff4bd38405e3a7e4ac75b21f488451e65d1f15733ceb637744784"
+      },
+      {
+        "path": ".cache/phase1/open-datasets/cninfo-1216935954-3.png",
+        "bytes": 175074,
+        "sha256": "1cdff45a6ee6943dcb28bb493407c101e818328a2812cb71eb782df81d5ea111"
+      },
+      {
+        "path": ".cache/phase1/open-datasets/cninfo-1216935954-4.png",
+        "bytes": 43631,
+        "sha256": "57bd6fcc9d66019be0d66dff1d4d28b932a36d42f808a34d3a1663b366f98c5d"
+      }
+    ]
+  },
+  "retained_files": [
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/000938-2023-distribution.bin",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/000938-2023-distribution.metadata.json",
+      "bytes": 877,
+      "sha256": "a68739d515a4183739b69a2436ae08ea8071cbcb181ccba5d02cb220a1b59d99"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/1216935954.metadata.json",
+      "bytes": 456,
+      "sha256": "9ee8271b52ba5b502680d6b21da83cb7762f3ae7154d02d823cadf37ca3aca13"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/1216935954.pdf",
+      "bytes": 280401,
+      "sha256": "3e9580d1ed9858f7172c98d30b72452dc39458cf381969dccc53a39931a847b1"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/1216935954.txt",
+      "bytes": 6669,
+      "sha256": "f0aa2c9d6a25a72a56e827e83445c4b1ed9c8b296a872b3c3fcc8da83f7879c5"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/300308-2023-distribution.bin",
+      "bytes": 829,
+      "sha256": "0786e6dc13cfc658d5c29258f86d7b157b533f2b7971a80a3f40ffbf1d475f2f"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/300308-2023-distribution.metadata.json",
+      "bytes": 876,
+      "sha256": "1c8b898e85b6b8ff18b0e03d963c88d5f3289c4d224e22427fae7db47a160ab7"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/stock-map.bin",
+      "bytes": 592485,
+      "sha256": "5682733958a171c9084706da8d74b8b7f96d63cfd99b932c7c7edc58f8b32b72"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/stock-map.metadata.json",
+      "bytes": 471,
+      "sha256": "4776e52371078865ddb7ba473a7aa9dcce1ad7646b3b3c6ee926198cdb73d803"
+    }
+  ],
+  "audit_scripts": [
+    {
+      "path": ".cache/phase1/open-datasets/probe_cninfo_announcements.py",
+      "bytes": 2892,
+      "sha256": "67002585cab10d367558cc0073a029dc9c28f84b89e110f9a81e9708cd11253e"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/read_cninfo_pdf.py",
+      "bytes": 1749,
+      "sha256": "dc9c981fb40cf1f20744163ca25778acab8f66012f3c1181d00adff073bd3e02"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/summarize_cninfo_probe.py",
+      "bytes": 6207,
+      "sha256": "c4796c1b1d288f8adce37ae2c4f77f734c7ea4ec8201e256abd6bdde6d3de8df"
+    }
+  ],
+  "limits": [
+    "One implementation notice is not complete annual corporate-action coverage for this or any other stock.",
+    "No automatic production corporate-action adapter or candidate mutation was performed.",
+    "Intraday publication and historical revision lineage are unverified.",
+    "No quotes for 2024-2025, model/backtest, GPU, server, or provider-restriction retry was used."
+  ]
+}
