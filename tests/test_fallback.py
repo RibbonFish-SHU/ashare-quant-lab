@@ -318,7 +318,7 @@ def test_complete_entry_cannot_promote_failed_http_metadata(tmp_path, monkeypatc
     metadata["classification"] = "running"
     path = tmp_path / "metadata.json"
     save_json(path, metadata)
-    plan = {"requests": [request]}
+    plan = {"schema_version": "fallback-pilot-plan-v1", "requests": [request]}
     save_json(tmp_path / "plan.original.json", plan)
     save_json(
         tmp_path / "run.json",

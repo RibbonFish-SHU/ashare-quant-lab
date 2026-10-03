@@ -1,4 +1,4 @@
-"""At most ten missing 2023 securities, one bounded Eastmoney connection at a time."""
+"""Bounded 2023 Eastmoney pilot and its explicitly authorized remaining-90 continuation."""
 
 from contextlib import contextmanager
 import json
@@ -62,7 +62,74 @@ def plan_missing(run_path, original_plan, limit=10):
     }
 
 
+def plan_continuation(run_path, original_plan, pilot_run_path, pilot_plan_path):
+    """Bind the fixed remaining 90 to the original missing 100 and ten verified captures."""
+    pilot_run_path, pilot_plan_path = Path(pilot_run_path), Path(pilot_plan_path)
+    pilot_header = json.loads(pilot_run_path.read_text(encoding="utf-8"))
+    if (
+        pilot_header.get("schema_version") != "public-http-run-v1"
+        or pilot_header.get("plan", {}).get("schema_version") != "fallback-pilot-plan-v1"
+    ):
+        raise ValueError("continuation requires the original pilot run/plan schema")
+    # Check before recursive plan verification: a continuation can never be its own pilot.
+    if digest(pilot_plan_path) != pilot_header["plan_sha256"]:
+        raise ValueError("retained pilot plan digest differs from pilot run")
+    successful, pilot = load_collection(pilot_run_path)
+    base = plan_missing(run_path, original_plan, 10)
+    if (
+        pilot["plan"] != base
+        or pilot.get("status") != "complete"
+        or len(successful) != 10
+        or len(pilot["attempts"]) != 10
+        or any(e["status"] != "complete" or e.get("worker_exit") != 0 for e in pilot["attempts"])
+        or base["missing_baostock_bar_queries"] != 100
+        or len(base["missing_codes"]) != 100
+    ):
+        raise ValueError(
+            "continuation requires original missing 100 and the complete ten-attempt pilot"
+        )
+    completed = {r["query_id"] for r in successful}
+    remaining = [
+        code
+        for code in base["missing_codes"]
+        if request_identity(eastmoney_request(code))["query_id"] not in completed
+    ]
+    if len(remaining) != 90:
+        raise ValueError("continuation must contain exactly the remaining 90 securities")
+    return {
+        "schema_version": "fallback-continuation-plan-v1",
+        "provider": "eastmoney",
+        "research_eligible": False,
+        "origin_run": base["origin_run"],
+        "origin_plan": base["origin_plan"],
+        "pilot_run": {"path": str(pilot_run_path.resolve()), "sha256": digest(pilot_run_path)},
+        "pilot_plan": {"path": str(pilot_plan_path.resolve()), "sha256": digest(pilot_plan_path)},
+        "missing_baostock_bar_queries": 100,
+        "missing_codes": base["missing_codes"],
+        "excluded_pilot_query_ids": sorted(completed),
+        "excluded_pilot_symbols": sorted(r["symbol"] for r in successful),
+        "remaining_codes": remaining,
+        "selection": "original missing codes minus verified complete pilot; lexical order",
+        "max_securities": 90,
+        "requests": [eastmoney_request(code) for code in remaining],
+        "limits": {**base["limits"], "min_worker_exit_to_next_start_seconds": 1},
+    }
+
+
 def verify_plan(plan):
+    if plan.get("schema_version") == "fallback-continuation-plan-v1":
+        for name in ("origin_run", "origin_plan", "pilot_run", "pilot_plan"):
+            if digest(plan[name]["path"]) != plan[name]["sha256"]:
+                raise ValueError(f"continuation {name} digest differs")
+        expected = plan_continuation(
+            plan["origin_run"]["path"],
+            plan["origin_plan"]["path"],
+            plan["pilot_run"]["path"],
+            plan["pilot_plan"]["path"],
+        )
+        if expected != plan:
+            raise ValueError("continuation plan differs from the verified remaining-90 selection")
+        return
     if (
         plan.get("schema_version") != "fallback-pilot-plan-v1"
         or plan.get("provider") != "eastmoney"
@@ -193,7 +260,11 @@ def fetch(request, directory):
 def load_collection(path):
     path = Path(path)
     run = json.loads(path.read_text(encoding="utf-8"))
-    if run.get("schema_version") != "public-http-run-v1":
+    schemas = {
+        "public-http-run-v1": "fallback-pilot-plan-v1",
+        "public-http-run-v2": "fallback-continuation-plan-v1",
+    }
+    if run.get("schema_version") not in schemas:
         raise ValueError("unsupported HTTP run")
     plan_path = path.parent / "plan.original.json"
     if digest(plan_path) != run["plan_sha256"]:
@@ -201,6 +272,8 @@ def load_collection(path):
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     if plan != run["plan"]:
         raise ValueError("embedded HTTP plan differs")
+    if plan.get("schema_version") != schemas[run["schema_version"]]:
+        raise ValueError("HTTP run schema differs from plan kind")
     verify_plan(plan)
     expected = {request_identity(r)["query_id"]: r for r in plan["requests"]}
     successful = {}
@@ -243,7 +316,9 @@ def collect(plan_path, output, *, project_root):
             with (output / "plan.original.json").open("xb") as stream:
                 stream.write(plan_path.read_bytes())
             run = {
-                "schema_version": "public-http-run-v1",
+                "schema_version": "public-http-run-v2"
+                if plan["schema_version"] == "fallback-continuation-plan-v1"
+                else "public-http-run-v1",
                 "plan": plan,
                 "plan_sha256": digest(plan_path),
                 "research_eligible": False,
