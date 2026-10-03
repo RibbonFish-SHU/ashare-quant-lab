@@ -1,0 +1,736 @@
+{
+  "schema_version": "phase1-reference-integration-execution-v1",
+  "research_eligible": false,
+  "source_commit": "03566ca30972f1fc680f35adab1091c8caf0b797",
+  "source_files_count": 133,
+  "source_files": {
+    "src/ashare_lab/fallback/__init__.py": "956a024ffb2de1345184bb8bc69586cf8ac7dd6f116d74055f9bfacd2c78711e",
+    "src/ashare_lab/fallback/cli.py": "3c5e7a287975a6566b8cf4e80c013dacc10ec032444ac7547838cb055de60f45",
+    "src/ashare_lab/fallback/collect.py": "c791eea0c7c599610ef9e59fa72f00a8456809405ca374ff6f3caa9e06fd8852",
+    "src/ashare_lab/fallback/compatibility.py": "1e50088467e9c36eac34f2df8b2344f181ded9d57aaad45691ff107d118a4747",
+    "src/ashare_lab/fallback/evidence.py": "cd2c73f34d5e5bd601332fe54684b7ffef368cce863ad865ca97e7061b20d37f",
+    "src/ashare_lab/fallback/evidence_quality.py": "efb07a75a14094fad6453bad690712edb9126d2da3917ab0995718e3d5268807",
+    "src/ashare_lab/fallback/pipeline.py": "09fd268c50351a3dab5d26cb0a27f9340c3cca1aa1dfc03cef5329cae1617b6d",
+    "src/ashare_lab/fallback/protocol.py": "b3b0a64f9b3cb301c8857cd3affdac00e5db16e43a77575ab36c0435d143cad9",
+    "tests/test_reference_integration.py": "2de6adfd85b342e5227e5d2f662126aad368f558332a25d3a207658165fea734"
+  },
+  "versions": {
+    "python": "3.11.16",
+    "pandas": "2.2.3",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.3.2",
+    "pytest": "8.4.1",
+    "ruff": "0.12.2"
+  },
+  "execution": {
+    "schema_version": "reference-integration-execution-v1",
+    "source_sha": "03566ca30972f1fc680f35adab1091c8caf0b797",
+    "started_at_utc": "2026-10-03T15:10:22.511663+00:00",
+    "wrapper_pid": 59496,
+    "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "online_requests": 0,
+    "runs": [
+      {
+        "name": "first10",
+        "argv": [
+          "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+          "-m",
+          "ashare_lab.fallback.cli",
+          "build",
+          "--run",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+          "--reference",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified",
+          "--evidence-root",
+          "E:\\量化\\ashare-quant-lab",
+          "--output",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence"
+        ],
+        "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration",
+        "pid": 51996,
+        "started_at_utc": "2026-10-03T15:10:22.537526+00:00",
+        "finished_at_utc": "2026-10-03T15:10:25.520004+00:00",
+        "seconds": 2.9839999999967404,
+        "returncode": 2,
+        "exited": true,
+        "output": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence",
+        "rows": 2420,
+        "old_manifest_sha256": "9a56a71dc05b5f5bc887069b4774606a5ed626cf7bdd6f2d90cfaab038c90b14",
+        "all_price_values_equal": true,
+        "bars_file_bytes_equal": true,
+        "capture_identities_equal": true,
+        "ipo_references": 10,
+        "quality_status": "unverified",
+        "compared_rows": 10,
+        "compared_ohlc_values": 40,
+        "nonzero_ohlc_differences": 0,
+        "compared_symbols": [
+          "000938.SZ"
+        ],
+        "uncovered_symbols": [
+          "000963.SZ",
+          "000977.SZ",
+          "000983.SZ",
+          "000999.SZ",
+          "001289.SZ",
+          "001979.SZ",
+          "002001.SZ",
+          "002007.SZ",
+          "002008.SZ"
+        ],
+        "interval_rows_without_complete_comparison": 2410,
+        "check_statuses": {
+          "typed_conversion": "pass",
+          "duplicate_dates": "pass",
+          "response_order": "pass",
+          "outside_requested_interval": "pass",
+          "calendar_reference_coverage": "pass",
+          "calendar_missing_rows": "pass",
+          "listing_metadata": "unverified",
+          "bars_on_closed_days": "pass",
+          "listing_boundaries": "unverified",
+          "successful_empty_responses": "pass",
+          "cross_source_differences": "unverified",
+          "historical_availability_and_execution": "unverified",
+          "volume_and_amount_precision": "unverified",
+          "ipo_reference": "pass",
+          "ipo_reference_boundary": "pass",
+          "delisting_boundary": "unverified",
+          "pit_availability": "unverified",
+          "cross_source_ohlc_overlap": "unverified",
+          "volume_unit_evidence": "unverified"
+        },
+        "files": [
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence\\bars.parquet",
+            "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6",
+            "bytes": 226610
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence\\conversion-issues.json",
+            "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+            "bytes": 4
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence\\manifest.json",
+            "sha256": "b0ac04e31b3d4ed1063438f676005b6d75c7729987ec85463ae1badf161afe2c",
+            "bytes": 46776
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence\\quality.json",
+            "sha256": "b2835179f03be5c4f6753ab7c44c9c4f78b27b55cb49cfd4ce904796f5d794bd",
+            "bytes": 48893
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-first10-evidence\\reference-evidence.json",
+            "sha256": "f6c8acec17933b3e262b0a9b3591d96fd1a697258e80464dbe260559d77fc7bc",
+            "bytes": 172713
+          }
+        ],
+        "output_bytes": 494996,
+        "parquet_roundtrip": true,
+        "duckdb_roundtrip": true,
+        "canonical_reader_rejected": true
+      },
+      {
+        "name": "remaining90",
+        "argv": [
+          "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+          "-m",
+          "ashare_lab.fallback.cli",
+          "build",
+          "--run",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-remaining90\\run.json",
+          "--reference",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified",
+          "--evidence-root",
+          "E:\\量化\\ashare-quant-lab",
+          "--output",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence"
+        ],
+        "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration",
+        "pid": 43684,
+        "started_at_utc": "2026-10-03T15:10:25.820892+00:00",
+        "finished_at_utc": "2026-10-03T15:10:31.073390+00:00",
+        "seconds": 5.25,
+        "returncode": 2,
+        "exited": true,
+        "output": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence",
+        "rows": 21780,
+        "old_manifest_sha256": "ea70ff5e99066f9560fe8fa95a68d600ccab0edf944e02644c8e19cbcf57d903",
+        "all_price_values_equal": true,
+        "bars_file_bytes_equal": true,
+        "capture_identities_equal": true,
+        "ipo_references": 90,
+        "quality_status": "unverified",
+        "compared_rows": 5,
+        "compared_ohlc_values": 20,
+        "nonzero_ohlc_differences": 0,
+        "compared_symbols": [
+          "300308.SZ"
+        ],
+        "uncovered_symbols": [
+          "002027.SZ",
+          "002032.SZ",
+          "002049.SZ",
+          "002050.SZ",
+          "002064.SZ",
+          "002074.SZ",
+          "002120.SZ",
+          "002129.SZ",
+          "002142.SZ",
+          "002179.SZ",
+          "002180.SZ",
+          "002202.SZ",
+          "002230.SZ",
+          "002236.SZ",
+          "002241.SZ",
+          "002252.SZ",
+          "002271.SZ",
+          "002304.SZ",
+          "002311.SZ",
+          "002352.SZ",
+          "002371.SZ",
+          "002410.SZ",
+          "002414.SZ",
+          "002415.SZ",
+          "002459.SZ",
+          "002460.SZ",
+          "002466.SZ",
+          "002475.SZ",
+          "002493.SZ",
+          "002555.SZ",
+          "002568.SZ",
+          "002594.SZ",
+          "002600.SZ",
+          "002601.SZ",
+          "002602.SZ",
+          "002603.SZ",
+          "002607.SZ",
+          "002648.SZ",
+          "002709.SZ",
+          "002714.SZ",
+          "002736.SZ",
+          "002756.SZ",
+          "002791.SZ",
+          "002812.SZ",
+          "002821.SZ",
+          "002841.SZ",
+          "002916.SZ",
+          "002920.SZ",
+          "002938.SZ",
+          "003816.SZ",
+          "300003.SZ",
+          "300014.SZ",
+          "300015.SZ",
+          "300033.SZ",
+          "300059.SZ",
+          "300122.SZ",
+          "300124.SZ",
+          "300142.SZ",
+          "300207.SZ",
+          "300223.SZ",
+          "300274.SZ",
+          "300316.SZ",
+          "300347.SZ",
+          "300408.SZ",
+          "300413.SZ",
+          "300433.SZ",
+          "300450.SZ",
+          "300454.SZ",
+          "300496.SZ",
+          "300498.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "300601.SZ",
+          "300628.SZ",
+          "300661.SZ",
+          "300750.SZ",
+          "300751.SZ",
+          "300759.SZ",
+          "300760.SZ",
+          "300763.SZ",
+          "300769.SZ",
+          "300782.SZ",
+          "300866.SZ",
+          "300896.SZ",
+          "300919.SZ",
+          "300957.SZ",
+          "300979.SZ",
+          "300999.SZ",
+          "301269.SZ"
+        ],
+        "interval_rows_without_complete_comparison": 21775,
+        "check_statuses": {
+          "typed_conversion": "pass",
+          "duplicate_dates": "pass",
+          "response_order": "pass",
+          "outside_requested_interval": "pass",
+          "calendar_reference_coverage": "pass",
+          "calendar_missing_rows": "pass",
+          "listing_metadata": "unverified",
+          "bars_on_closed_days": "pass",
+          "listing_boundaries": "unverified",
+          "successful_empty_responses": "pass",
+          "cross_source_differences": "unverified",
+          "historical_availability_and_execution": "unverified",
+          "volume_and_amount_precision": "unverified",
+          "ipo_reference": "pass",
+          "ipo_reference_boundary": "pass",
+          "delisting_boundary": "unverified",
+          "pit_availability": "unverified",
+          "cross_source_ohlc_overlap": "unverified",
+          "volume_unit_evidence": "unverified"
+        },
+        "files": [
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence\\bars.parquet",
+            "sha256": "8db14e4281f93f3ce7bed89d730cc755e2993f938d490ca4b7bc48bd81679004",
+            "bytes": 1852847
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence\\conversion-issues.json",
+            "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+            "bytes": 4
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence\\manifest.json",
+            "sha256": "9598b045ce817e4d9f040173381a101488e5f682706cb429c8406274163fa3cf",
+            "bytes": 154141
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence\\quality.json",
+            "sha256": "51ec38698eec97ce044cb82978a115094246c31fe76bcd57039cf5b402967fcd",
+            "bytes": 167682
+          },
+          {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\datasets\\candidates\\eastmoney-2023-remaining90-evidence\\reference-evidence.json",
+            "sha256": "f6c8acec17933b3e262b0a9b3591d96fd1a697258e80464dbe260559d77fc7bc",
+            "bytes": 172713
+          }
+        ],
+        "output_bytes": 2347387,
+        "parquet_roundtrip": true,
+        "duckdb_roundtrip": true,
+        "canonical_reader_rejected": true
+      }
+    ],
+    "protected_file_count": 470,
+    "protected_files_unchanged": true,
+    "finished_at_utc": "2026-10-03T15:10:31.164082+00:00",
+    "wrapper_completed": true
+  },
+  "checks": [
+    {
+      "name": "targeted",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_reference_integration.py",
+        "tests/test_fallback.py",
+        "tests/test_fallback_continuation.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration",
+      "pid": 69624,
+      "returncode": 0,
+      "seconds": 8.59299999999348,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\targeted.txt",
+      "wrapper_note": "following main-cwd launch failed before process creation due to locale decoding of git path; retried with explicit UTF-8",
+      "log_file": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\targeted.txt",
+        "sha256": "63444103308b228e5b064c7af228d4c8b3c450fa8b1c4c6517d4ba903f990c01",
+        "bytes": 183
+      }
+    },
+    {
+      "name": "main-cwd",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\tests\\test_reference_integration.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab",
+      "pid": 64812,
+      "returncode": 0,
+      "seconds": 1.9850000000442378,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\main-cwd.txt",
+      "log_file": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\main-cwd.txt",
+        "sha256": "481221218d57a2fa4192983e831017767cc14c3a8220c2306f705a08fa98728d",
+        "bytes": 101
+      }
+    },
+    {
+      "name": "full",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration",
+      "pid": 69964,
+      "returncode": 0,
+      "seconds": 10.780999999959022,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\full.txt",
+      "log_file": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\full.txt",
+        "sha256": "e94a5788d8002dbba903ba6d7fdfb1244e6e025c3bc3d72800a017a69fc110f8",
+        "bytes": 346
+      }
+    },
+    {
+      "name": "ruff",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "."
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration",
+      "pid": 68888,
+      "returncode": 0,
+      "seconds": 0.0470000000204891,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\ruff.txt",
+      "log_file": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\ruff.txt",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "bytes": 19
+      }
+    },
+    {
+      "name": "format",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\ruff.exe",
+        "format",
+        "--check",
+        "src/ashare_lab/fallback/evidence.py",
+        "src/ashare_lab/fallback/evidence_quality.py",
+        "src/ashare_lab/fallback/pipeline.py",
+        "src/ashare_lab/fallback/cli.py",
+        "tests/test_reference_integration.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration",
+      "pid": 66876,
+      "returncode": 0,
+      "seconds": 0.031000000017229468,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\format.txt",
+      "log_file": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration-checks\\format.txt",
+        "sha256": "f114d83b30c5c657ee43a847a45bafccaea255d82673feb87c26d252c61e29c1",
+        "bytes": 26
+      }
+    }
+  ],
+  "raw_plan_bindings": [
+    {
+      "run": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\run.json",
+        "sha256": "8cc5edf4013ce072c73dd568e457607ece3611b33a446820b53eaeb72acb4083",
+        "bytes": 25971
+      },
+      "plan_sha256": "ff10586e24213fa69f1744704ab62ff95205579851c6ee60c2b73cb9ddb102b9",
+      "retained_original_plan": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-first10\\plan.original.json",
+        "sha256": "ff10586e24213fa69f1744704ab62ff95205579851c6ee60c2b73cb9ddb102b9",
+        "bytes": 6502
+      }
+    },
+    {
+      "run": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-remaining90\\run.json",
+        "sha256": "b66a3c11187065cc7aca5f3a2c9c2c6b25915e5666048e33d37c4898c0bc524d",
+        "bytes": 139680
+      },
+      "plan_sha256": "fd0a618e0ae46105bc099f52e57933c9fe2feeb99117d9cb41300e40e43c907c",
+      "retained_original_plan": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\raw\\eastmoney\\20261003-missing-remaining90\\plan.original.json",
+        "sha256": "fd0a618e0ae46105bc099f52e57933c9fe2feeb99117d9cb41300e40e43c907c",
+        "bytes": 39469
+      }
+    }
+  ],
+  "verified_reference_files": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\docs\\evidence\\phase1_szse_listing_date_audit.json",
+      "sha256": "6afb33c66af597f5f3a219ccdcbe749a29f86950ac942e1a1648bbdf9e8e5ebd",
+      "bytes": 14517
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\docs\\evidence\\phase1_alternative_source_probe.json",
+      "sha256": "6273b4de5ac780c8e1f5b182518000f426fcba43004c8452bbda34bb8f875944",
+      "bytes": 35108
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\docs\\evidence\\phase1_pilot_independent_crosscheck.json",
+      "sha256": "fc8e1675cb94f00730c8c6246df620d6155b758072b467b2abd4567c91df15c8",
+      "bytes": 3231
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\szse\\20261003-listing-audit\\a-list.bin",
+      "sha256": "4bc75fd1046c524b6a64787bac3fbd6ef15080776fc7bc97fd9d703b06562948",
+      "bytes": 545038
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\szse\\20261003-listing-audit\\a-list.metadata.json",
+      "sha256": "1c4dbe69f55ce0bc9e469eeb9b8b72ab712e94e61e9ba81716191e127661509b",
+      "bytes": 1123
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\szse\\20261003-listing-audit\\listing-date-extract.json",
+      "sha256": "d052dc9dedb050a2ada3e2767c0f8aa165b87957d3d6a172f5b9aa1e6a99d4cf",
+      "bytes": 33865
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json",
+      "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df",
+      "bytes": 281838
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\manifest.json",
+      "sha256": "1d87a23ef4cea9169fce8e53ece320d4e5d1afcb8e10da434b321f3fadcc7bb9",
+      "bytes": 3439
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\manifest.json",
+      "sha256": "fb4ae0bd52ebb08b5be5ee079c23a3d60313a280f8a4ab6e22074d57d51bb283",
+      "bytes": 2985
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\raw-bars.parquet",
+      "sha256": "6ce1e295ee310e72dfd5ce1d3d327c4a3af1a2acb84098f02745d3f7e1697e49",
+      "bytes": 5475
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sh600000-july-response.txt",
+      "sha256": "08fd34c1db2de87e37fc4c3af97240157623947a5cee1fe0694fceb9ce217a03",
+      "bytes": 2740
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sh600000-july-metadata.json",
+      "sha256": "3278ada34507e4ae49ff0764863aebd59dffc76db35f55df2bb8c1a5900f33a2",
+      "bytes": 1173
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sh688065-2023-06-12.response.txt",
+      "sha256": "b9157e06d855260e4779ae1a98d5056072d03f48920905cb27c849912cb4c83c",
+      "bytes": 2758
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sh688065-2023-06-12.metadata.json",
+      "sha256": "f863fddc717ba3e4e7540d1ece6e685eebb75a9e9d956afe3203c6dd983fa018",
+      "bytes": 1210
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sz000001-2023-07-18.response.txt",
+      "sha256": "607c5b5976c60b9766fea2200f0c74260db405c6517187d5bcbb95e513444a3b",
+      "bytes": 2690
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sz000001-2023-07-18.metadata.json",
+      "sha256": "16811e842d05a5ec6865c0040a120b343588a154e3c7ac272103636b055711de",
+      "bytes": 1210
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sz300308-2023-07-18.response.txt",
+      "sha256": "ff36581f2130dfbea9db3e54103ca74fa19b05290fc71e0085f360b44c34eab7",
+      "bytes": 2836
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-phase1-probe\\sz300308-2023-07-18.metadata.json",
+      "sha256": "422b505a5d40d2ac59c4aad0284432a8079160c5761dbbb6b6e3765a3715ae38",
+      "bytes": 1210
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\raw-bars.parquet",
+      "sha256": "e47f74e44f02a317b0152a01fd6b65fe04c6f68d62b21edd244c79c8fc73c3b4",
+      "bytes": 4644
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\000001-20230718.response.txt",
+      "sha256": "0e9f5bcc64eee322fa1edc7f387a6bb9f650bc8a1281d04e6b343811f324c6a2",
+      "bytes": 573
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\000001-20230718.metadata.json",
+      "sha256": "74be2db372ae9869be1d18cf06e57f5f80bd3e0ece01588965dbb25d3a36ba2a",
+      "bytes": 1566
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\688065-20230612.response.txt",
+      "sha256": "55fb3ffdb86691ff4f56a46edc4626fff9386274775af50b254556b83d15a3d5",
+      "bytes": 483
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\688065-20230612.metadata.json",
+      "sha256": "8b5b1347b1d0939d515273f830898dd88f2e17a13d12a885340086919a51f518",
+      "bytes": 1566
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\sh600000-july-response.txt",
+      "sha256": "15f76cfd22e72e8684600bdbd863fe5c8a942fc9184472ff791f7afaa50eef9b",
+      "bytes": 551
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\eastmoney\\20261003-phase1-probe\\sh600000-july-metadata.json",
+      "sha256": "6cfe89f5e51adaf2aba8c679f776e190cea65d2823f5f6bda79bc74037fa2333",
+      "bytes": 1566
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\plan.json",
+      "sha256": "7450745decde4e51086a23f0f45674c96b8d7c88fb20adcc3313d1ee57fcc526",
+      "bytes": 2671
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\captures.json",
+      "sha256": "0af894fbcaa6b9c2ce94be63af5fa70ed3ec7fe4ebda34468f839c37e3f14f75",
+      "bytes": 1030
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\comparisons.json",
+      "sha256": "3e082741e5808e27055b09e2a603550ff39af882a5d2c92ad51eb162a02043dd",
+      "bytes": 6555
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\raw-bars.parquet",
+      "sha256": "587f6a0a30a077254b7bea5d3f85b63c64ebd54b5ec88ee138b5cef99cd10c4d",
+      "bytes": 3078
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-source-fallback\\datasets\\candidates\\eastmoney-2023-first10\\bars.parquet",
+      "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6",
+      "bytes": 226610
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\000938.SZ\\metadata.json",
+      "sha256": "50db4feea5092561e78f4396216aaea026ee52ee303502efa10d82fe0236e6c8",
+      "bytes": 1247
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\000938.SZ\\response.bin",
+      "sha256": "7f5723d7ccbdddb4340b74689be09c92f86c73a6a17e1e181eb27e5cb8b3fab5",
+      "bytes": 2676
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\000963.SZ\\metadata.json",
+      "sha256": "a6c26afa356c9d7510a4327efa58d870228025574ac3e3532042e869e0d84c6e",
+      "bytes": 1070
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\tencent\\20261003-pilot-crosscheck\\000963.SZ\\response.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "protected_files_unchanged": true,
+  "source_state": {
+    "source-access": {
+      "ledger": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json",
+        "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+        "bytes": 145
+      },
+      "request_count": 1998,
+      "restriction": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json",
+        "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+        "bytes": 938
+      }
+    },
+    "eastmoney-source-access": {
+      "ledger": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\eastmoney-source-access\\wire-ledger.json",
+        "sha256": "98bed98652732b6ab4bc029c13c5738bf0ed1b9c6c7f4678d358cb43b8646525",
+        "bytes": 42200
+      },
+      "request_count": 100,
+      "restriction": null
+    }
+  },
+  "process_exit": {
+    "recorded_at_utc": "2026-10-03T15:13:35.762569+00:00",
+    "command": "Get-CimInstance Win32_Process -Filter 'ProcessId=59496 OR ProcessId=51996 OR ProcessId=43684'",
+    "returned_processes": [],
+    "wrapper_pid": 59496,
+    "wrapper_returncode": 0,
+    "child_pids": [
+      51996,
+      43684
+    ],
+    "child_returncodes": [
+      2,
+      2
+    ],
+    "meaning": "bounded process check after subprocess waits; no retained batch process"
+  },
+  "aggregate": {
+    "securities": 100,
+    "rows": 24200,
+    "independent_ohlc_rows": 15,
+    "independent_ohlc_values": 60,
+    "independent_ohlc_nonzero_differences": 0,
+    "securities_without_independent_overlap": 98,
+    "candidate_output_bytes": 2842383
+  },
+  "artifacts": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration\\execution.json",
+      "sha256": "a3a7278ad96f3a708efc3c47a46647558cae208d770050c6e0ae6ff4cbca8639",
+      "bytes": 11597
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration\\first10.log",
+      "sha256": "f2dea77e4c2bf734d3ff50a60821a1d391d69bf26537d7af60377bcdb86cfcc8",
+      "bytes": 95
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration\\process-exit.json",
+      "sha256": "1ddb4c3d896258ab363c445a5bcfa0ecaba5d36991998f72210524c49d2c8bfe",
+      "bytes": 440
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration\\protected-after.json",
+      "sha256": "d40b1d1be2636067ce53fc77c829ec774f2c244d27c445bb7f892f3997540671",
+      "bytes": 168804
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration\\protected-before.json",
+      "sha256": "d40b1d1be2636067ce53fc77c829ec774f2c244d27c445bb7f892f3997540671",
+      "bytes": 168804
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\artifacts\\reference-integration\\remaining90.log",
+      "sha256": "7ae497bb73862e083c8b04627908cd60d1b3399d0a792f9e731cc3b89ceed3ea",
+      "bytes": 97
+    }
+  ],
+  "task_scripts": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\.cache\\phase1\\reference_execute.py",
+      "sha256": "81f298dd25a442deaca687a23b04fd53007a327e80500d3bb22fc27bcba7ec12",
+      "bytes": 6709
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-evidence-integration\\.cache\\phase1\\reference_evidence.py",
+      "sha256": "f22f1be4f1641398ec25b0bfa5f7ef390bd448c2c1f607d31b1b3c6ccd202a9f",
+      "bytes": 5508
+    }
+  ],
+  "remaining_unverified": [
+    "historical constituent eligibility",
+    "delisting dates and semantics",
+    "PIT and revisions",
+    "full-year independent prices",
+    "Tencent 000938/300308 volume units",
+    "display rounding",
+    "ST/suspension/limits/preclose",
+    "adjustments/corporate actions"
+  ],
+  "online_requests": 0,
+  "server_or_gpu_operations": 0
+}
