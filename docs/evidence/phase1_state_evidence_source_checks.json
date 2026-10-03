@@ -1,0 +1,430 @@
+{
+  "schema_version": "phase1-state-evidence-source-checks-v1",
+  "recorded_at_utc": "2026-10-03T18:31:58.657718+00:00",
+  "branch": "phase1/state-evidence",
+  "base_commit": "007216cfc8f30270210732b86ba73ea9a4e42f66",
+  "worktree": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+  "source_identity_basis": "This evidence is part of the stable source commit; source file byte digests below identify the exact checked implementation. No real candidate has run.",
+  "research_eligible": false,
+  "actual_state_candidate_builds": 0,
+  "online_requests": 0,
+  "owner": "ashare-experiment; main owns review and integration; all listed check processes exited",
+  "versions": {
+    "python": "3.11.16",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.3.2",
+    "pytest": "8.4.1",
+    "ruff": "0.12.2"
+  },
+  "checks": [
+    {
+      "check": "new-tests",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_temporal.py",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_sources.py",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_pipeline.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+      "pid": 72664,
+      "exit_code": 0,
+      "started_at_utc": "2026-10-03T18:26:54.864519+00:00",
+      "elapsed_seconds": 8.32228079997003,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\new-tests.log"
+    },
+    {
+      "check": "full-tests",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+      "pid": 26884,
+      "exit_code": 0,
+      "started_at_utc": "2026-10-03T18:27:03.187879+00:00",
+      "elapsed_seconds": 30.08855369995581,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\full-tests.log"
+    },
+    {
+      "check": "main-cwd",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_temporal.py",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_sources.py",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_pipeline.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab",
+      "pid": 65212,
+      "exit_code": 0,
+      "started_at_utc": "2026-10-03T18:27:33.277415+00:00",
+      "elapsed_seconds": 7.847793100052513,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\main-cwd.log"
+    },
+    {
+      "check": "ruff",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+      "pid": 42016,
+      "exit_code": 0,
+      "started_at_utc": "2026-10-03T18:27:41.125248+00:00",
+      "elapsed_seconds": 0.04478029999881983,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\ruff.log"
+    },
+    {
+      "check": "format",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\ruff.exe",
+        "format",
+        "--check",
+        "src/ashare_lab/state_evidence",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_temporal.py",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_sources.py",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\tests\\test_state_pipeline.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+      "pid": 77480,
+      "exit_code": 0,
+      "started_at_utc": "2026-10-03T18:27:41.170657+00:00",
+      "elapsed_seconds": 0.03177709999727085,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\format.log"
+    },
+    {
+      "check": "input-validation",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.state_evidence.cli",
+        "validate",
+        "--source",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\configs\\state-evidence-2023.json",
+        "--input-root",
+        "E:\\量化\\ashare-quant-lab",
+        "--pdftotext",
+        "D:/texlive/2025/bin/windows/pdftotext.exe",
+        "--project-root",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+        "--report",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\input-validation.json"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence",
+      "pid": 76080,
+      "exit_code": 0,
+      "started_at_utc": "2026-10-03T18:27:41.202796+00:00",
+      "elapsed_seconds": 3.458222800050862,
+      "log": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\artifacts\\state-evidence-source-checks\\20261003T182654Z\\input-validation.log"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "configs/state-evidence-2023.json",
+      "bytes": 21667,
+      "sha256": "5af4ee5d4b8242258eb8e2af6756d8bd693647ed70af1677d524758da394dbf9"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/__init__.py",
+      "bytes": 73,
+      "sha256": "16177f4c06556e713ab31ce74f0fe416d1bd1bb5b6f1650d39782537dc15b732"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/announcements.py",
+      "bytes": 8246,
+      "sha256": "74a17612990c4f7ba857261dfadbcf57b4b2bb7e2cd15d7ae24ddf9733ecff72"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/cli.py",
+      "bytes": 1879,
+      "sha256": "b8e4dd5c19961e9e6acb0828affcca28a1f5b88a83a4e0ad9f6d9ef058e67403"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/common.py",
+      "bytes": 4235,
+      "sha256": "701ef19c9ab5413489b6b005b536e18371849b476d5aae6d52922ca839094bb1"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/inputs.py",
+      "bytes": 12766,
+      "sha256": "e31b5019b8823fe288a93cc9cff9edcbe1cba552ab475d47f27c38a2dd8416ae"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/names.py",
+      "bytes": 8351,
+      "sha256": "1915a2f1edb855b3f4542d491f892bd442e5c8b4240b7ae361c4b682b6f12756"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/pipeline.py",
+      "bytes": 15926,
+      "sha256": "16b9803a04e2c3777ac2cb6ca9d50a145bbf4e9802c4ac0d57857295a094084c"
+    },
+    {
+      "path": "src/ashare_lab/state_evidence/temporal.py",
+      "bytes": 8786,
+      "sha256": "b5600dd73a9e575588a8cff6d02315f1d9a5706a929d4091c539d87fb0bb9b9b"
+    },
+    {
+      "path": "tests/test_state_pipeline.py",
+      "bytes": 14406,
+      "sha256": "6d480ea0a84386bf12f23acd4d2e6157bf9b7d1176f9c31405f1d81f1aa6a80c"
+    },
+    {
+      "path": "tests/test_state_sources.py",
+      "bytes": 18311,
+      "sha256": "860a8c2593f61d82670485d9d2e4bc81201cfa41caec054cc2aecebd53a91081"
+    },
+    {
+      "path": "tests/test_state_temporal.py",
+      "bytes": 8027,
+      "sha256": "1948c0fc1d3f4c0e6a828e6fc30f83cb434e04df1b496cba0dc4d89a4816fbad"
+    }
+  ],
+  "logs": [
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/execution.json",
+      "bytes": 4948,
+      "sha256": "62e3f26ff255ef838ba05c524563b9672350bf769a3ff8fdde21d62d931f90b9"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/format.log",
+      "bytes": 27,
+      "sha256": "75b7030be9d7de96bf4e76e79b1f03f14af8899d169fd8d79564d59167d1ab80"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/full-tests.log",
+      "bytes": 508,
+      "sha256": "a407226bad6f4fe8439168f0c1f0fafcd6141057dba65f9c7ee4388d7a82db3a"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/input-validation.json",
+      "bytes": 5779,
+      "sha256": "904e72aabd41cbb09c7aefa464a11620fc131a096c4d698debf5e63ba7dd4c73"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/input-validation.log",
+      "bytes": 4709,
+      "sha256": "20a29f4bff5995db6232a8e3862aa4a60a6153f4117c07c5c9b7245b701ca1a6"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/main-cwd.log",
+      "bytes": 101,
+      "sha256": "78cec869458cae4fe771ea6ffac01bf6432625d917a3b5c103356718b2afb9fb"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/new-tests.log",
+      "bytes": 101,
+      "sha256": "e46376d897ec42482c05dee4b7f7a5ad88bbe7a367c96e47799840798e1a88e5"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/ruff.log",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "artifacts/state-evidence-source-checks/20261003T182654Z/source-files.json",
+      "bytes": 2004,
+      "sha256": "3de3a0f4f696682455ece9569d7848dc3942eeab81bf1f7ba520a52f2cef3149"
+    }
+  ],
+  "input_validation": {
+    "status": "inputs_parsed_candidate_not_built",
+    "research_eligible": false,
+    "input_files_verified": 71,
+    "symbols": 336,
+    "events": 272,
+    "event_kinds": {
+      "name_change": 270,
+      "halt": 1,
+      "resume": 1
+    },
+    "unknown_availability_events": 272,
+    "calendar_civil_days": 365,
+    "calendar_open_days": 242,
+    "daily_raw_rows_checked": 242,
+    "candidate_rows_read": {
+      ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet": 57096,
+      ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/bars.parquet": 2420,
+      ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/bars.parquet": 21780,
+      "datasets/candidates/community-2023-main-review-original336-v2/quotes.parquet": 81312
+    },
+    "name_quality": {
+      "raw_rows_checked": 7489,
+      "events": 270,
+      "selected_sz_symbols": 134,
+      "symbols_with_name_reference": 129,
+      "sz_symbols_without_event": [
+        "000166.SZ",
+        "000333.SZ",
+        "001289.SZ",
+        "001979.SZ",
+        "300498.SZ"
+      ],
+      "selected_future_name_events_excluded": [
+        {
+          "symbol": "300223.SZ",
+          "date": "2026-08-13",
+          "row": 30
+        },
+        {
+          "symbol": "002180.SZ",
+          "date": "2026-04-20",
+          "row": 200
+        },
+        {
+          "symbol": "300919.SZ",
+          "date": "2026-01-15",
+          "row": 245
+        },
+        {
+          "symbol": "002602.SZ",
+          "date": "2025-11-12",
+          "row": 289
+        },
+        {
+          "symbol": "002602.SZ",
+          "date": "2024-11-08",
+          "row": 565
+        }
+      ],
+      "observed_at_utc": "2026-10-03 15:36:55.783276+00:00",
+      "historical_availability": "unknown",
+      "current_name_column": "C excluded from history",
+      "continuity_verified": false,
+      "certified_st": null
+    },
+    "event_conflicts": [],
+    "signature_date_conflicts": [
+      "8f1bb52ed4e7c40822b085aadb3692a5988d5ecae6ccaffd8d78b6bf9cef7ce9"
+    ],
+    "rejected_sources": [
+      {
+        "path": "datasets/raw/eastmoney/20261003-halt-probe/halts-2023-06-15.json",
+        "sha256": "509afaf60172e358fa0cf107f6fda83cca0973f987f7e3249a4f2f3b97c912bb",
+        "requested_date": "2023-06-15",
+        "reason": "requested_history_not_returned",
+        "rows": 500,
+        "within_scope_rows": 0,
+        "earliest_event_date": "2025-10-30",
+        "latest_event_date": "2026-10-08",
+        "reported_total": 1045,
+        "reported_pages": 3,
+        "observed_at_utc": "2026-10-03 15:42:07.353962+00:00",
+        "adopted_events": 0
+      },
+      {
+        "path": "datasets/raw/eastmoney/20261003-halt-probe/halts-2023-06-16.json",
+        "sha256": "2780ab8d1ea3254dedbc3af5f31317e8ca3c3a7c6ce8742d22fc70bf388fda77",
+        "requested_date": "2023-06-16",
+        "reason": "requested_history_not_returned",
+        "rows": 500,
+        "within_scope_rows": 0,
+        "earliest_event_date": "2025-10-30",
+        "latest_event_date": "2026-10-08",
+        "reported_total": 1044,
+        "reported_pages": 3,
+        "observed_at_utc": "2026-10-03 15:42:08.565682+00:00",
+        "adopted_events": 0
+      },
+      {
+        "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.json",
+        "sha256": "498692b824b3760b70fece6e2adae857f91c2df1f1c6dea445040956ba4900e6",
+        "reason": "parameter_failure_not_normal_state",
+        "provider_result": {
+          "version": null,
+          "result": null,
+          "success": false,
+          "message": "filter参数必须包含DATETIME",
+          "code": 9501
+        },
+        "observed_at_utc": "2026-10-03 15:43:30.807060+00:00",
+        "adopted_events": 0
+      },
+      {
+        "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.json",
+        "sha256": "4ddb7cfc3c2ce4f92f00cfb558b92906f3c591096ac8d99650cadbec3655df19",
+        "reason": "parameter_failure_not_normal_state",
+        "provider_result": {
+          "version": null,
+          "result": null,
+          "success": false,
+          "message": "filter参数必须包含MARKET",
+          "code": 9501
+        },
+        "observed_at_utc": "2026-10-03 15:43:48.672568+00:00",
+        "adopted_events": 0
+      },
+      {
+        "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.json",
+        "sha256": "8d9584bb27e680034e8145dd987719fd97b89bd15c15958266c67a8a1da1ac04",
+        "reason": "parameter_failure_not_normal_state",
+        "provider_result": {
+          "version": null,
+          "result": null,
+          "success": false,
+          "message": "filter字段中日期参数格式错误",
+          "code": 9501
+        },
+        "observed_at_utc": "2026-10-03 15:44:08.433169+00:00",
+        "adopted_events": 0
+      }
+    ],
+    "pdf_tools": [
+      {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "bytes": 3501056,
+        "sha256": "bccedf2c2219b34700df5d8edb61940921c1ddfb263cf51892cfae82c8c0fea6",
+        "version": "pdftotext version 25.02.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011 Glyph & Cog, LLC",
+        "mode": "UTF-8 default reading order; whitespace-only normalization",
+        "stderr": ""
+      },
+      {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "bytes": 3501056,
+        "sha256": "bccedf2c2219b34700df5d8edb61940921c1ddfb263cf51892cfae82c8c0fea6",
+        "version": "pdftotext version 25.02.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011 Glyph & Cog, LLC",
+        "mode": "UTF-8 default reading order; whitespace-only normalization",
+        "stderr": ""
+      }
+    ],
+    "candidate_created_by_preparation": false,
+    "online_requests": 0
+  },
+  "earlier_read_only_diagnostics": [
+    {
+      "path": ".cache/state-evidence/preflight-01.log",
+      "bytes": 3474,
+      "sha256": "387a638e329c036d26ea643ccf8da936a9eec7d9e5f4c24920784d2cc67be7b3"
+    },
+    {
+      "path": ".cache/state-evidence/preflight-02.json",
+      "bytes": 5818,
+      "sha256": "da1924f4a0d58c698ed929211cff9b2b7c54090e21485d9c2149031253b2475a"
+    }
+  ],
+  "helpers": [
+    {
+      "path": ".cache/state-evidence/check_source.py",
+      "bytes": 2559,
+      "sha256": "7d5fdaf62f1463db4bdc0d586a2335a2fb72ec1a189ce26c9c1ca620dd99468e"
+    },
+    {
+      "path": ".cache/state-evidence/make_config.py",
+      "bytes": 5349,
+      "sha256": "c1c7ebb574e6b992488a4856b3ec1de8ad12facd181db911dd34f908504acfc5"
+    }
+  ],
+  "proposed_output": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-evidence\\datasets\\candidates\\state-evidence-2023-original336-v1",
+  "proposed_output_exists": false,
+  "real_build_gate": "Main reviews stable commit and explicit project-root command first, per latest handoff."
+}

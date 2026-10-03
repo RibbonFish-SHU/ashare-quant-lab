@@ -1,0 +1,235 @@
+{
+  "schema_version": "phase1-state-evidence-main-acceptance-v1",
+  "recorded_at_utc": "2026-10-03T20:11:05.882095+00:00",
+  "owner": "main-review",
+  "status": "accepted_as_candidate_only",
+  "research_eligible": false,
+  "source_commit": "2be10c58983a172ea99e3e5f5f3eb8cdd87cc937",
+  "source_worktree": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review",
+  "source_worktree_clean_at_build": true,
+  "real_build_attempts": 1,
+  "successful_builds": 1,
+  "failed_builds": 0,
+  "build": {
+    "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review",
+    "argv": [
+      "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ashare_lab.state_evidence.cli",
+      "build",
+      "--source",
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\configs\\state-evidence-2023.json",
+      "--input-root",
+      "E:\\量化\\ashare-quant-lab",
+      "--pdftotext",
+      "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+      "--project-root",
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review",
+      "--output",
+      "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1"
+    ],
+    "pid": 25072,
+    "started_at_utc": "2026-10-03T19:59:06.439781+00:00",
+    "finished_at_utc": "2026-10-03 19:59:18.277804+00:00",
+    "seconds": 11.600687999976799,
+    "returncode": 2,
+    "child_waited_and_exited": true,
+    "online_requests": 0,
+    "server_operations": 0,
+    "gpu_runs": 0,
+    "model_or_backtest_runs": 0
+  },
+  "wrapper_post_build_issue": {
+    "occurred": true,
+    "exception": "TypeError",
+    "message": "keys must be str, int, float, bool or None, not WindowsPath",
+    "impact": "The child build had already completed. Protected-after and execution fields were repaired by a read-only check; the build was not rerun.",
+    "fixed_for_future_runs": true
+  },
+  "output": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1",
+    "manifest": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\manifest.json",
+      "bytes": 76503,
+      "sha256": "acfb52a909fca9dc0e4ccbde8cafe77621d2250669254cdfbe60aa5b7fc5cde5"
+    },
+    "quality": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\quality.json",
+      "bytes": 2007473,
+      "sha256": "1c81035c187bbb104dfb771087c953d4262a3ee1d94377a8008a9632167ff546"
+    },
+    "tables": {
+      "events": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\events.parquet",
+        "bytes": 31112,
+        "sha256": "e03c509163b5010f692cc226b6800ed6a62e4a47d464e66ea3cd5fc1703feb5f",
+        "rows": 272,
+        "parquet_roundtrip": true,
+        "duckdb_roundtrip": true
+      },
+      "daily_references": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\daily_references.parquet",
+        "bytes": 6572857,
+        "sha256": "51757b2079430086ee7e7099007aa939294c5f65e315dd3bc023545f9592d08e",
+        "rows": 81312,
+        "parquet_roundtrip": true,
+        "duckdb_roundtrip": true
+      }
+    },
+    "manifest_status": "built_candidate",
+    "quality_status": "unverified",
+    "canonical_reader_rejected": true
+  },
+  "independent_duckdb_checks": {
+    "securities": 336,
+    "open_days": 242,
+    "first_day": "2023-01-03",
+    "last_day": "2023-12-29",
+    "daily_rows": 81312,
+    "event_rows": 272,
+    "classification_counts": {
+      "full_day_halt_reference": 4,
+      "no_selected_halt_reference": 81307,
+      "partial_day_halt_reference": 1
+    },
+    "halt_688065_rows": [
+      {
+        "event_date": "2023-06-15",
+        "classification": "partial_day_halt_reference",
+        "source_volume_shares": 353426,
+        "source_trading_active": false,
+        "community_price_missing": false,
+        "positive_volume_conflict": false
+      },
+      {
+        "event_date": "2023-06-16",
+        "classification": "full_day_halt_reference",
+        "source_volume_shares": 0,
+        "source_trading_active": false,
+        "community_price_missing": true,
+        "positive_volume_conflict": false
+      },
+      {
+        "event_date": "2023-06-19",
+        "classification": "full_day_halt_reference",
+        "source_volume_shares": 0,
+        "source_trading_active": false,
+        "community_price_missing": true,
+        "positive_volume_conflict": false
+      },
+      {
+        "event_date": "2023-06-20",
+        "classification": "full_day_halt_reference",
+        "source_volume_shares": 0,
+        "source_trading_active": false,
+        "community_price_missing": true,
+        "positive_volume_conflict": false
+      },
+      {
+        "event_date": "2023-06-21",
+        "classification": "full_day_halt_reference",
+        "source_volume_shares": 0,
+        "source_trading_active": false,
+        "community_price_missing": true,
+        "positive_volume_conflict": false
+      }
+    ],
+    "event_688065_rows": [
+      {
+        "kind": "halt",
+        "effective_date": "2023-06-15",
+        "effective_session": "afternoon_open",
+        "signature_date": "2022-06-15",
+        "signature_date_conflict": true,
+        "available_time": null,
+        "research_eligible": false
+      },
+      {
+        "kind": "resume",
+        "effective_date": "2023-06-26",
+        "effective_session": "morning_open",
+        "signature_date": "2023-06-26",
+        "signature_date_conflict": false,
+        "available_time": null,
+        "research_eligible": false
+      }
+    ],
+    "state_nulls": {
+      "can_trade_null_rows": 81312,
+      "certified_st_null_rows": 81312,
+      "historical_asof_certified_false_rows": 81312,
+      "source_trading_active_unknown_rows": 24216
+    },
+    "events_unknown_availability_rows": 272,
+    "formal_reader": {
+      "rejected": true,
+      "exception": "ContractError",
+      "message": "unsupported or incomplete dataset manifest"
+    }
+  },
+  "input_validation": {
+    "input_files_verified": 71,
+    "symbols": 336,
+    "events": 272,
+    "event_kinds": {
+      "name_change": 270,
+      "halt": 1,
+      "resume": 1
+    },
+    "unknown_availability_events": 272,
+    "calendar_civil_days": 365,
+    "calendar_open_days": 242,
+    "event_conflicts": [],
+    "signature_date_conflicts": [
+      "8f1bb52ed4e7c40822b085aadb3692a5988d5ecae6ccaffd8d78b6bf9cef7ce9"
+    ],
+    "current_name_column_excluded": "C excluded from history",
+    "sz_symbols_without_event": [
+      "000166.SZ",
+      "000333.SZ",
+      "001289.SZ",
+      "001979.SZ",
+      "300498.SZ"
+    ]
+  },
+  "source_and_execution_evidence": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\artifacts\\state-evidence-main-review\\20261003T195906.400243Z\\build.log",
+      "bytes": 145,
+      "sha256": "adeb886402b1a30e668afecdba58904899d9d98897d9a0ca5917f3f3d0ae40c3"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\artifacts\\state-evidence-main-review\\20261003T195906.400243Z\\execution.json",
+      "bytes": 1818,
+      "sha256": "e979d74e331491798a043ce93ea1d9ef96acc951d4a514514ce5afe8c5070a20"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\artifacts\\state-evidence-main-review\\20261003T195906.400243Z\\protected-before.json",
+      "bytes": 25582,
+      "sha256": "f5f88b7ac512f43e6b4ea0fc0a25604521c8d05c57e7b065c2d36c1ebcc4bf87"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\artifacts\\state-evidence-main-review\\20261003T195906.400243Z\\protected-after.json",
+      "bytes": 25582,
+      "sha256": "f5f88b7ac512f43e6b4ea0fc0a25604521c8d05c57e7b065c2d36c1ebcc4bf87"
+    }
+  ],
+  "source_checks": {
+    "new_state_tests": "67 passed",
+    "full_tests": "401 passed",
+    "ruff": "passed",
+    "format": "passed",
+    "origin_source_check_record": "docs/evidence/phase1_state_evidence_source_checks.json"
+  },
+  "limits": [
+    "The candidate is retrospective reference evidence only; available_time is unknown for all events.",
+    "No historical PIT availability, name continuity, ST certification, or complete halt/trading-state coverage is claimed.",
+    "2023 is the only market-data window used in this build; 2024-2025 market data was not read.",
+    "No model, backtest, GPU, server, broker, or live-trading operation was performed.",
+    "The 71-file input count is the actual validation result; the earlier source report text saying 70 was corrected here."
+  ],
+  "herdr": {
+    "environment_controlled": false,
+    "other_project_agents_touched": 0
+  }
+}

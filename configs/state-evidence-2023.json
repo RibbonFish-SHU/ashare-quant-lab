@@ -1,0 +1,472 @@
+{
+  "schema_version": "state-evidence-input-v1",
+  "research_eligible": false,
+  "start": "2023-01-01",
+  "end": "2023-12-31",
+  "availability_policy": "exclude_unknown",
+  "scope_basis": "Original retained 336-code request plan; coverage scope, not certified universe",
+  "original_plan": ".cache/worktrees/phase1-data/.cache/phase1/plans/securities-2023.json",
+  "files": [
+    {
+      "path": ".cache/phase1/main-review/audit_resume_event.py",
+      "bytes": 4005,
+      "sha256": "73111017d2f0bc22da495b49a98050f0f8d714f9dcf704bfeb39e7076b1e9355"
+    },
+    {
+      "path": ".cache/phase1/main-review/audit_szse_name_history.py",
+      "bytes": 6993,
+      "sha256": "318368773d91d4bd1bb6d115ddd78b4abe772c58b954b942d6b83b7f27e43016"
+    },
+    {
+      "path": ".cache/phase1/main-review/summarize_state_probes.py",
+      "bytes": 5756,
+      "sha256": "d3440368aaa94865f07dce5db9d7b02e5aadb33f1c44299b4ad5824d8d9f46b1"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/.cache/phase1/plans/securities-2023.json",
+      "bytes": 281838,
+      "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+      "bytes": 3903548,
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/calendar.parquet",
+      "bytes": 11083,
+      "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/conversion-issues.json",
+      "bytes": 779,
+      "sha256": "75d5365cb895a9e727b38f71fd0ce47fdc360c3aaeb779c11d91be1a968d6113"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/dividends.parquet",
+      "bytes": 54714,
+      "sha256": "e2b7c263129b7106e5fd1c41800d3df965a6463410e2d96c5b0b1455df3e6870"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/factors.parquet",
+      "bytes": 44008,
+      "sha256": "5a028663e0735a7474c43d175b88b99bca6675ce4f7ce929d92faf40c824ee99"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/manifest.json",
+      "bytes": 10368,
+      "sha256": "79b3ac25ed6810740e8d42d39b6e52890f9cd5c3cfc6569c101537f8a458cb87"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/membership_snapshots.parquet",
+      "bytes": 70153,
+      "sha256": "7954bf2e34f318c0493c945602abc02b8fd980485d5946d7b83ab69f88100f05"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/quality.json",
+      "bytes": 92529,
+      "sha256": "f39563d2e9530d1392ca78dfdb43ba3831cc27a50c0f70420423f9206c191e04"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/securities.parquet",
+      "bytes": 44864,
+      "sha256": "e80fc675e7b5649fd83fcb6c9c0965673b78038ca4c94158de486697f77bac4b"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/phase1-membership-2023/attempts/be261ded9c6c9fd210f529c6460225a66e0d091f16c49c5fcd2ae45217e7c656/5f3bb8dd7d74437eb054123db4e8932e/response.json",
+      "bytes": 17891,
+      "sha256": "f1d8631afbf17f1c250921324fa559ff84dc1ab1c651c51a9f8d730e996ebbc3"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/phase1-securities-2023/attempts/f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01/f5fc98e84b064a8798bc90372d18360c/response.json",
+      "bytes": 59518,
+      "sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/bars.parquet",
+      "bytes": 226610,
+      "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/conversion-issues.json",
+      "bytes": 4,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/manifest.json",
+      "bytes": 22889,
+      "sha256": "9a56a71dc05b5f5bc887069b4774606a5ed626cf7bdd6f2d90cfaab038c90b14"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/quality.json",
+      "bytes": 7503,
+      "sha256": "33be9db5482a5759a061789812d529e71072182fe9f6bf4fa834f8aa1f5acb2a"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/bars.parquet",
+      "bytes": 1852847,
+      "sha256": "8db14e4281f93f3ce7bed89d730cc755e2993f938d490ca4b7bc48bd81679004"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/conversion-issues.json",
+      "bytes": 4,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/manifest.json",
+      "bytes": 130730,
+      "sha256": "ea70ff5e99066f9560fe8fa95a68d600ccab0edf944e02644c8e19cbcf57d903"
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/quality.json",
+      "bytes": 45821,
+      "sha256": "a16f08dce7f0a242760ffc55cc9cf7fe5b5c82fee1fe44e8d6c42c3ab0f9008a"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/comparisons.parquet",
+      "bytes": 7735229,
+      "sha256": "08eb2985ce0f91c74f260c4962b6de0367d648b8604d1623b2123b6a37fbe124"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/csi300.reference.txt",
+      "bytes": 446338,
+      "sha256": "225d2b0a54dd0fe5e50359605afc6e4a1dd30399a818ad89537a1765146a788f"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/day.txt",
+      "bytes": 50776,
+      "sha256": "0420e7dba42f6e11c8d14c1ce8fed88a6fa6fc19ef1d0ef5d8ec17fd14a9aeb1"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/day_future.txt",
+      "bytes": 50776,
+      "sha256": "0420e7dba42f6e11c8d14c1ce8fed88a6fa6fc19ef1d0ef5d8ec17fd14a9aeb1"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/inventory.json",
+      "bytes": 7170613,
+      "sha256": "50d1e3cffd7bd6dcc07b53ebb00a09e20db763002619d3e311c464e264ad39a9"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/manifest.json",
+      "bytes": 44985,
+      "sha256": "81ff189413043f6fd0322107ad88401fb96b3a43b2e2048452d67cb8161f432d"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/members.json",
+      "bytes": 731527,
+      "sha256": "8fe3345a473f11572104316cd38598477c54848c663efc105f7cfaf115eb469d"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/membership-reference.json",
+      "bytes": 23084,
+      "sha256": "d41ad07d24c3438ca1cc692ad25b46e2a15f031f96e82fd3324d71e4542432ae"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/quality.json",
+      "bytes": 189642,
+      "sha256": "ef6997661bc2e82e3347f0bb6d9937ae594235b54c69846994b1b411e73bcf1e"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/quotes.parquet",
+      "bytes": 20313756,
+      "sha256": "36d32fcf091dcbafe3d360b6b966931860f67f0f32b121ccaa40be6951f16705"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/reference-evidence.json",
+      "bytes": 172713,
+      "sha256": "f6c8acec17933b3e262b0a9b3591d96fd1a697258e80464dbe260559d77fc7bc"
+    },
+    {
+      "path": "datasets/candidates/community-2023-main-review-original336/manifest.json",
+      "bytes": 41681,
+      "sha256": "2c276e631f20622e90c465877ffabdbcda527eb8f151c29b52fea7a350d0d4df"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/1217071606.metadata.json",
+      "bytes": 591,
+      "sha256": "8437ba481c6fa0e37845f1c79e6454e99f719349a7615f0d7f4421e1ebc2c563"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/1217071606.pdf",
+      "bytes": 95512,
+      "sha256": "df8b19e7ccc280fd79177b1201d5433a5c45a4a2174522b39881d0ac3d14c0ac"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/688065-search.bin",
+      "bytes": 823,
+      "sha256": "7ecebc7954df352b301abe19fbc52c2e6c763bcfa4b7f091f0fe1d054fa32c89"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/688065-search.metadata.json",
+      "bytes": 849,
+      "sha256": "9c1eb08f842d116179e85e7841d194e15de5a8f03dad009acdc82b910a2a0b58"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/extracted.json",
+      "bytes": 2076,
+      "sha256": "06892b4fbf945e3fd91a4d63a0ffc36bcb3bbb23253706c9f1ee3aa81cdd7503"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/page-1.png",
+      "bytes": 219854,
+      "sha256": "393dcee248e5325dbf98cf9d317a202e6b12449f6acf19ee3bbfb29e73ee5b02"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/1217133087.metadata.json",
+      "bytes": 607,
+      "sha256": "d18054ecbd26b5605df7ed97764a996bb78f9cd3870f66e7cd9bb4937a765f68"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/1217133087.pdf",
+      "bytes": 193767,
+      "sha256": "03d0b3e8076db23a1da481ba78faf5dd4d0ff3725a0cbb778fe1842d7b1d9716"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/688065-resume-search.bin",
+      "bytes": 806,
+      "sha256": "2e5525541365b0ffa6600563ec218f8245c2e0a4a7eca610e6a07771a9477c4f"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/688065-resume-search.metadata.json",
+      "bytes": 860,
+      "sha256": "03b1c32439d476209f51f2ee2fee52e4eb8f48fb0fc2809776472106517bd023"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/extracted.json",
+      "bytes": 3756,
+      "sha256": "105f974931fe75a2852e15a5ab632b29cc8e20eb2e10759e6e2e39c7a362311d"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/page-1.png",
+      "bytes": 253200,
+      "sha256": "ecf199e94b5910e21da746d9180c5bf49ea432c0e1e5b3cb66453fa9b65d5ff5"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-resume-probe/page-2.png",
+      "bytes": 121920,
+      "sha256": "a1d2f240d805b3adc0ecbc832559d088bedf61a2c06d75f2949ddb8c9d0c423a"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/akshare-source-blob.json",
+      "bytes": 3709,
+      "sha256": "f4796f89e7653b367f185cd1f510e10e0f8624f83e6f80a5834be38a3c43cd84"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/halt-probe-manifest.json",
+      "bytes": 5594,
+      "sha256": "35fe29a29c1de100c75bd14dc640929de12fc22eb1a4437f7a21c23076adedad"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/halts-2023-06-15.json",
+      "bytes": 214682,
+      "sha256": "509afaf60172e358fa0cf107f6fda83cca0973f987f7e3249a4f2f3b97c912bb"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/halts-2023-06-16.json",
+      "bytes": 214682,
+      "sha256": "2780ab8d1ea3254dedbc3af5f31317e8ca3c3a7c6ce8742d22fc70bf388fda77"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/source.metadata.json",
+      "bytes": 2142,
+      "sha256": "da685c327462fb04838cda08e75424035af1684b5c0d379bf2682001e68d4d1e"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/stock_tfp_em.py",
+      "bytes": 2481,
+      "sha256": "6378e367be7c0250af9921ebeed953d02324e4c6b06cb967d1c32d97576a60c6"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.json",
+      "bytes": 110,
+      "sha256": "8d9584bb27e680034e8145dd987719fd97b89bd15c15958266c67a8a1da1ac04"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.metadata.json",
+      "bytes": 1739,
+      "sha256": "8ebf120a6307e098a47e683cc524ba2df138cf5ca69c731622a88138b32865df"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.json",
+      "bytes": 101,
+      "sha256": "4ddb7cfc3c2ce4f92f00cfb558b92906f3c591096ac8d99650cadbec3655df19"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.metadata.json",
+      "bytes": 1633,
+      "sha256": "86978953739f77af7a5d85f0b0d02cf956563cfef502c448a6ec2580acf6d768"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.json",
+      "bytes": 103,
+      "sha256": "498692b824b3760b70fece6e2adae857f91c2df1f1c6dea445040956ba4900e6"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.metadata.json",
+      "bytes": 1546,
+      "sha256": "06d4c14ea5ce6daaaafc40d115c6c316c5a4f292c873f40ed799f8fd72efa079"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-listing-audit/listing-date-extract.json",
+      "bytes": 33865,
+      "sha256": "d052dc9dedb050a2ada3e2767c0f8aa165b87957d3d6a172f5b9aa1e6a99d4cf"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/abbreviation-changes.xlsx",
+      "bytes": 287040,
+      "sha256": "b31ab4c9b342eb910a2db4df26fbd1e64782978470453a12dae4bc4f089bb127"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/historical-plan-name-references-v2.json",
+      "bytes": 232830,
+      "sha256": "f28fdf832fd8b17652d30cbf0f7201e6461f8211f2a493bb81834b2370571a9e"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/request.metadata.json",
+      "bytes": 3322,
+      "sha256": "cee65a6b9a943bc5771d5c290b06788590bc96b876d14beef4214055db5f9ba6"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/sheet-1-cells.json",
+      "bytes": 1482558,
+      "sha256": "006c295587e63dba542f4c632070f12ab591fbdbadaab52489e64dc6b9ab328f"
+    },
+    {
+      "path": "docs/evidence/phase1_halt_review.json",
+      "bytes": 6675,
+      "sha256": "f60a658d7520605ae9f3bcb1e78330693d52c17a7fc8c46bc3585001d34591cc"
+    },
+    {
+      "path": "docs/evidence/phase1_resume_event_review.json",
+      "bytes": 8138,
+      "sha256": "858d8e213a8ebefff5db8567a3d619bae9993f0acdb7c8cad944cdca736a1997"
+    },
+    {
+      "path": "docs/evidence/phase1_state_evidence_input_preflight.json",
+      "bytes": 9082,
+      "sha256": "686891c137cd37ffca21573491226b376e3a3211ef4b2af9123510c9cfca362d"
+    },
+    {
+      "path": "docs/evidence/phase1_szse_name_history_probe.json",
+      "bytes": 3690,
+      "sha256": "8089c405d7a26c1b33825a29be2cb941971c1923e290a66ed4198539f813bcb7"
+    },
+    {
+      "path": "docs/evidence/phase1_trading_state_probe.json",
+      "bytes": 9198,
+      "sha256": "7128a4cb24fb1449fd9fb3975d3cd6028a184fa6f64caba377fd295ea3fbc24f"
+    }
+  ],
+  "candidates": [
+    {
+      "kind": "baostock",
+      "table": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+      "manifest": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/manifest.json"
+    },
+    {
+      "kind": "eastmoney",
+      "table": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/bars.parquet",
+      "manifest": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/manifest.json"
+    },
+    {
+      "kind": "eastmoney",
+      "table": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/bars.parquet",
+      "manifest": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/manifest.json"
+    },
+    {
+      "kind": "community",
+      "table": "datasets/candidates/community-2023-main-review-original336-v2/quotes.parquet",
+      "manifest": "datasets/candidates/community-2023-main-review-original336-v2/manifest.json"
+    }
+  ],
+  "calendar": {
+    "table": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/calendar.parquet",
+    "manifest": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/manifest.json",
+    "raw": ".cache/worktrees/phase1-data/datasets/raw/phase1-membership-2023/attempts/be261ded9c6c9fd210f529c6460225a66e0d091f16c49c5fcd2ae45217e7c656/5f3bb8dd7d74437eb054123db4e8932e/response.json"
+  },
+  "daily_raw_checks": [
+    ".cache/worktrees/phase1-data/datasets/raw/phase1-securities-2023/attempts/f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01/f5fc98e84b064a8798bc90372d18360c/response.json"
+  ],
+  "names": {
+    "xlsx": "datasets/raw/szse/20261003-name-history-probe/abbreviation-changes.xlsx",
+    "metadata": "datasets/raw/szse/20261003-name-history-probe/request.metadata.json",
+    "cells": "datasets/raw/szse/20261003-name-history-probe/sheet-1-cells.json",
+    "extraction": "datasets/raw/szse/20261003-name-history-probe/historical-plan-name-references-v2.json"
+  },
+  "announcements": [
+    {
+      "pdf": "datasets/raw/cninfo/20261003-halt-probe/1217071606.pdf",
+      "metadata": "datasets/raw/cninfo/20261003-halt-probe/1217071606.metadata.json",
+      "search": "datasets/raw/cninfo/20261003-halt-probe/688065-search.bin",
+      "search_metadata": "datasets/raw/cninfo/20261003-halt-probe/688065-search.metadata.json",
+      "extraction": "datasets/raw/cninfo/20261003-halt-probe/extracted.json",
+      "reviewed_claim": {
+        "symbol": "688065.SH",
+        "kind": "halt",
+        "announcement_id": "1217071606",
+        "announcement_number": "2023-019",
+        "title": "关于控股股东筹划重大事项的停牌公告",
+        "adjunct_url": "finalpage/2023-06-15/1217071606.PDF",
+        "effective_date": "2023-06-15",
+        "effective_session": "afternoon_open",
+        "body_page": 1,
+        "body_quote": "本公司股票将于2023年6月15日（星期四）下午开市起停牌",
+        "signature_page": 1,
+        "signature_quote": "2022年6月15日",
+        "signature_date": "2022-06-15",
+        "signature_date_conflict": true,
+        "source_timestamp_ms": 1686803580000,
+        "source_timestamp_precision": "minute_label_unverified",
+        "review_basis": "Execution agent inspected all 3 retained page images and re-extracted PDF text offline on 2026-10-04; source time is a label, historical availability remains unknown."
+      }
+    },
+    {
+      "pdf": "datasets/raw/cninfo/20261003-resume-probe/1217133087.pdf",
+      "metadata": "datasets/raw/cninfo/20261003-resume-probe/1217133087.metadata.json",
+      "search": "datasets/raw/cninfo/20261003-resume-probe/688065-resume-search.bin",
+      "search_metadata": "datasets/raw/cninfo/20261003-resume-probe/688065-resume-search.metadata.json",
+      "extraction": "datasets/raw/cninfo/20261003-resume-probe/extracted.json",
+      "reviewed_claim": {
+        "symbol": "688065.SH",
+        "kind": "resume",
+        "announcement_id": "1217133087",
+        "announcement_number": "2023-020",
+        "title": "关于公司股票复牌的提示性公告",
+        "adjunct_url": "finalpage/2023-06-26/1217133087.PDF",
+        "effective_date": "2023-06-26",
+        "effective_session": "morning_open",
+        "body_page": 2,
+        "body_quote": "本公司股票将于2023年6月26日（星期一）上午开市起复牌",
+        "signature_page": 2,
+        "signature_quote": "2023年6月26日",
+        "signature_date": "2023-06-26",
+        "signature_date_conflict": false,
+        "source_timestamp_ms": 1687708800000,
+        "source_timestamp_precision": "date_label",
+        "review_basis": "Execution agent inspected all 3 retained page images and re-extracted PDF text offline on 2026-10-04; source time is a label, historical availability remains unknown."
+      }
+    }
+  ],
+  "rejected_eastmoney": {
+    "manifest": "datasets/raw/eastmoney/20261003-halt-probe/halt-probe-manifest.json",
+    "targeted": [
+      {
+        "raw": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.json",
+        "metadata": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.metadata.json"
+      },
+      {
+        "raw": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.json",
+        "metadata": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.metadata.json"
+      },
+      {
+        "raw": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.json",
+        "metadata": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.metadata.json"
+      }
+    ]
+  },
+  "non_authoritative_inputs": [
+    "summary-first-pass.json is intentionally excluded",
+    "Probe scripts and summaries are retained identity/diagnostic anchors, never executed or used as pass assertions"
+  ]
+}
