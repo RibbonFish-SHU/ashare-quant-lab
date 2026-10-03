@@ -45,7 +45,16 @@ def audit(tables, records, issues, *, acquisition_complete, events=()):
         )
 
     check("acquisition", "pass" if acquisition_complete else "fail", len(records))
-    check("typed_conversion", "fail" if issues else "pass", len(issues), issues)
+    check(
+        "typed_conversion",
+        "fail"
+        if any(i["status"] == "fail" for i in issues)
+        else "unverified"
+        if issues
+        else "pass",
+        len(issues),
+        issues,
+    )
     grouped = defaultdict(list)
     for kind, rows in tables.items():
         for row in rows:

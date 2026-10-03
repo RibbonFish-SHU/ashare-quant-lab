@@ -31,12 +31,15 @@
 - 允许查询的日期为 2010–2023，必须显式 ISO 日期。2023 计划只为当前开发批次；2022 年末成员 /
   日历只用于验收年初基准。日线固定 daily、未复权；不提供默认 today 或封存行情的入口。
 
-## 候选 schema：baostock-candidate-v1
+## 候选 schema：baostock-candidate-v2
 
 这是与 Phase 0 canonical 隔离的新命名空间 `real_candidate`。每行保留 query_id、raw 文件与摘要、
 旧 capture query_name、从 0 开始的行号、完整原字段 / 字符串、SDK、观察时间及精度。
 `historical_publish_time` 和 `available_time` 均为空，`time_basis=unknown_historical_vintage`。
 `valid_candidate` 只表示字段转换成功，不表示数据已获研究资格。
+v1 原产物保持不变。v2 显式加入 `needs_review` 和 `non_active_with_reported_trades`：
+日级非正常交易标志伴随非零成交，不能在没有日内区间证据时直接解释为整日停牌数据错误。
+完整原值保留并报告 unverified，也不自动转换为正常 / 可成交。
 
 | 候选表 | 转换与限制 |
 | --- | --- |
@@ -50,7 +53,8 @@
 
 空字符串与不存在字段在 typed 候选中均为 null，但完整 raw_values_json 保留二者区别。
 非数值、非有限数、负值、溢出、无效日期、代码错配、主动交易必填值缺失等产生可定位 fail，
-对应候选行仍保留且标记 invalid，不填零、不丢行。OHLC 顺序与停牌非零成交矛盾也失败。
+对应候选行仍保留且标记 invalid，不填零、不丢行。OHLC 顺序错误失败；日级状态与成交量的
+时段歧义标记 needs_review / unverified，须补充停复牌区间证据。
 一条查询可覆盖相同市场行的不同版本；查询内重复键失败，跨查询相同值可并存，共同字段矛盾失败。
 
 ## 成员事件与质量门槛

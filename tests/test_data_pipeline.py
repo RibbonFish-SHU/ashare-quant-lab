@@ -140,7 +140,6 @@ def test_suspended_missing_quantity_not_zero_or_executable():
         {"volume": "1.5"},
         {"high": "6.00"},
         {"isST": "2"},
-        {"tradestatus": "0", "volume": "10"},
         {"code": "sh.600001"},
         {"date": "2023-01-06"},
     ],
@@ -566,6 +565,31 @@ def test_empty_pre_ipo_request_is_not_missing_open_day():
     checks, _ = quality([bars, calendar, basic])
     assert checks["bars_missing_open_days"]["status"] == "pass"
     assert checks["listing_metadata_coverage"]["status"] == "pass"
+
+
+def test_real_688065_non_active_flag_with_trades_needs_interval_evidence():
+    r = bar(
+        code="sh.688065",
+        date="2023-06-15",
+        open="55.0400",
+        high="55.8000",
+        low="54.7600",
+        close="55.5300",
+        preclose="55.0200",
+        volume="353426",
+        amount="19589785.9900",
+        turn="0.134100",
+        tradestatus="0",
+    )
+    r["parameters"].update(code="sh.688065", start_date="2023-06-15", end_date="2023-06-15")
+    row, issues = converted(r)
+    assert row["record_status"] == "needs_review"
+    assert row["source_trading_active"] is False and row["volume_shares"] == 353426
+    assert row["amount_cny"] == Decimal("19589785.9900")
+    assert issues[0]["status"] == "unverified"
+    checks, report = quality([r])
+    assert checks["typed_conversion"]["status"] == "unverified"
+    assert report["research_eligible"] is False
 
 
 def test_real_blacklist_error_blocks_new_online_plans_but_allows_offline_reuse(

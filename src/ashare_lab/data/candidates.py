@@ -8,7 +8,7 @@ import pyarrow as pa
 
 from .queries import API_KINDS, query_id, symbol
 
-VERSION = "baostock-candidate-v1"
+VERSION = "baostock-candidate-v2"
 DECIMAL = pa.decimal128(32, 12)
 COMMON = [
     ("query_id", pa.string()),
@@ -269,17 +269,19 @@ def convert(record):
                 if row["volume_shares"] is None
                 else "suspended_zero_quantity"
                 if row["volume_shares"] == 0
-                else "status_quantity_conflict"
+                else "non_active_with_reported_trades"
             )
             if row["source_trading_active"] is False and (
                 (row["volume_shares"] or 0) != 0 or (row["amount_cny"] or 0) != 0
             ):
                 issue(
-                    "suspension_quantity_conflict",
+                    "non_active_with_reported_trades",
                     "volume/amount",
                     [raw.get("volume"), raw.get("amount")],
-                    "suspended source status has nonzero quantity",
+                    "daily source flag cannot distinguish intraday halt from a full-day halt; interval evidence required",
+                    status="unverified",
                 )
+                row["trade_observation"] = "non_active_with_reported_trades"
         elif kind == "securities":
             row.update(
                 name_observed=take("code_name"),
@@ -337,6 +339,8 @@ def convert(record):
             )
         if any(i["status"] == "fail" for i in issues[start:]):
             row["record_status"] = "invalid"
+        elif issues[start:]:
+            row["record_status"] = "needs_review"
         output.append(row)
     return kind, output, issues
 
