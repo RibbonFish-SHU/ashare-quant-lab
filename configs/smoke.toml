@@ -1,0 +1,8 @@
+# Engineering fixture only. Dates are not an approved research period.
+seed = 20261003
+output_root = "artifacts/experiments"
+data_kind = "synthetic"
+data_version = "synthetic-v1"
+feature_version = "phase0-expression-v1"
+model_version = "phase0-compatibility-v1"
+device = "cpu"
