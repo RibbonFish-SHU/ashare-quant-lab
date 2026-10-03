@@ -7,10 +7,13 @@
 
 - 社区导入已集成到 main，集成提交 `065476149accc012a75d789966fa8a19b363e273`。
   成功运行源码为 `e821b8eb1b69abb5b7fe6f2d635ec421331af712`，完整 334 项测试通过。
-- 本批真实构建已结束：一次失败、一次成功；原执行分支拟定的输出目录未创建，
+- 前一批社区导入真实构建已结束：一次失败、一次成功；原执行分支拟定的输出目录未创建，
   不再启动原拟执行命令，不重复社区构建或模型兼容性实验。
-- 主审成功产物为 `datasets/candidates/community-2023-main-review-original336-v2`；
+- 前一批主审成功产物为 `datasets/candidates/community-2023-main-review-original336-v2`，
   未研究晋级。完整摘要与旧输入不变证据见 [主审](PHASE1_COMMUNITY_IMPORT_REVIEW.md)。
+- 本批状态证据的真实构建已由主审完成一次；候选摘要、输入保护和限制见
+  [状态证据主审](PHASE1_STATE_EVIDENCE_REVIEW.md) 与
+  [版本化验收证据](evidence/phase1_state_evidence_main_acceptance.json)。
 - 原执行 worktree `.cache/worktrees/phase1-community-import` 仍为干净的 379f182；
   主审修复 worktree `.cache/worktrees/phase1-community-review` 为干净的 e821b8e。
   旧 worktree、原始文件、失败记录、来源限制和日志全部保留。

@@ -3,7 +3,9 @@
 执行代理，2026-10-04（北京时间）。依据 `docs/PHASE1_STATE_EVIDENCE_PLAN.md` 及最新正式交接，
 在基线 `007216cfc8f30270210732b86ba73ea9a4e42f66` 创建分支 `phase1/state-evidence`，
 工作目录为 `E:\量化\ashare-quant-lab\.cache\worktrees\phase1-state-evidence`。
-本报告所在源码提交交主审；**实际状态候选构建次数为 0**，拟运行命令尚未执行。
+本报告所在源码提交交主审；主审在独立 review worktree 上完成了 **1 次真实状态候选构建**，
+产物与验收记录见 [主审报告](PHASE1_STATE_EVIDENCE_REVIEW.md) 和
+`docs/evidence/phase1_state_evidence_main_acceptance.json`。
 
 本批源码、配置、测试、预检进程与报告归执行代理；主代理维护任务书、来源决定、主审和集成。
 旧 worktree、原件、BaoStock 限制/账本、失败产物和所有旧候选均保留。没有操作 Herdr、其他项目、网络、服务器或 GPU。
@@ -16,7 +18,8 @@
 [状态证据契约](STATE_EVIDENCE_CONTRACT.md)，输入及人工选择见
 [版本化选择配置](../configs/state-evidence-2023.json)。既有适配器和正式交易/风控逻辑未变。
 
-- 原计划重算证券集合；70 份输入合计 47,285,116 字节逐一核对摘要，另记录选择配置自身摘要。
+- 原计划重算证券集合；输入验证实际核对 **71 份文件**（执行代理早期文字曾记为 70，
+  以版本化输入验证和真实构建 manifest 为准），合计 47,285,116 字节逐一核对摘要，另记录选择配置自身摘要。
   包含主代理预检的全部 40 份原件/锚点、原计划、原日历 raw、旧候选和原社区失败 manifest。
 - XLSX 重解析 7,489 行，与单元格提取及历史事件逐项一致；A/B/D/E 生成历史事件，C 当前简称不输出为历史。
   原 134 个深市代码中 129 个有 270 条截至 2023 年的名称事件；5 个无事件保持未知。
@@ -68,10 +71,10 @@ PDF 工具为已有 `D:\texlive\2025\bin\windows\pdftotext.exe`，版本 **25.02
 该本地实现错误记录保留在 `.cache/state-evidence/preflight-01.log`，不算供应商响应或候选构建失败。
 `.cache/state-evidence/preflight-02.json` 保留修复后预检；最终结果以版本化检查索引所绑定的日志为准。
 
-## 主审后的拟运行命令（尚未执行）
+## 主审实际构建与验收
 
 ```powershell
-$stateRoot = 'E:\量化\ashare-quant-lab\.cache\worktrees\phase1-state-evidence'
+$stateRoot = 'E:\量化\ashare-quant-lab\.cache\worktrees\phase1-state-review'
 $inputRoot = 'E:\量化\ashare-quant-lab'
 $env:PYTHONPATH = Join-Path $stateRoot 'src'
 $env:PYTHONIOENCODING = 'utf-8'
@@ -81,14 +84,22 @@ Set-Location $stateRoot
   --input-root $inputRoot `
   --pdftotext 'D:\texlive\2025\bin\windows\pdftotext.exe' `
   --project-root $stateRoot `
-  --output "$stateRoot\datasets\candidates\state-evidence-2023-original336-v1"
+  --output "$stateRoot\datasets\candidates\state-evidence-2023-main-review-original336-v1"
 ```
 
-启动前需由主审确认提交和此命令；这是最新交接明确的先审源码、再实际构建顺序。
-运行时工作区须干净且固定到所审提交，候选目录必须尚不存在；运行日志保存至本 worktree 的独立 artifacts 目录。
-成功条件须同时包含：`built_candidate`、质量 `unverified`、前后输入摘要不变、全量存储往返一致、正式读取器拒绝。
-成功 CLI 仍退出 2，不能仅凭退出码判断。实际行数、四个完整停牌开市日、半日成交核对及新产物摘要/耗时待该次构建验收，
-本报告不把预检或合成测试冒充真实候选验收。
+主审在干净提交 `2be10c58983a172ea99e3e5f5f3eb8cdd87cc937` 的独立 worktree 上执行上述命令一次。
+CLI 返回 **2**，耗时 **11.600687999976799 秒**；manifest 为 `built_candidate`，质量为 `unverified`，
+正式读取器拒绝，且 `research_eligible=false`。候选路径为
+`datasets/candidates/state-evidence-2023-main-review-original336-v1`（位于主审 review worktree）。
+输出含 272 条事件和 81,312 条日级参考（336 个证券 × 242 个开市日），events/daily_references
+均通过 Parquet 与 DuckDB 往返。688065 的 2023-06-15 被标为半日停牌（当日成交 353,426 股），
+2023-06-16、06-19、06-20、06-21 为完整停牌日，2023-06-26 复牌参考不会改写严格 as-of 视图。
+所有事件的 `available_time` 仍为 null，`can_trade` 仍为 null，认证状态覆盖为零。
 
-本轮检查与预检子进程均已退出，无常驻采集/实验进程。执行代理保有此 worktree、输入选择和待运行产物所有权；
-主代理可审阅本提交并协调下一步，不需重复社区构建、联网获取或模型实验。
+构建子进程已正常退出，保护输入前后摘要一致，未联网、未使用 GPU、未执行服务器、模型或回测任务。
+审阅封装脚本在构建完成后首次写入 `protected-after.json` 时把 Windows `Path` 当作 JSON 键，
+因此自身先以 `TypeError` 退出；本次没有重跑构建，主审通过只读后验补齐执行记录并保留该问题说明。
+完整 argv、进程、输入保护摘要、manifest/表摘要和限制见主审报告及版本化验收证据。
+
+本轮检查、构建与后验子进程均已退出，无常驻采集/实验进程。候选仍为不可研究的历史参考，
+不代表 PIT、停牌/风险警示全覆盖或正式研究数据验收；2024–2025 行情、模型、回测、GPU 和服务器任务均未执行。
