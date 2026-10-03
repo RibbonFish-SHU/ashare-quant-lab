@@ -22,7 +22,8 @@
       ".venv/Scripts/ruff.exe check .",
       ".venv/Scripts/ruff.exe format --check ."
     ],
-    "online_collection_covered_by_this_record": false
+    "online_collection_covered_by_this_record": true,
+    "online_collection_review_mode": "Offline review of original pilot artifacts; no repeated HTTP"
   },
   "pilot_artifact_review": {
     "verified_at_utc": "2026-10-03T12:51:49.934162+00:00",
