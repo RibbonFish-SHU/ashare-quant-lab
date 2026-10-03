@@ -311,8 +311,13 @@ def reference_tables(directory):
     }
 
 
-def audit(records, rows, issues, reference):
+def audit(records, rows, issues, reference, evidence=None):
     checks = []
+    primary_reference = reference
+    if evidence is not None:
+        from .evidence_quality import with_listing_reference
+
+        reference = with_listing_reference(reference, evidence)
 
     def check(name, status, count, **detail):
         checks.append({"name": name, "status": status, "count": count, **detail})
@@ -534,8 +539,14 @@ def audit(records, rows, issues, reference):
         unknown_volume_units=sum(r["volume_scale_to_shares"] is None for r in rows),
         reason="scaled displayed quantities are not exact executions; lexical decimals do not establish rounding",
     )
+    if evidence is not None:
+        from .evidence_quality import report_checks
+
+        checks.extend(report_checks(evidence, records, rows, primary_reference))
     return {
-        "schema_version": "public-bars-quality-v1",
+        "schema_version": "public-bars-quality-v2"
+        if evidence is not None
+        else "public-bars-quality-v1",
         "research_eligible": False,
         "formal_research_gate": "blocked",
         "status": "fail" if any(c["status"] == "fail" for c in checks) else "unverified",
@@ -547,7 +558,16 @@ def audit(records, rows, issues, reference):
     }
 
 
-def build(records, output, *, project_root, reference, input_refs=(), acquisition=None):
+def build(
+    records,
+    output,
+    *,
+    project_root,
+    reference,
+    input_refs=(),
+    acquisition=None,
+    evidence=None,
+):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     if len({r["query_id"] for r in records}) != len(records):
@@ -558,7 +578,14 @@ def build(records, output, *, project_root, reference, input_refs=(), acquisitio
         rows.extend(converted)
         issues.extend(found)
     ref, ref_identity = reference_tables(reference)
-    quality = audit(records, rows, issues, ref)
+    quality = audit(records, rows, issues, ref, evidence=evidence)
+    if evidence is not None:
+        save_json(output / "reference-evidence.json", evidence)
+        quality["reference_evidence"] = {
+            "file": "reference-evidence.json",
+            "sha256": digest(output / "reference-evidence.json"),
+            "schema_version": evidence["schema_version"],
+        }
     quality["acquisition"] = acquisition or {
         "successful_captures": len(records),
         "scope": "explicit reused captures",
@@ -583,6 +610,15 @@ def build(records, output, *, project_root, reference, input_refs=(), acquisitio
         "source": code_identity(Path(project_root)),
         "inputs": list(input_refs),
         "reference": ref_identity,
+        "reference_evidence": (
+            {
+                "schema_version": evidence["schema_version"],
+                "research_eligible": evidence["research_eligible"],
+                "references": evidence["references"],
+            }
+            if evidence is not None
+            else None
+        ),
         "captures": [
             {k: v for k, v in r.items() if k not in {"rows", "observed_at_utc"}} for r in records
         ],
