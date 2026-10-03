@@ -1,0 +1,90 @@
+{
+  "phase0_linux_artifacts.json": {
+    "bytes": 170078,
+    "sha256": "7aab3521f753b04f24ca14759445a9ec256036150028d1b4ee68e008c66b91b5"
+  },
+  "phase0_linux_cpu_events.jsonl": {
+    "bytes": 312,
+    "sha256": "52f72b858f30518d3c75142bcab3766d35fcb8caf893771ad8dbf930d2dfafc0"
+  },
+  "phase0_linux_cpu_manifest.json": {
+    "bytes": 11211,
+    "sha256": "1ffcf177ab7a66203ab50431acd2c25863683a088acd294ac974cce31e27c841"
+  },
+  "phase0_linux_cpu_result.json": {
+    "bytes": 1273,
+    "sha256": "61e597cdb4d00cc234be63034b1b54877bf70eaf3334bb8172e287ca62d2a4d8"
+  },
+  "phase0_linux_final_environment.json": {
+    "bytes": 2261,
+    "sha256": "e68f602baf61a7929aa9d03bde36188c83aa956a48943627dc81f5e5f446f1cd"
+  },
+  "phase0_linux_gpu_events.jsonl": {
+    "bytes": 1993,
+    "sha256": "1fe50fad97e4506627bfa2768cb9abe56b6dc0ca6126987c0c05d19b8b1eeb51"
+  },
+  "phase0_linux_gpu_manifest.json": {
+    "bytes": 11339,
+    "sha256": "068d5a3f362ef90644ffbc14eb8cf03756c1cc71e2428718aa7df5da47443467"
+  },
+  "phase0_linux_gpu_observation.json": {
+    "bytes": 22946,
+    "sha256": "91c4b9a87042b833235c815e36836909f454a45ebda0e0f9e1b595f54a939a38"
+  },
+  "phase0_linux_gpu_result.json": {
+    "bytes": 1289,
+    "sha256": "452ea6cc481d72f256c333b60ea07f41e3b2c2da3422e8a5008cd19c4ddb9e92"
+  },
+  "phase0_linux_installation.json": {
+    "bytes": 4727,
+    "sha256": "e334cfa68d7391cb14d1771d16407f4baa77c62efda665a20814662604896a70"
+  },
+  "phase0_linux_logs/cleanup.log": {
+    "bytes": 355,
+    "sha256": "0d39029362e627aabf916303898b553d0cce95c6935f0d50b1225790755d1e0a"
+  },
+  "phase0_linux_logs/cpu-smoke.log": {
+    "bytes": 908,
+    "sha256": "d2b876c52896e4fa842c1c37eaef17b32aec3143d392aa78e50707867f888ddb"
+  },
+  "phase0_linux_logs/dependencies.log": {
+    "bytes": 66,
+    "sha256": "6eed07b067373ed19fdf16e57f58808b478b637eb46123af7c1ab63e5700bdac"
+  },
+  "phase0_linux_logs/gpu-20261003T082227Z.log": {
+    "bytes": 908,
+    "sha256": "d2fd0c0886d328b7384c7f833bc83c2d386c736a5e0f9f27a22db8ef5cbf16ca"
+  },
+  "phase0_linux_logs/project.log": {
+    "bytes": 280,
+    "sha256": "b8f756aa78b38acbc57425ec88d6426a23ebdc42a70f231b820de9dd163965ad"
+  },
+  "phase0_linux_logs/python.log": {
+    "bytes": 15,
+    "sha256": "a653f483c16545a1c15153c784d7cf4e2d13dcda5a0668977e56d27b98c41eb3"
+  },
+  "phase0_linux_logs/ruff.log": {
+    "bytes": 19,
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "phase0_linux_logs/sync.log": {
+    "bytes": 4407,
+    "sha256": "2720343b988bf9d0b89539d86af7530ecefbffeb603607a37411064879700061"
+  },
+  "phase0_linux_logs/tests.log": {
+    "bytes": 99,
+    "sha256": "26e7cb3664fa2413b858aaad1e214bd633b0ebdf904b6ec78a1f2d7b925ef684"
+  },
+  "phase0_linux_logs/venv.log": {
+    "bytes": 172,
+    "sha256": "892fff0fcc2d978ca5690c0b935745ee929cdca284e9f1edd20c7d8f24ff571e"
+  },
+  "phase0_linux_pre_cleanup.json": {
+    "bytes": 1815,
+    "sha256": "1c3c03b77573a2d4e572e1f29e8644d2e0dcbe2fbc2b0e5f20ddfe5517cc7d26"
+  },
+  "phase0_linux_transfer.json": {
+    "bytes": 1362,
+    "sha256": "09b8bb6ea31333796da1eb78700f69a92a5ba628171bd541bf87c8d89690d335"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "source_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+  "started_at": "2026-10-03T08:20:41.776360+00:00",
+  "status": "passed",
+  "steps": [
+    {
+      "name": "python",
+      "command": [
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/interpreter/python/bin/python3.11",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.009,
+      "free_bytes": 16456151040,
+      "allocated_bytes": 3363840000
+    },
+    {
+      "name": "venv",
+      "command": [
+        "uv",
+        "venv",
+        "--python",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/interpreter/python/bin/python3.11",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv",
+        "--offline",
+        "--no-python-downloads",
+        "--cache-dir",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/uv-cache"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.268,
+      "free_bytes": 16456019968,
+      "allocated_bytes": 3363971072
+    },
+    {
+      "name": "sync",
+      "command": [
+        "uv",
+        "pip",
+        "sync",
+        "configs/requirements-linux-cu118.lock",
+        "--python",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python",
+        "--offline",
+        "--no-index",
+        "--require-hashes",
+        "--find-links",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/offline/distributions",
+        "--cache-dir",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/uv-cache",
+        "--link-mode",
+        "hardlink"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 20.536,
+      "free_bytes": 9690841088,
+      "allocated_bytes": 10129149952
+    },
+    {
+      "name": "project",
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python",
+        "--offline",
+        "--no-deps",
+        "--no-index",
+        "--cache-dir",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/uv-cache",
+        "--link-mode",
+        "hardlink",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/offline/distributions/ashare_quant_lab-0.1.0-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.067,
+      "free_bytes": 9690685440,
+      "allocated_bytes": 10129305600
+    },
+    {
+      "name": "dependencies",
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python",
+        "--offline",
+        "--cache-dir",
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/uv-cache"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.067,
+      "free_bytes": 9690681344,
+      "allocated_bytes": 10129309696
+    },
+    {
+      "name": "tests",
+      "command": [
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.037,
+      "free_bytes": 9667944448,
+      "allocated_bytes": 10152046592
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.035,
+      "free_bytes": 9667911680,
+      "allocated_bytes": 10152079360
+    },
+    {
+      "name": "cpu-smoke",
+      "command": [
+        "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python",
+        "-m",
+        "ashare_lab.cli",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.479,
+      "free_bytes": 9570697216,
+      "allocated_bytes": 10249293824
+    }
+  ],
+  "initial_free_bytes": 16549441536,
+  "initial_allocated_bytes": 3270549504,
+  "additional_peak_bound_bytes": 9908464506,
+  "reserve_bytes": 5368709120,
+  "finished_at": "2026-10-03T08:21:27.788706+00:00",
+  "minimum_sampled_free_bytes": 9570697216,
+  "sample_interval_seconds": 0.25,
+  "samples": 184,
+  "final_free_bytes": 9570697216,
+  "final_allocated_bytes": 10249293824
+}

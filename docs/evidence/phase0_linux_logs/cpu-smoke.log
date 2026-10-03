@@ -1,0 +1,5 @@
+{"run_directory": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/artifacts/experiments/synthetic/20261003T082111.238796Z-aaf5bcb1"}
+[3627297:MainThread](2026-10-03 16:21:23,241) INFO - qlib.Initialization - [config.py:452] - default_conf: client.
+[3627297:MainThread](2026-10-03 16:21:26,327) INFO - qlib.Initialization - [__init__.py:75] - qlib successfully initialized based on client settings.
+[3627297:MainThread](2026-10-03 16:21:26,328) INFO - qlib.Initialization - [__init__.py:77] - data_path={'__DEFAULT_FREQ': PosixPath('/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/artifacts/experiments/synthetic/20261003T082111.238796Z-aaf5bcb1/qlib_synthetic')}
+{"status": "passed", "run_directory": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/artifacts/experiments/synthetic/20261003T082111.238796Z-aaf5bcb1"}
