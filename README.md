@@ -5,6 +5,8 @@ Phase 1 数据管线已集成，2023 候选共 75,271 行，1,403 个计划请�
 BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,200 行日线已完成原件与落盘核对。
 两个来源分别保留，原 336 代码计划均已有日线候选；历史 PIT、回测和正式策略尚未验收，
 真实候选均不具有正式研究资格。
+另已下载 Qlib 推荐的免费社区历史包，完成六只股票的价格 / 原生 provider 抽样，
+并核实包内历史成分的时间偏差；见[公开数据包实测](docs/PHASE1_OPEN_DATA_REVIEW.md)。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
@@ -32,5 +34,6 @@ uv run --frozen --extra dev ashare-lab smoke --config configs/smoke.toml
 - [补充行情来源实测与下一批范围](docs/PHASE1_SOURCE_FALLBACK_PLAN.md)
 - [补充行情首批报告](docs/PHASE1_FALLBACK_REPORT.md)、[续采报告](docs/PHASE1_FALLBACK_CONTINUATION_REPORT.md)与[主审结果](docs/PHASE1_FALLBACK_REVIEW.md)
 - [上市日期与独立价格抽样](docs/PHASE1_METADATA_AND_CROSSCHECK.md)
+- [免费社区历史数据包及成员口径实测](docs/PHASE1_OPEN_DATA_REVIEW.md)
 
 研究、推理、交易和风控保持隔离。当前代码仅有研究工程工具；实盘晋级依照项目方案另行确认。

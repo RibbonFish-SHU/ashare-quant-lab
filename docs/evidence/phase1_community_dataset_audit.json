@@ -1,0 +1,898 @@
+{
+  "recorded_at_utc": "2026-10-03T14:20:52.988430+00:00",
+  "kind": "public-community-dataset-main-audit-v1",
+  "research_eligible": false,
+  "official_recommendation": {
+    "source_url": "https://github.com/microsoft/qlib",
+    "readme_git_blob": "42c446e69e5ead8cb6aae2df145d5d24e5d78632",
+    "statement": "Official Qlib dataset temporarily disabled; README points to chenditc/investment_data community releases."
+  },
+  "release": {
+    "repository": "chenditc/investment_data",
+    "tag": "2023-12-31",
+    "tag_commit": "ea31b1b1c1340ecda02438d8850595657c46ab46",
+    "url": "https://github.com/chenditc/investment_data/releases/tag/2023-12-31",
+    "published_at": "2023-12-31T09:28:09Z",
+    "asset_id": 143134949,
+    "asset_created_at": "2023-12-31T09:28:10Z",
+    "asset_updated_at": "2023-12-31T09:28:43Z",
+    "publisher_digest": null,
+    "publisher_manifest_present": false
+  },
+  "download": {
+    "source": "chenditc/investment_data",
+    "release_id": 135431362,
+    "tag": "2023-12-31",
+    "asset_id": 143134949,
+    "url": "https://github.com/chenditc/investment_data/releases/download/2023-12-31/qlib_bin.tar.gz",
+    "expected_bytes": 407271371,
+    "started_at": "2026-10-03T14:10:44.095200+00:00",
+    "complete": true,
+    "status": 200,
+    "content_length": "407271371",
+    "last_modified": "Sun, 31 Dec 2023 09:28:51 GMT",
+    "completed_at": "2026-10-03T14:11:57.210344+00:00",
+    "bytes": 407271371,
+    "sha256": "5651eb91463e1cee56ad23a8fe41bc2036fcae54dd5720a6c6ddc238e2b3a4b3",
+    "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\investment_data\\2023-12-31\\qlib_bin.tar.gz"
+  },
+  "inventory": {
+    "recorded_at": "2026-10-03T14:13:32.597741+00:00",
+    "archive_sha256": "5651eb91463e1cee56ad23a8fe41bc2036fcae54dd5720a6c6ddc238e2b3a4b3",
+    "archive_bytes": 407271371,
+    "member_count": 61062,
+    "uncompressed_regular_bytes": 525329303,
+    "feature_symbol_count": 5550,
+    "field_counts": {
+      "adjclose.day.bin": 5550,
+      "amount.day.bin": 5550,
+      "change.day.bin": 5550,
+      "close.day.bin": 5550,
+      "factor.day.bin": 5550,
+      "high.day.bin": 5550,
+      "low.day.bin": 5550,
+      "open.day.bin": 5550,
+      "volume.day.bin": 5550,
+      "vwap.day.bin": 5550
+    },
+    "calendars": {
+      "qlib_bin/calendars/day_future.txt": {
+        "count": 4616,
+        "first": "2005-01-04",
+        "last": "2023-12-29",
+        "after_2023_count": 0
+      },
+      "qlib_bin/calendars/day.txt": {
+        "count": 4616,
+        "first": "2005-01-04",
+        "last": "2023-12-29",
+        "after_2023_count": 0
+      }
+    },
+    "instrument_rows": {
+      "csi800.txt": 54404,
+      "all.txt": 5550,
+      "csi300.txt": 14398,
+      "csi1000.txt": 22005,
+      "csiall.txt": 84024,
+      "csi500.txt": 19500
+    }
+  },
+  "saved_members": [
+    {
+      "archive_member": "qlib_bin/calendars/day_future.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/calendars/day_future.txt",
+      "bytes": 50776,
+      "sha256": "0420e7dba42f6e11c8d14c1ce8fed88a6fa6fc19ef1d0ef5d8ec17fd14a9aeb1"
+    },
+    {
+      "archive_member": "qlib_bin/calendars/day.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/calendars/day.txt",
+      "bytes": 50776,
+      "sha256": "0420e7dba42f6e11c8d14c1ce8fed88a6fa6fc19ef1d0ef5d8ec17fd14a9aeb1"
+    },
+    {
+      "archive_member": "qlib_bin/instruments/csi800.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/instruments/csi800.txt",
+      "bytes": 1686524,
+      "sha256": "ab85becc4b9099b3fa6a0db6d9b7d17251352f38334feee6ce56a847be81691b"
+    },
+    {
+      "archive_member": "qlib_bin/instruments/all.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/instruments/all.txt",
+      "bytes": 172050,
+      "sha256": "924ff836acd5992d6dc570854461c7a6830835fd548e9c4063cac049ccbdfcd2"
+    },
+    {
+      "archive_member": "qlib_bin/instruments/csi300.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/instruments/csi300.txt",
+      "bytes": 446338,
+      "sha256": "225d2b0a54dd0fe5e50359605afc6e4a1dd30399a818ad89537a1765146a788f"
+    },
+    {
+      "archive_member": "qlib_bin/instruments/csi1000.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/instruments/csi1000.txt",
+      "bytes": 682155,
+      "sha256": "869c91c6439de4bb38695432298fe2e98ce6461bbbfac146adcc78f2c9c21fea"
+    },
+    {
+      "archive_member": "qlib_bin/instruments/csiall.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/instruments/csiall.txt",
+      "bytes": 2604744,
+      "sha256": "2cbcc91a3ddf0e2c6802f0cef5be51d34eb7da3555d0ea90fa7704a238cdfa24"
+    },
+    {
+      "archive_member": "qlib_bin/instruments/csi500.txt",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/instruments/csi500.txt",
+      "bytes": 604500,
+      "sha256": "1dde1637e3d0f633e795025b917dc599f53c1f7d7b315c87b66baa1e4d9db147"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/vwap.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/vwap.day.bin",
+      "bytes": 18468,
+      "sha256": "e6dac88426322ed58d4bca4199f9eb63e434513fd4e60620dfab05bb476ac460"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/high.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/high.day.bin",
+      "bytes": 18468,
+      "sha256": "48269f025756fb3a34faea780b4ae511b482b05b912bd021fe1b851fd2f48132"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/open.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/open.day.bin",
+      "bytes": 18468,
+      "sha256": "b8344786a831bb5fe276267cefba6dd0ffb8920fed8f2bb0fcc25473f6887d55"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/close.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/close.day.bin",
+      "bytes": 18468,
+      "sha256": "c7515405cbffaa768382f6980a8be730069744cdff73cdff0defdd3543d6c751"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/adjclose.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/adjclose.day.bin",
+      "bytes": 18468,
+      "sha256": "501672049bef960e1440bf6b9d9e78d5dce3d3b1e8bb8ce4a3de604cd1b59fea"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/amount.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/amount.day.bin",
+      "bytes": 18468,
+      "sha256": "4646ceccfad3607da4dfc984aef4bd3f4d8e20ebf4f70c0ad5d7dc5e83fbbc70"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/change.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/change.day.bin",
+      "bytes": 18468,
+      "sha256": "94f5245ad8a7460c8da780f63fd7703f2241fc97b213a6bcf4d23b8f69b6ca29"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/factor.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/factor.day.bin",
+      "bytes": 18468,
+      "sha256": "8ddf6389c52bc14be1671c4ccffd26a906469778fa93c6f799725e019c103d06"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/low.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/low.day.bin",
+      "bytes": 18468,
+      "sha256": "642ecb37213739da69d9b46256e3deb49647a58aa7f6f784cb3369c683f90897"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000001/volume.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000001/volume.day.bin",
+      "bytes": 18468,
+      "sha256": "94591d11ad55012653b0e490ba838fe41258089c627201279e8de0c6aab4bb1c"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/vwap.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/vwap.day.bin",
+      "bytes": 18468,
+      "sha256": "342382f8db824e2b1e6190bf46f835ee061b9e4a04bb5e603c4b34175790ac89"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/high.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/high.day.bin",
+      "bytes": 18468,
+      "sha256": "ee49f57c670852ae071a719ff41892a0305273f2b6ba86069965bf3d2ff19994"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/open.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/open.day.bin",
+      "bytes": 18468,
+      "sha256": "334e9fc7998b9039be82399a7a6bfee48d3567e5f311125fc8300280691b681b"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/close.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/close.day.bin",
+      "bytes": 18468,
+      "sha256": "c387f6cbe37d68c76a2b27990885b495959d4bfd35d10da09820a47b2ab1c585"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/adjclose.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/adjclose.day.bin",
+      "bytes": 18468,
+      "sha256": "ac3f4f6c2dfac7d784e456e1f51d780b2c11ae00056c41e3e43796482350a9f2"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/amount.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/amount.day.bin",
+      "bytes": 18468,
+      "sha256": "f3b3734da9600238b3573fed242f2db256795bc24c070843a962daddd6b9d742"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/change.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/change.day.bin",
+      "bytes": 18468,
+      "sha256": "f8545fe60822de6857f7b31fb9593812f70cb8f620dbbca78c67867c4ae307fe"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/factor.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/factor.day.bin",
+      "bytes": 18468,
+      "sha256": "e9b89cb4f6f814226fe79c02b4594e05646fd8eea7260e2a1b56e9957ff4fddc"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/low.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/low.day.bin",
+      "bytes": 18468,
+      "sha256": "ab8cbd0720f4a02302784955b90e51d88b34959e34f4959d9d98c6e33b79698a"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz000938/volume.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz000938/volume.day.bin",
+      "bytes": 18468,
+      "sha256": "6b60cec70481425d271e2c28dfbb89205a4f391024181a556acfcc38c64cd05c"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/vwap.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/vwap.day.bin",
+      "bytes": 18468,
+      "sha256": "bcafdc90297a3532841e899514cbbcaeae743c91b97a3e34ca2e222dd2e33b80"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/high.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/high.day.bin",
+      "bytes": 18468,
+      "sha256": "f7c86f622c2e3cd8eb894f55b83c755953f218912ac48611c5d18393ee9b2f87"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/open.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/open.day.bin",
+      "bytes": 18468,
+      "sha256": "b8f38925c4f9eebe1bb35843574749cfd4b6f5e221c37c501c2b415032abaf74"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/close.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/close.day.bin",
+      "bytes": 18468,
+      "sha256": "5e9a15dbda61a529ff9c2711ad16e3813d52a8c174884c4371a7573651b6911d"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/adjclose.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/adjclose.day.bin",
+      "bytes": 18468,
+      "sha256": "d3bb44cd9f1a78bbdce8e21e8e3303a87de078b4628ef9e2e28d6a18ec291431"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/amount.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/amount.day.bin",
+      "bytes": 18468,
+      "sha256": "fb34c0a4fe4f6bc2bfe40f24cbab5c9059557ebabd684e1fd23aec8f0343661c"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/change.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/change.day.bin",
+      "bytes": 18468,
+      "sha256": "0251e61bf111f5bab928d1ba3dec850194a3efe4020d9d8157b932f23eef4a73"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/factor.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/factor.day.bin",
+      "bytes": 18468,
+      "sha256": "a52c336db9d724b9972cd7b74cf5b8969661ede01027f9bca282b2cf56f72a83"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/low.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/low.day.bin",
+      "bytes": 18468,
+      "sha256": "4fc0771fd63bd3f77a95e365325c4dcb673b26c63f83c9cb575e75db5cb99f30"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh600000/volume.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh600000/volume.day.bin",
+      "bytes": 18468,
+      "sha256": "96951c14cc9d86cd630b94bb8fb45beaa9b35750953146877c221b617ce01f4d"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/vwap.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/vwap.day.bin",
+      "bytes": 11420,
+      "sha256": "dbf57b5f990ed808ba4afddea8ddf67cba473b157b3883c3fbf08436c4c6cb45"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/high.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/high.day.bin",
+      "bytes": 11420,
+      "sha256": "73a336bb1630e8b12c19cf49984ba82a9f1d40022cb53c02eb0117e98570b29a"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/open.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/open.day.bin",
+      "bytes": 11420,
+      "sha256": "c0fe23c504fcb1e3f013958e2fc7dc1440c4194a0ceff591f73900091fad44ca"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/close.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/close.day.bin",
+      "bytes": 11420,
+      "sha256": "1baa7f0c72e85345bda8f2e69bd0061ef2af4809c3fa5654d81a5f4e7a025579"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/adjclose.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/adjclose.day.bin",
+      "bytes": 11420,
+      "sha256": "acc36bc2ac85f124b29db2788c45a06a512fd5dba255b3fbc693f2acbe2a4f80"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/amount.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/amount.day.bin",
+      "bytes": 11420,
+      "sha256": "173c28e93f57f54ed366df91fc44ed4ddadf51d180eb9eb43897d182eb2e197f"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/change.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/change.day.bin",
+      "bytes": 11420,
+      "sha256": "6a99bda2521344a7e1aec85fdb8fea8ad54636f0986220915dc0512e7337ea18"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/factor.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/factor.day.bin",
+      "bytes": 11420,
+      "sha256": "fcb6f2bf425bb1374f6c39ad97a9294b383e4c9a1478052f66ad7466263c9adb"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/low.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/low.day.bin",
+      "bytes": 11420,
+      "sha256": "8971df7784845326201a3e8b21306925efff47f3257a475f89f13ea8e37d6b07"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz300308/volume.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz300308/volume.day.bin",
+      "bytes": 11420,
+      "sha256": "362c198249cb511d53c24c8ebab4176a22ef283d10ab09740117aaea9170c5d0"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/vwap.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/vwap.day.bin",
+      "bytes": 3296,
+      "sha256": "ecbd2ee552b512fbee601237099e4c09581c0fa8b7a78090b26ff958fd9f6023"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/high.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/high.day.bin",
+      "bytes": 3296,
+      "sha256": "36ea92ec942b979c5c57f61521108e5a9b36943556de7692589fdea881331821"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/open.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/open.day.bin",
+      "bytes": 3296,
+      "sha256": "3a0663f910adb6cf8c23ced56bec00f1e089a65fd36364cfdd5f3ae23ed4c292"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/close.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/close.day.bin",
+      "bytes": 3296,
+      "sha256": "95431c809e6f488b13571ed6224dfe74a312d8cd1c8ebb173ae1d627697375fc"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/adjclose.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/adjclose.day.bin",
+      "bytes": 3296,
+      "sha256": "a088d040430574ca06f5c9b06df71a25d063d2614b998d8221d8a0007bbcda17"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/amount.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/amount.day.bin",
+      "bytes": 3296,
+      "sha256": "7d8c0944526c5b0593705e207e9705480b40741b7eeb9ed213bd4b0a2fd465be"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/change.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/change.day.bin",
+      "bytes": 3296,
+      "sha256": "71e0e7c92c8d66317615662c42418d0c7b2f2605768100e2a9cbdc1f928f3ad9"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/factor.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/factor.day.bin",
+      "bytes": 3296,
+      "sha256": "b389a81632ad09a169271832bde3fbba6bbdaa247874041dc3aee8787b6fd29c"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/low.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/low.day.bin",
+      "bytes": 3296,
+      "sha256": "8135346e43c98558e40b9bafd9e9546660b9112417bdde2312ba8a7abde30847"
+    },
+    {
+      "archive_member": "qlib_bin/features/sh688065/volume.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sh688065/volume.day.bin",
+      "bytes": 3296,
+      "sha256": "a02b3414da05623d7c3f177ddae4d9bd187044a359e99d9410f00d81ebfc52c9"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/vwap.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/vwap.day.bin",
+      "bytes": 1392,
+      "sha256": "530f63c23a3d6f6e959eef2f1dc5ed025afb3c519c847193437074a78efa0516"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/high.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/high.day.bin",
+      "bytes": 1392,
+      "sha256": "b45c8d689f4fe833ec89c9b2faf638fc30cfc2a37184907707af90c5576aa05c"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/open.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/open.day.bin",
+      "bytes": 1392,
+      "sha256": "c5db5ce916cbdd4b06945f10d4da0b237cd2ffbc9b11f4e3afd0c43e9ef7e010"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/close.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/close.day.bin",
+      "bytes": 1392,
+      "sha256": "430e7774d66aadee2851a6a4a2f7eff55a0a8b70c341aa25f44230ff0ccd555e"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/adjclose.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/adjclose.day.bin",
+      "bytes": 1392,
+      "sha256": "b42758239e4643b7da3f3be1e4e15f3ba7a3055c01021d0ab319900f7c4d8bb7"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/amount.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/amount.day.bin",
+      "bytes": 1392,
+      "sha256": "f7b3b6af61de1533d0a8652be52533da89d8d4ed21922a1278bd203610b4dc02"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/change.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/change.day.bin",
+      "bytes": 1392,
+      "sha256": "bc4d82b5a5ba9d568b100998bf25b339e9de85651b5cedf161965610cc5eeb7a"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/factor.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/factor.day.bin",
+      "bytes": 1392,
+      "sha256": "f9debe71d5d7048a0a0204f1fc587422c7043ea24adc64a123f25e4055dd20cf"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/low.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/low.day.bin",
+      "bytes": 1392,
+      "sha256": "a2539f18f857f4998635ba7abbbadae56f27dfb9551ce087b237343079480476"
+    },
+    {
+      "archive_member": "qlib_bin/features/sz301269/volume.day.bin",
+      "path": "datasets/raw/investment_data/2023-12-31/audit/members/qlib_bin/features/sz301269/volume.day.bin",
+      "bytes": 1392,
+      "sha256": "6534106dc47eac0b27b260464a6f44d05d241246054fec09da5d72dc8921979f"
+    }
+  ],
+  "sample": {
+    "securities": 6,
+    "calendar_rows": 1452,
+    "finite_ohlc_values_compared": 5792,
+    "equal_after_rounding_to_cny_cent": 5792,
+    "missing_price_values": 16,
+    "missing_price_dates": [
+      "2023-06-16",
+      "2023-06-19",
+      "2023-06-20",
+      "2023-06-21"
+    ],
+    "missing_price_symbol": "688065.SH",
+    "missing_price_reference_observation": "Retained BaoStock bars identify all four as suspended_zero_quantity with source_trading_active=false. This does not establish the reason for every missing value in the community archive.",
+    "per_security": [
+      {
+        "symbol": "600000.SH",
+        "requested_days": 242,
+        "reference_overlap_days": 242,
+        "no_retained_reference_days": [],
+        "unavailable": [],
+        "ohlc_compared_values": 968,
+        "ohlc_equal_at_cent_precision": 968,
+        "ohlc_max_abs_error_cny": 6.361479014671545e-07,
+        "ohlc_mismatches": [],
+        "provisional_volume_formula": "normalized_volume * factor * 100",
+        "volume_max_abs_error_shares": 3.368978828191757,
+        "volume_compared_rows": 242,
+        "provisional_amount_formula": "amount * 1000",
+        "amount_max_abs_error_cny": 45.0,
+        "amount_compared_rows": 242
+      },
+      {
+        "symbol": "688065.SH",
+        "requested_days": 242,
+        "reference_overlap_days": 242,
+        "no_retained_reference_days": [],
+        "unavailable": [
+          {
+            "date": "2023-06-16",
+            "field": "open",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-16",
+            "field": "high",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-16",
+            "field": "low",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-16",
+            "field": "close",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-19",
+            "field": "open",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-19",
+            "field": "high",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-19",
+            "field": "low",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-19",
+            "field": "close",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-20",
+            "field": "open",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-20",
+            "field": "high",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-20",
+            "field": "low",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-20",
+            "field": "close",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-21",
+            "field": "open",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-21",
+            "field": "high",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-21",
+            "field": "low",
+            "reason": "price unavailable"
+          },
+          {
+            "date": "2023-06-21",
+            "field": "close",
+            "reason": "price unavailable"
+          }
+        ],
+        "ohlc_compared_values": 952,
+        "ohlc_equal_at_cent_precision": 952,
+        "ohlc_max_abs_error_cny": 6.5305610235100175e-06,
+        "ohlc_mismatches": [],
+        "provisional_volume_formula": "normalized_volume * factor * 100",
+        "volume_max_abs_error_shares": 0.4022236168384552,
+        "volume_compared_rows": 238,
+        "provisional_amount_formula": "amount * 1000",
+        "amount_max_abs_error_cny": 6.4700000286102295,
+        "amount_compared_rows": 238
+      },
+      {
+        "symbol": "000001.SZ",
+        "requested_days": 242,
+        "reference_overlap_days": 242,
+        "no_retained_reference_days": [],
+        "unavailable": [],
+        "ohlc_compared_values": 968,
+        "ohlc_equal_at_cent_precision": 968,
+        "ohlc_max_abs_error_cny": 1.2662104147409536e-06,
+        "ohlc_mismatches": [],
+        "provisional_volume_formula": "normalized_volume * factor * 100",
+        "volume_max_abs_error_shares": 14.459691047668457,
+        "volume_compared_rows": 242,
+        "provisional_amount_formula": "amount * 1000",
+        "amount_max_abs_error_cny": 120.65000009536743,
+        "amount_compared_rows": 242
+      },
+      {
+        "symbol": "000938.SZ",
+        "requested_days": 242,
+        "reference_overlap_days": 242,
+        "no_retained_reference_days": [],
+        "unavailable": [],
+        "ohlc_compared_values": 968,
+        "ohlc_equal_at_cent_precision": 968,
+        "ohlc_max_abs_error_cny": 3.2121547945962448e-06,
+        "ohlc_mismatches": [],
+        "provisional_volume_formula": "normalized_volume * factor * 100",
+        "volume_max_abs_error_shares": 53.761233389377594,
+        "volume_compared_rows": 242,
+        "provisional_amount_formula": "amount * 1000",
+        "amount_max_abs_error_cny": 236.21000003814697,
+        "amount_compared_rows": 242
+      },
+      {
+        "symbol": "300308.SZ",
+        "requested_days": 242,
+        "reference_overlap_days": 242,
+        "no_retained_reference_days": [],
+        "unavailable": [],
+        "ohlc_compared_values": 968,
+        "ohlc_equal_at_cent_precision": 968,
+        "ohlc_max_abs_error_cny": 1.2157021757275288e-05,
+        "ohlc_mismatches": [],
+        "provisional_volume_formula": "normalized_volume * factor * 100",
+        "volume_max_abs_error_shares": 51.714253425598145,
+        "volume_compared_rows": 242,
+        "provisional_amount_formula": "amount * 1000",
+        "amount_max_abs_error_cny": 352.0,
+        "amount_compared_rows": 242
+      },
+      {
+        "symbol": "301269.SZ",
+        "requested_days": 242,
+        "reference_overlap_days": 242,
+        "no_retained_reference_days": [],
+        "unavailable": [],
+        "ohlc_compared_values": 968,
+        "ohlc_equal_at_cent_precision": 968,
+        "ohlc_max_abs_error_cny": 7.795248976094626e-06,
+        "ohlc_mismatches": [],
+        "provisional_volume_formula": "normalized_volume * factor * 100",
+        "volume_max_abs_error_shares": 49.9515175470151,
+        "volume_compared_rows": 242,
+        "provisional_amount_formula": "amount * 1000",
+        "amount_max_abs_error_cny": 63.0,
+        "amount_compared_rows": 242
+      }
+    ],
+    "native_qlib": {
+      "version": "0.9.7",
+      "rows": 1452,
+      "fields": [
+        "$open",
+        "$high",
+        "$low",
+        "$close",
+        "$factor"
+      ],
+      "values_equal_to_binary": 7260,
+      "models_or_backtest_run": false
+    }
+  },
+  "membership": {
+    "interval_rows": 14398,
+    "baseline_date": "2023-01-03",
+    "baseline_members": 300,
+    "baseline_matches_previously_conditional_300": true,
+    "source_lineage": "Community exporter reads Tushare ts_index_weight snapshots; not an independent official daily constituent list.",
+    "checked_2023_trading_days": 242,
+    "equal_to_conditional_official_event_reconstruction": 215,
+    "mismatch_days": [
+      "2023-06-12",
+      "2023-06-13",
+      "2023-06-14",
+      "2023-06-15",
+      "2023-06-16",
+      "2023-06-19",
+      "2023-06-20",
+      "2023-06-21",
+      "2023-06-26",
+      "2023-06-27",
+      "2023-06-28",
+      "2023-06-29",
+      "2023-12-11",
+      "2023-12-12",
+      "2023-12-13",
+      "2023-12-14",
+      "2023-12-15",
+      "2023-12-18",
+      "2023-12-19",
+      "2023-12-20",
+      "2023-12-21",
+      "2023-12-22",
+      "2023-12-25",
+      "2023-12-26",
+      "2023-12-27",
+      "2023-12-28",
+      "2023-12-29"
+    ],
+    "june": {
+      "official_first_trading_date": "2023-06-12",
+      "archive_change_date": "2023-06-30",
+      "late_trading_days": 12,
+      "missing_added": 9,
+      "retained_removed": 9
+    },
+    "december": {
+      "official_first_trading_date": "2023-12-11",
+      "archive_change_by_year_end": false,
+      "stale_trading_days": 15,
+      "missing_added": 14,
+      "retained_removed": 14
+    },
+    "full_pit_certified": false
+  },
+  "input_evidence": [
+    {
+      "path": "datasets/raw/investment_data/2023-12-31/download.metadata.json",
+      "bytes": 700,
+      "sha256": "9a96bfbbde281d5569c2ff1af2e3bf774b4d8f03affbfe846e14d4b9f3d5cbc0"
+    },
+    {
+      "path": "datasets/raw/investment_data/2023-12-31/audit/inventory.json",
+      "bytes": 7131269,
+      "sha256": "87a64977f13351020f0840ab82c159fb1052a57f7f6e21bd0257fe0ca6d750b2"
+    },
+    {
+      "path": "datasets/raw/investment_data/2023-12-31/audit/sample-audit.json",
+      "bytes": 73554,
+      "sha256": "803e3d4f1db36e11badb12ea3bc260a81181d8319bef8d8830ae3d8129131191"
+    },
+    {
+      "path": "datasets/raw/investment_data/2023-12-31/audit/inventory.json",
+      "sha256": "87a64977f13351020f0840ab82c159fb1052a57f7f6e21bd0257fe0ca6d750b2",
+      "bytes": 7131269
+    },
+    {
+      "path": "docs/evidence/phase1_membership_conditional_reconciliation.json",
+      "sha256": "84aa36790d8dc13396c37466d867f76274212e38026fe6db1183dff8a1276958",
+      "bytes": 57279
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145",
+      "bytes": 3903548
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/bars.parquet",
+      "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6",
+      "bytes": 226610
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/bars.parquet",
+      "sha256": "8db14e4281f93f3ce7bed89d730cc755e2993f938d490ca4b7bc48bd81679004",
+      "bytes": 1852847
+    },
+    {
+      "path": ".cache/phase1/open-datasets/qlib-readme.md",
+      "bytes": 43014,
+      "sha256": "75f4357305c367c4e52db8006cd057e86577f8028b4d9e4ba403ce346512ee7c"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/investment-data-readme.md",
+      "bytes": 9593,
+      "sha256": "5b10f073d7c0fdd725bdba7aec8b768b231a4de06233cc27ae1548a226aa4c68"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/investment-LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/investment-tags-2023.json",
+      "bytes": 132497,
+      "sha256": "38961ad3ac52bb3b6bd2d405907ac3b6ae4d3646f6b7079ed8ae012faf893852"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/investment-release-2023-12-31.json",
+      "bytes": 3208,
+      "sha256": "e90d73b2047071a07e5dae5f6f0d932f5796c0b845666dba1997fba2ada17138"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/investment-tree-2023-12-31.json",
+      "bytes": 10644,
+      "sha256": "111e1f7a5256bbea770e38ce1a8b81cd88b419ef3f12ba3fca36a94d02228984"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/historical-qlib_dump_index_weight.py",
+      "bytes": 2070,
+      "sha256": "96afd4ef20d10e97ccf1088c1119b7f02a8d54a3f6104c9ecfc2ddf7a44272ae"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/historical-qlib_dump_all_to_qlib_source.py",
+      "bytes": 882,
+      "sha256": "e92c6811356760d99fb0e68a77b6ee0844d3289d97f620b5a2cf645f0943679b"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/historical-qlib_normalize.py",
+      "bytes": 1261,
+      "sha256": "c6384ea467f8366fb45ebd106cec64a41b1037a0c09b2741066ebc5e47a9b3d1"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/historical-dump_qlib_bin.sh",
+      "bytes": 1277,
+      "sha256": "7a9217adf7487ee20b18096677f29c8d57207e450d77c794e01fd8adc9691f3d"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/historical-docs_final_a_stock_limit.md",
+      "bytes": 1418,
+      "sha256": "548be3d6b8a41c8a66d83b2f1f29b789358b24656852dc094014edd1ce5ad602"
+    }
+  ],
+  "audit_scripts": [
+    {
+      "path": ".cache/phase1/open-datasets/probe_community.py",
+      "bytes": 7080,
+      "sha256": "70086c6b2632032dd28eda14143a8ec6b65739665c40c8c4698a3d6962b1230c"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/inspect_community_archive.py",
+      "bytes": 4044,
+      "sha256": "25dce8555bc1ce62fb850fff753400f6f33dea36f98527e01229038dfd2907fc"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/audit_community_sample.py",
+      "bytes": 9376,
+      "sha256": "347c21d44472efc45d03eb750356876cccec14b1d2175caa7fa0d8430ebd5647"
+    },
+    {
+      "path": ".cache/phase1/open-datasets/summarize_community_audit.py",
+      "bytes": 6846,
+      "sha256": "cd9bf4671bf224a1939dbaa71c5eb3c0855d27443c91ac6198c17d6bacf37cef"
+    }
+  ],
+  "errata": [
+    "The unmodified sample-audit.json limits prose says five retained references. Its computed per-security results actually contain 242 reference rows for each of all six securities; this summary uses the computed counts."
+  ],
+  "limits": [
+    "Calendar bounds and archive inventory do not prove complete 2005-2023 coverage for every security.",
+    "Float32 normalized prices/factors support the observed cent-precision comparison; volume and amount are not lossless raw values.",
+    "The archive lacks explicit daily status, exact limit prices, PIT announcement/version fields and row-level upstream provenance in its ten features.",
+    "Current repository Apache-2.0 code license is not proof of a uniform open-data license over every Wind/Caihui/Tushare/BaoStock/Yahoo input; no separate data license was verified.",
+    "No publisher manifest or digest exists on this historical release. Archive bytes, GitHub asset metadata, local SHA256 and read checks are retained; unpinned historical Qlib dependency is not a reproducible exporter lock.",
+    "Only six securities' feature bodies were sampled; all archive names/types/sizes and both calendar files were inventoried.",
+    "Same or overlapping upstream sources are not automatically independent validation.",
+    "Corrected membership remains a candidate pending complete event coverage and historical availability semantics."
+  ],
+  "next_use": "Use the retained dated archive as an offline quotation/reference candidate. Preserve raw bytes and float precision, correct index events explicitly, and retain research_eligible=false until the research contract is satisfied.",
+  "boundaries": {
+    "downloaded_latest_release": false,
+    "market_data_2024_2025_read": false,
+    "models_or_backtest_run": false,
+    "gpu_or_server_used": false,
+    "external_repository_mutations": false,
+    "processes_completed": true
+  }
+}
