@@ -1,0 +1,4 @@
+# Supplemental source-only lock. Existing research environment provides pandas.
+# Download with pip/uv --no-deps --require-hashes, or reuse the verified official wheel.
+# The collector zip-imports this exact wheel and rejects any other SHA-256.
+baostock==0.9.4 --hash=sha256:0bf71c6069ab5890ff3596632f9c3f8f1fbc6bfcac582c2f9d6a5c11ab2cfaf8

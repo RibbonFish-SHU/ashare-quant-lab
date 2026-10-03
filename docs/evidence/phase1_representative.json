@@ -1,0 +1,733 @@
+{
+  "recorded_at_utc": "2026-10-03T09:23:11.758670+00:00",
+  "phase": "phase1-representative",
+  "source": {
+    "commit": "b72d41aafb8defdce4d339e985d283390b936469",
+    "dirty": false,
+    "status": "",
+    "files_sha256": {
+      ".gitignore": "97a20f799587fa48d5b89f39fcb38ae952892e8edc9fd98513803db37ff52e00",
+      ".python-version": "c9f7f5169e0543b33a766a4909b3e5477f8f982c9608c5f66a6ff2d712a31a5f",
+      "AGENTS.md": "afe6591696b97d1f80b51e8b285851dc5c11faa6d4c57e6bbea13da8dce1bd1a",
+      "PROJECT_PLAN.md": "742226ae7e2f17ffd33603565f951e8c406f9b2e1dd9d264b8792bb7c5a0e777",
+      "README.md": "9d43a80d6dcf309747162f82cb8570167a0852202d9c1aadbe377a8b13335935",
+      "configs/csi-events-2023.json": "9fa583057428176505301153dcad5abc844b57028d577b8ebede1547644df8ac",
+      "configs/phase1-membership-2023.json": "ac4d40db5f36313392638e0d3c8f822f42551aa9bcdc9c2b05b985bc135a71bf",
+      "configs/phase1-representative.json": "9a781d00d36badaabd8bdeac0c5dfb8b54b484e1b25501541872e2e73dce648f",
+      "configs/smoke.toml": "266c18366b08a77c57254cfd28daad05e1d8d32bb7aae00a076dad9f3182cb13",
+      "docs/DATA_CONTRACT.md": "6ca14201388f7529e8a972fbe77659d15e3d36917cadf35fcdcdbc0ed25bd511",
+      "docs/DATA_SOURCE_DECISION.md": "1f63c0477e3ad85557011096d477d37af674f7c441d40f5f99ef8c54eb0a965f",
+      "docs/EXPERIMENT_AGENT_HANDOFF.md": "64a17054689f4e00a49d48695084c5a427364d19649bf791d6927a8f78fce650",
+      "docs/PHASE0_DATA_PROBE_REPORT.md": "ff21906ccd8f2e869c76e30369c97c07b5476c9a55d271546cc354bacba421c4",
+      "docs/PHASE0_EXECUTION_REPORT.md": "b46144d6714db29c13ed4e561c27ffe9bcf318fec3f8d2811106c3b3bbb5b35a",
+      "docs/PHASE0_PLAN.md": "e9bc19adc4345334867af1abde63144f92719e01e2cda4e06cff3905eec17688",
+      "docs/PHASE0_REVIEW.md": "147dcebc77bf5af3b785c2ffc3bce8d35b4c2a784601bc72062cbf56309cf92c",
+      "docs/PHASE1_DATA_CONTRACT.md": "250fc010efac804b57bb1b86f20bbea3d330e92cc8b095e97d01dbd19903794b",
+      "docs/PHASE1_PLAN.md": "b949fe6a068601b481db7e1c92639b56206115aa0df7d802b74f2ddbd4e8d0b6",
+      "docs/PHASE1_RUNBOOK.md": "81943d98f4b7ababc2c7c17681684356de3367b8833065791f0cd43427cc5460",
+      "docs/RUNBOOK.md": "4331e909e366d51718604cf5469ce8082118c90b262d67ba11af926718421e8c",
+      "docs/evidence/phase0_free_source_probe.json": "f03686f84e93fbeb26225dd8ae907af4770d52926589eee8699cabf178cf91b5",
+      "docs/evidence/phase0_local_smoke_execution.json": "e29e554e999c9dce55c21e371c4e40d306cd999c2a256639c7bbc003ae8091cb",
+      "docs/evidence/phase0_local_smoke_manifest.json": "d60f644ce345fef291e9840b9cb7adfe38f61df609f2c487acd23a895f8d4247",
+      "docs/evidence/phase0_local_smoke_result.json": "31829d068b1ce4b05a899ee1ec0c996bdea7561c388f1fc4a742ee3d6f7a7e2e",
+      "docs/evidence/phase0_review_fix_checks.json": "8b33c0df5474cd796d12a1035723599fc1742faa617f02411af89893e78d8589",
+      "docs/evidence/phase0_review_fix_data_check.json": "afc631f2a7c88234cf66407ae132843c4b2c39c59fde99bda20ace9e84bbd1f3",
+      "pyproject.toml": "50b79c8ddc4df5fda674b42f4818434dfc25bb52fa1daaf63b59cd494c220202",
+      "requirements/source-baostock.txt": "72e5c0cda71e3a3e5ef333f6ac30ab0664f0e1ba0c63f69bdfe05847e673a8c5",
+      "scripts/archive_source_probe.py": "ad8b28b24448728526b54ef6655eee72f292d2c5f20e845f95dc9a3109e606ac",
+      "scripts/verify_csi_baseline.py": "3c4439ab2156e5b639e7b09f98a0b77c20fcf16ff1ebd49c748204a6226d97e4",
+      "src/ashare_lab/__init__.py": "aba01d1b423cba4769aea6210cd0e4d6e5763294c66abc7f1ae8739e6cdd7bef",
+      "src/ashare_lab/cli.py": "2c2339e9f3a9d220935cc821fc46c6a35198f55d36f5693fb6e892ecee07e93d",
+      "src/ashare_lab/compatibility.py": "dbbef9f7fcfc8f18e6d6411e1ff21c3bd4101e8be582aabab329323899f9a1b3",
+      "src/ashare_lab/config.py": "f9b22eee8c8f4054147729eb595a982ded4f2ecf9e6df28204a23b4595c9a1ac",
+      "src/ashare_lab/contracts.py": "b37315e08c451e9570dc6ea11d237b8c7b8bf73268404da2b2784adec2061fb0",
+      "src/ashare_lab/data/__init__.py": "aa6afafa539056ea55994ba56da848a879b579b00cad3a4caf5a9973178dcb13",
+      "src/ashare_lab/data/candidates.py": "ff77245d1e69fedb4265d281adeba9fab04c4bd1a0128c0d3c24ccd72a851121",
+      "src/ashare_lab/data/cli.py": "d73a40250f365780c3bb5e92943033698e40b0a911eb3789f9176dc3f9373c61",
+      "src/ashare_lab/data/collect.py": "26aed3655c97513cbe40335fb4ba02eef706f1461c87e955d10a806a044ba947",
+      "src/ashare_lab/data/pipeline.py": "06643574f071aef07370d0ff6a87455dc6b0b25501e742d34205a5bb742d4ca8",
+      "src/ashare_lab/data/plans.py": "6457e4e91a346a4fbe4ba032aa1ec426976d7cc6a0819b9c8e8b13b87deb458d",
+      "src/ashare_lab/data/quality.py": "859daf27d2b1908dc4b6863bc6cd7df5c5a328c7b22a2c3138ab2195ee3929ec",
+      "src/ashare_lab/data/queries.py": "23f76d973834e86c37d97dbae9f0e8f2855eb5a85ab71d7d10d27d662c2de2ac",
+      "src/ashare_lab/data/raw.py": "e627638c20410a4ea1185526dcb8e34679b290b3352a0fdd132d4843bb030b32",
+      "src/ashare_lab/data/worker.py": "eb356a4bf2aae3e8905f264a91d591e603e78d581aa72ed8385eb81963c4fab6",
+      "src/ashare_lab/devices.py": "eab41ea65e47667d215583051a728b282e4113d0ed97dd36fe7c3d9c59276642",
+      "src/ashare_lab/runtime.py": "f0733ad4a03aaa79fed22bacbdb7d9c89983c3223e45e9579f07f7b819ba52bf",
+      "src/ashare_lab/storage.py": "8025ef18a869f1dc64e2199d7b4e0b929df2ff1b2c48b08653c94f60a6046c98",
+      "src/ashare_lab/synthetic.py": "9ae0b8687a8e62498c58a2d4a79ac131445c7ee8342c2cddaa4d2ea5f5d5a92a",
+      "src/ashare_lab/temporal.py": "7f4e54b7d793e731584e37ad8e410e3890d2eab59cc9c261f713189bf0c7a829",
+      "tests/test_contracts.py": "fc1650cf39c10f6469878e146cef7fe9d41a3f87dd0956970a0769aa71fa66c0",
+      "tests/test_data_pipeline.py": "ffd46bc7fda006dfa822bb3517fe332a844e8cc68ded8e13a7915371fae0b14f",
+      "tests/test_reproducibility.py": "e66d9f7051a4243056a6b2db7707ed21d06239a223f3231d522a36648a20ca32",
+      "tests/test_runtime.py": "32aec8f8a457031f94fa0b3c15e5502cab22004bef2bf8c5d31bdb776ea06d9c",
+      "tests/test_storage.py": "a34a0582cc7f490c9fb72e0e1a8e87112f7b53a6779861279f62e736c413288c",
+      "tests/test_temporal.py": "ce28cf8f97989edbd97fabecc890c8e62e7be0dfd7dc187094335aa8e9d42f88",
+      "uv.lock": "04b6d9538456f9d49af9ebb472d55234df3de0ea4bfa3799f57009e5241312d5"
+    },
+    "source_sha256": "1a35da81cc04848b218a34ad167df47a44aa22708fe96f03fe0f9e94721a6c60"
+  },
+  "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "pandas": "2.2.3",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.3.2",
+    "pytest": "8.4.1",
+    "ruff": "0.12.2"
+  },
+  "sdk": {
+    "name": "baostock",
+    "version": "0.9.4",
+    "loading": "verified wheel zipimport, no installed-environment change"
+  },
+  "acquisition": {
+    "planned": 56,
+    "attempt_entries": 56,
+    "reused": 56,
+    "network_queries": 0,
+    "raw_rows": 5132,
+    "status": "complete",
+    "started_at_utc": "2026-10-03T09:22:33.168274+00:00",
+    "finished_at_utc": "2026-10-03T09:22:33.655032+00:00"
+  },
+  "candidate_tables": {
+    "bars": {
+      "rows": 104,
+      "sha256": "f3bed52edef753d081e4d76c587a90fdc92579e2d29426f2a185aefcc82d013b",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "calendar": {
+      "rows": 147,
+      "sha256": "ae3eafecce0fc3ca2a65cb7f76f8cabae6af5388f27cca2498750787adc20a8e",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "dividends": {
+      "rows": 2,
+      "sha256": "333193b7c7d9afeffec54054b70b3bfbd5ff62340e4b8b3793e26957d0529993",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "factors": {
+      "rows": 4,
+      "sha256": "d752100fc19e1bfcc704c4321554244fc21c5c26b66f4dc2110b4cc9e66ed958",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "membership_snapshots": {
+      "rows": 4800,
+      "sha256": "5bd53367978c362f79878116a8a46ccacf352f5db40518837cd1bcc94e486dcf",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "securities": {
+      "rows": 1,
+      "sha256": "9e0dfdfc8434347e7c00a14f46ef788445fd03b3c585b1aa038d6616998c69d6",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "st_snapshots": {
+      "rows": 74,
+      "sha256": "ef7f56f3a33d16a61453b61ab615c7b0b697c03fd531b202d2758f557767c23a",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    },
+    "suspension_snapshots": {
+      "rows": 0,
+      "sha256": "26d2e93d4ccfea8eae8a729c6469bb9946e7e47f9685605d9d6fe6b3886d3cb9",
+      "parquet_roundtrip": true,
+      "duckdb_roundtrip": true
+    }
+  },
+  "quality_checks": [
+    {
+      "name": "acquisition",
+      "status": "pass",
+      "count": 56,
+      "examples": []
+    },
+    {
+      "name": "typed_conversion",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "duplicate_keys_within_response",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "overlapping_observations",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "calendar_request_coverage",
+      "status": "unverified",
+      "count": 2,
+      "examples": [
+        {
+          "query_id": "1fc39e13d8e36affc121f5becb8a86baf178889e19dbecac06fc780b98181140",
+          "missing_days": 7,
+          "first": "2023-07-18",
+          "last": "2023-07-24"
+        },
+        {
+          "query_id": "54b247d6e01ba14098d0d4ab796ca76a0795be1c4f215bbd30c5536005d9e6de",
+          "missing_days": 19,
+          "first": "2019-11-25",
+          "last": "2019-12-13"
+        }
+      ]
+    },
+    {
+      "name": "bars_missing_open_days",
+      "status": "unverified",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "bars_on_closed_days",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "pre_ipo_rows",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "listing_metadata_coverage",
+      "status": "unverified",
+      "count": 16,
+      "examples": [
+        {
+          "query_id": "d3160913961e6197c5dfa803ff404d995e69d40b9721fbcca71def8a1d65b756",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "7e8c130509b8e2110d66dc8fcff336c0b05e53e06019a0d54e046e62671e6f63",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "5fb573cd8ecf6154f4351ebbe3ab98cae6e89561ceb4667dd69897bbca92b6d3",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "48407b7cf082ea27ba61795632664f7d559a55f818fe49ee9f5e024954671394",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "9f36b4790239bad2b4add9d5b28712146e66ebb057db46ada3d8f0bf81029af6",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "9796d7208dffd08dfb8df3a22385d0ddd40036c32e73bcf9145cc07c3ee1c405",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "f8c65fe4add7fd11485403c8462461249b6189b2dd9e5c4ab58150e5a77beffe",
+          "code": "sh.600000"
+        },
+        {
+          "query_id": "94e0d55159766d88f05faf1dfd2d5b20f43eb255ce0e3ec98e7fb818551dfb5e",
+          "code": "sh.600000"
+        }
+      ]
+    },
+    {
+      "name": "out_date_semantics",
+      "status": "unverified",
+      "count": 1,
+      "examples": [
+        {
+          "query_id": "54b247d6e01ba14098d0d4ab796ca76a0795be1c4f215bbd30c5536005d9e6de",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-probe\\capture-01.json",
+          "raw_sha256": "f9e751c1de6fcae1d9e5a96054baeb7ee30777f66d5ff6acd1a9ce474e2cfe49",
+          "raw_query_name": "delisted_bars_2019",
+          "row_number": 13,
+          "symbol": "600747.SH",
+          "event_date": "2019-12-12",
+          "source_out_date": "2019-12-12"
+        }
+      ],
+      "reason": "source outDate has not been verified as first delisted natural day; not used to certify boundary rows"
+    },
+    {
+      "name": "suspension_observations",
+      "status": "unverified",
+      "count": 4,
+      "examples": [
+        {
+          "query_id": "54b247d6e01ba14098d0d4ab796ca76a0795be1c4f215bbd30c5536005d9e6de",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-probe\\capture-01.json",
+          "raw_sha256": "f9e751c1de6fcae1d9e5a96054baeb7ee30777f66d5ff6acd1a9ce474e2cfe49",
+          "raw_query_name": "delisted_bars_2019",
+          "row_number": 10,
+          "symbol": "600747.SH",
+          "event_date": "2019-12-09"
+        },
+        {
+          "query_id": "54b247d6e01ba14098d0d4ab796ca76a0795be1c4f215bbd30c5536005d9e6de",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-probe\\capture-01.json",
+          "raw_sha256": "f9e751c1de6fcae1d9e5a96054baeb7ee30777f66d5ff6acd1a9ce474e2cfe49",
+          "raw_query_name": "delisted_bars_2019",
+          "row_number": 11,
+          "symbol": "600747.SH",
+          "event_date": "2019-12-10"
+        },
+        {
+          "query_id": "54b247d6e01ba14098d0d4ab796ca76a0795be1c4f215bbd30c5536005d9e6de",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-probe\\capture-01.json",
+          "raw_sha256": "f9e751c1de6fcae1d9e5a96054baeb7ee30777f66d5ff6acd1a9ce474e2cfe49",
+          "raw_query_name": "delisted_bars_2019",
+          "row_number": 12,
+          "symbol": "600747.SH",
+          "event_date": "2019-12-11"
+        },
+        {
+          "query_id": "54b247d6e01ba14098d0d4ab796ca76a0795be1c4f215bbd30c5536005d9e6de",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-probe\\capture-01.json",
+          "raw_sha256": "f9e751c1de6fcae1d9e5a96054baeb7ee30777f66d5ff6acd1a9ce474e2cfe49",
+          "raw_query_name": "delisted_bars_2019",
+          "row_number": 13,
+          "symbol": "600747.SH",
+          "event_date": "2019-12-12"
+        }
+      ],
+      "classes": {
+        "active_reported_not_execution_guarantee": 100,
+        "suspended_zero_quantity": 3,
+        "suspended_missing_quantity": 1
+      },
+      "reason": "flat prices, zero quantity and missing quantity stay distinct; execution unverified"
+    },
+    {
+      "name": "st_and_star_st_history",
+      "status": "unverified",
+      "count": 0,
+      "examples": [],
+      "reason": "isST is a source binary flag; complete ST/*ST transitions and daily limit prices not established"
+    },
+    {
+      "name": "membership_shape",
+      "status": "pass",
+      "count": 0,
+      "examples": [],
+      "queried_snapshots": 16,
+      "empty_query_ids": []
+    },
+    {
+      "name": "membership_update_age",
+      "status": "unverified",
+      "count": 2,
+      "examples": [
+        {
+          "query_id": "e3af4e9c341f879fdabb1b516c648e0a765aeb9471d82b28c94bc863f6b7a33d",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-coverage\\capture-00.json",
+          "raw_sha256": "a54f35ac06de5366640e0d195b01d3b40d41f0c1206b0bba734f4df00d8bbefc",
+          "raw_query_name": "members_2022_jan",
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2022-01-04",
+          "update_date": "2021-11-15"
+        },
+        {
+          "query_id": "bbe8421a8886492859b4099d3dbdcd3a7685495b64b30bfdbd6067fab710f93f",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-coverage\\capture-00.json",
+          "raw_sha256": "a54f35ac06de5366640e0d195b01d3b40d41f0c1206b0bba734f4df00d8bbefc",
+          "raw_query_name": "members_2023_jan",
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-03",
+          "update_date": "2022-08-01"
+        }
+      ],
+      "reason": "updateDate is neither announcement time nor proof of historical membership"
+    },
+    {
+      "name": "official_event_reconciliation",
+      "status": "fail",
+      "count": 1,
+      "examples": [
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-03",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        }
+      ],
+      "comparisons": 4,
+      "reconciliations": [
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-03",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-06-09",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-06-12",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "check": "exact_event_delta",
+          "status": "pass",
+          "actual_added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "actual_removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ],
+          "expected_added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "expected_removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ]
+        }
+      ],
+      "scope": "selected announcements only; post-event presence is not a full 300-code baseline proof"
+    },
+    {
+      "name": "weekly_membership_changes",
+      "status": "unverified",
+      "count": 2,
+      "examples": [
+        {
+          "previous_query_date": "2023-01-03",
+          "query_date": "2023-06-09",
+          "added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ],
+          "event_ids": [],
+          "status": "unverified"
+        },
+        {
+          "previous_query_date": "2023-06-09",
+          "query_date": "2023-06-12",
+          "added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ],
+          "event_ids": [
+            "csi-14796"
+          ],
+          "status": "pass"
+        }
+      ],
+      "changes": [
+        {
+          "previous_query_date": "2023-01-03",
+          "query_date": "2023-06-09",
+          "added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ],
+          "event_ids": [],
+          "status": "unverified"
+        },
+        {
+          "previous_query_date": "2023-06-09",
+          "query_date": "2023-06-12",
+          "added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ],
+          "event_ids": [
+            "csi-14796"
+          ],
+          "status": "pass"
+        }
+      ],
+      "reason": "weekly observations cannot exclude changes and reversals between observations; temporary events need official coverage"
+    },
+    {
+      "name": "corporate_action_semantics",
+      "status": "unverified",
+      "count": 2,
+      "examples": [
+        {
+          "query_id": "f205f05339d26fc0efce0f69c9034767d501d9b018a3a96703de51a2913647d3",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-actions\\capture-00.json",
+          "raw_sha256": "82bd7162276554774a0fed1a7a260b8acde0be5b021a7e93df65c3371b0864b5",
+          "raw_query_name": "dividend_2023",
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "ex_date": "2023-07-21",
+          "after_tax_expression": "0.288或0.32"
+        }
+      ],
+      "text_tax_rows": 1,
+      "factor_rows": 4,
+      "reason": "event dates and proposal/implementation stages retained; cumulative factors are not event split multipliers; algorithm and historical revisions unverified"
+    },
+    {
+      "name": "historical_availability_and_revisions",
+      "status": "unverified",
+      "count": 5132,
+      "examples": [],
+      "reason": "current captures lack historical vintage/publication timestamps; official change log confirms historical repairs"
+    }
+  ],
+  "quality_status": "fail",
+  "research_eligible": false,
+  "exit_codes": {
+    "collect": 0,
+    "build": 2,
+    "baseline_verification": 2
+  },
+  "checks": {
+    "pytest_passed": 102,
+    "pytest_duration_seconds": 1.85,
+    "ruff": "passed",
+    "canonical_reader_rejected": true
+  },
+  "artifacts": [
+    {
+      "path": "datasets\\raw\\phase1-representative\\run.json",
+      "sha256": "95836a881dca78e16b9add61d4057dadbbdd26f4921a9c7ec2b5ea8c081f39ed",
+      "bytes": 87985
+    },
+    {
+      "path": "datasets\\candidates\\phase1-representative\\manifest.json",
+      "sha256": "bca65f62dbe86a9dfe12056f0cff7a79cf19dfbbe39fab017067199e090a7824",
+      "bytes": 8737
+    },
+    {
+      "path": "datasets\\candidates\\phase1-representative\\quality.json",
+      "sha256": "1989018d4bb39be57b4f20d226f6db82d50c1175d384c6b830cf8cdad046e114",
+      "bytes": 16996
+    },
+    {
+      "path": "datasets\\candidates\\phase1-representative\\conversion-issues.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "artifacts\\phase1-checks\\first-pytest.txt",
+      "sha256": "aa2b8a1e48788a1de640f215639f266e9e09adc9be34d7c7bd19156e1e15953f",
+      "bytes": 368
+    },
+    {
+      "path": "artifacts\\phase1-checks\\first-ruff.txt",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42
+    }
+  ]
+}

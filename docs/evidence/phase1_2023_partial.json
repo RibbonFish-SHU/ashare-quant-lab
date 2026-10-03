@@ -1,0 +1,928 @@
+{
+  "schema_version": "phase1-batch-audit-v1",
+  "recorded_at_utc": "2026-10-03T10:36:34.782916+00:00",
+  "audit_script": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\final_offline_audit.py",
+    "bytes": 10334,
+    "sha256": "c71f0e74d002fb8fe8833080c3b9efb4d6844380e4c93392df760bdb4a0a437c"
+  },
+  "audit_scope": "offline only; preserved actual raw, candidates, logs, and request restrictions",
+  "research_eligible": false,
+  "environment": {
+    "python": "3.11.16",
+    "pandas": "2.2.3",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.3.2",
+    "pytest": "8.4.1",
+    "ruff": "0.12.2"
+  },
+  "runs": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\run.json",
+      "bytes": 84019,
+      "sha256": "189690b1687355f28c26a3272c9186efdf7545b194aafd3610eb04e8b5cb5e35",
+      "status": "complete",
+      "started_at_utc": "2026-10-03T09:25:05.447053+00:00",
+      "finished_at_utc": "2026-10-03T09:26:53.902227+00:00",
+      "plan_sha256": "ac4d40db5f36313392638e0d3c8f822f42551aa9bcdc9c2b05b985bc135a71bf",
+      "planned_unique_queries": 59,
+      "successful_unique_queries": 59,
+      "missing_unique_queries": 0,
+      "missing_never_attempted": 0,
+      "missing_attempted_without_success": 0,
+      "attempt_entries_by_status": {
+        "complete": 56,
+        "reused": 3
+      },
+      "successful_rows": 17469,
+      "successful_queries_by_api": {
+        "query_trade_dates": 2,
+        "query_hs300_stocks": 57
+      },
+      "successful_zero_row_queries_by_api": {},
+      "failed_attempts": [],
+      "executions": [
+        {
+          "at": "2026-10-03T09:25:05.447053+00:00",
+          "offline": false,
+          "pid": 57092,
+          "limits": {
+            "timeout": 60,
+            "delay": 0.25,
+            "budget": 10000,
+            "retries": 1
+          },
+          "source": {
+            "commit": "6ee283d588b68eb43cab2b2b488dedf123ceb0e8",
+            "dirty": false,
+            "status": "",
+            "source_sha256": "bbcc7ea599514f18e8d6e3dd20d42cc09a587a6e5ec73356c35898169bb9e819"
+          },
+          "source_file_count": 61
+        }
+      ]
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\run.json",
+      "bytes": 1678779,
+      "sha256": "a4f5aad865370ea56f56bb7fa4151bdaeb7cb02f5ad69fec5e5a9efac98941df",
+      "status": "stopped_on_error",
+      "started_at_utc": "2026-10-03T09:29:51.760208+00:00",
+      "finished_at_utc": "2026-10-03T09:56:07.053551+00:00",
+      "plan_sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df",
+      "planned_unique_queries": 1344,
+      "successful_unique_queries": 943,
+      "missing_unique_queries": 401,
+      "missing_never_attempted": 400,
+      "missing_attempted_without_success": 1,
+      "attempt_entries_by_status": {
+        "complete": 941,
+        "reused": 2,
+        "login_failed": 1,
+        "provider_error": 1
+      },
+      "successful_rows": 57802,
+      "successful_queries_by_api": {
+        "query_stock_basic": 236,
+        "query_history_k_data_plus": 236,
+        "query_dividend_data": 236,
+        "query_adjust_factor": 235
+      },
+      "successful_zero_row_queries_by_api": {
+        "query_dividend_data": 28,
+        "query_adjust_factor": 28
+      },
+      "failed_attempts": [
+        {
+          "api": "query_dividend_data",
+          "parameters": {
+            "code": "sh.600875",
+            "year": "2023",
+            "yearType": "operate"
+          },
+          "query_id": "a0e3fb1d2f7693da8097de7469855810a894b9d9892388fd5aaf541de5c5fa9a",
+          "status": "login_failed",
+          "error_code": null,
+          "error_msg": null,
+          "row_count": 0,
+          "raw_locator": {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\a0e3fb1d2f7693da8097de7469855810a894b9d9892388fd5aaf541de5c5fa9a\\9fc5f02495c34623aacb7784b57df4ab\\response.json",
+            "sha256": "4b92b73375412a72ae91152f2046ca293f01a452b4270e8abd26d7f1bc421eed"
+          },
+          "observed_at_utc": "2026-10-03T09:36:30.536722+00:00",
+          "retryable": null,
+          "later_success_in_same_run": true
+        },
+        {
+          "api": "query_adjust_factor",
+          "parameters": {
+            "code": "sz.000895",
+            "end_date": "2023-12-31",
+            "start_date": "2023-01-01"
+          },
+          "query_id": "c391d366c4c8a96988aeb0bff5742ef3c257a2b91c958502698a9f9a262b5adf",
+          "status": "provider_error",
+          "error_code": "10001011",
+          "error_msg": "黑名单用户，请与管理员联系",
+          "row_count": 0,
+          "raw_locator": {
+            "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\c391d366c4c8a96988aeb0bff5742ef3c257a2b91c958502698a9f9a262b5adf\\1d8ad010322245fd8c33c055ad6e66c3\\response.json",
+            "sha256": "3ab7918a83ae644e7cd1a598133a754e65ff87f80aaaa3833d864edc0de2de19"
+          },
+          "observed_at_utc": "2026-10-03T09:56:06.420024+00:00",
+          "retryable": null,
+          "later_success_in_same_run": false
+        }
+      ],
+      "executions": [
+        {
+          "at": "2026-10-03T09:29:51.760208+00:00",
+          "offline": false,
+          "pid": 66572,
+          "limits": {
+            "timeout": 60,
+            "delay": 0.25,
+            "budget": 10000,
+            "retries": 1
+          },
+          "source": {
+            "commit": "8cf15f6e4b7a46043e9e856a410ce1ac85903d65",
+            "dirty": false,
+            "status": "",
+            "source_sha256": "1ba5cc4e8fe8caf0c7e1556cae0c403c8332e2facadf2d4dd2e7115aaf984712"
+          },
+          "source_file_count": 61
+        },
+        {
+          "at": "2026-10-03T09:45:33.805221+00:00",
+          "offline": false,
+          "pid": 59448,
+          "access_state": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access",
+          "limits": {
+            "timeout": 60,
+            "timeout_scope": "whole_worker_batch",
+            "delay": 0.25,
+            "budget": 10000,
+            "retries": 1,
+            "batch_size": 20
+          },
+          "source": {
+            "commit": "c63f92c9192634cf28d650b18868a750f871d93f",
+            "dirty": false,
+            "status": "",
+            "source_sha256": "1f4d7d2ddab4c4764d24941325901d48908fbeb554546c3ef24a2da4d81ab8fe"
+          },
+          "source_file_count": 62
+        }
+      ]
+    }
+  ],
+  "candidate_outputs": [
+    {
+      "manifest": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\manifest.json",
+        "bytes": 9335,
+        "sha256": "cad42acbc45504e7b4e24153ae29877bc2b1c3e882465bf51c420b8948a6da1d"
+      },
+      "schema_version": "baostock-candidate-v1",
+      "source_commit": "b68a2808f6f9b9253c08a1678f8a4ec5201b17f8",
+      "source_dirty": false,
+      "source_sha256": "7f9cff9c6d7c17307405b5f98f637a15ee9487f4f47a638919c83e8330d4d7ce",
+      "source_file_count": 63,
+      "files": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\bars.parquet",
+          "bytes": 3903532,
+          "sha256": "4fc6ae9965536e31d6d20e5fe0381c0e01600bb9221c0714b0123240558889b0"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\calendar.parquet",
+          "bytes": 11083,
+          "sha256": "514ab5b9aa645e4472680c4653d7fc0e8ed187a7a0193acaa6cfd5025fcf0212"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\conversion-issues.json",
+          "bytes": 715,
+          "sha256": "8dc08940d5eb1a8c8919fab5a8ec624beb74af3f9c786fcb12be3cb72bdb33bf"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\dividends.parquet",
+          "bytes": 54714,
+          "sha256": "5dc85b262c258fd37d7c4f5809a99c013397185e8ac9e96bc3af6499f1bef467"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\factors.parquet",
+          "bytes": 44008,
+          "sha256": "a935e1af96e316f32be1beede444158577afdcba469fb3a0a98772b77f9476c0"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\manifest.json",
+          "bytes": 9335,
+          "sha256": "cad42acbc45504e7b4e24153ae29877bc2b1c3e882465bf51c420b8948a6da1d"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\membership_snapshots.parquet",
+          "bytes": 70153,
+          "sha256": "464ba9fbee5653ddffae559bb3dd87805f1d6395c3d7647450c4a18f68d56347"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\quality.json",
+          "bytes": 61266,
+          "sha256": "3833e7dc8c2c16af401ff1321063c8d7e42da65922537adbb9b09c8e42297853"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial\\securities.parquet",
+          "bytes": 44864,
+          "sha256": "2b278bf3645845d2902cb560ca06bb1d0bc819419c90a3389a9f89b92a8445ff"
+        }
+      ],
+      "all_recorded_artifact_digests_verified": true,
+      "canonical_reader_rejected": true
+    },
+    {
+      "manifest": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\manifest.json",
+        "bytes": 9451,
+        "sha256": "62a771516725ee94609516236863b0d8b836fe4466e078508892d0e380bf2ca9"
+      },
+      "schema_version": "baostock-candidate-v2",
+      "source_commit": "fa9f1f611f48b0fd97f298a791bbd466a545de47",
+      "source_dirty": false,
+      "source_sha256": "21a5236de9f7c899019ac83246fa6266e457324ce865a82cc8291174b8d59fc7",
+      "source_file_count": 64,
+      "files": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\bars.parquet",
+          "bytes": 3903548,
+          "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\calendar.parquet",
+          "bytes": 11083,
+          "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\conversion-issues.json",
+          "bytes": 779,
+          "sha256": "75d5365cb895a9e727b38f71fd0ce47fdc360c3aaeb779c11d91be1a968d6113"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\dividends.parquet",
+          "bytes": 54714,
+          "sha256": "e2b7c263129b7106e5fd1c41800d3df965a6463410e2d96c5b0b1455df3e6870"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\factors.parquet",
+          "bytes": 44008,
+          "sha256": "5a028663e0735a7474c43d175b88b99bca6675ce4f7ce929d92faf40c824ee99"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\manifest.json",
+          "bytes": 9451,
+          "sha256": "62a771516725ee94609516236863b0d8b836fe4466e078508892d0e380bf2ca9"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\membership_snapshots.parquet",
+          "bytes": 70153,
+          "sha256": "7954bf2e34f318c0493c945602abc02b8fd980485d5946d7b83ab69f88100f05"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\quality.json",
+          "bytes": 61343,
+          "sha256": "23a32dc10f0d05a8e2ce23cea055daae44444d4626f928ad62337b3dea9bdb7e"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2\\securities.parquet",
+          "bytes": 44864,
+          "sha256": "e80fc675e7b5649fd83fcb6c9c0965673b78038ca4c94158de486697f77bac4b"
+        }
+      ],
+      "all_recorded_artifact_digests_verified": true,
+      "canonical_reader_rejected": true
+    },
+    {
+      "manifest": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\manifest.json",
+        "bytes": 9451,
+        "sha256": "c38b19d462102f275e272ead7a84e7e962a7f43a9a0dbf8b09296de59dcb5169"
+      },
+      "schema_version": "baostock-candidate-v2",
+      "source_commit": "f4e523c6d685ca57984f63cc0d9431b391ea16f9",
+      "source_dirty": false,
+      "source_sha256": "a7a10e036c67e449cd85347ced531ad7f6e6ee23e20702509f4ebbbe3742682b",
+      "source_file_count": 64,
+      "files": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\bars.parquet",
+          "bytes": 3903548,
+          "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\calendar.parquet",
+          "bytes": 11083,
+          "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\conversion-issues.json",
+          "bytes": 779,
+          "sha256": "75d5365cb895a9e727b38f71fd0ce47fdc360c3aaeb779c11d91be1a968d6113"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\dividends.parquet",
+          "bytes": 54714,
+          "sha256": "e2b7c263129b7106e5fd1c41800d3df965a6463410e2d96c5b0b1455df3e6870"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\factors.parquet",
+          "bytes": 44008,
+          "sha256": "5a028663e0735a7474c43d175b88b99bca6675ce4f7ce929d92faf40c824ee99"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\manifest.json",
+          "bytes": 9451,
+          "sha256": "c38b19d462102f275e272ead7a84e7e962a7f43a9a0dbf8b09296de59dcb5169"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\membership_snapshots.parquet",
+          "bytes": 70153,
+          "sha256": "7954bf2e34f318c0493c945602abc02b8fd980485d5946d7b83ab69f88100f05"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\quality.json",
+          "bytes": 92529,
+          "sha256": "f39563d2e9530d1392ca78dfdb43ba3831cc27a50c0f70420423f9206c191e04"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\securities.parquet",
+          "bytes": 44864,
+          "sha256": "e80fc675e7b5649fd83fcb6c9c0965673b78038ca4c94158de486697f77bac4b"
+        }
+      ],
+      "all_recorded_artifact_digests_verified": true,
+      "canonical_reader_rejected": true
+    }
+  ],
+  "candidate_rows": {
+    "calendar": 369,
+    "membership_snapshots": 17100,
+    "securities": 236,
+    "bars": 57096,
+    "dividends": 228,
+    "factors": 242
+  },
+  "acquisition_coverage": {
+    "count_basis": "unique source/SDK/API/parameter query IDs across input runs",
+    "planned_queries": 1403,
+    "successful_queries": 1002,
+    "missing_queries": 401,
+    "successful_fraction": 0.714183891660727,
+    "by_api": {
+      "query_adjust_factor": {
+        "planned": 336,
+        "successful": 235,
+        "missing": 101
+      },
+      "query_dividend_data": {
+        "planned": 336,
+        "successful": 236,
+        "missing": 100
+      },
+      "query_history_k_data_plus": {
+        "planned": 336,
+        "successful": 236,
+        "missing": 100
+      },
+      "query_hs300_stocks": {
+        "planned": 57,
+        "successful": 57,
+        "missing": 0
+      },
+      "query_stock_basic": {
+        "planned": 336,
+        "successful": 236,
+        "missing": 100
+      },
+      "query_trade_dates": {
+        "planned": 2,
+        "successful": 2,
+        "missing": 0
+      }
+    }
+  },
+  "missing_query_ids_location": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-partial-v2-coverage\\quality.json",
+    "bytes": 92529,
+    "sha256": "f39563d2e9530d1392ca78dfdb43ba3831cc27a50c0f70420423f9206c191e04"
+  },
+  "quality_checks": [
+    {
+      "name": "acquisition",
+      "status": "fail",
+      "count": 1002,
+      "count_basis": "successful unique queries; includes successful zero-row responses"
+    },
+    {
+      "name": "typed_conversion",
+      "status": "unverified",
+      "count": 1
+    },
+    {
+      "name": "duplicate_keys_within_response",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "overlapping_observations",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "calendar_request_coverage",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "calendar_response_completeness",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "bars_missing_open_days",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "bars_on_closed_days",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "pre_ipo_rows",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "listing_metadata_coverage",
+      "status": "pass",
+      "count": 0
+    },
+    {
+      "name": "out_date_semantics",
+      "status": "unverified",
+      "count": 0,
+      "reason": "source outDate has not been verified as first delisted natural day; not used to certify boundary rows"
+    },
+    {
+      "name": "suspension_observations",
+      "status": "unverified",
+      "count": 18,
+      "classes": {
+        "active_reported_not_execution_guarantee": 57078,
+        "suspended_missing_quantity": 13,
+        "non_active_with_reported_trades": 1,
+        "suspended_zero_quantity": 4
+      },
+      "reason": "flat prices, zero quantity and missing quantity stay distinct; execution unverified"
+    },
+    {
+      "name": "st_and_star_st_history",
+      "status": "unverified",
+      "count": 0,
+      "reason": "isST is a source binary flag; complete ST/*ST transitions and daily limit prices not established"
+    },
+    {
+      "name": "membership_shape",
+      "status": "pass",
+      "count": 0,
+      "queried_snapshots": 57,
+      "empty_query_ids": []
+    },
+    {
+      "name": "membership_update_age",
+      "status": "unverified",
+      "count": 14,
+      "reason": "updateDate is neither announcement time nor proof of historical membership"
+    },
+    {
+      "name": "official_event_reconciliation",
+      "status": "fail",
+      "count": 14,
+      "comparisons": 59,
+      "scope": "selected announcements only; post-event presence is not a full 300-code baseline proof"
+    },
+    {
+      "name": "weekly_membership_changes",
+      "status": "unverified",
+      "count": 3,
+      "reason": "weekly observations cannot exclude changes and reversals between observations; temporary events need official coverage"
+    },
+    {
+      "name": "corporate_action_semantics",
+      "status": "unverified",
+      "count": 228,
+      "text_tax_rows": 227,
+      "factor_rows": 242,
+      "reason": "event dates and proposal/implementation stages retained; cumulative factors are not event split multipliers; algorithm and historical revisions unverified"
+    },
+    {
+      "name": "historical_availability_and_revisions",
+      "status": "unverified",
+      "count": 75271,
+      "reason": "current captures lack historical vintage/publication timestamps; official change log confirms historical repairs"
+    }
+  ],
+  "v1_to_final_v2": {
+    "tables": {
+      "bars": {
+        "compared_rows": 57096,
+        "changed_rows": 1,
+        "physical_schema_unchanged": true,
+        "before_metadata": {
+          "schema_version": "baostock-candidate-v1",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        },
+        "after_metadata": {
+          "schema_version": "baostock-candidate-v2",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        }
+      },
+      "calendar": {
+        "compared_rows": 369,
+        "changed_rows": 0,
+        "physical_schema_unchanged": true,
+        "before_metadata": {
+          "schema_version": "baostock-candidate-v1",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        },
+        "after_metadata": {
+          "schema_version": "baostock-candidate-v2",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        }
+      },
+      "dividends": {
+        "compared_rows": 228,
+        "changed_rows": 0,
+        "physical_schema_unchanged": true,
+        "before_metadata": {
+          "schema_version": "baostock-candidate-v1",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        },
+        "after_metadata": {
+          "schema_version": "baostock-candidate-v2",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        }
+      },
+      "factors": {
+        "compared_rows": 242,
+        "changed_rows": 0,
+        "physical_schema_unchanged": true,
+        "before_metadata": {
+          "schema_version": "baostock-candidate-v1",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        },
+        "after_metadata": {
+          "schema_version": "baostock-candidate-v2",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        }
+      },
+      "membership_snapshots": {
+        "compared_rows": 17100,
+        "changed_rows": 0,
+        "physical_schema_unchanged": true,
+        "before_metadata": {
+          "schema_version": "baostock-candidate-v1",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        },
+        "after_metadata": {
+          "schema_version": "baostock-candidate-v2",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        }
+      },
+      "securities": {
+        "compared_rows": 236,
+        "changed_rows": 0,
+        "physical_schema_unchanged": true,
+        "before_metadata": {
+          "schema_version": "baostock-candidate-v1",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        },
+        "after_metadata": {
+          "schema_version": "baostock-candidate-v2",
+          "data_kind": "real_candidate",
+          "research_eligible": "false"
+        }
+      }
+    },
+    "differences": [
+      {
+        "table": "bars",
+        "table_row_index": 45588,
+        "raw_location": {
+          "query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+          "raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+          "row_number": 108,
+          "symbol": "688065.SH",
+          "event_date": "2023-06-15"
+        },
+        "changes": {
+          "record_status": {
+            "before": "invalid",
+            "after": "needs_review"
+          },
+          "trade_observation": {
+            "before": "status_quantity_conflict",
+            "after": "non_active_with_reported_trades"
+          }
+        }
+      }
+    ],
+    "all_other_cells_identical": true,
+    "raw_values_and_locations_identical": true
+  },
+  "v2_to_coverage": {
+    "all_parquet_files_byte_identical": true,
+    "conversion_issues_byte_identical": true,
+    "quality_changes_only_acquisition_metadata": true
+  },
+  "source_restriction": {
+    "source": "baostock",
+    "recorded_at_utc": "2026-10-03T10:00:44.883040+00:00",
+    "first_observed_at_utc": "2026-10-03T09:56:06.420024+00:00",
+    "error_code": "10001011",
+    "error_msg": "黑名单用户，请与管理员联系",
+    "query_id": "c391d366c4c8a96988aeb0bff5742ef3c257a2b91c958502698a9f9a262b5adf",
+    "raw_locator": {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\c391d366c4c8a96988aeb0bff5742ef3c257a2b91c958502698a9f9a262b5adf\\1d8ad010322245fd8c33c055ad6e66c3\\response.json",
+      "sha256": "3ab7918a83ae644e7cd1a598133a754e65ff87f80aaaa3833d864edc0de2de19"
+    },
+    "ledger": {
+      "wire_requests_by_china_date": {
+        "2026-10-03": 1998
+      },
+      "timezone": "Asia/Shanghai",
+      "last_send_epoch": 1791021366.3933697
+    },
+    "state": "restricted_until_service_restoration_is_established",
+    "automatic_retry": false
+  },
+  "shared_access_state_files": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json",
+      "bytes": 938,
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json",
+      "bytes": 145,
+      "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0"
+    }
+  ],
+  "wire_ledger": {
+    "wire_requests_by_china_date": {
+      "2026-10-03": 1998
+    },
+    "timezone": "Asia/Shanghai",
+    "last_send_epoch": 1791021366.3933697
+  },
+  "wire_ledger_scope": "this CLI only; not the service-wide anonymous quota or evidence of reset time",
+  "validation": {
+    "pytest": "111 passed in 2.48s",
+    "ruff": "All checks passed",
+    "build_exit": 2,
+    "build_exit_meaning": "formal research blocked, artifacts completed",
+    "known_processes": {
+      "checked_at_utc": "2026-10-03T10:33:40.8743743Z",
+      "scope": "Known Phase 1 collector/controlled worker IDs only; read-only check",
+      "processes": [
+        {
+          "pid": 57092,
+          "present": false,
+          "name": null,
+          "command_line": null,
+          "created": null
+        },
+        {
+          "pid": 66572,
+          "present": false,
+          "name": null,
+          "command_line": null,
+          "created": null
+        },
+        {
+          "pid": 59448,
+          "present": false,
+          "name": null,
+          "command_line": null,
+          "created": null
+        },
+        {
+          "pid": 73840,
+          "present": false,
+          "name": null,
+          "command_line": null,
+          "created": null
+        }
+      ]
+    }
+  },
+  "logs_and_recovery_evidence": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\access-ledger-cleanup.json",
+      "bytes": 363,
+      "sha256": "b525036fe95976eb5eaf6cf8c2d057b62f432c5f0fa5531a4dc51942305e2077"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\access-ledger-migration.json",
+      "bytes": 775,
+      "sha256": "d348afb566f205b664d9078b8841da1550622ef402ce565040579e8785697d34"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\actual-source-restriction.json",
+      "bytes": 938,
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\batch-pytest.txt",
+      "bytes": 368,
+      "sha256": "f492e1c6f9da2a4af3d0d80c94ba1ec3035954f3517fb95ae498b7bf7c730403"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\batch-ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\controlled-worker-stop.json",
+      "bytes": 903,
+      "sha256": "6ddaec3b036e756bd25fb1a1aa12174dad4234c922add8cab521db4402bd4bda"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\coverage-pytest.txt",
+      "bytes": 368,
+      "sha256": "37901fc10f92294e611e955ca84c928b97811761993408486f2ee6639e38ba22"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\coverage-ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\final-process-check.json",
+      "bytes": 1292,
+      "sha256": "cf9a47096cebe346e73732c5f532356ad89ce6cccf397ced440c7669a4d58e91"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\final-pytest.txt",
+      "bytes": 368,
+      "sha256": "2451e41e4417e03831eaaa164ae9012123f418a4e425f09e7ac032f628d326f0"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\final-ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\first-pytest.txt",
+      "bytes": 368,
+      "sha256": "aa2b8a1e48788a1de640f215639f266e9e09adc9be34d7c7bd19156e1e15953f"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\first-ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\membership-collection.log",
+      "bytes": 212,
+      "sha256": "6928570b862a1b5b545df98e3a269a7b0ab95d0b7c6bc330b77931ef4e1bf8bc"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\partial-build-v2-coverage.log",
+      "bytes": 516,
+      "sha256": "1434ade6f62853c6bbeb026a9ac4c7c21b789965b5450672cbacfd87e1a8f5ad"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\partial-build-v2.log",
+      "bytes": 498,
+      "sha256": "b6732fbbdcd3c719947a897afd8c4a80c780e0b831199d03fb5ec71db52ccbc2"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\partial-build.log",
+      "bytes": 492,
+      "sha256": "9cc4c6808eeed47b4929053ef62422655839aa3940111b52c27561003a56267f"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\restriction-pytest.txt",
+      "bytes": 368,
+      "sha256": "6aa58e02c43b2c48181d5c39ea600a474343913e8d838bd19be35a548d3a85ee"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\restriction-ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\running-acquisition-source-check.json",
+      "bytes": 438,
+      "sha256": "c41427171a6b9eefeac88c02e1fd3408d0921f72caaf35a0519746c12d7ada9f"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\securities-collection-resume.log",
+      "bytes": 230,
+      "sha256": "ae55f42de7de8aedddacaca81a5cd78ba30e72928750de33330eaa0afc9f001e"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\securities-collection.log",
+      "bytes": 230,
+      "sha256": "e6d38932cd3da7bac564466d9b79417bc6277bfeae947b3fa721062fa00b1807"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\v2-pytest.txt",
+      "bytes": 368,
+      "sha256": "77cf27d49c78b93b74108eb6e9e3dbedcc72824da387f301122a57826c446158"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\v2-ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\wire-ledger-before-path-fix.json",
+      "bytes": 144,
+      "sha256": "ed8192aca4b585f36040c9c7c13447129d99c3819cf00cb9b23f72af9290830e"
+    }
+  ],
+  "storage": {
+    "measurement": "logical retained file bytes at audit; peak disk/RAM not sampled",
+    "roots": [
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw",
+        "file_count": 5511,
+        "logical_bytes": 42792086
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates",
+        "file_count": 43,
+        "logical_bytes": 12927906
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1",
+        "file_count": 2,
+        "logical_bytes": 292172
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks",
+        "file_count": 25,
+        "logical_bytes": 9491
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access",
+        "file_count": 3,
+        "logical_bytes": 1084
+      }
+    ],
+    "total_retained_scope_bytes": 56022739,
+    "volume_total_bytes": 2048405794816,
+    "volume_free_bytes": 1509824782336,
+    "excluded": "existing interpreter/env/wheel, shared Phase 0 raw, source checkout, server artifacts"
+  },
+  "source_semantics_evidence": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\docs\\evidence\\phase1_representative.json",
+      "bytes": 26813,
+      "sha256": "28d05da5148f68adc9ea2756cc070a6aa0d438b7c4803c7a4c6d01127911bf28"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\docs\\evidence\\phase1_baseline_2023.json",
+      "bytes": 2491,
+      "sha256": "4288e9e4071c6f19a3d9d17cef01bd7c6003979b84cfed160309bb6f248053ec"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\docs\\evidence\\phase1_source_documents.json",
+      "bytes": 2388,
+      "sha256": "b14a2b8ca659e1ef44b640bb157650bf5dace8e98b1d709ff6e8fc09b04b49f7"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\docs\\evidence\\phase1_membership_2023.json",
+      "bytes": 56576,
+      "sha256": "fcc8f401dbd9e03c81bb4781903d631e7ceaf59e5bb14b4064c6c971dc26a28c"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\docs\\evidence\\phase1_halt_review.json",
+      "bytes": 6675,
+      "sha256": "f60a658d7520605ae9f3bcb1e78330693d52c17a7fc8c46bc3585001d34591cc"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "recorded_at_utc": "2026-10-03T10:21:36.734386+00:00",
+  "raw_query_id": "f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01",
+  "raw_locator": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+    "sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51",
+    "row_number": 108
+  },
+  "provider_rows": [
+    {
+      "date": "2023-06-14",
+      "code": "sh.688065",
+      "open": "54.8500",
+      "high": "55.9100",
+      "low": "54.5000",
+      "close": "55.0200",
+      "preclose": "54.4700",
+      "volume": "758428",
+      "amount": "41960419.3400",
+      "adjustflag": "3",
+      "turn": "0.287800",
+      "tradestatus": "1",
+      "isST": "0"
+    },
+    {
+      "date": "2023-06-15",
+      "code": "sh.688065",
+      "open": "55.0400",
+      "high": "55.8000",
+      "low": "54.7600",
+      "close": "55.5300",
+      "preclose": "55.0200",
+      "volume": "353426",
+      "amount": "19589785.9900",
+      "adjustflag": "3",
+      "turn": "0.134100",
+      "tradestatus": "0",
+      "isST": "0"
+    },
+    {
+      "date": "2023-06-16",
+      "code": "sh.688065",
+      "open": "55.5300",
+      "high": "55.5300",
+      "low": "55.5300",
+      "close": "55.5300",
+      "preclose": "55.5300",
+      "volume": "0",
+      "amount": "0.0000",
+      "adjustflag": "3",
+      "turn": "0.000000",
+      "tradestatus": "0",
+      "isST": "0"
+    }
+  ],
+  "official_bulletin": {
+    "ADDDATE": "2023-06-15 12:33:50",
+    "BULLETIN_HEADING": "临时公告",
+    "BULLETIN_TYPE": "其它",
+    "BULLETIN_YEAR": "2023",
+    "INDEXCLASS": null,
+    "OPERATION_SEQ": null,
+    "PLAN_Date": null,
+    "PLAN_Year": null,
+    "ROWNUM": null,
+    "ROWNUM_": null,
+    "SECURITY_CODE": "688065",
+    "SECURITY_NAME": "凯赛生物",
+    "SSEDATE": "2023-06-15",
+    "SSEDate": null,
+    "SSETime": null,
+    "SSETimeStr": null,
+    "TITLE": "关于控股股东筹划重大事项的停牌公告",
+    "URL": "/disclosure/listedinfo/announcement/c/new/2023-06-15/688065_20230615_SA1I.pdf",
+    "author": null,
+    "book_Name": null,
+    "bulletinHeading": null,
+    "bulletinType": null,
+    "bulletin_No": null,
+    "bulletin_Type": null,
+    "bulletin_Year": null,
+    "category_A": null,
+    "category_B": null,
+    "category_C": null,
+    "category_D": null,
+    "chapter_No": null,
+    "companyAbbr": null,
+    "dispatch_Organ": null,
+    "file_Serial": null,
+    "finish_Time": null,
+    "initial_Date": null,
+    "isChangeFlag": null,
+    "journal_Issue": null,
+    "journal_Name": null,
+    "journal_Section": null,
+    "journal_Year": null,
+    "keyWord": null,
+    "key_Word": null,
+    "language": null,
+    "lemma_CN": null,
+    "lemma_EN": null,
+    "publishing_Comp": null,
+    "question": null,
+    "question_Class": null,
+    "read_Status": null,
+    "save_Time": null,
+    "section": null,
+    "security_Code": null,
+    "source": null,
+    "spareVolEnd": null,
+    "title": null,
+    "title_ETC": null,
+    "title_PY": null,
+    "unit_Code": null,
+    "unit_Type": null
+  },
+  "official_calendar": [
+    {
+      "summary": "重要事项未公告",
+      "bizType": "7",
+      "tradeEndDate": "20230625",
+      "subTypeDesc": "连续停牌",
+      "updateTime": "20230621",
+      "stockAbbr": "凯赛生物",
+      "title": "自2023-06-16起连续停牌",
+      "stockCode": "688065",
+      "content": "",
+      "controlType": "TR",
+      "bizTypeDesc": "停复牌",
+      "bizSeq": "106319",
+      "tradeBeginDate": "20230616",
+      "ext3": "",
+      "ext2": "",
+      "ext1": "20"
+    }
+  ],
+  "conclusion": "Daily tradestatus=0 with reported trades requires interval-level review, not automatic whole-day suspension error. Preserve both fields; candidate v2 needs_review/unverified; formal research stays blocked.",
+  "unverified": [
+    "Exact intraday halt interval: official PDF returned an HTML JavaScript challenge, not a PDF; challenge was not decoded or bypassed.",
+    "ADDDATE is preserved as a source field, not certified historical publication or availability time.",
+    "Calendar response updateTime=20230621 cannot be used as availability at 20230616."
+  ],
+  "artifacts": [
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\announcement-page.html",
+      "sha256": "30c60a013569880308add2c7d9824b7dd074a805a14f8763f0d3c209cb6ff33e",
+      "bytes": 29591
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\bulletins-20230615.json",
+      "sha256": "bbab8b8599b7e6c7d9fd17a885e437d2ef8572ce72f7bd7fd84fb1ba64876908",
+      "bytes": 5591
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\bulletins-request.json",
+      "sha256": "614e38da28e249b04880a4e2f4e6f2cc57daf9a98f84d919b653e30f0d6585d5",
+      "bytes": 576
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\halt-pdf-request.json",
+      "sha256": "22c062d7281203c15ef0c02955b5abaeb22238c15f54e0b8be8e4d010a96d2b0",
+      "bytes": 1930
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\main_2020.js",
+      "sha256": "721e0dd30c2269a53a8747faeaaaae60230ea0a1d8767c3b078ee65b4bab6ab1",
+      "bytes": 26744
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\page-request.json",
+      "sha256": "4517ebe991f12a9eb0dc2bf1d031b4e0ec57a8d9ac66c992e866e3437839b38e",
+      "bytes": 184
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\searchKCB_pl.js",
+      "sha256": "a8db4f4cfd329561d07c8eb5e98360a800f79137016561e1476f7fb65aee757a",
+      "bytes": 219214
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\sse_full.js",
+      "sha256": "7a8a29c5c6a1074c60302109db9fb3a92eb3a67171b8beadd3e1ec87514c781c",
+      "bytes": 377125
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\trade-calendar-request.json",
+      "sha256": "8361daa00d11a531e282f52d78822b19fbcdee9b3b023d8a3f3a91418a9d0dd3",
+      "bytes": 507
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\trade-calendar.json",
+      "sha256": "abf117f005372adf35dff2962b47a12fbf954b3c5861532690ef3b2a5aa3c2b1",
+      "bytes": 1177
+    },
+    {
+      "path": "datasets\\raw\\sse\\phase1-halt-review\\unexpected-static-response.bin",
+      "sha256": "b6b98ed9506e114ed33a37accd9dbd4389f85d029c5032496320c51e81f85a48",
+      "bytes": 7373
+    }
+  ]
+}

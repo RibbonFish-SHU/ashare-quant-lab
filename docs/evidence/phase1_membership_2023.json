@@ -1,0 +1,1964 @@
+{
+  "recorded_at_utc": "2026-10-03T09:51:47.042578+00:00",
+  "status": "fail",
+  "research_eligible": false,
+  "run": {
+    "queries": 59,
+    "reused": 3,
+    "new_complete": 56,
+    "rows": 17469,
+    "start": "2026-10-03T09:25:05.447053+00:00",
+    "finish": "2026-10-03T09:26:53.902227+00:00",
+    "source_commit": "6ee283d588b68eb43cab2b2b488dedf123ceb0e8",
+    "source_dirty": false
+  },
+  "quality_checks": [
+    {
+      "name": "acquisition",
+      "status": "pass",
+      "count": 59,
+      "examples": []
+    },
+    {
+      "name": "typed_conversion",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "duplicate_keys_within_response",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "overlapping_observations",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "calendar_request_coverage",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "bars_missing_open_days",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "bars_on_closed_days",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "pre_ipo_rows",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "listing_metadata_coverage",
+      "status": "pass",
+      "count": 0,
+      "examples": []
+    },
+    {
+      "name": "out_date_semantics",
+      "status": "unverified",
+      "count": 0,
+      "examples": [],
+      "reason": "source outDate has not been verified as first delisted natural day; not used to certify boundary rows"
+    },
+    {
+      "name": "suspension_observations",
+      "status": "unverified",
+      "count": 0,
+      "examples": [],
+      "classes": {},
+      "reason": "flat prices, zero quantity and missing quantity stay distinct; execution unverified"
+    },
+    {
+      "name": "st_and_star_st_history",
+      "status": "unverified",
+      "count": 0,
+      "examples": [],
+      "reason": "isST is a source binary flag; complete ST/*ST transitions and daily limit prices not established"
+    },
+    {
+      "name": "membership_shape",
+      "status": "pass",
+      "count": 0,
+      "examples": [],
+      "queried_snapshots": 57,
+      "empty_query_ids": []
+    },
+    {
+      "name": "membership_update_age",
+      "status": "unverified",
+      "count": 14,
+      "examples": [
+        {
+          "query_id": "113ad33efc84ea9b9a4d078940f7cea888fbf7f1aa6eac868107cd2447a5dd15",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\113ad33efc84ea9b9a4d078940f7cea888fbf7f1aa6eac868107cd2447a5dd15\\d384047c271f499da19cd8625c74e6e8\\response.json",
+          "raw_sha256": "79466d34245d0784263781d3f8fa0c99aedbd89d2d730a98a2813ae2dac47044",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2022-12-09",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "b76a19772e9c2dd5665d2b5da646a6f44bdae798c362cb9cd5496bb6b32a3f45",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\b76a19772e9c2dd5665d2b5da646a6f44bdae798c362cb9cd5496bb6b32a3f45\\abaa554292cf409a853f02344b7dd5e0\\response.json",
+          "raw_sha256": "cf84d72671de3c85e3fd3e9f3ea379235a68e1b7d69aca97498ea55972e16528",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2022-12-12",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "ee1286cf155b05ecf5f4d029250f5af28f676c8d44cd3b9f8fb2e4671d5cea13",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\ee1286cf155b05ecf5f4d029250f5af28f676c8d44cd3b9f8fb2e4671d5cea13\\32e9613775bb4948ac535ed1406e5faa\\response.json",
+          "raw_sha256": "1f5855ca0173fd54fbd98768602a96af2fc9d368a85e9d8f8dcd65834831e2a0",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-02",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "bbe8421a8886492859b4099d3dbdcd3a7685495b64b30bfdbd6067fab710f93f",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\baostock\\20261003-phase0-coverage\\capture-00.json",
+          "raw_sha256": "a54f35ac06de5366640e0d195b01d3b40d41f0c1206b0bba734f4df00d8bbefc",
+          "raw_query_name": "members_2023_jan",
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-03",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "20f6921f336d54f95a71fb3ff8af9616479af61ea528db4ec34137f55d6638f0",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\20f6921f336d54f95a71fb3ff8af9616479af61ea528db4ec34137f55d6638f0\\6d2a14700b2d4cbb9efc338b6d67409f\\response.json",
+          "raw_sha256": "fd69d34e63beab244c07f222428d0305db3e893ff181a04332f21b782e20714a",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-09",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "1d25cdd4ad75f894bfdd8968a9deebab9f1c4545ae586658851c802ee57ae555",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\1d25cdd4ad75f894bfdd8968a9deebab9f1c4545ae586658851c802ee57ae555\\ca01bdc794d5407999f800eeec699aa8\\response.json",
+          "raw_sha256": "9655305f00d17277faf5ca6512f299ff7bad39b9b96e5b0b27dfac0f6143c5ee",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-16",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "f87c550f527fd9a5d684e95fe8fd77273b4aca83a39b052097b58d74206e450c",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\f87c550f527fd9a5d684e95fe8fd77273b4aca83a39b052097b58d74206e450c\\9e5bb55967d7464e9824a361dc7dea03\\response.json",
+          "raw_sha256": "dc9b09bc988cbb2ab9c500131372965a08123fe7e2228e967abdabe047714328",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-23",
+          "update_date": "2022-08-01"
+        },
+        {
+          "query_id": "b239dc7fa8af8bb1818d7b462a5a3b182ead5359628cdf5a1099e65b66efd4c6",
+          "raw_path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-membership-2023\\attempts\\b239dc7fa8af8bb1818d7b462a5a3b182ead5359628cdf5a1099e65b66efd4c6\\16502c14c40f4d5d928810222d4c2dd5\\response.json",
+          "raw_sha256": "1caa52022d3ee96545e098239f0a7fa56b24b6d8b21b03e743f1b9f055f12625",
+          "raw_query_name": null,
+          "row_number": 0,
+          "symbol": "600000.SH",
+          "query_date": "2023-01-30",
+          "update_date": "2022-08-01"
+        }
+      ],
+      "reason": "updateDate is neither announcement time nor proof of historical membership"
+    },
+    {
+      "name": "official_event_reconciliation",
+      "status": "fail",
+      "count": 14,
+      "examples": [
+        {
+          "event_id": "csi-14497",
+          "query_date": "2022-12-12",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-02",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-03",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-09",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-16",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-23",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-30",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-02-06",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        }
+      ],
+      "comparisons": 59,
+      "reconciliations": [
+        {
+          "event_id": "csi-14497",
+          "query_date": "2022-12-12",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-02",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-03",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-09",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-16",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-23",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-01-30",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-02-06",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-02-13",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-02-20",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-02-27",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-03-06",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-03-13",
+          "check": "post_event_presence",
+          "status": "fail",
+          "missing_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "retained_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-03-20",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-03-27",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-04-03",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-04-10",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-04-17",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-04-24",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-05-01",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-05-08",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-05-15",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-05-22",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-05-29",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-06-05",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "query_date": "2023-06-09",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14497",
+          "check": "exact_event_delta",
+          "status": "fail",
+          "actual_added": [],
+          "actual_removed": [],
+          "expected_added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "expected_removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ]
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-06-12",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-06-19",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-06-26",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-07-03",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-07-10",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-07-17",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-07-24",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-07-31",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-08-07",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-08-14",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-08-21",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-08-28",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-09-04",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-09-11",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-09-18",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-09-25",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-10-02",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-10-09",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-10-16",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-10-23",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-10-30",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-11-06",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-11-13",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-11-20",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-11-27",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-12-04",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "query_date": "2023-12-08",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-14796",
+          "check": "exact_event_delta",
+          "status": "pass",
+          "actual_added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "actual_removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ],
+          "expected_added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "expected_removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ]
+        },
+        {
+          "event_id": "csi-15044",
+          "query_date": "2023-12-11",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-15044",
+          "query_date": "2023-12-18",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-15044",
+          "query_date": "2023-12-25",
+          "check": "post_event_presence",
+          "status": "pass",
+          "missing_added": [],
+          "retained_removed": []
+        },
+        {
+          "event_id": "csi-15044",
+          "check": "exact_event_delta",
+          "status": "pass",
+          "actual_added": [
+            "000999.SZ",
+            "002603.SZ",
+            "300308.SZ",
+            "301269.SZ",
+            "600023.SH",
+            "600372.SH",
+            "600489.SH",
+            "600515.SH",
+            "600938.SH",
+            "601059.SH",
+            "601916.SH",
+            "688041.SH",
+            "688256.SH",
+            "688271.SH"
+          ],
+          "actual_removed": [
+            "000723.SZ",
+            "002064.SZ",
+            "002120.SZ",
+            "002414.SZ",
+            "002756.SZ",
+            "300207.SZ",
+            "300601.SZ",
+            "300769.SZ",
+            "600383.SH",
+            "600763.SH",
+            "600884.SH",
+            "601216.SH",
+            "603185.SH",
+            "688005.SH"
+          ],
+          "expected_added": [
+            "000999.SZ",
+            "002603.SZ",
+            "300308.SZ",
+            "301269.SZ",
+            "600023.SH",
+            "600372.SH",
+            "600489.SH",
+            "600515.SH",
+            "600938.SH",
+            "601059.SH",
+            "601916.SH",
+            "688041.SH",
+            "688256.SH",
+            "688271.SH"
+          ],
+          "expected_removed": [
+            "000723.SZ",
+            "002064.SZ",
+            "002120.SZ",
+            "002414.SZ",
+            "002756.SZ",
+            "300207.SZ",
+            "300601.SZ",
+            "300769.SZ",
+            "600383.SH",
+            "600763.SH",
+            "600884.SH",
+            "601216.SH",
+            "603185.SH",
+            "688005.SH"
+          ]
+        }
+      ],
+      "scope": "selected announcements only; post-event presence is not a full 300-code baseline proof"
+    },
+    {
+      "name": "weekly_membership_changes",
+      "status": "unverified",
+      "count": 3,
+      "examples": [
+        {
+          "previous_query_date": "2023-03-13",
+          "query_date": "2023-03-20",
+          "added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ],
+          "event_ids": [],
+          "status": "unverified"
+        },
+        {
+          "previous_query_date": "2023-06-09",
+          "query_date": "2023-06-12",
+          "added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ],
+          "event_ids": [
+            "csi-14796"
+          ],
+          "status": "pass"
+        },
+        {
+          "previous_query_date": "2023-12-08",
+          "query_date": "2023-12-11",
+          "added": [
+            "000999.SZ",
+            "002603.SZ",
+            "300308.SZ",
+            "301269.SZ",
+            "600023.SH",
+            "600372.SH",
+            "600489.SH",
+            "600515.SH",
+            "600938.SH",
+            "601059.SH",
+            "601916.SH",
+            "688041.SH",
+            "688256.SH",
+            "688271.SH"
+          ],
+          "removed": [
+            "000723.SZ",
+            "002064.SZ",
+            "002120.SZ",
+            "002414.SZ",
+            "002756.SZ",
+            "300207.SZ",
+            "300601.SZ",
+            "300769.SZ",
+            "600383.SH",
+            "600763.SH",
+            "600884.SH",
+            "601216.SH",
+            "603185.SH",
+            "688005.SH"
+          ],
+          "event_ids": [
+            "csi-15044"
+          ],
+          "status": "pass"
+        }
+      ],
+      "changes": [
+        {
+          "previous_query_date": "2023-03-13",
+          "query_date": "2023-03-20",
+          "added": [
+            "000723.SZ",
+            "000733.SZ",
+            "002180.SZ",
+            "002756.SZ",
+            "300769.SZ",
+            "600039.SH",
+            "600233.SH",
+            "600674.SH",
+            "600803.SH",
+            "600884.SH",
+            "601615.SH",
+            "601689.SH",
+            "605117.SH",
+            "688187.SH",
+            "688303.SH"
+          ],
+          "removed": [
+            "000066.SZ",
+            "000703.SZ",
+            "002568.SZ",
+            "002607.SZ",
+            "002791.SZ",
+            "300003.SZ",
+            "300866.SZ",
+            "600161.SH",
+            "600352.SH",
+            "600489.SH",
+            "600655.SH",
+            "601825.SH",
+            "601916.SH",
+            "603087.SH",
+            "603160.SH"
+          ],
+          "event_ids": [],
+          "status": "unverified"
+        },
+        {
+          "previous_query_date": "2023-06-09",
+          "query_date": "2023-06-12",
+          "added": [
+            "000617.SZ",
+            "000983.SZ",
+            "600732.SH",
+            "600754.SH",
+            "600875.SH",
+            "601607.SH",
+            "601699.SH",
+            "601872.SH",
+            "688223.SH"
+          ],
+          "removed": [
+            "002008.SZ",
+            "002032.SZ",
+            "002600.SZ",
+            "002602.SZ",
+            "300529.SZ",
+            "300595.SZ",
+            "601966.SH",
+            "603882.SH",
+            "688169.SH"
+          ],
+          "event_ids": [
+            "csi-14796"
+          ],
+          "status": "pass"
+        },
+        {
+          "previous_query_date": "2023-12-08",
+          "query_date": "2023-12-11",
+          "added": [
+            "000999.SZ",
+            "002603.SZ",
+            "300308.SZ",
+            "301269.SZ",
+            "600023.SH",
+            "600372.SH",
+            "600489.SH",
+            "600515.SH",
+            "600938.SH",
+            "601059.SH",
+            "601916.SH",
+            "688041.SH",
+            "688256.SH",
+            "688271.SH"
+          ],
+          "removed": [
+            "000723.SZ",
+            "002064.SZ",
+            "002120.SZ",
+            "002414.SZ",
+            "002756.SZ",
+            "300207.SZ",
+            "300601.SZ",
+            "300769.SZ",
+            "600383.SH",
+            "600763.SH",
+            "600884.SH",
+            "601216.SH",
+            "603185.SH",
+            "688005.SH"
+          ],
+          "event_ids": [
+            "csi-15044"
+          ],
+          "status": "pass"
+        }
+      ],
+      "reason": "weekly observations cannot exclude changes and reversals between observations; temporary events need official coverage"
+    },
+    {
+      "name": "corporate_action_semantics",
+      "status": "unverified",
+      "count": 0,
+      "examples": [],
+      "text_tax_rows": 0,
+      "factor_rows": 0,
+      "reason": "event dates and proposal/implementation stages retained; cumulative factors are not event split multipliers; algorithm and historical revisions unverified"
+    },
+    {
+      "name": "historical_availability_and_revisions",
+      "status": "unverified",
+      "count": 17469,
+      "examples": [],
+      "reason": "current captures lack historical vintage/publication timestamps; official change log confirms historical repairs"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "datasets\\raw\\phase1-membership-2023\\run.json",
+      "sha256": "189690b1687355f28c26a3272c9186efdf7545b194aafd3610eb04e8b5cb5e35",
+      "bytes": 84019
+    },
+    {
+      "path": "datasets\\candidates\\phase1-membership-2023\\manifest.json",
+      "sha256": "9ed64d2b3cd15cb9fa8c1002b56a1ec6ba46f703cc3175557ae74c671ac0e813",
+      "bytes": 8046
+    },
+    {
+      "path": "datasets\\candidates\\phase1-membership-2023\\quality.json",
+      "sha256": "b5b3e56b535f06844539ab5dfcea58132ba75a7df7a426d72e5f4137b94f6fc8",
+      "bytes": 50261
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\2023-announcement-index.json",
+      "sha256": "77656badcc158f467c92c660584ed3258089432a7ce772129e73567cb578e676",
+      "bytes": 100430
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\temporary-notice-screen.json",
+      "sha256": "ba91c34f5843b77c6faf1fa9646fc8094a534c3e1a4af586b107275147886313",
+      "bytes": 1405
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-14599-request.json",
+      "sha256": "456264c73c43a7828cd0eebaa5d73c7e4950d5a6b5675638787a6250eab77a8f",
+      "bytes": 176
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-14599.json",
+      "sha256": "6f2ff3c98ddec0d8a348d97bb26a1830ada7c58ff705a0bf79c23c66464b03fe",
+      "bytes": 1992
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-14651-request.json",
+      "sha256": "8a08f5a5e92ad99b1baca54e9cb7a4e8ceda3b498bb54adecb004ddbdbfca00c",
+      "bytes": 176
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-14651.json",
+      "sha256": "31eb76acec897376a9f6057f403eaf36f0b04938122cbd255fab0ee24eee29c7",
+      "bytes": 1698
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-14722-request.json",
+      "sha256": "c0b821b67de29a841307857b0f3721fff5f157bd156964d05876a940793c14ab",
+      "bytes": 176
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-14722.json",
+      "sha256": "a27e1336fd52843fe2a8a8d83a7698ba413350e46c16b73585fd492349684a2e",
+      "bytes": 1699
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-15044-request.json",
+      "sha256": "afe54b85475b245fd1fcc8b55ced462971efbf3e2fbede1d2c374d5e4c4516d6",
+      "bytes": 176
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\announcement-15044.json",
+      "sha256": "697aff6dfe1de169d2ac971b17020e5afd3b72c27dad3da9266f4d8fecf24b35",
+      "bytes": 2552
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\csi-20231124-adjustments.pdf",
+      "sha256": "1ccc9012bcb5e539c662232dd26cd7cc17c98923621e2a1970ef4d5bb1fa6ded",
+      "bytes": 181980
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14599.xlsx",
+      "sha256": "59a5445d0478d498378ed57f291120b170f1027e6f241e6a6497f83be9494b03",
+      "bytes": 12486
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14651.xlsx",
+      "sha256": "94a51cceb659f7049a70014cf9d931705dc1752c366994c362de5c08af4253c8",
+      "bytes": 11642
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14722.xlsx",
+      "sha256": "745f785b13d91a6dab1cd537f13525e8eb4b8fa39276d7d1e83fa4a1a3742424",
+      "bytes": 12090
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14599-cells.json",
+      "sha256": "8f82949d17de3d2d690dd51f2d5c5df47b08b9495640eca950fe17e7f5822aa4",
+      "bytes": 61746
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14651-cells.json",
+      "sha256": "b5027721998904d51db854923c7f653e614e753a1137f73ac7a32b48204366e9",
+      "bytes": 3929
+    },
+    {
+      "path": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14722-cells.json",
+      "sha256": "de29ad90e98de66180f74e6f43490ba90301191f4de1b63fabc1b54d82431e04",
+      "bytes": 19571
+    }
+  ],
+  "temporary_notice_screen": {
+    "inspected_at_utc": "2026-10-03T09:50:29.283366+00:00",
+    "attachments": [
+      {
+        "announcement_id": 14599,
+        "attachment_create_date": "2023-03-16",
+        "publish_date": "2023-02-03",
+        "file": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14599.xlsx",
+        "sha256": "59a5445d0478d498378ed57f291120b170f1027e6f241e6a6497f83be9494b03",
+        "sheet_row_counts": [
+          71
+        ],
+        "potential_matches": 0,
+        "formulas": 0
+      },
+      {
+        "announcement_id": 14651,
+        "attachment_create_date": "2023-03-06",
+        "publish_date": "2023-03-06",
+        "file": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14651.xlsx",
+        "sha256": "94a51cceb659f7049a70014cf9d931705dc1752c366994c362de5c08af4253c8",
+        "sheet_row_counts": [
+          4,
+          2
+        ],
+        "potential_matches": 0,
+        "formulas": 0
+      },
+      {
+        "announcement_id": 14722,
+        "attachment_create_date": "2023-04-10",
+        "publish_date": "2023-04-10",
+        "file": "datasets\\raw\\csi\\phase1-2023-review\\attachment-14722.xlsx",
+        "sha256": "745f785b13d91a6dab1cd537f13525e8eb4b8fa39276d7d1e83fa4a1a3742424",
+        "sheet_row_counts": [
+          25,
+          7
+        ],
+        "potential_matches": 0,
+        "formulas": 0
+      }
+    ],
+    "limit": "Selected ambiguous notices; no claim that the historical archive is exhaustive."
+  },
+  "index_screen": {
+    "announcements_in_2023": 349,
+    "pages": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "date_bounds": [
+      "2022-12-05",
+      "2024-01-12"
+    ],
+    "scope": "official announcement-index observation; selected ambiguous attachment verification, not proof of exhaustive historical archive"
+  }
+}

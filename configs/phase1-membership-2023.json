@@ -1,0 +1,365 @@
+{
+  "schema_version": "source-plan-v1",
+  "source": "baostock",
+  "sdk": "0.9.4",
+  "purpose": "2023 calendar and weekly membership observations plus official adjustment boundaries",
+  "research_eligible": false,
+  "queries": [
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2023-12-31",
+        "start_date": "2023-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2022-12-12",
+        "start_date": "2022-12-09"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2022-12-09"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2022-12-12"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-02"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-03"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-09"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-16"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-23"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-30"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-02-06"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-02-13"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-02-20"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-02-27"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-03-06"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-03-13"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-03-20"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-03-27"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-04-03"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-04-10"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-04-17"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-04-24"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-05-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-05-08"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-05-15"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-05-22"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-05-29"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-05"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-09"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-12"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-19"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-26"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-07-03"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-07-10"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-07-17"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-07-24"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-07-31"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-08-07"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-08-14"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-08-21"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-08-28"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-09-04"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-09-11"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-09-18"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-09-25"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-10-02"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-10-09"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-10-16"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-10-23"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-10-30"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-11-06"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-11-13"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-11-20"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-11-27"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-12-04"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-12-08"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-12-11"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-12-18"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-12-25"
+      }
+    }
+  ]
+}

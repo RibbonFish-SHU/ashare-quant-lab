@@ -1,0 +1,455 @@
+{
+  "schema_version": "source-plan-v1",
+  "source": "baostock",
+  "sdk": "0.9.4",
+  "purpose": "reuse existing exact requests without network",
+  "research_eligible": false,
+  "queries": [
+    {
+      "api": "query_dividend_data",
+      "parameters": {
+        "code": "sh.600000",
+        "year": "2010",
+        "yearType": "operate"
+      }
+    },
+    {
+      "api": "query_dividend_data",
+      "parameters": {
+        "code": "sh.600000",
+        "year": "2023",
+        "yearType": "operate"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2011-01-10",
+        "start_date": "2011-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2011-01-04"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2011-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2011-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2012-01-10",
+        "start_date": "2012-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2012-01-04"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2012-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2012-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2013-01-10",
+        "start_date": "2013-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2013-01-04"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2013-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2013-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2014-01-10",
+        "start_date": "2014-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2014-01-02"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2014-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2014-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2015-01-10",
+        "start_date": "2015-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2015-01-05"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2015-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2015-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2016-01-10",
+        "start_date": "2016-01-01"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2016-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2016-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2017-01-10",
+        "start_date": "2017-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2017-01-03"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2017-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2017-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2018-01-10",
+        "start_date": "2018-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2018-01-02"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2018-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2018-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2019-01-10",
+        "start_date": "2019-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2019-01-02"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2019-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2019-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2020-01-10",
+        "start_date": "2020-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2020-01-02"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2020-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2020-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2021-01-10",
+        "start_date": "2021-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2021-01-04"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2021-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2021-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2022-01-10",
+        "start_date": "2022-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2022-01-04"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2022-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2022-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2023-01-10",
+        "start_date": "2023-01-01"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-01-03"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2023-01-10",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2023-01-01"
+      }
+    },
+    {
+      "api": "query_adjust_factor",
+      "parameters": {
+        "code": "sh.600000",
+        "end_date": "2023-12-31",
+        "start_date": "2022-01-01"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2023-07-24",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2023-07-18"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2010-01-04"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2016-01-04"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-09"
+      }
+    },
+    {
+      "api": "query_hs300_stocks",
+      "parameters": {
+        "date": "2023-06-12"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2010-01-10",
+        "start_date": "2010-01-01"
+      }
+    },
+    {
+      "api": "query_trade_dates",
+      "parameters": {
+        "end_date": "2023-06-14",
+        "start_date": "2023-06-08"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2010-01-08",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2010-01-04"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600000",
+        "end_date": "2023-06-14",
+        "fields": "date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2023-06-08"
+      }
+    },
+    {
+      "api": "query_adjust_factor",
+      "parameters": {
+        "code": "sh.600000",
+        "end_date": "2010-12-31",
+        "start_date": "2010-01-01"
+      }
+    },
+    {
+      "api": "query_adjust_factor",
+      "parameters": {
+        "code": "sh.600000",
+        "end_date": "2023-12-31",
+        "start_date": "2023-01-01"
+      }
+    },
+    {
+      "api": "query_stock_basic",
+      "parameters": {
+        "code": "sh.600747"
+      }
+    },
+    {
+      "api": "query_st_stocks",
+      "parameters": {
+        "date": "2023-06-09"
+      }
+    },
+    {
+      "api": "query_suspended_stocks",
+      "parameters": {
+        "date": "2023-06-09"
+      }
+    },
+    {
+      "api": "query_history_k_data_plus",
+      "parameters": {
+        "adjustflag": "3",
+        "code": "sh.600747",
+        "end_date": "2019-12-13",
+        "fields": "date,code,open,high,low,close,volume,amount,tradestatus,isST",
+        "frequency": "d",
+        "start_date": "2019-11-25"
+      }
+    }
+  ]
+}
