@@ -98,6 +98,9 @@ Windows 中文目录已验证：LightGBM 原生 `save_model(path)` 无法写入�
 
 ## 未完成验收
 
-本地 / Linux synthetic 工程、单卡验证和 5,132 行真实 raw 读取已通过。完整历史成员与状态覆盖、
+本地 / Linux synthetic 工程、单卡验证和真实 raw 读取已通过。Phase 1 数据管线已集成，
+2023 部分候选 75,271 行可离线重放；运行入口见 [PHASE1_RUNBOOK.md](PHASE1_RUNBOOK.md)，
+源码审阅与 143 项集成检查见 [PHASE1_REVIEW.md](PHASE1_REVIEW.md)。BaoStock 受限后停止该来源。
+完整历史成员与状态覆盖、
 可用时间依据、正式复权 / 标签口径及冻结时间划分仍按 Phase 1 推进；原始快照不自动具有研究资格。
 数据源公开能力与限制见 [DATA_SOURCE_DECISION.md](DATA_SOURCE_DECISION.md)。

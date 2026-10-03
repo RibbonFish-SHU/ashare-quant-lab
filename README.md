@@ -1,7 +1,8 @@
 # ashare-quant-lab
 
 A 股日频研究工程。已验证本地 / Linux 环境、数据契约、CPU / 单卡 GPU smoke 和真实原始样本读取；
-当前推进 Phase 1 免费来源采集、适配与质量审核。历史 PIT、回测和正式策略尚未验收。
+Phase 1 数据管线已集成，2023 候选共 75,271 行，1,403 个计划请求中成功 1,002 个。
+BaoStock 访问受限后已停止该来源；继续核验东方财富补充行情。历史 PIT、回测和正式策略尚未验收。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
@@ -24,5 +25,8 @@ uv run --frozen --extra dev ashare-lab smoke --config configs/smoke.toml
 - [数据源决策与未冻结时间划分](docs/DATA_SOURCE_DECISION.md)
 - [免费来源实测与真实原始数据读取](docs/PHASE0_DATA_PROBE_REPORT.md)
 - [Phase 1 采集、适配与质量审核任务](docs/PHASE1_PLAN.md)
+- [Phase 1 运行入口与数据契约](docs/PHASE1_RUNBOOK.md)
+- [Phase 1 执行报告](docs/PHASE1_EXECUTION_REPORT.md)与[主审验收](docs/PHASE1_REVIEW.md)
+- [补充行情来源实测与下一批范围](docs/PHASE1_SOURCE_FALLBACK_PLAN.md)
 
 研究、推理、交易和风控保持隔离。当前代码仅有研究工程工具；实盘晋级依照项目方案另行确认。

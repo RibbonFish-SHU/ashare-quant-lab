@@ -1,0 +1,150 @@
+{
+  "reviewed_at_utc": "2026-10-03T12:11:30.005777+00:00",
+  "reviewed_head": "54d20bd83d3b60baa9b0f06e4534bb8aa088fd1e",
+  "implementation": "7e5f54a7a8c0ef49dcbbf61631fb8c29764fd486",
+  "offline": true,
+  "independent_rejections": [
+    {
+      "case": "raw status after valid plan binding",
+      "rejected": true,
+      "message": "raw response is not a complete successful attempt",
+      "fixture_sha256": "3eee3a907da774e757fdaedfa30b2e924c8250fc9f5f62ef23710cd41f8655ae"
+    },
+    {
+      "case": "missing queries deleted from embedded plan",
+      "rejected": true,
+      "message": "embedded plan differs from verified original plan",
+      "fixture_sha256": "7e909c00b9521ecfd1178f05a2e92990745f4743ffee5cac67f3d21061885e18"
+    }
+  ],
+  "real_run_counts": [
+    {
+      "run_sha256": "189690b1687355f28c26a3272c9186efdf7545b194aafd3610eb04e8b5cb5e35",
+      "planned": 59,
+      "successful": 59,
+      "complete": true,
+      "rows": 17469
+    },
+    {
+      "run_sha256": "a4f5aad865370ea56f56bb7fa4151bdaeb7cb02f5ad69fec5e5a9efac98941df",
+      "planned": 1344,
+      "successful": 943,
+      "complete": false,
+      "rows": 57802
+    }
+  ],
+  "verified_artifacts": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\manifest.json",
+      "sha256": "79b3ac25ed6810740e8d42d39b6e52890f9cd5c3cfc6569c101537f8a458cb87",
+      "bytes": 10368
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\bars.parquet",
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145",
+      "bytes": 3903548
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\calendar.parquet",
+      "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480",
+      "bytes": 11083
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\dividends.parquet",
+      "sha256": "e2b7c263129b7106e5fd1c41800d3df965a6463410e2d96c5b0b1455df3e6870",
+      "bytes": 54714
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\factors.parquet",
+      "sha256": "5a028663e0735a7474c43d175b88b99bca6675ce4f7ce929d92faf40c824ee99",
+      "bytes": 44008
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\membership_snapshots.parquet",
+      "sha256": "7954bf2e34f318c0493c945602abc02b8fd980485d5946d7b83ab69f88100f05",
+      "bytes": 70153
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\securities.parquet",
+      "sha256": "e80fc675e7b5649fd83fcb6c9c0965673b78038ca4c94158de486697f77bac4b",
+      "bytes": 44864
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\quality.json",
+      "sha256": "f39563d2e9530d1392ca78dfdb43ba3831cc27a50c0f70420423f9206c191e04",
+      "bytes": 92529
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\conversion-issues.json",
+      "sha256": "75d5365cb895a9e727b38f71fd0ce47fdc360c3aaeb779c11d91be1a968d6113",
+      "bytes": 779
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\source-restriction.json",
+      "sha256": "0f47cd3ec9b02646feb377ff8108feac530cfeafaa0a73bea969fb477921809b",
+      "bytes": 938
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\source-access\\wire-ledger.json",
+      "sha256": "72ef882ecffedc3f5a89e7acfb1854d1dc74ef931b5e4a1920dfaeafe574a1c0",
+      "bytes": 145
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-before.json",
+      "sha256": "a463786200b9a68c8a14eada2f737150cbf3b97729a9fc76d3200cb97864ac77",
+      "bytes": 476
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\plan-binding-before.json",
+      "sha256": "034f8681e08c880a695e75d0e29c42924009e1b406f6f8990d01d90e90a54712",
+      "bytes": 494
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-tests-before.txt",
+      "sha256": "51b67b05dccb08d1af72e2f4c3e0e247e8d3b6c61f86ad9e8184748b72779e7d",
+      "bytes": 49088
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-targeted-first.txt",
+      "sha256": "888b66a2242b177b975acdb85f3e288219a2da111c61a493a8433987053f053b",
+      "bytes": 204
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-targeted-final.txt",
+      "sha256": "c1d3be922185f13422ff7038d7ac01f574d45d69b6f5f9a44e9f4bb1b642c1d2",
+      "bytes": 204
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-full-pytest.txt",
+      "sha256": "b6708d75fab1347de4c80ffa59041f7570bc4d061f7203669d7de6580ebc7ed3",
+      "bytes": 368
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-ruff.txt",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "bytes": 42
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\artifacts\\phase1-checks\\provenance-build.log",
+      "sha256": "53bfafd4cb23df683cdd81badab3e31e2c8a147b576cab5c09622af9861471f9",
+      "bytes": 516
+    }
+  ],
+  "research_eligible": false,
+  "integration": {
+    "merge_commit": "63e303495702dd85bc7d0b05abf71f65e36f33bc",
+    "pytest": {
+      "command": ".venv/Scripts/python.exe -m pytest -q",
+      "result": "143 passed in 3.87s"
+    },
+    "ruff_check": {
+      "command": ".venv/Scripts/ruff.exe check .",
+      "result": "All checks passed!"
+    },
+    "ruff_format": {
+      "command": ".venv/Scripts/ruff.exe format --check .",
+      "result": "35 files already formatted"
+    },
+    "model_or_gpu_rerun": false
+  }
+}
