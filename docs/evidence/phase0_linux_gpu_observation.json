@@ -1,0 +1,757 @@
+{
+  "source_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+  "authorization": "User 2026-10-03 explicitly authorized this project to use currently idle GPUs; ashare-main relayed authorization and revoked the prior GPU pause.",
+  "started_at": "2026-10-03T08:22:27.106629+00:00",
+  "selected_uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+  "before": {
+    "devices": [
+      {
+        "index": "0",
+        "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "1",
+        "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "2",
+        "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "3",
+        "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "4",
+        "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "5",
+        "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "6",
+        "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "7",
+        "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      }
+    ],
+    "compute_processes": [],
+    "reservation_verified": true,
+    "selected": "GPU-c59b5457-918c-909d-424d-afb0736b687a"
+  },
+  "command": [
+    "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv/bin/python",
+    "-m",
+    "ashare_lab.cli",
+    "smoke",
+    "--gpu",
+    "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+    "--allocation-confirmed"
+  ],
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "samples": [
+    {
+      "elapsed_seconds": 0.001,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [],
+      "reservation_verified": false
+    },
+    {
+      "elapsed_seconds": 1.194,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [],
+      "reservation_verified": false
+    },
+    {
+      "elapsed_seconds": 2.398,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [],
+      "reservation_verified": false
+    },
+    {
+      "elapsed_seconds": 3.587,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [],
+      "reservation_verified": false
+    },
+    {
+      "elapsed_seconds": 4.795,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "252",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [
+        [
+          "3627512",
+          "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "238"
+        ]
+      ],
+      "reservation_verified": false
+    },
+    {
+      "elapsed_seconds": 5.984,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "382",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [
+        [
+          "3627512",
+          "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "368"
+        ]
+      ],
+      "reservation_verified": false
+    },
+    {
+      "elapsed_seconds": 7.171,
+      "devices": [
+        {
+          "index": "0",
+          "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "382",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "23028",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+          "name": "NVIDIA RTX A5000",
+          "memory_total_mib": "24564",
+          "memory_used_mib": "9",
+          "utilization_pct": "0",
+          "driver": "535.261.03"
+        }
+      ],
+      "compute_processes": [
+        [
+          "3627512",
+          "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+          "368"
+        ]
+      ],
+      "reservation_verified": false
+    }
+  ],
+  "log_path": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/logs/gpu-20261003T082227Z.log",
+  "pid": 3627512,
+  "exit_code": 0,
+  "after": {
+    "devices": [
+      {
+        "index": "0",
+        "uuid": "GPU-c59b5457-918c-909d-424d-afb0736b687a",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "5",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "1",
+        "uuid": "GPU-81000a12-3d75-397b-e816-43e13849f697",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "2",
+        "uuid": "GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "3",
+        "uuid": "GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "4",
+        "uuid": "GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "5",
+        "uuid": "GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "6",
+        "uuid": "GPU-c4b80f8d-163c-663e-8188-b6d085348a96",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "23028",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      },
+      {
+        "index": "7",
+        "uuid": "GPU-74836844-02b8-80ed-948c-68cac545d7a0",
+        "name": "NVIDIA RTX A5000",
+        "memory_total_mib": "24564",
+        "memory_used_mib": "9",
+        "utilization_pct": "0",
+        "driver": "535.261.03"
+      }
+    ],
+    "compute_processes": [],
+    "reservation_verified": false
+  },
+  "elapsed_seconds": 8.268,
+  "finished_at": "2026-10-03T08:22:35.375576+00:00"
+}

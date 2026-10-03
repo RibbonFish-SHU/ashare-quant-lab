@@ -1,0 +1,38 @@
+{
+  "source_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+  "lock_sha256": "e92a4023f51a8d9079195034b33ab5a54902f6e0eb8b0e06894a95f3a9f04f4a",
+  "project": {
+    "name": "ashare-quant-lab",
+    "version": "0.1.0",
+    "filename": "ashare_quant_lab-0.1.0-py3-none-any.whl",
+    "source_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+    "verified_sha256": "c26ea33953793a40919f7dfa3f174fbe3e4b57dffe4f7f040bbaa44a62d8cf10",
+    "compressed_bytes": 17861,
+    "unpacked_bytes": 45199,
+    "archive_members": 15
+  },
+  "packed_artifacts_bytes": 3268781489,
+  "verified_artifacts": 201,
+  "source_bundle_sha256": "acf38f12eae04ecfb5db364404568665fe5244075cda455886e491c645a778dd",
+  "source_bundle_bytes": 43897,
+  "run_source_verification": [
+    {
+      "kind": "cpu",
+      "run": "20261003T082111.238796Z-aaf5bcb1",
+      "source_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+      "verified_source_files": 42
+    },
+    {
+      "kind": "gpu",
+      "run": "20261003T082227.336319Z-04473326",
+      "source_commit": "277d577aeeb7dd2676dc2f22d9dd82edca596541",
+      "verified_source_files": 42
+    }
+  ],
+  "local_checks": {
+    "pytest": "65 passed in 1.88s",
+    "ruff": "All checks passed",
+    "python": "3.11.16",
+    "execution_note": "PYTHONPATH=src, project Windows environment; subsequent Linux suite uses the installed wheel"
+  }
+}

@@ -1,0 +1,7 @@
+2026-10-03T16:26:30+08:00
+14570659:1:1068179417:.venv/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so
+文件系统               1B-块          已用        可用 已用% 挂载点
+/dev/sdb       7142750527488 6769863733248 12882972672  100% /home/user
+6936887296	.
+Clearing cache at: .cache/phase0-linux/uv-cache
+Removed 40437 files (23.1MiB)

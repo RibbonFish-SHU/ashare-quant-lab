@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-03T08:24:32.214403+00:00",
+  "free_bytes": 9570365440,
+  "paths": {
+    ".": {
+      "resolved": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation",
+      "allocated_bytes": 10249449472
+    },
+    ".venv": {
+      "resolved": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv",
+      "allocated_bytes": 6834028544
+    },
+    ".cache/phase0-linux/interpreter": {
+      "resolved": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/interpreter",
+      "allocated_bytes": 100569088
+    },
+    ".cache/phase0-linux/uv-cache": {
+      "resolved": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/uv-cache",
+      "allocated_bytes": 6742159360
+    },
+    ".cache/phase0-linux/offline": {
+      "resolved": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.cache/phase0-linux/offline",
+      "allocated_bytes": 3269758976
+    },
+    "artifacts": {
+      "resolved": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/artifacts",
+      "allocated_bytes": 266240
+    }
+  },
+  "torch_hardlink": {
+    "inode": 14570659,
+    "links": 2,
+    "bytes": 1068179417
+  },
+  "main_sha": "f029e8e39f608e649bc4d81aad6da439ea9d67d6",
+  "gpu_devices": "0, GPU-c59b5457-918c-909d-424d-afb0736b687a, 9, 0\n1, GPU-81000a12-3d75-397b-e816-43e13849f697, 9, 0\n2, GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e, 9, 0\n3, GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37, 9, 0\n4, GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24, 9, 0\n5, GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289, 9, 0\n6, GPU-c4b80f8d-163c-663e-8188-b6d085348a96, 9, 0\n7, GPU-74836844-02b8-80ed-948c-68cac545d7a0, 9, 0\n",
+  "gpu_processes": ""
+}

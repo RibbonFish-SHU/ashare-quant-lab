@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-10-03T08:27:43.271434+00:00",
+  "python": "3.11.16",
+  "libc": [
+    "glibc",
+    "2.31"
+  ],
+  "core_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.3.2",
+    "pyqlib": "0.9.7",
+    "lightgbm": "4.6.0",
+    "torch": "2.7.1+cu118",
+    "mlflow": "2.22.1",
+    "pytest": "8.4.1",
+    "ruff": "0.12.2"
+  },
+  "cuda_build": "11.8",
+  "runtime_versions_match": 198,
+  "installed_source_sha256": {
+    "cli.py": "f03d190eeb713b8729d7588b4b0585e1eb7d034d1d1ad029d33557dcd5be2e56",
+    "config.py": "143ec867032b3a346b79e23bd082384fc877850c6c65db793e485b4a15e2b963",
+    "storage.py": "47ded575b2df2bbe4899d5fb7b36c0af5ed7f7d87b291ef7793b3889bd3b6b56",
+    "synthetic.py": "836e8ce53a7f9618d6f5da4dc09319d87f348360416e5d09fcaf86d3056c0dcc",
+    "contracts.py": "db9ecafed95e79610443a2e5792993f0ac4b2f7081558afddd8e640ece725e74",
+    "runtime.py": "6a5a2169276c87a0f4c2e028226803b4563641751860dec37d364430c1c00a72",
+    "__init__.py": "8cc01fc54c957656480526906b06ce6ec9e6d09164a1a9c59da44d0cbdada9d4",
+    "devices.py": "ecf21d7f9a1c761577e81406d2491527fcec50e50163ff6a6703d828289eafdd",
+    "temporal.py": "130d599a39a597aea6a83d0d5c8678b11cf01dda3e9728de580aa54015a61fd6",
+    "compatibility.py": "8e1212d22d1d310786864b465779622b0e9a843bbec304de6d37dd451e7a393a"
+  },
+  "dependency_check_exit": 0,
+  "dependency_check": "Using Python 3.11.16 environment at: /home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/.venv\nChecked 199 packages in 79ms\nAll installed packages are compatible\n",
+  "free_bytes": 12882972672,
+  "allocated_bytes": 6936887296,
+  "free_inodes": 202078119,
+  "gpu_devices": "0, GPU-c59b5457-918c-909d-424d-afb0736b687a, 9, 0\n1, GPU-81000a12-3d75-397b-e816-43e13849f697, 9, 0\n2, GPU-8dc94d4a-f03d-678c-325a-1db5f31daf9e, 9, 0\n3, GPU-afb2badc-bdd8-5ca7-f48c-ea3ffdb05e37, 9, 0\n4, GPU-7b8df9d9-f81c-0362-ea16-4fef072dfe24, 9, 0\n5, GPU-c3ec651b-17a7-c15a-8c55-2a34fc656289, 9, 0\n6, GPU-c4b80f8d-163c-663e-8188-b6d085348a96, 9, 0\n7, GPU-74836844-02b8-80ed-948c-68cac545d7a0, 9, 0\n",
+  "gpu_processes": "",
+  "completed_workload_pids_alive": [],
+  "torch_hardlink": {
+    "inode": 14570659,
+    "links": 1,
+    "bytes": 1068179417
+  }
+}

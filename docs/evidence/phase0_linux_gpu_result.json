@@ -1,0 +1,49 @@
+{
+  "data_kind": "synthetic",
+  "dataset": "/home/user/dyy_work/ashare-quant-lab/.cache/worktrees/phase0-linux-validation/artifacts/experiments/synthetic/20261003T082227.336319Z-04473326/data/synthetic/synthetic-v1",
+  "future_rejected": true,
+  "parquet_roundtrip": true,
+  "duckdb_asof": true,
+  "rows": {
+    "bars": 73,
+    "calendar": 48,
+    "membership": 4,
+    "actions": 1,
+    "status": 72
+  },
+  "initial_members": [
+    "000001.SZ",
+    "600000.SH"
+  ],
+  "label_boundary_example": {
+    "signal_time": "2024-01-02 08:00:00+00:00",
+    "entry_time": "2024-01-03 01:30:00+00:00",
+    "exit_time": "2024-01-10 01:30:00+00:00",
+    "available_time": "2024-01-10 07:10:00+00:00"
+  },
+  "compatibility": {
+    "lightgbm": {
+      "fit_rows": 64,
+      "prediction_rows": 64
+    },
+    "torch": {
+      "device": "cuda:0",
+      "cuda_build": "11.8",
+      "steps": 3,
+      "losses_engineering_only": [
+        0.06594974547624588,
+        0.06570403277873993,
+        0.06546154618263245
+      ],
+      "device_name": "NVIDIA RTX A5000"
+    },
+    "qlib": {
+      "provider": "synthetic",
+      "rows": 24,
+      "lag_checked": true,
+      "alpha158_expression_count": 158
+    }
+  },
+  "real_data_acceptance": "pending provider and history range",
+  "formal_research": "not run"
+}
