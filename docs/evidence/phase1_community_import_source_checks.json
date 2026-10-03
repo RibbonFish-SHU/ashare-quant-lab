@@ -1,0 +1,163 @@
+{
+  "schema_version": "phase1-community-import-source-checks-v1",
+  "recorded_at_utc": "2026-10-03T16:16:59.020178+00:00",
+  "base_commit": "48cc074386fc87c75b293a6982121a51d21b58a0",
+  "research_eligible": false,
+  "real_candidate_builds": 0,
+  "online_requests": 0,
+  "source_commit_pending": false,
+  "source_files": [
+    {
+      "path": "src/ashare_lab/community/__init__.py",
+      "bytes": 80,
+      "sha256": "bef1a86d07c78fe1200b144584223988a81a34b7df13fd89362228eddcfec799"
+    },
+    {
+      "path": "src/ashare_lab/community/archive.py",
+      "bytes": 9336,
+      "sha256": "f9907c76bfff88fae345e044ad1fd11ac9a2423754f199b0213c4a1fc473f714"
+    },
+    {
+      "path": "src/ashare_lab/community/cli.py",
+      "bytes": 1426,
+      "sha256": "702b81df944e30e29eb2cfb8f88378190047357e5f13b113fbac3909bae8469f"
+    },
+    {
+      "path": "src/ashare_lab/community/pipeline.py",
+      "bytes": 17072,
+      "sha256": "a3e82261a402c8d6282b0fe2c79894ca39a40871b25ad6c4dc37c4315158c70e"
+    },
+    {
+      "path": "src/ashare_lab/community/quality.py",
+      "bytes": 10976,
+      "sha256": "a959916f62952dfd9281bb3cf5123eb269e247eb943d52dbf2b260e888e6a67c"
+    },
+    {
+      "path": "src/ashare_lab/community/references.py",
+      "bytes": 5224,
+      "sha256": "a431601f0a95ce81b8b6dec761f76291838aec817b47d0e62acc0205db4b4cd1"
+    },
+    {
+      "path": "src/ashare_lab/community/source.py",
+      "bytes": 6355,
+      "sha256": "7f8a2ba764924b0359bdcfa390ac06cc74578774672592a6df7a066a5a7ee023"
+    },
+    {
+      "path": "tests/test_community_import.py",
+      "bytes": 30965,
+      "sha256": "e9ce10a82f413120c3441b11781bb5e163933afcb0a88103529ca553a344ec3b"
+    },
+    {
+      "path": "configs/community-2023.json",
+      "bytes": 4543,
+      "sha256": "782f365f901f2cc05f086120098dde8acce7fde25909da8c40ba187ef67866a7"
+    }
+  ],
+  "checks": [
+    {
+      "name": "full",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import",
+      "pid": 67256,
+      "returncode": 0,
+      "seconds": 19.180593399971258
+    },
+    {
+      "name": "main-cwd",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import\\tests\\test_community_import.py",
+        "-q"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab",
+      "pid": 43028,
+      "returncode": 0,
+      "seconds": 8.17465830000583
+    },
+    {
+      "name": "ruff",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "."
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import",
+      "pid": 32472,
+      "returncode": 0,
+      "seconds": 0.02964110003085807
+    },
+    {
+      "name": "format",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\ruff.exe",
+        "format",
+        "--check",
+        "src/ashare_lab/community",
+        "tests/test_community_import.py"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import",
+      "pid": 58620,
+      "returncode": 0,
+      "seconds": 0.028479899978265166
+    }
+  ],
+  "results": {
+    "full": "325 passed in 18.02s",
+    "main_cwd": "71 passed in 7.64s",
+    "ruff": "All checks passed",
+    "format": "8 files already formatted"
+  },
+  "logs": [
+    {
+      "path": "artifacts/community-review-checks/execution.json",
+      "bytes": 1499,
+      "sha256": "3228f6169faa8abb6f1780985ca6af6cb7ed60c0eb15c92584da8370f1c178e0"
+    },
+    {
+      "path": "artifacts/community-review-checks/format.txt",
+      "bytes": 26,
+      "sha256": "8e93d18ae56550d4eef2feac77e6630617c7e169246e56e39c75d58b46167985"
+    },
+    {
+      "path": "artifacts/community-review-checks/full.txt",
+      "bytes": 427,
+      "sha256": "7f67d06b5d4eef51c143cc51b994cd73545e6301b108d9cec42428ab584236eb"
+    },
+    {
+      "path": "artifacts/community-review-checks/main-cwd.txt",
+      "bytes": 101,
+      "sha256": "5e6f97bf961673a65ec06debb3fd404e3c21d00e8985630eccc774dce0da479e"
+    },
+    {
+      "path": "artifacts/community-review-checks/ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    }
+  ],
+  "versions": {
+    "python": "3.11.16",
+    "numpy": "1.26.4",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.3.2",
+    "pytest": "8.4.1",
+    "ruff": "0.12.2"
+  },
+  "all_check_children_waited_and_exited": true,
+  "next_action": "See PHASE1_COMMUNITY_IMPORT_REVIEW.md for real archive failure, reviewed fix and candidate acceptance.",
+  "source_commit": "379f18235869e6301ea4f0ac3cd6d528d994587b",
+  "source_commit_confirmed_at_utc": "2026-10-03T16:37:07.318991+00:00",
+  "execution_worktree": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import",
+  "source_commit_confirmation": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import\\artifacts\\community-review-checks\\committed-source-identity.json",
+    "sha256": "057e7bee26fb0429326852d5120d1caea73460d7a22628790024c3518bcca488",
+    "source_sha256": "68035bd1be4a7ec22ac02456a8b89fb74ec4f0ba34b5ac0bb05c87887caa6822"
+  },
+  "build_count_scope": "At recorded_at_utc before the first real build; later attempts are recorded in phase1_community_import_main_acceptance.json."
+}
