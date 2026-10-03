@@ -1,0 +1,315 @@
+{
+  "recorded_at_utc": "2026-10-03T14:39:32.375882+00:00",
+  "kind": "original-336-community-price-main-review-v1",
+  "research_eligible": false,
+  "archive_sha256": "5651eb91463e1cee56ad23a8fe41bc2036fcae54dd5720a6c6ddc238e2b3a4b3",
+  "plan_overlap": {
+    "kind": "original-plan-archive-inventory-overlap",
+    "archive_sha256": "5651eb91463e1cee56ad23a8fe41bc2036fcae54dd5720a6c6ddc238e2b3a4b3",
+    "plan_sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df",
+    "planned_count": 336,
+    "present_in_instrument_file": 336,
+    "present_in_feature_dirs": 336,
+    "missing_from_instruments": [],
+    "missing_feature_dirs": [],
+    "incomplete_feature_counts": {},
+    "instrument_date_bounds_not_covering_full_2023": {
+      "601059.SH": [
+        "2023-02-01",
+        "2023-12-29"
+      ]
+    },
+    "quote_body_coverage_certified": false
+  },
+  "counts": {
+    "reference_rows": 81296,
+    "compared_values": 325116,
+    "equal_after_cent_rounding": 325116,
+    "unavailable_values": 68
+  },
+  "all_feature_headers": {
+    "total": 55500,
+    "valid_calendar_bounds": 55500
+  },
+  "price_precision": "Compare reconstructed OHLC after rounding to CNY cents; never claim lossless floats.",
+  "max_abs_price_error_cny": 0.0001572703936290054,
+  "missing_rows": [
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-08",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-09",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-10",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-13",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-14",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-15",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "600372.SH",
+      "date": "2023-02-16",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "1a6a091aaf938d4ba7fe0d5ab0d64f279064706b3c48b7427a82f234a5913ad9"
+    },
+    {
+      "symbol": "601916.SH",
+      "date": "2023-06-15",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "5ce2c3b5cd7480304c3cd3fc8bbe719a38302f50f91d77449ac4838905c341c7"
+    },
+    {
+      "symbol": "601916.SH",
+      "date": "2023-06-16",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "5ce2c3b5cd7480304c3cd3fc8bbe719a38302f50f91d77449ac4838905c341c7"
+    },
+    {
+      "symbol": "601916.SH",
+      "date": "2023-06-19",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "5ce2c3b5cd7480304c3cd3fc8bbe719a38302f50f91d77449ac4838905c341c7"
+    },
+    {
+      "symbol": "601916.SH",
+      "date": "2023-06-20",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "5ce2c3b5cd7480304c3cd3fc8bbe719a38302f50f91d77449ac4838905c341c7"
+    },
+    {
+      "symbol": "601916.SH",
+      "date": "2023-06-21",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "5ce2c3b5cd7480304c3cd3fc8bbe719a38302f50f91d77449ac4838905c341c7"
+    },
+    {
+      "symbol": "601916.SH",
+      "date": "2023-06-26",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_missing_quantity",
+      "reference_raw_sha256": "5ce2c3b5cd7480304c3cd3fc8bbe719a38302f50f91d77449ac4838905c341c7"
+    },
+    {
+      "symbol": "688065.SH",
+      "date": "2023-06-16",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_zero_quantity",
+      "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51"
+    },
+    {
+      "symbol": "688065.SH",
+      "date": "2023-06-19",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_zero_quantity",
+      "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51"
+    },
+    {
+      "symbol": "688065.SH",
+      "date": "2023-06-20",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_zero_quantity",
+      "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51"
+    },
+    {
+      "symbol": "688065.SH",
+      "date": "2023-06-21",
+      "fields": [
+        "open",
+        "high",
+        "low",
+        "close"
+      ],
+      "reference_trading_active": false,
+      "reference_observation": "suspended_zero_quantity",
+      "reference_raw_sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51"
+    }
+  ],
+  "cent_precision_mismatches": [],
+  "per_field_totals": {
+    "open": 81279,
+    "high": 81279,
+    "low": 81279,
+    "close": 81279
+  },
+  "reference_inputs": [
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145",
+      "bytes": 3903548
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/bars.parquet",
+      "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6",
+      "bytes": 226610
+    },
+    {
+      "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/bars.parquet",
+      "sha256": "8db14e4281f93f3ce7bed89d730cc755e2993f938d490ca4b7bc48bd81679004",
+      "bytes": 1852847
+    }
+  ],
+  "audit_script": {
+    "path": ".cache/phase1/open-datasets/audit_community_336.py",
+    "sha256": "30adb2ebfdff60d2559726bc0e0d76147277999e248f5e39de1bac1b5a327deb",
+    "bytes": 6930
+  },
+  "full_artifact": {
+    "path": "datasets/raw/investment_data/2023-12-31/audit/original-plan-price-audit.json",
+    "bytes": 489300,
+    "sha256": "eaaa5071c2953b894bff724038f867cca1682b90b271833a7718d0aed0a204a3"
+  },
+  "inventory_artifact": {
+    "path": "datasets/raw/investment_data/2023-12-31/audit/original-plan-overlap.json",
+    "bytes": 605,
+    "sha256": "a1e577d8651787e39863dbb8b058b74eb2ecc89303c052f69f5c7578e25802d7"
+  },
+  "initial_failure": {
+    "path": "datasets/raw/investment_data/2023-12-31/audit/original-plan-price-audit-failure.json",
+    "bytes": 421,
+    "sha256": "e87a8d33b0f73fa18fe57195c12da7a34468d87e0e65e9295518ed1ba265f7a7"
+  },
+  "failure_fix": "Initial numpy.float32 JSON serialization failed before writing the result; converted decoded values to Python float, repeated offline only. Failed script and failure record retained.",
+  "limits": [
+    "All 55,500 feature headers were checked against the bounded historical calendar; only original-plan OHLC/factor bodies were decoded.",
+    "Comparison is to retained candidates, not a certification of either source or independent upstream origin.",
+    "No daily trading-status field was inferred from NaN values.",
+    "Float32 reconstructed prices are not lossless raw quotes; cent rounding is explicit.",
+    "No additional acquisition, source mutation, model or backtest was performed.",
+    "Volume and amount comparison remains limited to the earlier six securities.",
+    "All original references remain untouched. No corrected membership or production market-data candidate is created by this audit.",
+    "Archive all.txt starts 601059.SH at 2023-02-01; a full-year calendar does not imply pre-IPO quotes."
+  ],
+  "processes_completed": true
+}
