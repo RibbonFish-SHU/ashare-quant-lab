@@ -6,6 +6,7 @@ from pathlib import Path
 
 from ashare_lab.data.raw import digest, save_json
 from .collect import collect, load_collection, plan_continuation, plan_missing
+from .evidence import load_reference_evidence
 from .pipeline import build, load_probes
 
 
@@ -33,6 +34,11 @@ def main(argv=None):
     p = commands.add_parser("build")
     p.add_argument("--run", type=Path, required=True)
     p.add_argument("--reference", type=Path, required=True)
+    p.add_argument(
+        "--evidence-root",
+        type=Path,
+        help="main repository containing the reviewed offline reference evidence",
+    )
     p.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command in {"plan", "plan-continuation"}:
@@ -86,6 +92,10 @@ def main(argv=None):
                 "original_missing_bars_denominator": 100,
                 "continuation_missing": 90 - len(records),
             }
+    evidence_root = getattr(args, "evidence_root", None)
+    evidence = load_reference_evidence(evidence_root) if evidence_root else None
+    if evidence is not None:
+        refs.extend(evidence["references"])
     _, report = build(
         records,
         args.output,
@@ -93,6 +103,7 @@ def main(argv=None):
         reference=args.reference,
         input_refs=refs,
         acquisition=acquisition,
+        evidence=evidence,
     )
     print(
         json.dumps(

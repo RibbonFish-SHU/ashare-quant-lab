@@ -90,3 +90,22 @@ python -m ashare_lab.fallback.cli build --run <独立raw目录/run.json> --refer
 `probe` / `build` 保存完整 Parquet / DuckDB 往返结果、manifest、quality 和转换问题，
 完成后退出 2 表示正式研究门禁仍阻止；不把此退出码误写成采集或存储失败。
 `collect` 仅请求全部完成时退出 0；输出已有快照不能覆盖。
+
+## 显式离线参考证据（v1）
+
+`build` 可追加 `--evidence-root <保留原件的主仓库>`。入口固定验证 main `d2a1f90` 三份已审
+来源摘要，再验证深交所 XLSX / metadata / 提取 / 历史计划，以及七探针和腾讯交叉批次的
+metadata / body / 计划 / Parquet / 比较原件。新观察或变更摘要需要新的审阅版本。
+旧七探针缺 completion flags 的例外不扩展给新 raw。
+
+输出增加 `reference-evidence.json` 并由候选 manifest 绑定，质量报告为
+`public-bars-quality-v2`；不使用该参数时继续原 v1 质量行为。行情 Parquet schema 不变。
+上市参考仅从保留历史计划内的代码选取，带原件、E/G 单元格、观察时间；不赋历史可用时间，
+不从当前名单生成历史成分、ST、停牌或退市状态。IPO 当日包含在边界内，IPO 之前行情失败。
+未知退市/PIT 与已有 IPO 参考分项报告，不据此认证完整上市边界。
+
+腾讯 OHLC 仅按实际构建行情重算双方请求范围内的证券/日期交集；比较差值方向为候选减参考。
+对照报告保存双方行号、raw 摘要/路径、原始值、单位及字面小数指数，同时列出无重叠证券、
+未比较行/字段。相同供应商不算独立，重复参考拒绝；多源价格矛盾保留全部证据并报失败。
+未知量单位不做量缩放比较，显示金额差值不应用静默容差。部分 OHLC 相同仍为 unverified。
+不将运行时引入的参考写回旧快照，候选及正式研究门禁始终保持阻止。
