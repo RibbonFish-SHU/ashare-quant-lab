@@ -209,12 +209,19 @@ def comparison_summary(comparisons):
 
 
 def membership_report(archive, conditional, latest, start, end):
-    rows = parse_intervals(archive["texts"]["qlib_bin/instruments/csi300.txt"], latest)
+    rows = parse_intervals(
+        archive["texts"]["qlib_bin/instruments/csi300.txt"], latest, allow_unmapped=True
+    )
+    unmapped = [row for row in rows if row["symbol"] is None]
+    if any(row["start"] <= end and start <= row["end"] for row in unmapped):
+        raise ValueError("unmapped membership code overlaps requested interval")
     result = {
         "research_eligible": False,
         "formal_universe": False,
         "source": "community csi300 interval reference; Tushare snapshot lineage",
         "raw_interval_rows": len(rows),
+        "unmapped_source_intervals": unmapped,
+        "unmapped_source_policy": "preserve outside requested interval; reject any overlap",
         "derived_membership_written": False,
         "historical_available_time": None,
     }

@@ -5,7 +5,7 @@
   "research_eligible": false,
   "real_candidate_builds": 0,
   "online_requests": 0,
-  "source_commit_pending": true,
+  "source_commit_pending": false,
   "source_files": [
     {
       "path": "src/ashare_lab/community/__init__.py",
@@ -150,5 +150,14 @@
     "ruff": "0.12.2"
   },
   "all_check_children_waited_and_exited": true,
-  "next_action": "Main review of stable commit and explicit --project-root command before the one real offline build."
+  "next_action": "See PHASE1_COMMUNITY_IMPORT_REVIEW.md for real archive failure, reviewed fix and candidate acceptance.",
+  "source_commit": "379f18235869e6301ea4f0ac3cd6d528d994587b",
+  "source_commit_confirmed_at_utc": "2026-10-03T16:37:07.318991+00:00",
+  "execution_worktree": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import",
+  "source_commit_confirmation": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import\\artifacts\\community-review-checks\\committed-source-identity.json",
+    "sha256": "057e7bee26fb0429326852d5120d1caea73460d7a22628790024c3518bcca488",
+    "source_sha256": "68035bd1be4a7ec22ac02456a8b89fb74ec4f0ba34b5ac0bb05c87887caa6822"
+  },
+  "build_count_scope": "At recorded_at_utc before the first real build; later attempts are recorded in phase1_community_import_main_acceptance.json."
 }

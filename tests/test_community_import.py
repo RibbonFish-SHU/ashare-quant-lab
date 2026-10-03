@@ -806,3 +806,82 @@ def test_future_instrument_boundary_uses_verified_release_date(bundle):
     archive = read_archive(bundle["archive_path"], SYMBOLS)
     with pytest.raises(ValueError, match="future instrument"):
         membership_report(archive, None, date(2023, 1, 4), bundle["start"], date(2023, 1, 4))
+
+
+def test_historical_unmapped_member_is_preserved_without_inventing_a_security(bundle):
+    original = b"SHT00018\t2005-04-08\t2007-01-03\n"
+    members = [(n, b + original if n.endswith("/csi300.txt") else b) for n, b in entries()]
+    make_archive(bundle["archive_path"], members)
+    binding = ref(bundle["archive_path"])
+    config = json.loads(bundle["description"].read_text())
+    config["archive"] = binding
+    save_json(bundle["description"], config)
+    rewrite_document(bundle, "release", lambda d: d["assets"][0].update(size=binding["bytes"]))
+    rewrite_document(
+        bundle,
+        "download",
+        lambda d: d.update(
+            expected_bytes=binding["bytes"],
+            bytes=binding["bytes"],
+            content_length=binding["bytes"],
+            sha256=binding["sha256"],
+        ),
+    )
+    result = build(**bundle)
+    assert result["quality_status"] == "unverified" and result["canonical_reader_rejected"]
+    assert (bundle["output"] / "csi300.reference.txt").read_bytes().endswith(original)
+    report = json.loads((bundle["output"] / "membership-reference.json").read_text())
+    assert report["raw_interval_rows"] == 2
+    assert report["unmapped_source_intervals"] == [
+        {
+            "source_code": "SHT00018",
+            "symbol": None,
+            "start": "2005-04-08",
+            "end": "2007-01-03",
+            "line_number": 2,
+        }
+    ]
+    quotes = pq.read_table(bundle["output"] / "quotes.parquet", columns=["symbol"])
+    assert set(quotes.column("symbol").to_pylist()) == SYMBOLS
+
+
+@pytest.mark.parametrize(
+    "conditional",
+    [
+        None,
+        {
+            "states": [{"from": "2023-01-01", "members": ["000001.SZ"]}],
+            "inputs": [],
+            "assumptions": ["fixture only"],
+        },
+    ],
+)
+def test_unmapped_member_overlapping_request_is_rejected(tmp_path, conditional):
+    original = b"SHT00018\t2023-01-03\t2023-01-04\n"
+    members = [(n, b + original if n.endswith("/csi300.txt") else b) for n, b in entries()]
+    archive = read_archive(make_archive(tmp_path / "a.tar.gz", members), SYMBOLS)
+    with pytest.raises(ValueError, match="unmapped membership code overlaps requested interval"):
+        membership_report(archive, conditional, date(2023, 12, 31), DAYS[0], DAYS[-1])
+
+
+def test_unmapped_reference_code_is_not_accepted_in_all_securities(tmp_path):
+    original = b"SHT00018\t2005-04-08\t2007-01-03\n"
+    members = [(n, b + original if n.endswith("/all.txt") else b) for n, b in entries()]
+    with pytest.raises(ValueError, match="invalid instrument interval"):
+        read_archive(make_archive(tmp_path / "a.tar.gz", members), SYMBOLS)
+
+
+@pytest.mark.parametrize(
+    "extra, message",
+    [
+        (b"SHT00018\t2007-01-03\t2005-04-08\n", "reversed"),
+        (b"SHT00018\t2005-04-08\t2024-01-03\n", "future"),
+        (b"SHT00018\t2005-04-08\t2007-01-03\n" * 2, "duplicate"),
+        (b"SH/../T00018\t2005-04-08\t2007-01-03\n", "invalid instrument"),
+        (b"SHT00018 \t2005-04-08\t2007-01-03\n", "invalid instrument"),
+    ],
+)
+def test_unmapped_reference_still_validates_dates_duplicates_and_code(tmp_path, extra, message):
+    members = [(n, b + extra if n.endswith("/csi300.txt") else b) for n, b in entries()]
+    with pytest.raises(ValueError, match=message):
+        read_archive(make_archive(tmp_path / "a.tar.gz", members), SYMBOLS)

@@ -87,19 +87,28 @@ def parse_calendar(body, latest):
     return days
 
 
-def parse_intervals(body, latest):
+def parse_intervals(body, latest, *, allow_unmapped=False):
     rows, seen = [], set()
     for number, line in enumerate(body.decode("utf-8").splitlines(), 1):
         parts = line.split("\t")
-        if len(parts) != 3 or not re.fullmatch(r"(?:SH|SZ|BJ)\d{6}", parts[0]):
+        if len(parts) != 3:
             raise ValueError("invalid instrument interval")
         code, first, last = parts
+        canonical = re.fullmatch(r"(?:SH|SZ|BJ)\d{6}", code) is not None
+        if not canonical and not (allow_unmapped and re.fullmatch(r"[A-Z][A-Z0-9]{1,31}", code)):
+            raise ValueError("invalid instrument interval")
         start, end = iso_day(first), iso_day(last)
         if start > end or end > latest or tuple(parts) in seen:
             raise ValueError("duplicate, reversed or future instrument interval")
         seen.add(tuple(parts))
         rows.append(
-            {"symbol": code[2:] + "." + code[:2], "start": start, "end": end, "line_number": number}
+            {
+                "source_code": code,
+                "symbol": code[2:] + "." + code[:2] if canonical else None,
+                "start": start,
+                "end": end,
+                "line_number": number,
+            }
         )
     return rows
 
@@ -181,7 +190,7 @@ def read_archive(path, symbols, *, latest=date(2023, 12, 31), limits=Limits()):
         if "/calendars/" in name and parse_calendar(body, latest) != calendar:
             raise ValueError("archive calendars disagree")
         if "/instruments/" in name:
-            parse_intervals(body, latest)
+            parse_intervals(body, latest, allow_unmapped=name != "qlib_bin/instruments/all.txt")
     for name, offset, count in headers:
         if offset + count > len(calendar):
             raise ValueError(f"feature extends beyond calendar: {name}")

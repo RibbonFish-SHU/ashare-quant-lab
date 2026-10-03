@@ -31,6 +31,10 @@ python -m ashare_lab.community.cli --archive <archive> --source configs/communit
   校验后的 tag 上界同时传给归档读取和成员诊断。日历及 instrument 结束时间不能晚于
   该版本；多个日历必须一致。
   `all.txt` 仅用于核对证券是否存在，不能替代 IPO 或每日交易状态。
+- `all.txt` 和 feature 仍只接受规范数字证券代码。其他原始成员参考可含安全的未映射标识，
+  保留原始代码、日期与行号，`symbol=null`，不猜测对应股票。CSI300 中任一未映射区间
+  与请求日期重叠时拒绝构建；区间外的记录列入 `unmapped_source_intervals`，原文仍保留。
+  本次原包含七条 2005–2007 年的 `SHT00018`，不会作为 2023 年股票成员。
 - 原始请求代码集合从计划查询重算并与 `codes` 精确比较；计划原件摘要必须匹配。
   候选覆盖计划代码 × 请求区间内归档日历，包括上市前空位和缺值，不前向填充。
 
