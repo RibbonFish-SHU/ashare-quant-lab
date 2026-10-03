@@ -520,3 +520,81 @@ def test_invalid_sdk_pagination_cursor_is_not_clean_eof(tmp_path):
         tmp_path / "progress.json",
     )
     assert response["status"] == "parse_or_local_error" and not response["retryable"]
+
+
+def test_first_missing_optional_field_cannot_hide_later_conflict():
+    first, second, third = bar(turn=""), bar(turn="1"), bar(turn="2")
+    second["parameters"]["end_date"] = "2023-01-06"
+    third["parameters"]["end_date"] = "2023-01-09"
+    checks, _ = quality([first, second, third])
+    assert checks["overlapping_observations"]["count"] == 1
+
+
+def test_other_calendar_request_cannot_mask_partial_response():
+    complete = record(
+        "query_trade_dates",
+        ["calendar_date", "is_trading_day"],
+        [["2023-01-03", "1"], ["2023-01-04", "1"], ["2023-01-05", "1"]],
+        {"start_date": "2023-01-03", "end_date": "2023-01-05"},
+    )
+    partial = record(
+        "query_trade_dates",
+        complete["fields"],
+        [["2023-01-03", "1"]],
+        {"start_date": "2023-01-03", "end_date": "2023-01-04"},
+    )
+    checks, _ = quality([complete, partial])
+    assert checks["calendar_request_coverage"]["status"] == "pass"
+    assert checks["calendar_response_completeness"]["status"] == "fail"
+
+
+def test_empty_pre_ipo_request_is_not_missing_open_day():
+    bars = bar()
+    bars["rows"] = []
+    calendar = record(
+        "query_trade_dates",
+        ["calendar_date", "is_trading_day"],
+        [["2023-01-03", "1"], ["2023-01-04", "1"], ["2023-01-05", "1"]],
+        {"start_date": "2023-01-03", "end_date": "2023-01-05"},
+    )
+    basic = record(
+        "query_stock_basic",
+        ["code", "code_name", "ipoDate", "outDate", "type", "status"],
+        [["sh.600000", "fixture", "2023-01-06", "", "1", "1"]],
+        {"code": "sh.600000"},
+    )
+    checks, _ = quality([bars, calendar, basic])
+    assert checks["bars_missing_open_days"]["status"] == "pass"
+    assert checks["listing_metadata_coverage"]["status"] == "pass"
+
+
+def test_real_blacklist_error_blocks_new_online_plans_but_allows_offline_reuse(
+    tmp_path, monkeypatch
+):
+    monkeypatch.setattr("ashare_lab.data.collect.code_identity", lambda p: {"commit": "test"})
+    calls = []
+
+    def denied(command, **kwargs):
+        calls.append(command)
+        p = Path(command[command.index("--progress") + 1])
+        r = bar()
+        r.update(status="provider_error", rows=[], error_code="10001011", error_msg="blacklisted")
+        save_json(p, r)
+        return SimpleNamespace(returncode=1)
+
+    monkeypatch.setattr("ashare_lab.data.collect.subprocess.run", denied)
+    plan = tmp_path / "plan.json"
+    save_json(plan, {"queries": [validate_query(bar())]})
+    args = dict(
+        project_root=tmp_path, access_state=tmp_path / "access", sdk_wheel=tmp_path / "wheel"
+    )
+    assert collect(plan, tmp_path / "first", [], **args)["status"] == "stopped_on_error"
+    assert (tmp_path / "access/source-restriction.json").exists()
+    assert collect(plan, tmp_path / "next", [], **args)["status"] == "stopped_on_source_restriction"
+    assert len(calls) == 1
+    archive(tmp_path / "raw", bar())
+    assert (
+        collect(plan, tmp_path / "offline", [tmp_path / "raw"], offline=True, **args)["status"]
+        == "complete"
+    )
+    assert len(calls) == 1

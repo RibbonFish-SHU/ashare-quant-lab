@@ -4,6 +4,7 @@ from collections import Counter, defaultdict
 from datetime import timedelta
 
 from .candidates import FIELDS, KEYS, day
+from .queries import symbol
 
 
 def date_range(start, end):
@@ -61,26 +62,23 @@ def audit(tables, records, issues, *, acquisition_complete, events=()):
         seen = {}
         for row in rows:
             key = tuple(row.get(k) for k in KEYS[kind])
-            if key in seen:
-                # Requests can overlap or omit optional fields. Only jointly
-                # observed typed values can contradict another observation.
-                other = seen[key]
-                changed = [
-                    f
-                    for f, _ in FIELDS[kind]
-                    if row.get(f) is not None and other.get(f) is not None and row[f] != other[f]
-                ]
-                if changed:
+            observed = seen.setdefault(key, {})
+            # Keep the first non-null observation of EACH field. An initial
+            # legacy request that omitted turn must not hide later conflicts.
+            for field, _ in FIELDS[kind]:
+                if row.get(field) is None:
+                    continue
+                if field in observed and observed[field][0] != row[field]:
                     conflicts.append(
                         {
                             "kind": kind,
-                            "fields": changed,
-                            "left": location(other),
+                            "fields": [field],
+                            "left": location(observed[field][1]),
                             "right": location(row),
                         }
                     )
-            else:
-                seen[key] = row
+                else:
+                    observed.setdefault(field, (row[field], row))
     check(
         "duplicate_keys_within_response",
         "fail" if duplicates else "pass",
@@ -93,7 +91,7 @@ def audit(tables, records, issues, *, acquisition_complete, events=()):
     for row in tables.get("calendar", []):
         if row["event_date"] is not None:
             calendar.setdefault(row["event_date"], row["is_open"])
-    missing_calendar, missing_bars, closed_bars = [], [], []
+    missing_calendar, missing_bars, closed_bars, partial_calendars = [], [], [], []
     basics = {row["symbol"]: row for row in tables.get("securities", [])}
     listing_violations, out_boundaries, unknown_basics = [], [], []
     for record in records:
@@ -112,10 +110,19 @@ def audit(tables, records, issues, *, acquisition_complete, events=()):
                 }
             )
         if api == "query_trade_dates":
+            own_dates = {r["event_date"] for r in grouped[("calendar", record["query_id"])]}
+            if dates - own_dates:
+                partial_calendars.append(
+                    {
+                        "query_id": record["query_id"],
+                        "missing_days": len(dates - own_dates),
+                        "first_missing": str(min(dates - own_dates)),
+                    }
+                )
             continue
         rows = grouped[("bars", record["query_id"])]
         actual = {r["event_date"] for r in rows}
-        basic = basics.get(rows[0]["symbol"]) if rows else None
+        basic = basics.get(symbol(p["code"]))
         if not basic:
             unknown_basics.append({"query_id": record["query_id"], "code": p["code"]})
         expected = {
@@ -143,6 +150,12 @@ def audit(tables, records, issues, *, acquisition_complete, events=()):
         "unverified" if missing_calendar else "pass",
         len(missing_calendar),
         missing_calendar,
+    )
+    check(
+        "calendar_response_completeness",
+        "fail" if partial_calendars else "pass",
+        len(partial_calendars),
+        partial_calendars,
     )
     check(
         "bars_missing_open_days",

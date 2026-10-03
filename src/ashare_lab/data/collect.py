@@ -258,6 +258,12 @@ def collect(
         save_json(path, run)
         attempts = {}
         while not offline and set(ids) - done:
+            restriction_path = Path(access_state) / "source-restriction.json"
+            if restriction_path.exists():
+                run["status"] = "stopped_on_source_restriction"
+                run["source_restriction"] = json.loads(restriction_path.read_text(encoding="utf-8"))
+                log("source_restriction_preserved", path=str(restriction_path))
+                break
             pending = [q for q in queries if query_id(q) not in done]
             size = 1 if attempts.get(query_id(pending[0]), 0) else batch_size
             entries = launch_batch(
@@ -279,6 +285,20 @@ def collect(
                     done.add(key)
             save_json(path, run)
             failure = next((e for e in entries if e["status"] != "complete"), None)
+            if failure and failure.get("error_code") == "10001011":
+                restriction = {
+                    "source": "baostock",
+                    "recorded_at_utc": utc_now(),
+                    "first_observed_at_utc": failure["observed_at_utc"],
+                    "error_code": failure["error_code"],
+                    "error_msg": failure.get("error_msg"),
+                    "query_id": failure["query_id"],
+                    "raw_locator": failure["raw_locator"],
+                    "state": "restricted_until_service_restoration_is_established",
+                    "automatic_retry": False,
+                }
+                save_json(restriction_path, restriction)
+                run["source_restriction"] = restriction
             if not entries or (
                 failure
                 and (not failure.get("retryable", False) or attempts[failure["query_id"]] > retries)
