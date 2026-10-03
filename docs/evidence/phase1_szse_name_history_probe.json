@@ -1,0 +1,88 @@
+{
+  "schema_version": "szse-name-history-probe-v1",
+  "research_eligible": false,
+  "recorded_at_utc": "2026-10-03T15:39:29.255837+00:00",
+  "raw_file": {
+    "path": "datasets/raw/szse/20261003-name-history-probe/abbreviation-changes.xlsx",
+    "bytes": 287040,
+    "sha256": "b31ab4c9b342eb910a2db4df26fbd1e64782978470453a12dae4bc4f089bb127"
+  },
+  "source_url": "https://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx&CATALOGID=SSGSGMXX&TABKEY=tab2",
+  "observed_at_utc": "2026-10-03T15:36:55.783276+00:00",
+  "request_count": 1,
+  "retries": 0,
+  "source_rows": 7489,
+  "source_date_min": "1994-01-03",
+  "source_date_max": "2026-09-30",
+  "source_symbols": 3125,
+  "historical_plan_sz_codes": 134,
+  "missing_state_codes": 100,
+  "selected_through_2023_events": 270,
+  "selected_symbols_with_pre2024_events": 129,
+  "missing_state_codes_with_pre2024_name_event": 97,
+  "missing_state_codes_without_pre2024_name_event": [
+    "001289.SZ",
+    "001979.SZ",
+    "300498.SZ"
+  ],
+  "selected_symbols_without_pre2024_events": [
+    "000166.SZ",
+    "000333.SZ",
+    "001289.SZ",
+    "001979.SZ",
+    "300498.SZ"
+  ],
+  "later_selected_events_excluded": 5,
+  "events_2023": [],
+  "same_day_duplicates": [],
+  "chain_disagreements": [],
+  "has_pre2023_or_start_event": 129,
+  "last_start_event_st_symbols": [],
+  "limitations": [
+    "C column is the current display name and is not used for historical states.",
+    "Only A/B/D/E from events through 2023 retained as historical reference.",
+    "A historical change date is not a verified announcement or availability time.",
+    "No row for a code does not prove no name change or no ST state.",
+    "Last historical event is a reference only; continuity/completeness remains unverified.",
+    "Name-based ST flag is a diagnostic; historical risk-warning/execution rules require separate evidence.",
+    "No market quotes, corporate-action expansion or model evaluation performed."
+  ],
+  "evidence": [
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/abbreviation-changes.xlsx",
+      "bytes": 287040,
+      "sha256": "b31ab4c9b342eb910a2db4df26fbd1e64782978470453a12dae4bc4f089bb127"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/request.metadata.json",
+      "bytes": 3322,
+      "sha256": "cee65a6b9a943bc5771d5c290b06788590bc96b876d14beef4214055db5f9ba6"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/sheet-1-cells.json",
+      "bytes": 1482558,
+      "sha256": "006c295587e63dba542f4c632070f12ab591fbdbadaab52489e64dc6b9ab328f"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-listing-audit/listing-date-extract.json",
+      "bytes": 33865,
+      "sha256": "d052dc9dedb050a2ada3e2767c0f8aa165b87957d3d6a172f5b9aa1e6a99d4cf"
+    },
+    {
+      "path": ".cache/phase1/main-review/audit_szse_name_history.py",
+      "bytes": 6993,
+      "sha256": "318368773d91d4bd1bb6d115ddd78b4abe772c58b954b942d6b83b7f27e43016"
+    },
+    {
+      "path": "datasets/raw/szse/20261003-name-history-probe/historical-plan-name-references-v2.json",
+      "bytes": 232830,
+      "sha256": "f28fdf832fd8b17652d30cbf0f7201e6461f8211f2a493bb81834b2370571a9e"
+    }
+  ],
+  "correction": {
+    "first_pass_summary": "datasets/raw/szse/20261003-name-history-probe/summary-first-pass.json",
+    "first_pass_script": ".cache/phase1/main-review/audit_szse_name_history.first-pass.py",
+    "reason": "Reading missing defaultdict keys inserted empty histories and overstated symbols with history. Use get without insertion and reconcile with actual event symbols.",
+    "network_retry": false
+  }
+}

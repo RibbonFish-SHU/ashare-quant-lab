@@ -1,0 +1,225 @@
+{
+  "schema_version": "public-trading-state-probe-v1",
+  "research_eligible": false,
+  "recorded_at_utc": "2026-10-03T15:48:37.455299+00:00",
+  "request_counts": {
+    "szse_xlsx": 1,
+    "github_immutable_sdk_source": 1,
+    "eastmoney_halt": 5,
+    "cninfo_search": 1,
+    "cninfo_pdf": 1,
+    "total": 9
+  },
+  "network_retries": 0,
+  "scope": "Public event/metadata only. No quotes, BaoStock, models, backtests, server, or GPU.",
+  "szse_names": {
+    "evidence": "docs/evidence/phase1_szse_name_history_probe.json",
+    "selected_symbols": 134,
+    "symbols_with_pre2024_events": 129,
+    "events_through_2023": 270,
+    "missing_state_symbols": 100,
+    "missing_state_symbols_with_pre2024_name_event": 97,
+    "selected_events_in_2023": 0,
+    "assessment": "Historical name references only; no-event absence does not certify non-ST or continuity."
+  },
+  "eastmoney_halts": {
+    "sdk_blob": "83925d5a16a5759e484c2d98ad16e9cddcd2b655",
+    "responses": [
+      {
+        "query_date": "2023-06-15",
+        "rows_on_page": 500,
+        "declared_rows": 1045,
+        "declared_pages": 3,
+        "minimum_returned_start": "2025-10-30 00:00:00",
+        "maximum_returned_start": "2026-10-08 00:00:00",
+        "starts_after_query_date": 500,
+        "target_688065_rows": 0,
+        "adopted_as_historical_state": false
+      },
+      {
+        "query_date": "2023-06-16",
+        "rows_on_page": 500,
+        "declared_rows": 1044,
+        "declared_pages": 3,
+        "minimum_returned_start": "2025-10-30 00:00:00",
+        "maximum_returned_start": "2026-10-08 00:00:00",
+        "starts_after_query_date": 500,
+        "target_688065_rows": 0,
+        "adopted_as_historical_state": false
+      }
+    ],
+    "parameter_errors": [
+      {
+        "capture": "targeted-688065",
+        "code": 9501,
+        "message": "filter参数必须包含DATETIME",
+        "kind": "parameter_validation_error_not_access_denial"
+      },
+      {
+        "capture": "targeted-688065-with-date",
+        "code": 9501,
+        "message": "filter参数必须包含MARKET",
+        "kind": "parameter_validation_error_not_access_denial"
+      },
+      {
+        "capture": "targeted-688065-with-controls",
+        "code": 9501,
+        "message": "filter字段中日期参数格式错误",
+        "kind": "parameter_validation_error_not_access_denial"
+      }
+    ],
+    "assessment": "The date wrapper returns later-starting events and incomplete first pages. Do not adopt as historical daily state or infer no halt for absent symbols. Strict filters not resolved; no pagination or further requests performed."
+  },
+  "cninfo_halt": {
+    "symbol": "688065.SH",
+    "announcement_id": "1217071606",
+    "notice_number": "2023-019",
+    "url": "https://static.cninfo.com.cn/finalpage/2023-06-15/1217071606.PDF",
+    "pdf_bytes": 95512,
+    "pdf_sha256": "df8b19e7ccc280fd79177b1201d5433a5c45a4a2174522b39881d0ac3d14c0ac",
+    "pages": 1,
+    "rendered_pages_reviewed": [
+      1
+    ],
+    "event_date": "2023-06-15",
+    "effective_session": "afternoon_open",
+    "exact_wall_clock_from_notice": null,
+    "event_date_basis": "Body specifies 2023-06-15 Thursday and afternoon opening; header notice number 2023-019 and two disclosure routes also identify 2023.",
+    "original_signature_date_text": "2022 年 6 月 15 日",
+    "signature_year_conflict": true,
+    "source_announcement_timestamp_shanghai": "2023-06-15T12:33:00+08:00",
+    "historical_available_time": null,
+    "availability_note": "Current search field is minute precision; it is not independently certified first public availability or an archived 2023 observation.",
+    "expected_duration_text": "预计停牌时间不超过五个交易日",
+    "actual_resume_time_confirmed": false,
+    "retained_daily_reference": {
+      "date": "2023-06-15",
+      "code": "sh.688065",
+      "open": "55.0400",
+      "high": "55.8000",
+      "low": "54.7600",
+      "close": "55.5300",
+      "preclose": "55.0200",
+      "volume": "353426",
+      "amount": "19589785.9900",
+      "adjustflag": "3",
+      "turn": "0.134100",
+      "tradestatus": "0",
+      "isST": "0"
+    },
+    "interpretation": "Daily tradestatus=0 can coexist with morning trades on a partial halt day; preserve partial-session semantics and never classify automatically as full-day suspension."
+  },
+  "decisions": [
+    "Keep source announcement time, effective session, original signature text and present observation separate.",
+    "Introduce interval/session state evidence before converting daily provider flags to execution eligibility.",
+    "No update to previous raw data, candidate tables, research eligibility or historical success counts.",
+    "Main reviews own these probes; executor community archive import scope remains offline and unchanged."
+  ],
+  "artifacts": [
+    {
+      "path": "docs/evidence/phase1_halt_review.json",
+      "bytes": 6675,
+      "sha256": "f60a658d7520605ae9f3bcb1e78330693d52c17a7fc8c46bc3585001d34591cc"
+    },
+    {
+      "path": "docs/evidence/phase1_szse_name_history_probe.json",
+      "bytes": 3690,
+      "sha256": "8089c405d7a26c1b33825a29be2cb941971c1923e290a66ed4198539f813bcb7"
+    },
+    {
+      "path": ".cache/phase1/main-review/summarize_state_probes.py",
+      "bytes": 5756,
+      "sha256": "d3440368aaa94865f07dce5db9d7b02e5aadb33f1c44299b4ad5824d8d9f46b1"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/akshare-source-blob.json",
+      "bytes": 3709,
+      "sha256": "f4796f89e7653b367f185cd1f510e10e0f8624f83e6f80a5834be38a3c43cd84"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/halt-probe-manifest.json",
+      "bytes": 5594,
+      "sha256": "35fe29a29c1de100c75bd14dc640929de12fc22eb1a4437f7a21c23076adedad"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/halts-2023-06-15.json",
+      "bytes": 214682,
+      "sha256": "509afaf60172e358fa0cf107f6fda83cca0973f987f7e3249a4f2f3b97c912bb"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/halts-2023-06-16.json",
+      "bytes": 214682,
+      "sha256": "2780ab8d1ea3254dedbc3af5f31317e8ca3c3a7c6ce8742d22fc70bf388fda77"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/source.metadata.json",
+      "bytes": 2142,
+      "sha256": "da685c327462fb04838cda08e75424035af1684b5c0d379bf2682001e68d4d1e"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/stock_tfp_em.py",
+      "bytes": 2481,
+      "sha256": "6378e367be7c0250af9921ebeed953d02324e4c6b06cb967d1c32d97576a60c6"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.json",
+      "bytes": 110,
+      "sha256": "8d9584bb27e680034e8145dd987719fd97b89bd15c15958266c67a8a1da1ac04"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-controls.metadata.json",
+      "bytes": 1739,
+      "sha256": "8ebf120a6307e098a47e683cc524ba2df138cf5ca69c731622a88138b32865df"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.json",
+      "bytes": 101,
+      "sha256": "4ddb7cfc3c2ce4f92f00cfb558b92906f3c591096ac8d99650cadbec3655df19"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065-with-date.metadata.json",
+      "bytes": 1633,
+      "sha256": "86978953739f77af7a5d85f0b0d02cf956563cfef502c448a6ec2580acf6d768"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.json",
+      "bytes": 103,
+      "sha256": "498692b824b3760b70fece6e2adae857f91c2df1f1c6dea445040956ba4900e6"
+    },
+    {
+      "path": "datasets/raw/eastmoney/20261003-halt-probe/targeted-688065.metadata.json",
+      "bytes": 1546,
+      "sha256": "06d4c14ea5ce6daaaafc40d115c6c316c5a4f292c873f40ed799f8fd72efa079"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/1217071606.metadata.json",
+      "bytes": 591,
+      "sha256": "8437ba481c6fa0e37845f1c79e6454e99f719349a7615f0d7f4421e1ebc2c563"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/1217071606.pdf",
+      "bytes": 95512,
+      "sha256": "df8b19e7ccc280fd79177b1201d5433a5c45a4a2174522b39881d0ac3d14c0ac"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/688065-search.bin",
+      "bytes": 823,
+      "sha256": "7ecebc7954df352b301abe19fbc52c2e6c763bcfa4b7f091f0fe1d054fa32c89"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/688065-search.metadata.json",
+      "bytes": 849,
+      "sha256": "9c1eb08f842d116179e85e7841d194e15de5a8f03dad009acdc82b910a2a0b58"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/extracted.json",
+      "bytes": 2076,
+      "sha256": "06892b4fbf945e3fd91a4d63a0ffc36bcb3bbb23253706c9f1ee3aa81cdd7503"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-halt-probe/page-1.png",
+      "bytes": 219854,
+      "sha256": "393dcee248e5325dbf98cf9d317a202e6b12449f6acf19ee3bbfb29e73ee5b02"
+    }
+  ]
+}
