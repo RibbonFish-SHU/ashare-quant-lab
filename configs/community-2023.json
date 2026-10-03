@@ -1,0 +1,113 @@
+{
+  "schema_version": "community-import-source-v1",
+  "research_eligible": false,
+  "release": {
+    "repository": "chenditc/investment_data",
+    "tag": "2023-12-31",
+    "tag_commit": "ea31b1b1c1340ecda02438d8850595657c46ab46",
+    "url": "https://github.com/chenditc/investment_data/releases/tag/2023-12-31",
+    "published_at": "2023-12-31T09:28:09Z",
+    "asset_id": 143134949,
+    "asset_created_at": "2023-12-31T09:28:10Z",
+    "asset_updated_at": "2023-12-31T09:28:43Z",
+    "publisher_digest": null,
+    "publisher_manifest_present": false,
+    "release_id": 135431362
+  },
+  "archive": {
+    "bytes": 407271371,
+    "sha256": "5651eb91463e1cee56ad23a8fe41bc2036fcae54dd5720a6c6ddc238e2b3a4b3"
+  },
+  "plan": {
+    "path": ".cache/worktrees/phase1-data/.cache/phase1/plans/securities-2023.json",
+    "bytes": 281838,
+    "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df"
+  },
+  "include_verified_szse_tencent": true,
+  "documents": {
+    "release": {
+      "path": ".cache/phase1/open-datasets/investment-release-2023-12-31.json",
+      "bytes": 3208,
+      "sha256": "e90d73b2047071a07e5dae5f6f0d932f5796c0b845666dba1997fba2ada17138"
+    },
+    "tags": {
+      "path": ".cache/phase1/open-datasets/investment-tags-2023.json",
+      "bytes": 132497,
+      "sha256": "38961ad3ac52bb3b6bd2d405907ac3b6ae4d3646f6b7079ed8ae012faf893852"
+    },
+    "download": {
+      "path": "datasets/raw/investment_data/2023-12-31/download.metadata.json",
+      "bytes": 700,
+      "sha256": "9a96bfbbde281d5569c2ff1af2e3bf774b4d8f03affbfe846e14d4b9f3d5cbc0"
+    },
+    "review_dataset": {
+      "path": "docs/evidence/phase1_community_dataset_audit.json",
+      "bytes": 38725,
+      "sha256": "9de9cb2c065cff9ea9511265747fa4dd7ce0c22545b19df14a364ed711dae57c"
+    },
+    "review_336": {
+      "path": "docs/evidence/phase1_community_336_audit.json",
+      "bytes": 10499,
+      "sha256": "424402216eceaf3fdb987025b2c9901e1344eea2c483a39cb28b6ffd13d705f1"
+    },
+    "conditional_membership": {
+      "path": "docs/evidence/phase1_membership_conditional_reconciliation.json",
+      "bytes": 57279,
+      "sha256": "84aa36790d8dc13396c37466d867f76274212e38026fe6db1183dff8a1276958"
+    }
+  },
+  "snapshots": [
+    {
+      "manifest": {
+        "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/manifest.json",
+        "bytes": 10368,
+        "sha256": "79b3ac25ed6810740e8d42d39b6e52890f9cd5c3cfc6569c101537f8a458cb87"
+      },
+      "tables": {
+        "bars": {
+          "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+          "bytes": 3903548,
+          "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+        },
+        "calendar": {
+          "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/calendar.parquet",
+          "bytes": 11083,
+          "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480"
+        },
+        "securities": {
+          "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/securities.parquet",
+          "bytes": 44864,
+          "sha256": "e80fc675e7b5649fd83fcb6c9c0965673b78038ca4c94158de486697f77bac4b"
+        }
+      }
+    },
+    {
+      "manifest": {
+        "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/manifest.json",
+        "bytes": 22889,
+        "sha256": "9a56a71dc05b5f5bc887069b4774606a5ed626cf7bdd6f2d90cfaab038c90b14"
+      },
+      "tables": {
+        "bars": {
+          "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-first10/bars.parquet",
+          "bytes": 226610,
+          "sha256": "01650c4c28ca9bd8720ef590fe77d7a5866729d472b226f23a33b6e065a093d6"
+        }
+      }
+    },
+    {
+      "manifest": {
+        "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/manifest.json",
+        "bytes": 130730,
+        "sha256": "ea70ff5e99066f9560fe8fa95a68d600ccab0edf944e02644c8e19cbcf57d903"
+      },
+      "tables": {
+        "bars": {
+          "path": ".cache/worktrees/phase1-source-fallback/datasets/candidates/eastmoney-2023-remaining90/bars.parquet",
+          "bytes": 1852847,
+          "sha256": "8db14e4281f93f3ce7bed89d730cc755e2993f938d490ca4b7bc48bd81679004"
+        }
+      }
+    }
+  ]
+}
