@@ -1,0 +1,217 @@
+{
+  "schema_version": "phase1-state-evidence-input-preflight-v1",
+  "recorded_at_utc": "2026-10-03T16:43:21.407334+00:00",
+  "status": "retained_bytes_verified_only",
+  "research_eligible": false,
+  "anchors": [
+    "docs/evidence/phase1_szse_name_history_probe.json",
+    "docs/evidence/phase1_trading_state_probe.json",
+    "docs/evidence/phase1_resume_event_review.json"
+  ],
+  "verified_files": 40,
+  "files": [
+    {
+      "path": ".cache\\phase1\\main-review\\audit_resume_event.py",
+      "bytes": 4005,
+      "sha256": "73111017d2f0bc22da495b49a98050f0f8d714f9dcf704bfeb39e7076b1e9355"
+    },
+    {
+      "path": ".cache\\phase1\\main-review\\audit_szse_name_history.py",
+      "bytes": 6993,
+      "sha256": "318368773d91d4bd1bb6d115ddd78b4abe772c58b954b942d6b83b7f27e43016"
+    },
+    {
+      "path": ".cache\\phase1\\main-review\\summarize_state_probes.py",
+      "bytes": 5756,
+      "sha256": "d3440368aaa94865f07dce5db9d7b02e5aadb33f1c44299b4ad5824d8d9f46b1"
+    },
+    {
+      "path": ".cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\bars.parquet",
+      "bytes": 3903548,
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+    },
+    {
+      "path": ".cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified\\calendar.parquet",
+      "bytes": 11083,
+      "sha256": "ba54b5f042b099b7bcd8e31e2c53cab0f17ff23addb98a585fd8f9519db98480"
+    },
+    {
+      "path": ".cache\\worktrees\\phase1-data\\datasets\\raw\\phase1-securities-2023\\attempts\\f910442e1c88eeafc3f615de1385de34d5a2208da3f7c8565703d9cc58650b01\\f5fc98e84b064a8798bc90372d18360c\\response.json",
+      "bytes": 59518,
+      "sha256": "f8635091a140f9ae82385ded6b14f83498b7cc9c7c1d0307f28939fa80a9ad51"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-halt-probe\\1217071606.metadata.json",
+      "bytes": 591,
+      "sha256": "8437ba481c6fa0e37845f1c79e6454e99f719349a7615f0d7f4421e1ebc2c563"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-halt-probe\\1217071606.pdf",
+      "bytes": 95512,
+      "sha256": "df8b19e7ccc280fd79177b1201d5433a5c45a4a2174522b39881d0ac3d14c0ac"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-halt-probe\\688065-search.bin",
+      "bytes": 823,
+      "sha256": "7ecebc7954df352b301abe19fbc52c2e6c763bcfa4b7f091f0fe1d054fa32c89"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-halt-probe\\688065-search.metadata.json",
+      "bytes": 849,
+      "sha256": "9c1eb08f842d116179e85e7841d194e15de5a8f03dad009acdc82b910a2a0b58"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-halt-probe\\extracted.json",
+      "bytes": 2076,
+      "sha256": "06892b4fbf945e3fd91a4d63a0ffc36bcb3bbb23253706c9f1ee3aa81cdd7503"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-halt-probe\\page-1.png",
+      "bytes": 219854,
+      "sha256": "393dcee248e5325dbf98cf9d317a202e6b12449f6acf19ee3bbfb29e73ee5b02"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\1217133087.metadata.json",
+      "bytes": 607,
+      "sha256": "d18054ecbd26b5605df7ed97764a996bb78f9cd3870f66e7cd9bb4937a765f68"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\1217133087.pdf",
+      "bytes": 193767,
+      "sha256": "03d0b3e8076db23a1da481ba78faf5dd4d0ff3725a0cbb778fe1842d7b1d9716"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\688065-resume-search.bin",
+      "bytes": 806,
+      "sha256": "2e5525541365b0ffa6600563ec218f8245c2e0a4a7eca610e6a07771a9477c4f"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\688065-resume-search.metadata.json",
+      "bytes": 860,
+      "sha256": "03b1c32439d476209f51f2ee2fee52e4eb8f48fb0fc2809776472106517bd023"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\extracted.json",
+      "bytes": 3756,
+      "sha256": "105f974931fe75a2852e15a5ab632b29cc8e20eb2e10759e6e2e39c7a362311d"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\page-1.png",
+      "bytes": 253200,
+      "sha256": "ecf199e94b5910e21da746d9180c5bf49ea432c0e1e5b3cb66453fa9b65d5ff5"
+    },
+    {
+      "path": "datasets\\raw\\cninfo\\20261003-resume-probe\\page-2.png",
+      "bytes": 121920,
+      "sha256": "a1d2f240d805b3adc0ecbc832559d088bedf61a2c06d75f2949ddb8c9d0c423a"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\akshare-source-blob.json",
+      "bytes": 3709,
+      "sha256": "f4796f89e7653b367f185cd1f510e10e0f8624f83e6f80a5834be38a3c43cd84"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\halt-probe-manifest.json",
+      "bytes": 5594,
+      "sha256": "35fe29a29c1de100c75bd14dc640929de12fc22eb1a4437f7a21c23076adedad"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\halts-2023-06-15.json",
+      "bytes": 214682,
+      "sha256": "509afaf60172e358fa0cf107f6fda83cca0973f987f7e3249a4f2f3b97c912bb"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\halts-2023-06-16.json",
+      "bytes": 214682,
+      "sha256": "2780ab8d1ea3254dedbc3af5f31317e8ca3c3a7c6ce8742d22fc70bf388fda77"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\source.metadata.json",
+      "bytes": 2142,
+      "sha256": "da685c327462fb04838cda08e75424035af1684b5c0d379bf2682001e68d4d1e"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\stock_tfp_em.py",
+      "bytes": 2481,
+      "sha256": "6378e367be7c0250af9921ebeed953d02324e4c6b06cb967d1c32d97576a60c6"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\targeted-688065-with-controls.json",
+      "bytes": 110,
+      "sha256": "8d9584bb27e680034e8145dd987719fd97b89bd15c15958266c67a8a1da1ac04"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\targeted-688065-with-controls.metadata.json",
+      "bytes": 1739,
+      "sha256": "8ebf120a6307e098a47e683cc524ba2df138cf5ca69c731622a88138b32865df"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\targeted-688065-with-date.json",
+      "bytes": 101,
+      "sha256": "4ddb7cfc3c2ce4f92f00cfb558b92906f3c591096ac8d99650cadbec3655df19"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\targeted-688065-with-date.metadata.json",
+      "bytes": 1633,
+      "sha256": "86978953739f77af7a5d85f0b0d02cf956563cfef502c448a6ec2580acf6d768"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\targeted-688065.json",
+      "bytes": 103,
+      "sha256": "498692b824b3760b70fece6e2adae857f91c2df1f1c6dea445040956ba4900e6"
+    },
+    {
+      "path": "datasets\\raw\\eastmoney\\20261003-halt-probe\\targeted-688065.metadata.json",
+      "bytes": 1546,
+      "sha256": "06d4c14ea5ce6daaaafc40d115c6c316c5a4f292c873f40ed799f8fd72efa079"
+    },
+    {
+      "path": "datasets\\raw\\szse\\20261003-listing-audit\\listing-date-extract.json",
+      "bytes": 33865,
+      "sha256": "d052dc9dedb050a2ada3e2767c0f8aa165b87957d3d6a172f5b9aa1e6a99d4cf"
+    },
+    {
+      "path": "datasets\\raw\\szse\\20261003-name-history-probe\\abbreviation-changes.xlsx",
+      "bytes": 287040,
+      "sha256": "b31ab4c9b342eb910a2db4df26fbd1e64782978470453a12dae4bc4f089bb127"
+    },
+    {
+      "path": "datasets\\raw\\szse\\20261003-name-history-probe\\historical-plan-name-references-v2.json",
+      "bytes": 232830,
+      "sha256": "f28fdf832fd8b17652d30cbf0f7201e6461f8211f2a493bb81834b2370571a9e"
+    },
+    {
+      "path": "datasets\\raw\\szse\\20261003-name-history-probe\\request.metadata.json",
+      "bytes": 3322,
+      "sha256": "cee65a6b9a943bc5771d5c290b06788590bc96b876d14beef4214055db5f9ba6"
+    },
+    {
+      "path": "datasets\\raw\\szse\\20261003-name-history-probe\\sheet-1-cells.json",
+      "bytes": 1482558,
+      "sha256": "006c295587e63dba542f4c632070f12ab591fbdbadaab52489e64dc6b9ab328f"
+    },
+    {
+      "path": "docs\\evidence\\phase1_halt_review.json",
+      "bytes": 6675,
+      "sha256": "f60a658d7520605ae9f3bcb1e78330693d52c17a7fc8c46bc3585001d34591cc"
+    },
+    {
+      "path": "docs\\evidence\\phase1_resume_event_review.json",
+      "bytes": 8138,
+      "sha256": "858d8e213a8ebefff5db8567a3d619bae9993f0acdb7c8cad944cdca736a1997"
+    },
+    {
+      "path": "docs\\evidence\\phase1_szse_name_history_probe.json",
+      "bytes": 3690,
+      "sha256": "8089c405d7a26c1b33825a29be2cb941971c1923e290a66ed4198539f813bcb7"
+    },
+    {
+      "path": "docs\\evidence\\phase1_trading_state_probe.json",
+      "bytes": 9198,
+      "sha256": "7128a4cb24fb1449fd9fb3975d3cd6028a184fa6f64caba377fd295ea3fbc24f"
+    }
+  ],
+  "network_data_requests": 0,
+  "events_reparsed": false,
+  "next_action": "Read original XLSX/PDF and verify extraction under PHASE1_STATE_EVIDENCE_PLAN; this preflight is not state coverage certification."
+}

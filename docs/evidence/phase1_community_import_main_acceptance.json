@@ -1,0 +1,464 @@
+{
+  "schema_version": "phase1-community-import-main-acceptance-v1",
+  "recorded_at_utc": "2026-10-03T16:41:15.360149+00:00",
+  "owner": "main-review",
+  "status": "accepted_as_candidate_only",
+  "research_eligible": false,
+  "source_commit": "e821b8eb1b69abb5b7fe6f2d635ec421331af712",
+  "source_worktree": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review",
+  "source_module": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\src\\ashare_lab\\community",
+    "commit": "e821b8eb1b69abb5b7fe6f2d635ec421331af712",
+    "files": {
+      "src/ashare_lab/community/__init__.py": {
+        "sha256": "1a112f6a9015206724c67b3cfe619a404457979f99e675e80f6b7efb3e39f44a",
+        "commit_blob_sha256": "bef1a86d07c78fe1200b144584223988a81a34b7df13fd89362228eddcfec799",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      },
+      "src/ashare_lab/community/archive.py": {
+        "sha256": "d62c88d56f58e4c15bc8bac281941a3599c817543aa39087eb58b9b8db95bf1f",
+        "commit_blob_sha256": "c3fc841407be20e12b81b8c7a8f0f3647b00b3dc9019e6f67ad545f7d09e935d",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      },
+      "src/ashare_lab/community/cli.py": {
+        "sha256": "ef48d2c9d1f81266227d4b5c8a501531e9dd7aeb92767adb2ed8613ec2226644",
+        "commit_blob_sha256": "702b81df944e30e29eb2cfb8f88378190047357e5f13b113fbac3909bae8469f",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      },
+      "src/ashare_lab/community/pipeline.py": {
+        "sha256": "8958f15b69a9351c4e79cc662c35553c172650e1af1b9c7ee1281739923c3af4",
+        "commit_blob_sha256": "a3e82261a402c8d6282b0fe2c79894ca39a40871b25ad6c4dc37c4315158c70e",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      },
+      "src/ashare_lab/community/quality.py": {
+        "sha256": "5df29bf7fc818eca1770ef254a49bd625e802ed0c01c4c43125af9c0ebe6923e",
+        "commit_blob_sha256": "3ce820f3c782d8a25567df0c350143c540d925069e7312aa9cba1a313c183c15",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      },
+      "src/ashare_lab/community/references.py": {
+        "sha256": "adc88bd8e7c6ae40a1bbe117c5b72b2802bb577cf5fd3781528b847ba0f1250f",
+        "commit_blob_sha256": "a431601f0a95ce81b8b6dec761f76291838aec817b47d0e62acc0205db4b4cd1",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      },
+      "src/ashare_lab/community/source.py": {
+        "sha256": "b335e56abda1f738a618f34bf84d95dbe04e75428036ab65e14781be51e6e0fd",
+        "commit_blob_sha256": "7f8a2ba764924b0359bdcfa390ac06cc74578774672592a6df7a066a5a7ee023",
+        "comparison": "exact bytes after CRLF-to-LF normalization only"
+      }
+    }
+  },
+  "original_execution_commit": "379f18235869e6301ea4f0ac3cd6d528d994587b",
+  "real_build_attempts": 2,
+  "failed_builds": 1,
+  "successful_builds": 1,
+  "output": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2",
+  "failed_output": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336",
+  "attempts": [
+    {
+      "execution": {
+        "owner": "main-review",
+        "source_commit": "379f18235869e6301ea4f0ac3cd6d528d994587b",
+        "cwd": "E:\\量化\\ashare-quant-lab",
+        "argv": [
+          "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+          "-m",
+          "ashare_lab.community.cli",
+          "--archive",
+          "E:\\量化\\ashare-quant-lab\\datasets\\raw\\investment_data\\2023-12-31\\qlib_bin.tar.gz",
+          "--source",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import\\configs\\community-2023.json",
+          "--input-root",
+          "E:\\量化\\ashare-quant-lab",
+          "--plan",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json",
+          "--start",
+          "2023-01-01",
+          "--end",
+          "2023-12-31",
+          "--project-root",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-import",
+          "--output",
+          "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336"
+        ],
+        "output": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336",
+        "started_at_utc": "2026-10-03T16:30:02.382782+00:00",
+        "real_build_attempts": 1,
+        "online_requests": 0,
+        "pid": 75524,
+        "status": "exited",
+        "returncode": 1,
+        "finished_at_utc": "2026-10-03T16:30:11.179412+00:00",
+        "seconds": 8.797043800004758,
+        "child_waited_and_exited": true,
+        "protected_file_count": 67,
+        "protected_inputs_unchanged": true,
+        "source_unchanged": true
+      },
+      "evidence": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\build.log",
+          "bytes": 1516,
+          "sha256": "c2589b91c6147be49d91a58be8355ee3b5d0b903f06cd084e193e0b57cc6057c"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\execution.json",
+          "bytes": 1488,
+          "sha256": "443074d99be07ff496d3958e123b824b3482a1124171188cdbb937461240bf30"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\instrument-diagnosis.json",
+          "bytes": 1910,
+          "sha256": "64c3e2231ddb312ef186c9c747d96f09ce09f35446fcf84be1242f89ead83541"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\protected-after.json",
+          "bytes": 15872,
+          "sha256": "53f8068e1e751d1fa7f46995c70fedc8b08a05bbf234ccdd910092e5d70427e4"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\protected-before.json",
+          "bytes": 15872,
+          "sha256": "53f8068e1e751d1fa7f46995c70fedc8b08a05bbf234ccdd910092e5d70427e4"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\source-after.json",
+          "bytes": 20070,
+          "sha256": "1697fa1f89f70c42752b887904de439330eb8e163f3a9646aef399f44ff2c190"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T162959.649300Z\\source-before.json",
+          "bytes": 20070,
+          "sha256": "1697fa1f89f70c42752b887904de439330eb8e163f3a9646aef399f44ff2c190"
+        }
+      ]
+    },
+    {
+      "execution": {
+        "owner": "main-review",
+        "source_commit": "e821b8eb1b69abb5b7fe6f2d635ec421331af712",
+        "cwd": "E:\\量化\\ashare-quant-lab",
+        "argv": [
+          "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+          "-m",
+          "ashare_lab.community.cli",
+          "--archive",
+          "E:\\量化\\ashare-quant-lab\\datasets\\raw\\investment_data\\2023-12-31\\qlib_bin.tar.gz",
+          "--source",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\configs\\community-2023.json",
+          "--input-root",
+          "E:\\量化\\ashare-quant-lab",
+          "--plan",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json",
+          "--start",
+          "2023-01-01",
+          "--end",
+          "2023-12-31",
+          "--project-root",
+          "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review",
+          "--output",
+          "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2"
+        ],
+        "output": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2",
+        "started_at_utc": "2026-10-03T16:38:12.396086+00:00",
+        "real_build_attempts": 1,
+        "attempt_number": 2,
+        "previous_failed_candidate": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336",
+        "online_requests": 0,
+        "pid": 66176,
+        "status": "exited",
+        "returncode": 2,
+        "finished_at_utc": "2026-10-03T16:38:41.464014+00:00",
+        "seconds": 29.068352900038008,
+        "child_waited_and_exited": true,
+        "protected_file_count": 68,
+        "protected_inputs_unchanged": true,
+        "source_unchanged": true
+      },
+      "evidence": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T163809.704267Z\\build.log",
+          "bytes": 144,
+          "sha256": "9d15ff2050378fa98f92611d0f369a285d5ccd35ae64fccbcdd71f27e9eba309"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T163809.704267Z\\execution.json",
+          "bytes": 1645,
+          "sha256": "4a5ffd07421b3aec8a1e5313e57f8fe8c1522c0b327ef6ffd8a6eb97f903fc77"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T163809.704267Z\\protected-after.json",
+          "bytes": 16108,
+          "sha256": "ca358c43ed9e184e84c5a865d079d62b99a487181ae592a7cbb0eddea5eaa07c"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T163809.704267Z\\protected-before.json",
+          "bytes": 16108,
+          "sha256": "ca358c43ed9e184e84c5a865d079d62b99a487181ae592a7cbb0eddea5eaa07c"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T163809.704267Z\\source-after.json",
+          "bytes": 20070,
+          "sha256": "66044595f41aeb7a65fda74bf24f912b8e156df0ad328d2e336df83a672ee396"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\artifacts\\community-main-review\\20261003T163809.704267Z\\source-before.json",
+          "bytes": 20070,
+          "sha256": "66044595f41aeb7a65fda74bf24f912b8e156df0ad328d2e336df83a672ee396"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\comparisons.parquet",
+      "bytes": 7735229,
+      "sha256": "08eb2985ce0f91c74f260c4962b6de0367d648b8604d1623b2123b6a37fbe124"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\csi300.reference.txt",
+      "bytes": 446338,
+      "sha256": "225d2b0a54dd0fe5e50359605afc6e4a1dd30399a818ad89537a1765146a788f"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\day.txt",
+      "bytes": 50776,
+      "sha256": "0420e7dba42f6e11c8d14c1ce8fed88a6fa6fc19ef1d0ef5d8ec17fd14a9aeb1"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\day_future.txt",
+      "bytes": 50776,
+      "sha256": "0420e7dba42f6e11c8d14c1ce8fed88a6fa6fc19ef1d0ef5d8ec17fd14a9aeb1"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\inventory.json",
+      "bytes": 7170613,
+      "sha256": "50d1e3cffd7bd6dcc07b53ebb00a09e20db763002619d3e311c464e264ad39a9"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\manifest.json",
+      "bytes": 44985,
+      "sha256": "81ff189413043f6fd0322107ad88401fb96b3a43b2e2048452d67cb8161f432d"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\members.json",
+      "bytes": 731527,
+      "sha256": "8fe3345a473f11572104316cd38598477c54848c663efc105f7cfaf115eb469d"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\membership-reference.json",
+      "bytes": 23084,
+      "sha256": "d41ad07d24c3438ca1cc692ad25b46e2a15f031f96e82fd3324d71e4542432ae"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\quality.json",
+      "bytes": 189642,
+      "sha256": "ef6997661bc2e82e3347f0bb6d9937ae594235b54c69846994b1b411e73bcf1e"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\quotes.parquet",
+      "bytes": 20313756,
+      "sha256": "36d32fcf091dcbafe3d360b6b966931860f67f0f32b121ccaa40be6951f16705"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2\\reference-evidence.json",
+      "bytes": 172713,
+      "sha256": "f6c8acec17933b3e262b0a9b3591d96fd1a697258e80464dbe260559d77fc7bc"
+    }
+  ],
+  "aggregate": {
+    "rows": 81312,
+    "securities": 336,
+    "calendar_days": 242,
+    "first_day": "2023-01-03",
+    "last_day": "2023-12-29",
+    "eligible_or_unknown": 0,
+    "known_availability": 0,
+    "known_historical_publish_time": 0,
+    "claimed_source_trading_status": 0,
+    "exact_volume_rows": 0,
+    "exact_amount_rows": 0,
+    "archive_digests": 1
+  },
+  "tables": {
+    "quotes": {
+      "rows": 81312,
+      "columns": 49,
+      "row_groups": 34
+    },
+    "comparisons": {
+      "rows": 81325,
+      "columns": 25,
+      "row_groups": 1
+    }
+  },
+  "duplicate_security_dates": 0,
+  "row_status_counts": {
+    "before_ipo_reference": 16,
+    "missing_with_suspension_reference": 17,
+    "price_candidate": 81279
+  },
+  "suspension_reference_missing_rows": {
+    "600372.SH": 7,
+    "601916.SH": 6,
+    "688065.SH": 4
+  },
+  "independent_sql_comparisons": [
+    {
+      "group": "retained_candidates",
+      "rows": 81296,
+      "matching_ohlc": "325116",
+      "mismatching_ohlc": "0"
+    },
+    {
+      "group": "tencent_limited_reference",
+      "rows": 29,
+      "matching_ohlc": "116",
+      "mismatching_ohlc": "0"
+    }
+  ],
+  "retained_price_counts": {
+    "reference_rows": 81296,
+    "equal_after_cent_rounding": 325116,
+    "compared_values": 325116,
+    "unavailable_values": 68
+  },
+  "max_abs_price_error_cny": 0.00015727039352896098,
+  "experimental_quantity_max_abs_deltas": {
+    "volume": 108.28735017776489,
+    "amount": 911.08
+  },
+  "rows_without_status_reference": 24216,
+  "membership": {
+    "raw_interval_rows": 14398,
+    "unmapped_source_intervals": [
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2005-04-08",
+        "end": "2005-06-30",
+        "line_number": 300
+      },
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2005-07-01",
+        "end": "2006-01-03",
+        "line_number": 600
+      },
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2006-01-04",
+        "end": "2006-04-20",
+        "line_number": 900
+      },
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2006-04-21",
+        "end": "2006-07-02",
+        "line_number": 1200
+      },
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2006-07-03",
+        "end": "2006-07-18",
+        "line_number": 1500
+      },
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2006-07-19",
+        "end": "2006-08-14",
+        "line_number": 1800
+      },
+      {
+        "source_code": "SHT00018",
+        "symbol": null,
+        "start": "2006-08-15",
+        "end": "2007-01-03",
+        "line_number": 2100
+      }
+    ],
+    "unmapped_source_policy": "preserve outside requested interval; reject any overlap",
+    "days_compared": 242,
+    "equal_days": 215,
+    "mismatch_days_by_conditional_event": {
+      "2023-06-12": 12,
+      "2023-12-11": 15
+    }
+  },
+  "canonical_reader_rejected": true,
+  "canonical_reader_error": "unsupported or incomplete dataset manifest",
+  "checks": {
+    "full": "334 passed in 17.16s",
+    "new_regression_before_fix": "6 failed, 3 passed",
+    "ruff": "passed",
+    "format": "passed",
+    "evidence": [
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\after-fix-full.json",
+        "bytes": 292,
+        "sha256": "ee27509fbfd0aa8b498fffe46113db9878197f2c8a7b7ec7310a452a44e15618"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\after-fix-full.txt",
+        "bytes": 427,
+        "sha256": "646b4ac5f4377edbcd93b9638dfc393c903a1f4e1b0964c8c489a00aa8c70bfe"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\before-fix.json",
+        "bytes": 361,
+        "sha256": "f72906dfb3aa78469cd2a8c3c69ae4c5035c88a78653efe3826928a3f39946fe"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\before-fix.txt",
+        "bytes": 16298,
+        "sha256": "845d321d929300099cd2d044ad5ac2237030cd59755a23a233ff8f4e37229364"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\format.txt",
+        "bytes": 26,
+        "sha256": "8e93d18ae56550d4eef2feac77e6630617c7e169246e56e39c75d58b46167985"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\lint.json",
+        "bytes": 739,
+        "sha256": "2c56799f3bcff888ce3ce44c17e10cde81acd64fa60897774f6016525032243d"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-community-review\\artifacts\\main-review-fix-checks\\ruff.txt",
+        "bytes": 19,
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      }
+    ]
+  },
+  "review_scripts": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\run_community_acceptance.py",
+      "bytes": 5535,
+      "sha256": "7f1eaee000e676085146d513e8367e2544ef6e0d361011d87a279c8bf357e8c2"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\run_community_recovery.py",
+      "bytes": 5869,
+      "sha256": "6c65818e775a948166344243df4d8e4ea9fead9f3b71a8baf7bab213f4c6b15b"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\verify_community_acceptance.py",
+      "bytes": 9124,
+      "sha256": "92cde0d48341fdfeec41a040b6a59c670770f93ad0277e85d0d05769fe20370c"
+    }
+  ],
+  "source_checks_note": "The 325/71 source-check record binds original commit 379f182; this 334-test record includes the reviewed archive fix.",
+  "herdr": {
+    "environment_verified": false,
+    "control_commands": 0,
+    "replacement_core_agents_started": 0
+  },
+  "online_data_requests": 0,
+  "server_operations": 0,
+  "gpu_runs": 0,
+  "model_or_backtest_runs": 0
+}
