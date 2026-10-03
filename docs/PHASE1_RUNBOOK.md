@@ -18,8 +18,8 @@ $env:PYTHONIOENCODING = 'utf-8'
 
 ```powershell
 & $phase1Python -m ashare_lab.data.cli collect --plan configs/phase1-membership-2023.json --output datasets/raw/phase1-membership-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel
-& $phase1Python -m ashare_lab.data.cli plan-2023 securities --run datasets/raw/phase1-membership-2023/run.json --events configs/csi-events-2023.json --output configs/phase1-securities-2023.json
-& $phase1Python -m ashare_lab.data.cli collect --plan configs/phase1-securities-2023.json --output datasets/raw/phase1-securities-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel
+& $phase1Python -m ashare_lab.data.cli plan-2023 securities --run datasets/raw/phase1-membership-2023/run.json --events configs/csi-events-2023.json --output .cache/phase1/plans/securities-2023.json
+& $phase1Python -m ashare_lab.data.cli collect --plan .cache/phase1/plans/securities-2023.json --output datasets/raw/phase1-securities-2023 --reuse-root $phase1Raw --sdk-wheel $phase1Wheel --batch-size 20
 & $phase1Python -m ashare_lab.data.cli build --run datasets/raw/phase1-representative/run.json --run datasets/raw/phase1-membership-2023/run.json --run datasets/raw/phase1-securities-2023/run.json --events configs/csi-events-2023.json --output datasets/candidates/phase1-2023
 ```
 

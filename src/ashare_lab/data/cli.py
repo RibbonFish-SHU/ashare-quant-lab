@@ -16,7 +16,7 @@ def access_directory(root):
         subprocess.check_output(
             ["git", "-C", str(root), "rev-parse", "--path-format=absolute", "--git-common-dir"],
             timeout=15,
-            text=True,
+            encoding="utf-8",
         ).strip()
     )
     return common.parent / ".cache" / "phase1" / "source-access"
@@ -43,6 +43,7 @@ def main(argv=None):
     p.add_argument("--timeout", type=int, default=60)
     p.add_argument("--delay", type=float, default=0.25)
     p.add_argument("--daily-budget", type=int, default=10000)
+    p.add_argument("--batch-size", type=int, default=1, choices=range(1, 21))
     p = commands.add_parser("build")
     p.add_argument("--run", type=Path, action="append", required=True)
     p.add_argument("--output", type=Path, required=True)
@@ -71,6 +72,7 @@ def main(argv=None):
             timeout=args.timeout,
             delay=args.delay,
             budget=args.daily_budget,
+            batch_size=args.batch_size,
         )
         print(
             json.dumps(

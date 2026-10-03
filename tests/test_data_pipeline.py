@@ -10,7 +10,7 @@ import subprocess
 import pytest
 
 from ashare_lab.data.candidates import convert
-from ashare_lab.data.collect import collect, source_lock
+from ashare_lab.data.collect import collect, launch_batch, source_lock
 from ashare_lab.data.pipeline import build, load_run
 from ashare_lab.data.plans import membership_2023
 from ashare_lab.data.quality import audit
@@ -437,3 +437,86 @@ def test_2023_plan_has_event_boundaries_and_no_holdout():
         "2023-12-08",
         "2023-12-11",
     } <= dates
+
+
+def test_shared_access_path_preserves_unicode(tmp_path):
+    from ashare_lab.data.cli import access_directory
+
+    repository = tmp_path / "量化项目"
+    repository.mkdir()
+    subprocess.run(["git", "init", "--quiet", str(repository)], check=True)
+    assert access_directory(repository) == repository / ".cache/phase1/source-access"
+
+
+def test_batch_driver_stops_at_first_failed_query(tmp_path):
+    from ashare_lab.data.batch_worker import run
+
+    tasks = [{"request": f"request-{i}", "progress": f"progress-{i}"} for i in range(3)]
+    calls = []
+
+    def execute(argv):
+        calls.append(argv)
+        return 1 if len(calls) == 2 else 0
+
+    path = tmp_path / "receipt.json"
+    assert run(tasks, path, [], execute) == 1
+    assert len(calls) == 2
+    assert json.loads(path.read_text())["finished"] == [
+        {"index": 0, "exit_code": 0},
+        {"index": 1, "exit_code": 1},
+    ]
+
+
+def test_batch_timeout_preserves_completed_and_partial_but_not_unattempted(tmp_path, monkeypatch):
+    queries = [validate_query(bar())]
+    for end in ("2023-01-06", "2023-01-09"):
+        q = validate_query(bar())
+        q["parameters"]["end_date"] = end
+        queries.append(q)
+
+    def timed_out(command, **kwargs):
+        task_file = Path(command[command.index("--tasks") + 1])
+        tasks = json.loads(task_file.read_text())
+        receipt = Path(command[command.index("--receipt") + 1])
+        save_json(receipt, {"finished": [{"index": 0, "exit_code": 0}], "running_index": 1})
+        for i in (0, 1):
+            r = bar() | queries[i]
+            r["status"] = "complete" if i == 0 else "running"
+            save_json(Path(tasks[i]["progress"]), r)
+        raise subprocess.TimeoutExpired(command, 60)
+
+    monkeypatch.setattr("ashare_lab.data.collect.subprocess.run", timed_out)
+    entries = launch_batch(
+        queries,
+        tmp_path,
+        project_root=tmp_path,
+        sdk_wheel=tmp_path / "wheel",
+        access_state=tmp_path / "access",
+        timeout=60,
+        delay=0.25,
+        budget=10000,
+        log=lambda *a, **kw: None,
+    )
+    assert [e["status"] for e in entries] == ["complete", "timeout"]
+    assert entries[0]["worker_exit_code"] == 0 and entries[1]["retryable"]
+    assert entries[1]["row_count"] == 1
+    assert len(list(tmp_path.glob("attempts/*/*/response.json"))) == 2
+
+
+def test_invalid_sdk_pagination_cursor_is_not_clean_eof(tmp_path):
+    r = bar()
+    result = SimpleNamespace(
+        fields=r["fields"],
+        error_code="0",
+        error_msg="ok",
+        data=r["rows"],
+        per_page_count=1,
+        cur_page_num="bad",
+        next=lambda: False,
+    )
+    response = fetch(
+        r,
+        SimpleNamespace(query_history_k_data_plus=lambda **kw: result),
+        tmp_path / "progress.json",
+    )
+    assert response["status"] == "parse_or_local_error" and not response["retryable"]

@@ -78,7 +78,7 @@ def fetch(query, sdk, progress):
     return record
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--request", type=Path, required=True)
     parser.add_argument("--progress", type=Path, required=True)
@@ -86,7 +86,7 @@ def main():
     parser.add_argument("--ledger", type=Path, required=True)
     parser.add_argument("--delay", type=float, required=True)
     parser.add_argument("--budget", type=int, required=True)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if hashlib.sha256(args.sdk_wheel.read_bytes()).hexdigest() != SDK_SHA256:
         raise ValueError("BaoStock official wheel hash mismatch")
     if args.delay < 0.25 or not 1 <= args.budget <= 10000:
@@ -144,6 +144,7 @@ def main():
         # sending another request after a restriction/error response.
         with contextlib.suppress(Exception):
             context.default_socket.close()
+        sdk_socket.send_msg = original_send
 
 
 if __name__ == "__main__":
