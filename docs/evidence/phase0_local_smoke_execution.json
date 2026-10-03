@@ -1,0 +1,14 @@
+{
+  "command": [
+    "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+    "-m",
+    "ashare_lab.cli",
+    "smoke",
+    "--config",
+    "configs/smoke.toml"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 5.813,
+  "stdout": "{\"run_directory\": \"E:\\\\量化\\\\ashare-quant-lab\\\\artifacts\\\\experiments\\\\synthetic\\\\20261003T062541.770495Z-84e985e0\"}\n{\"status\": \"passed\", \"run_directory\": \"E:\\\\量化\\\\ashare-quant-lab\\\\artifacts\\\\experiments\\\\synthetic\\\\20261003T062541.770495Z-84e985e0\"}\n",
+  "stderr": "[42676:MainThread](2026-10-03 14:25:45,778) INFO - qlib.Initialization - [config.py:452] - default_conf: client.\n[42676:MainThread](2026-10-03 14:25:46,710) INFO - qlib.Initialization - [__init__.py:75] - qlib successfully initialized based on client settings.\n[42676:MainThread](2026-10-03 14:25:46,710) INFO - qlib.Initialization - [__init__.py:77] - data_path={'__DEFAULT_FREQ': WindowsPath('E:/量化/ashare-quant-lab/artifacts/experiments/synthetic/20261003T062541.770495Z-84e985e0/qlib_synthetic')}\n"
+}

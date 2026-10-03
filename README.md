@@ -18,6 +18,7 @@ uv run --frozen --extra dev ashare-lab smoke --config configs/smoke.toml
 - [原始方案](PROJECT_PLAN.md)与[当前任务书](docs/PHASE0_PLAN.md)
 - [数据契约与标签时序](docs/DATA_CONTRACT.md)
 - [安装、执行、故障和资源说明](docs/RUNBOOK.md)
+- [本轮执行报告与验收缺口](docs/PHASE0_EXECUTION_REPORT.md)
 - [数据源决策与未冻结时间划分](docs/DATA_SOURCE_DECISION.md)
 
 研究、推理、交易和风控保持隔离。当前代码仅有研究工程工具；实盘晋级依照项目方案另行确认。
