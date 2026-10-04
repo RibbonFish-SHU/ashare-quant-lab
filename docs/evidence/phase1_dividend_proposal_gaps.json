@@ -1,0 +1,175 @@
+{
+  "schema_version": "reviewed-cninfo-no-distribution-proposal-gap-v1",
+  "research_eligible": false,
+  "available_time": null,
+  "records": [
+    {
+      "symbol": "002602.SZ",
+      "announcement_id": "1216693256",
+      "issuer_announcement_number": "2023-023",
+      "reporting_period": "2022年度",
+      "stage": "proposal",
+      "proposal": "no_cash_no_stock_bonus_no_capital_reserve_conversion",
+      "shareholder_approval_status": "pending_in_this_document",
+      "signature_date": "2023-04-28",
+      "source_record": {
+        "id": null,
+        "secCode": "002602",
+        "secName": "世纪华通",
+        "orgId": "9900021007",
+        "announcementId": "1216693256",
+        "announcementTitle": "关于2022年度利润分配预案的公告",
+        "announcementTime": 1682697600000,
+        "adjunctUrl": "finalpage/2023-04-29/1216693256.PDF",
+        "adjunctSize": 176,
+        "adjunctType": "PDF",
+        "storageTime": null,
+        "columnId": "09020202||250101||251302||2705",
+        "pageColumn": "SZZB",
+        "announcementType": "01010503||010112||011301",
+        "associateAnnouncement": null,
+        "important": null,
+        "batchNum": null,
+        "announcementContent": "",
+        "orgName": null,
+        "tileSecName": "世纪华通",
+        "shortTitle": "关于2022年度利润分配预案的公告",
+        "announcementTypeName": null,
+        "secNameList": null
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216693256.pdf",
+        "bytes": 179158,
+        "sha256": "0deacbaa8043032eeb01e74381ea7bc4e093bd8ce1e744bbefa1f3315de12cb2"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216693256.metadata.json",
+        "bytes": 779,
+        "sha256": "5dc3232b07230e668c3c8509280e788976017f52991f5ac800d3459326970e30"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216693256.extraction.json",
+        "bytes": 5978,
+        "sha256": "0bc7bf2ec937c7b9315c9c19f013f733a15fb1061b0beeaf4c7b49ffc65f07a7"
+      },
+      "citations": [
+        {
+          "page": 1,
+          "quote": "2022年度利润分配预案为：不派发现金红利，不送红股，不以资本公积金转增股本。"
+        },
+        {
+          "page": 2,
+          "quote": "该议案尚需提交公司股东大会审议。"
+        },
+        {
+          "page": 3,
+          "quote": "浙江世纪华通集团股份有限公司董事会二〇二三年四月二十八日"
+        }
+      ],
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "available_time": null,
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "300454.SZ",
+      "announcement_id": "1216403724",
+      "issuer_announcement_number": "2023-027",
+      "reporting_period": "2022年度",
+      "stage": "proposal",
+      "proposal": "no_cash_no_stock_bonus_no_capital_reserve_conversion",
+      "shareholder_approval_status": "pending_in_this_document",
+      "signature_date": "2023-04-13",
+      "source_record": {
+        "id": null,
+        "secCode": "300454",
+        "secName": "深信服",
+        "orgId": "9900035739",
+        "announcementId": "1216403724",
+        "announcementTitle": "深信服科技股份有限公司关于公司2022年度利润分配预案的公告",
+        "announcementTime": 1681401600000,
+        "adjunctUrl": "finalpage/2023-04-14/1216403724.PDF",
+        "adjunctSize": 259,
+        "adjunctType": "PDF",
+        "storageTime": null,
+        "columnId": "09020202||160201||160203||250301||251302||2705",
+        "pageColumn": "SZCY",
+        "announcementType": "01010503||010112||010115||011301",
+        "associateAnnouncement": null,
+        "important": null,
+        "batchNum": null,
+        "announcementContent": "",
+        "orgName": null,
+        "tileSecName": "深信服",
+        "shortTitle": "深信服科技股份有限公司关于公司2022年度利润分配预案的公告",
+        "announcementTypeName": null,
+        "secNameList": null
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216403724.pdf",
+        "bytes": 264586,
+        "sha256": "f1a81f9758702011031db2eedc41661a23407d2a6996d7b2ca8344b763e4835d"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216403724.metadata.json",
+        "bytes": 779,
+        "sha256": "d2f435022386ad7f64e8dde6399003847f1135d1c8d77d7b9b3941fffc01a712"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216403724.extraction.json",
+        "bytes": 5499,
+        "sha256": "df465b0d8eff8f1e7d235e9fc4759a5cb4ca86268ecc6e7e5260343325afc91f"
+      },
+      "citations": [
+        {
+          "page": 1,
+          "quote": "公司董事会通过的2022年度利润分配预案为：不进行现金分红，不送红股，不以资本公积金转增股本，剩余未分配利润将用于2023年度研发投入及生产经营等方面，并滚存至以后年度分配。"
+        },
+        {
+          "page": 2,
+          "quote": "本次利润分配预案尚需提交公司2022年年度股东大会审议批准后方可实施。"
+        },
+        {
+          "page": 1,
+          "quote": "上市公司以现金为对价，采用要约方式、集中竞价方式回购股份的，当年已实施的回购股份金额视同现金分红金额，纳入该年度现金分红的相关比例计算。"
+        },
+        {
+          "page": 3,
+          "quote": "二〇二三年四月十三日"
+        }
+      ],
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "available_time": null,
+      "annual_zero_event_certified": false
+    }
+  ],
+  "new_network_searches": 0,
+  "pdf_downloads": 2,
+  "visual_reviewed_pages": 6,
+  "download_manifest": {
+    "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/run.json",
+    "bytes": 4125,
+    "sha256": "b663a64e98145723e0192e5fa6cf38d1a1e82be4243732f54270843336fab7d5"
+  },
+  "search_manifest": {
+    "path": "datasets/raw/cninfo/20261004-dividend-category-gap/run.json",
+    "bytes": 30409,
+    "sha256": "9b256cc617872e7ce3b9420f325438711b97878322e5e863e9a57d36cabc8887"
+  },
+  "render_manifest": {
+    "path": ".cache/phase1/main-review/dividend-proposal-gap-pages/manifest.json",
+    "bytes": 2810,
+    "sha256": "0152adfa9be23933dce6beba560340d1d2b0e66ed2693f9fb50c61e6fadb2347"
+  },
+  "audit_script": {
+    "path": ".cache/phase1/main-review/audit_dividend_proposal_gaps.py",
+    "bytes": 5212,
+    "sha256": "f76ec2371f585be932be1662d73216b5bd0700d9054b10074c90f76d5333ff82"
+  },
+  "limits": [
+    "These are 2022 profit-distribution proposals disclosed in 2023; not final shareholder approval or calendar-2023 event-completeness evidence.",
+    "Repurchase amounts treated as cash dividends in a regulatory ratio are not cash credits to every holder's portfolio.",
+    "No implementation facts, zero cash events, or historical available_time are inferred."
+  ]
+}

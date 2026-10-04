@@ -1,0 +1,1107 @@
+{
+  "schema_version": "cninfo-reviewed-dividend-claims-v1",
+  "research_eligible": false,
+  "available_time": null,
+  "availability_policy": "exclude_unknown",
+  "files": {
+    "1217012955_pdf": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217012955.pdf",
+      "bytes": 87024,
+      "sha256": "912ffb558b8ca8d8e5882e7f7f1f14356fc962718a65dfcbca1727fa1fe802b8"
+    },
+    "1217012955_meta": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217012955.metadata.json",
+      "bytes": 768,
+      "sha256": "7e0e60b4bfcb62ba565e2eb914bec19d1702d1f7965df2237b0e0f0e4ac34c68"
+    },
+    "1217012955_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217012955.extraction.json",
+      "bytes": 6111,
+      "sha256": "aa7e8627cb4feba6842de7003bdca756acee593175645c30c467bc0c36e6f453"
+    },
+    "1216371154_pdf": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216371154.pdf",
+      "bytes": 156377,
+      "sha256": "ba2ba9610f0cff0fbfbf5cf46c7cffc29865cbab83cd4d284331170233938c6b"
+    },
+    "1216371154_meta": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216371154.metadata.json",
+      "bytes": 770,
+      "sha256": "2017c5ca9e70c7598cd8c7f2699218d0695e26623944f66c1b95d9ef3287eec2"
+    },
+    "1216371154_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216371154.extraction.json",
+      "bytes": 6148,
+      "sha256": "d156f892e5c81000cb32f249c194f2d96fde3ee2d9d212592b3ed63a6a5a5789"
+    },
+    "1216457838_pdf": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216457838.pdf",
+      "bytes": 245076,
+      "sha256": "8063ac7204c79d9f856b7a2e21887aa650bc5e2b2c1bbbecb81ab54473d0939b"
+    },
+    "1216457838_meta": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216457838.metadata.json",
+      "bytes": 770,
+      "sha256": "9d8b6491b9adb6a94cc34bee34627929b8dd4537cc2c01f8132030eb0180b1d6"
+    },
+    "1216457838_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216457838.extraction.json",
+      "bytes": 9757,
+      "sha256": "eee0cfd57318cbd7def3107483f0471d3fad026a206dd97a88bb408c0a7b29eb"
+    },
+    "1217534367_pdf": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217534367.pdf",
+      "bytes": 182579,
+      "sha256": "7a4d4033cc60c1eda0d92d97eedfac74909667ab09ffbda0adeaaa1dee08ccc0"
+    },
+    "1217534367_meta": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217534367.metadata.json",
+      "bytes": 770,
+      "sha256": "754303cc025e6489f03542024f6e5e23c0aac8d120d4540a3b77ba67a5446d6a"
+    },
+    "1217534367_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217534367.extraction.json",
+      "bytes": 10179,
+      "sha256": "ca03cc2a34c8ede3fa65c1587ac07f097ab0302553833ec819c7cb27531a6c2e"
+    },
+    "1217859384_pdf": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217859384.pdf",
+      "bytes": 245553,
+      "sha256": "fb0a3f90dc45731d2a1783dd677181049facd7a378be82a820ec23aadd3271d6"
+    },
+    "1217859384_meta": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217859384.metadata.json",
+      "bytes": 770,
+      "sha256": "e6b51a6c5a49f22d8e5db723863f1c400da2ce969f50f855b9e4abc2ff13117f"
+    },
+    "1217859384_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1217859384.extraction.json",
+      "bytes": 10208,
+      "sha256": "8f84bc98c4d31fe975012688efa2cbc3543c0be3b8973b68b8361d5a6fd894f3"
+    },
+    "1216935954_pdf": {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/1216935954.pdf",
+      "bytes": 280401,
+      "sha256": "3e9580d1ed9858f7172c98d30b72452dc39458cf381969dccc53a39931a847b1"
+    },
+    "1216935954_meta": {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/1216935954.metadata.json",
+      "bytes": 456,
+      "sha256": "9ee8271b52ba5b502680d6b21da83cb7762f3ae7154d02d823cadf37ca3aca13"
+    },
+    "1216935954_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216935954.extraction.json",
+      "bytes": 7531,
+      "sha256": "9389f5021f2ff1bd056da9c8aac320ff80263356b39b5427e59bd21931b08a3a"
+    },
+    "1216585626_pdf": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216585626.pdf",
+      "bytes": 92831,
+      "sha256": "5d3b099562874c388a93beafeb7d6eec5e84f77a8d15b7540229f5a48072f8f6"
+    },
+    "1216585626_meta": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216585626.metadata.json",
+      "bytes": 768,
+      "sha256": "63fa2128254fef53bd43f92032a245a4638d72bfa0cc413f9a6fd5e6828a670e"
+    },
+    "1216585626_text": {
+      "path": "datasets/raw/cninfo/20261004-dividend-pdfs/1216585626.extraction.json",
+      "bytes": 4168,
+      "sha256": "46393df4f0858ca6772be84990ac016b343e07194d450b3e80d926007352396b"
+    }
+  },
+  "claims": [
+    {
+      "symbol": "000963.SZ",
+      "announcement_id": "1217012955",
+      "title": "2022年年度权益分派实施公告",
+      "issuer_announcement_number": "2023-040",
+      "stage": "implementation",
+      "reporting_period": "2022年度",
+      "metadata_profile": "standard_v1",
+      "search_locator": {
+        "query_symbol": "000963.SZ",
+        "page": 1,
+        "row_index": 0
+      },
+      "pdf": "1217012955_pdf",
+      "pdf_metadata": "1217012955_meta",
+      "extraction": "1217012955_text",
+      "pdf_title": "2022年年度权益分派实施公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：000963证券简称：华东医药公告编号：2023-040华东医药股份有限公司2022年年度权益分派实施公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-06-07",
+        "citations": [
+          {
+            "page": 4,
+            "quote": "华东医药股份有限公司董事会2023年06月07日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1686153600000,
+      "source_timestamp_precision": "date_label",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "gross_cash_per_10_eligible_shares": {
+          "value": "2.9",
+          "unit": "CNY_per_10_eligible_shares",
+          "basis": "Gross cash; first-page implementation clause continues with tax on page 2",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "向全体股东每10股派2.9元人民币现金（含"
+            },
+            {
+              "page": 2,
+              "quote": "税；扣税后，通过深股通持有股份的香港市场投资者、QFII、RQFII"
+            }
+          ]
+        },
+        "stock_bonus_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit no-stock-dividend implementation clause",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "不送红股，不以公积金转增股本。"
+            },
+            {
+              "page": 1,
+              "quote": "本次实施的分配方案与公司2022年度股东大会审议通过的分配方案一致。"
+            }
+          ]
+        },
+        "capital_reserve_conversion_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit no-capital-reserve-conversion implementation clause",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "不送红股，不以公积金转增股本。"
+            },
+            {
+              "page": 1,
+              "quote": "本次实施的分配方案与公司2022年度股东大会审议通过的分配方案一致。"
+            }
+          ]
+        },
+        "record_date": {
+          "value": "2023-06-13",
+          "unit": "date",
+          "basis": "China Securities Depository Shenzhen eligibility date",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派股权登记日为：2023年6月13日，除权除息日为：2023年6月14日。"
+            }
+          ]
+        },
+        "ex_date": {
+          "value": "2023-06-14",
+          "unit": "date",
+          "basis": "Ex-right/ex-dividend date stated by issuer",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派股权登记日为：2023年6月13日，除权除息日为：2023年6月14日。"
+            }
+          ]
+        },
+        "cash_payment_date": {
+          "value": "2023-06-14",
+          "unit": "date",
+          "basis": "CSDC Shenzhen-distributed cash only; direct-paid holders not generalized",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年6月14日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "payment_scope": {
+          "value": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年6月14日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。",
+          "unit": "text",
+          "basis": "Original clause defining CSDC distribution scope",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年6月14日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "after_tax_policy": {
+          "value": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】",
+          "unit": "text",
+          "basis": "Individual holders in this clause only; retain holder/holding-period dependency",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "The source date label is 2023-06-08; the signature is 2023-06-07. Neither is assigned as available_time.",
+        "No ex-price cash deduction was separately stated in the selected clauses; keep it unknown."
+      ]
+    },
+    {
+      "symbol": "300059.SZ",
+      "announcement_id": "1216371154",
+      "title": "东方财富信息股份有限公司2022年度权益分派实施公告",
+      "issuer_announcement_number": "2023-037",
+      "stage": "implementation",
+      "reporting_period": "2022年度",
+      "metadata_profile": "standard_v1",
+      "search_locator": {
+        "query_symbol": "300059.SZ",
+        "page": 1,
+        "row_index": 0
+      },
+      "pdf": "1216371154_pdf",
+      "pdf_metadata": "1216371154_meta",
+      "extraction": "1216371154_text",
+      "pdf_title": "2022年度权益分派实施公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：300059证券简称：东方财富公告编号：2023-037东方财富信息股份有限公司2022年度权益分派实施公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-04-11",
+        "citations": [
+          {
+            "page": 3,
+            "quote": "东方财富信息股份有限公司董事会二〇二三年四月十一日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1681142400000,
+      "source_timestamp_precision": "date_label",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "gross_cash_per_10_eligible_shares": {
+          "value": "0.70",
+          "unit": "CNY_per_10_eligible_shares",
+          "basis": "Implementation gross cash per 10 old eligible shares",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "向全体股东每10股派0.70元人民币现金（含税；"
+            }
+          ]
+        },
+        "capital_reserve_conversion_per_10_old_shares": {
+          "value": "2",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Capital reserve conversion, distinct from stock dividend",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "同时，用资本公积金向全体股东每10股转增2股。"
+            }
+          ]
+        },
+        "record_date": {
+          "value": "2023-04-17",
+          "unit": "date",
+          "basis": "China Securities Depository Shenzhen eligibility date",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派股权登记日为：2023年4月17日，除权除息日为：2023年4月18日，新增可流通股份上市日为：2023年4月18日。"
+            }
+          ]
+        },
+        "ex_date": {
+          "value": "2023-04-18",
+          "unit": "date",
+          "basis": "Ex-right/ex-dividend date stated by issuer",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派股权登记日为：2023年4月17日，除权除息日为：2023年4月18日，新增可流通股份上市日为：2023年4月18日。"
+            }
+          ]
+        },
+        "cash_payment_date": {
+          "value": "2023-04-18",
+          "unit": "date",
+          "basis": "CSDC Shenzhen-distributed cash only; direct-paid holders not generalized",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "此次委托中国结算深圳分公司代派的现金红利将于2023年4月18日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "payment_scope": {
+          "value": "此次委托中国结算深圳分公司代派的现金红利将于2023年4月18日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。",
+          "unit": "text",
+          "basis": "Original clause defining CSDC distribution scope",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "此次委托中国结算深圳分公司代派的现金红利将于2023年4月18日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "share_listing_date": {
+          "value": "2023-04-18",
+          "unit": "date",
+          "basis": "Newly tradable shares only",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "新增可流通股份上市日为：2023年4月18日。"
+            }
+          ]
+        },
+        "fractional_share_policy": {
+          "value": "在转增股份过程中产生不足1股的部分，按小数点尾数由大到小排序依次向股东派发1股（若尾数相同时则在尾数相同者中由系统随机排序派发），直至实际转增股总数与本次转增股总数一致。",
+          "unit": "text",
+          "basis": "CSDC fractional allocation text; not replaced by independent account-level rounding",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "在转增股份过程中产生不足1股的部分，按小数点尾数由大到小排序依次向股东派发1股（若尾数相同时则在尾数相同者中由系统随机排序派发），直至实际转增股总数与本次转增股总数一致。"
+            }
+          ]
+        },
+        "after_tax_policy": {
+          "value": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】",
+          "unit": "text",
+          "basis": "Individual holders in this clause only; retain holder/holding-period dependency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "Stock-bonus ratio is not explicitly negated in the selected implementation clause; missing remains null.",
+        "The share-listing date applies to newly tradable shares, not all restricted shares."
+      ]
+    },
+    {
+      "symbol": "300750.SZ",
+      "announcement_id": "1216457838",
+      "title": "2022年年度权益分派实施公告",
+      "issuer_announcement_number": "2023-037",
+      "stage": "implementation",
+      "reporting_period": "2022年度",
+      "metadata_profile": "standard_v1",
+      "search_locator": {
+        "query_symbol": "300750.SZ",
+        "page": 1,
+        "row_index": 0
+      },
+      "pdf": "1216457838_pdf",
+      "pdf_metadata": "1216457838_meta",
+      "extraction": "1216457838_text",
+      "pdf_title": "2022年年度权益分派实施公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：300750证券简称：宁德时代公告编号：2023-037宁德时代新能源科技股份有限公司2022年年度权益分派实施公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-04-18",
+        "citations": [
+          {
+            "page": 5,
+            "quote": "宁德时代新能源科技股份有限公司董事会2023年4月18日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1681820786000,
+      "source_timestamp_precision": "timestamp_label_unverified",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "gross_cash_per_10_eligible_shares": {
+          "value": "25.20",
+          "unit": "CNY_per_10_eligible_shares",
+          "basis": "Implementation gross cash per 10 shares after cancelled restricted shares",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "向全体股东每10股派25.20元人民币现金（含税；"
+            }
+          ]
+        },
+        "capital_reserve_conversion_per_10_old_shares": {
+          "value": "8",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Capital reserve conversion, distinct from stock dividend",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "同时，以资本公积金向全体股东每10股转增8股。"
+            }
+          ]
+        },
+        "stock_bonus_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit approved no-stock-dividend clause plus current implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "本年度不送股。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的权益分派方案与公司2022年年度股东大会审议通过的分配方案及调整原则一致。"
+            }
+          ]
+        },
+        "record_date": {
+          "value": "2023-04-25",
+          "unit": "date",
+          "basis": "China Securities Depository Shenzhen eligibility date",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派股权登记日为：2023年4月25日，除权除息日为：2023年4月26日。"
+            }
+          ]
+        },
+        "ex_date": {
+          "value": "2023-04-26",
+          "unit": "date",
+          "basis": "Ex-right/ex-dividend date stated by issuer",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派股权登记日为：2023年4月25日，除权除息日为：2023年4月26日。"
+            }
+          ]
+        },
+        "cash_payment_date": {
+          "value": "2023-04-26",
+          "unit": "date",
+          "basis": "CSDC Shenzhen-distributed cash only; direct-paid holders not generalized",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年4月26日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "payment_scope": {
+          "value": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年4月26日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。",
+          "unit": "text",
+          "basis": "Original clause defining CSDC distribution scope",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年4月26日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "share_listing_date": {
+          "value": "2023-04-26",
+          "unit": "date",
+          "basis": "Converted unrestricted tradable shares only",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次所转的无限售条件流通股的起始交易日为2023年4月26日。"
+            }
+          ]
+        },
+        "fractional_share_policy": {
+          "value": "在转股过程中产生的不足1股的部分，按小数点后尾数由大到小排序依次向股东派发1股（若尾数相同时则在尾数相同者中由系统随机排序派发），直至实际转股总数与本次转股总数一致。",
+          "unit": "text",
+          "basis": "CSDC fractional allocation text; preserve as stated",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "在转股过程中产生的不足1股的部分，按小数点后尾数由大到小排序依次向股东派发1股（若尾数相同时则在尾数相同者中由系统随机排序派发），直至实际转股总数与本次转股总数一致。"
+            }
+          ]
+        },
+        "after_tax_policy": {
+          "value": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】",
+          "unit": "text",
+          "basis": "Individual holders in this clause only; retain holder/holding-period dependency",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "Initial download-selection hypothesis mentioned an excluded repurchase account; the reviewed document instead describes completed cancellation of 129,560 restricted shares. No differential-dividend deduction is inferred.",
+        "Website metadata has a timestamp label with time-of-day. Its historical first availability remains unverified."
+      ]
+    },
+    {
+      "symbol": "002812.SZ",
+      "announcement_id": "1217534367",
+      "title": "权益分派实施公告",
+      "issuer_announcement_number": "2023-141",
+      "stage": "implementation",
+      "reporting_period": "2022年度",
+      "metadata_profile": "standard_v1",
+      "search_locator": {
+        "query_symbol": "002812.SZ",
+        "page": 1,
+        "row_index": 2
+      },
+      "pdf": "1217534367_pdf",
+      "pdf_metadata": "1217534367_meta",
+      "extraction": "1217534367_text",
+      "pdf_title": "2022年度权益分派实施公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：002812债券代码：128095股票简称：恩捷股份债券简称：恩捷转债公告编号：2023-141云南恩捷新材料股份有限公司2022年度权益分派实施公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-08-14",
+        "citations": [
+          {
+            "page": 5,
+            "quote": "云南恩捷新材料股份有限公司董事会二零二三年八月十四日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1692028800000,
+      "source_timestamp_precision": "date_label",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "gross_cash_per_10_eligible_shares": {
+          "value": "1.779999",
+          "unit": "CNY_per_10_eligible_shares",
+          "basis": "Eligible shares exclude 1,469,800 repurchased shares",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "向全体股东每10股派1.779999元人民币现金（含税；"
+            }
+          ]
+        },
+        "reported_cash_per_eligible_share": {
+          "value": "0.1779999",
+          "unit": "CNY_per_eligible_share",
+          "basis": "Retain issuer's per-share text separately from arithmetic per-10 conversion",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "折算出每股现金分红为0.1779999元/股（含税）"
+            }
+          ]
+        },
+        "ex_price_cash_deduction_per_total_share": {
+          "value": "0.177732",
+          "unit": "CNY_per_total_share",
+          "basis": "Ex-price adjustment over all shares, not shareholder cash entitlement",
+          "citations": [
+            {
+              "page": 4,
+              "quote": "除权除息价格=股权登记日收盘价-0.177732元/股。"
+            }
+          ]
+        },
+        "stock_bonus_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit no-share-change approved clause with implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "不送红股，不以资本公积转增股本。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的权益分派方案与2023年第三次临时股东大会审议通过的权益分派方案及其调整原则一致。"
+            }
+          ]
+        },
+        "capital_reserve_conversion_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit no-share-change approved clause with implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "不送红股，不以资本公积转增股本。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的权益分派方案与2023年第三次临时股东大会审议通过的权益分派方案及其调整原则一致。"
+            }
+          ]
+        },
+        "record_date": {
+          "value": "2023-08-18",
+          "unit": "date",
+          "basis": "China Securities Depository Shenzhen eligibility date",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次权益分派股权登记日为：2023年8月18日，除权除息日为：2023年8月21日。"
+            }
+          ]
+        },
+        "ex_date": {
+          "value": "2023-08-21",
+          "unit": "date",
+          "basis": "Ex-right/ex-dividend date stated by issuer",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次权益分派股权登记日为：2023年8月18日，除权除息日为：2023年8月21日。"
+            }
+          ]
+        },
+        "cash_payment_date": {
+          "value": "2023-08-21",
+          "unit": "date",
+          "basis": "CSDC Shenzhen-distributed cash only; direct-paid holders not generalized",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年8月21日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "payment_scope": {
+          "value": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年8月21日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。",
+          "unit": "text",
+          "basis": "Original clause defining CSDC distribution scope",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年8月21日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "after_tax_policy": {
+          "value": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】",
+          "unit": "text",
+          "basis": "Individual holders in this clause only; retain holder/holding-period dependency",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】"
+            }
+          ]
+        },
+        "source_numerical_discrepancy": {
+          "value": "=173,778,232.00元/976,282,250股=0.1779999元/股。即173,778,142.9元=976,282,250股×0.1779999元/股。",
+          "unit": "text",
+          "basis": "Different total-cash values within source, retained without correcting issuer text",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "=173,778,232.00元/976,282,250股=0.1779999元/股。"
+            },
+            {
+              "page": 3,
+              "quote": "即173,778,142.9元=976,282,250股×0.1779999元/股。"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "Search title omits the year; the PDF explicitly identifies 2022年度.",
+        "Pages 2 and 3 contain different total-cash amounts. Per-10 and reported per-share rates agree, but no executable canonical cash amount is approved."
+      ]
+    },
+    {
+      "symbol": "002812.SZ",
+      "announcement_id": "1217859384",
+      "title": "2023年半年度权益分派实施公告",
+      "issuer_announcement_number": "2023-166",
+      "stage": "implementation",
+      "reporting_period": "2023半年度",
+      "metadata_profile": "standard_v1",
+      "search_locator": {
+        "query_symbol": "002812.SZ",
+        "page": 1,
+        "row_index": 0
+      },
+      "pdf": "1217859384_pdf",
+      "pdf_metadata": "1217859384_meta",
+      "extraction": "1217859384_text",
+      "pdf_title": "2023年半年度权益分派实施公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：002812债券代码：128095股票简称：恩捷股份债券简称：恩捷转债公告编号：2023-166云南恩捷新材料股份有限公司2023年半年度权益分派实施公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-09-14",
+        "citations": [
+          {
+            "page": 4,
+            "quote": "云南恩捷新材料股份有限公司董事会"
+          },
+          {
+            "page": 5,
+            "quote": "二零二三年九月十四日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1694707200000,
+      "source_timestamp_precision": "date_label",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "gross_cash_per_10_eligible_shares": {
+          "value": "2.049999",
+          "unit": "CNY_per_10_eligible_shares",
+          "basis": "Eligible shares exclude 1,469,800 repurchased shares",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "向全体股东每10股派2.049999元人民币现金（含税；"
+            }
+          ]
+        },
+        "reported_cash_per_eligible_share": {
+          "value": "0.204999",
+          "unit": "CNY_per_eligible_share",
+          "basis": "Retain issuer's per-share text separately from arithmetic per-10 conversion",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "折算出每股现金分红为0.204999元/股（含税）"
+            }
+          ]
+        },
+        "ex_price_cash_deduction_per_total_share": {
+          "value": "0.204692",
+          "unit": "CNY_per_total_share",
+          "basis": "Ex-price adjustment over all shares, not shareholder cash entitlement",
+          "citations": [
+            {
+              "page": 4,
+              "quote": "除权除息价格=股权登记日收盘价-0.204692元/股。"
+            }
+          ]
+        },
+        "stock_bonus_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit no-share-change approved clause with implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "不送红股，不以资本公积转增股本。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的权益分派方案与2023年第四次临时股东大会审议通过的权益分派方案及其调整原则一致。"
+            }
+          ]
+        },
+        "capital_reserve_conversion_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit no-share-change approved clause with implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "不送红股，不以资本公积转增股本。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的权益分派方案与2023年第四次临时股东大会审议通过的权益分派方案及其调整原则一致。"
+            }
+          ]
+        },
+        "record_date": {
+          "value": "2023-09-20",
+          "unit": "date",
+          "basis": "China Securities Depository Shenzhen eligibility date",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次权益分派股权登记日为：2023年9月20日，除权除息日为：2023年9月21日。"
+            }
+          ]
+        },
+        "ex_date": {
+          "value": "2023-09-21",
+          "unit": "date",
+          "basis": "Ex-right/ex-dividend date stated by issuer",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次权益分派股权登记日为：2023年9月20日，除权除息日为：2023年9月21日。"
+            }
+          ]
+        },
+        "cash_payment_date": {
+          "value": "2023-09-21",
+          "unit": "date",
+          "basis": "CSDC Shenzhen-distributed cash only; direct-paid holders not generalized",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年9月21日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "payment_scope": {
+          "value": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年9月21日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。",
+          "unit": "text",
+          "basis": "Original clause defining CSDC distribution scope",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年9月21日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "after_tax_policy": {
+          "value": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】",
+          "unit": "text",
+          "basis": "Individual holders in this clause only; retain holder/holding-period dependency",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "2.049999/10 = 0.2049999 differs from reported 0.204999. Preserve both; canonical rate is unknown.",
+        "Ex-price deduction 0.204692 is a third, distinct total-share quantity."
+      ]
+    },
+    {
+      "symbol": "300308.SZ",
+      "announcement_id": "1216935954",
+      "title": "2022年度权益分派实施公告",
+      "issuer_announcement_number": "2023-071",
+      "stage": "implementation",
+      "reporting_period": "2022年度",
+      "metadata_profile": "legacy_actions_probe_v1",
+      "search_locator": {
+        "query_symbol": "300308.SZ",
+        "page": 1,
+        "row_index": 0
+      },
+      "pdf": "1216935954_pdf",
+      "pdf_metadata": "1216935954_meta",
+      "extraction": "1216935954_text",
+      "pdf_title": "2022年度权益分派实施公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：300308证券简称：中际旭创公告编号：2023-071中际旭创股份有限公司2022年度权益分派实施公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-05-30",
+        "citations": [
+          {
+            "page": 4,
+            "quote": "中际旭创股份有限公司董事会2023年05月30日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1685376000000,
+      "source_timestamp_precision": "date_label",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "gross_cash_per_10_eligible_shares": {
+          "value": "2.000000",
+          "unit": "CNY_per_10_eligible_shares",
+          "basis": "Eligible shares exclude repurchase account",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "向全体股东每10股派2.000000元人民币现金（含税；"
+            }
+          ]
+        },
+        "ex_price_cash_deduction_per_total_share": {
+          "value": "0.195898",
+          "unit": "CNY_per_total_share",
+          "basis": "Ex-price cash deduction over all shares; not 0.2 eligible-share entitlement",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "本次权益分派实施后的除权除息价格=股权登记日收盘价-0.195898元。"
+            }
+          ]
+        },
+        "stock_bonus_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit approved zero share distribution and implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "本年度不送股、不以资本公积转增股本。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的分配方案与股东大会审议通过的分配方案及其调整原则一致。"
+            }
+          ]
+        },
+        "capital_reserve_conversion_per_10_old_shares": {
+          "value": "0",
+          "unit": "shares_per_10_old_shares",
+          "basis": "Explicit approved zero share distribution and implementation consistency",
+          "citations": [
+            {
+              "page": 1,
+              "quote": "本年度不送股、不以资本公积转增股本。"
+            },
+            {
+              "page": 2,
+              "quote": "本次实施的分配方案与股东大会审议通过的分配方案及其调整原则一致。"
+            }
+          ]
+        },
+        "record_date": {
+          "value": "2023-06-05",
+          "unit": "date",
+          "basis": "China Securities Depository Shenzhen eligibility date",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次权益分派股权登记日为：2023年6月5日；除权除息日为：2023年6月6日。"
+            }
+          ]
+        },
+        "ex_date": {
+          "value": "2023-06-06",
+          "unit": "date",
+          "basis": "Ex-right/ex-dividend date stated by issuer",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "本次权益分派股权登记日为：2023年6月5日；除权除息日为：2023年6月6日。"
+            }
+          ]
+        },
+        "cash_payment_date": {
+          "value": "2023-06-06",
+          "unit": "date",
+          "basis": "CSDC Shenzhen-distributed cash only; direct-paid holders not generalized",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年6月6日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "payment_scope": {
+          "value": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年6月6日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。",
+          "unit": "text",
+          "basis": "Original clause defining CSDC distribution scope",
+          "citations": [
+            {
+              "page": 3,
+              "quote": "此次委托中国结算深圳分公司代派的A股股东现金红利将于2023年6月6日通过股东托管证券公司（或其他托管机构）直接划入其资金账户。"
+            }
+          ]
+        },
+        "after_tax_policy": {
+          "value": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】",
+          "unit": "text",
+          "basis": "Individual holders in this clause only; retain holder/holding-period dependency",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "持有首发后限售股、股权激励限售股及无限售流通股的个人股息红利税实行差别化税率征收，本公司暂不扣缴个人所得税，待个人转让股票时，根据其持股期限计算应纳税额【注】"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "Reuses the original retained PDF and metadata; no new fetch time or redirect/final_url evidence is invented.",
+        "Legacy metadata lacks final_url/Content-Length; expose this limitation explicitly."
+      ]
+    },
+    {
+      "symbol": "300015.SZ",
+      "announcement_id": "1216585626",
+      "title": "关于2022年年度权益分派预案的公告",
+      "issuer_announcement_number": "2023-027",
+      "stage": "proposal",
+      "reporting_period": "2022年度",
+      "metadata_profile": "standard_v1",
+      "search_locator": {
+        "query_symbol": "300015.SZ",
+        "page": 1,
+        "row_index": 0
+      },
+      "pdf": "1216585626_pdf",
+      "pdf_metadata": "1216585626_meta",
+      "extraction": "1216585626_text",
+      "pdf_title": "关于2022年年度权益分派预案的公告",
+      "identity_citations": [
+        {
+          "page": 1,
+          "quote": "证券代码：300015股票简称：爱尔眼科公告编号：2023-027爱尔眼科医院集团股份有限公司关于2022年年度权益分派预案的公告"
+        }
+      ],
+      "signature": {
+        "value": "2023-04-25",
+        "citations": [
+          {
+            "page": 2,
+            "quote": "爱尔眼科医院集团股份有限公司董事会2023年4月25日"
+          }
+        ]
+      },
+      "source_timestamp_ms": 1682438400000,
+      "source_timestamp_precision": "date_label",
+      "research_eligible": false,
+      "available_time": null,
+      "facts": {
+        "proposal_status": {
+          "value": "本次权益分派预案尚需提交公司股东大会审议批准后方能实施，该事项仍存在不确定性，敬请广大投资者理性投资，注意投资风险。",
+          "unit": "text",
+          "basis": "Proposal-only negative control, no implementation values or dates",
+          "citations": [
+            {
+              "page": 2,
+              "quote": "本次权益分派预案尚需提交公司股东大会审议批准后方能实施，该事项仍存在不确定性，敬请广大投资者理性投资，注意投资风险。"
+            }
+          ]
+        }
+      },
+      "review_notes": [
+        "This document is a proposal. The separate category search discovered a later implementation notice, which is not substituted into this claim."
+      ]
+    }
+  ],
+  "review_basis": "Main agent read all six newly downloaded PDF originals through pdftotext and all 24 rendered pages; prior four-page 300308 review is reused. Whitespace-only normalization binds quotes.",
+  "limits": [
+    "Reviewed document clauses, not full-year event coverage or research-ready corporate actions.",
+    "No cash tax scalar is inferred; direct-paid holders and restricted shares are not generalized.",
+    "No historical timestamp is certified; no correction lineage search is claimed complete."
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "schema_version": "reviewed-cninfo-dividend-category-supplement-v1",
+  "research_eligible": false,
+  "available_time": null,
+  "formal_action_coverage_certified": false,
+  "audit_script": {
+    "path": ".cache/phase1/main-review/audit_dividend_supplement.py",
+    "bytes": 13410,
+    "sha256": "5797720da8b041458bacacddda8ce142d56c4f172e8986ebb0906800143fc715"
+  },
+  "network_requests_during_audit": 0,
+  "planned_queries": 14,
+  "complete_queries": 14,
+  "rows": 19,
+  "title_classification_counts": {
+    "implementation_title_only": 10,
+    "date_change_title": 1,
+    "proposal_title": 8
+  },
+  "additional_implementation_title_symbols": [
+    "001979.SZ",
+    "002129.SZ",
+    "002736.SZ",
+    "002938.SZ",
+    "300015.SZ",
+    "300033.SZ",
+    "300413.SZ",
+    "300896.SZ"
+  ],
+  "combined_unique_announcement_ids": 119,
+  "combined_implementation_title_symbols": 89,
+  "still_without_implementation_title": [
+    "000938.SZ",
+    "002049.SZ",
+    "002074.SZ",
+    "002602.SZ",
+    "002648.SZ",
+    "300454.SZ"
+  ],
+  "queries": [
+    {
+      "symbol": "000938.SZ",
+      "query_complete": true,
+      "zero_matches": true,
+      "notices": []
+    },
+    {
+      "symbol": "001979.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1216759143",
+          "title": "2022年度利润分配方案实施公告",
+          "adjunct_url": "finalpage/2023-05-06/1216759143.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "002049.SZ",
+      "query_complete": true,
+      "zero_matches": true,
+      "notices": []
+    },
+    {
+      "symbol": "002074.SZ",
+      "query_complete": true,
+      "zero_matches": true,
+      "notices": []
+    },
+    {
+      "symbol": "002129.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1217029620",
+          "title": "2022年度分红派息、转增股本实施公告",
+          "adjunct_url": "finalpage/2023-06-10/1217029620.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216865445",
+          "title": "关于调整实施公司2022年度分红派息、转增股本日期的公告",
+          "adjunct_url": "finalpage/2023-05-20/1216865445.PDF",
+          "classification": "date_change_title",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216854962",
+          "title": "2022年度分红派息、转增股本实施公告",
+          "adjunct_url": "finalpage/2023-05-19/1216854962.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216246670",
+          "title": "关于2022年度利润分配及资本公积金转增股本预案的公告",
+          "adjunct_url": "finalpage/2023-03-29/1216246670.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "002602.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1216693256",
+          "title": "关于2022年度利润分配预案的公告",
+          "adjunct_url": "finalpage/2023-04-29/1216693256.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "002648.SZ",
+      "query_complete": true,
+      "zero_matches": true,
+      "notices": []
+    },
+    {
+      "symbol": "002736.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1217054532",
+          "title": "2022年度分红派息实施公告",
+          "adjunct_url": "finalpage/2023-06-14/1217054532.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "002938.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1217001731",
+          "title": "鹏鼎控股（深圳）股份有限公司2022年年度利润分配实施公告",
+          "adjunct_url": "finalpage/2023-06-07/1217001731.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216245993",
+          "title": "鹏鼎控股（深圳）股份有限公司关于公司2022年利润分配预案的公告",
+          "adjunct_url": "finalpage/2023-03-29/1216245993.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "300015.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1216958564",
+          "title": "分红派息、转增股本实施公告",
+          "adjunct_url": "finalpage/2023-06-01/1216958564.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216585626",
+          "title": "关于2022年年度权益分派预案的公告",
+          "adjunct_url": "finalpage/2023-04-26/1216585626.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "300033.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1216192263",
+          "title": "2023-014--2022年度分红派息实施公告",
+          "adjunct_url": "finalpage/2023-03-23/1216192263.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "300413.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1217202615",
+          "title": "2022年年度权益分配实施公告",
+          "adjunct_url": "finalpage/2023-07-04/1217202615.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216521175",
+          "title": "关于2022年度利润分配预案的公告",
+          "adjunct_url": "finalpage/2023-04-22/1216521175.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "300454.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1216403724",
+          "title": "深信服科技股份有限公司关于公司2022年度利润分配预案的公告",
+          "adjunct_url": "finalpage/2023-04-14/1216403724.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    },
+    {
+      "symbol": "300896.SZ",
+      "query_complete": true,
+      "zero_matches": false,
+      "notices": [
+        {
+          "announcement_id": "1218033194",
+          "title": "2023半年度分红派息实施公告",
+          "adjunct_url": "finalpage/2023-10-16/1218033194.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1217629626",
+          "title": "关于2023年半年度利润分配预案的公告",
+          "adjunct_url": "finalpage/2023-08-25/1217629626.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216757367",
+          "title": "2022年度分红派息实施公告",
+          "adjunct_url": "finalpage/2023-05-05/1216757367.PDF",
+          "classification": "implementation_title_only",
+          "available_time": null
+        },
+        {
+          "announcement_id": "1216073896",
+          "title": "关于2022年度利润分配预案的公告",
+          "adjunct_url": "finalpage/2023-03-09/1216073896.PDF",
+          "classification": "proposal_title",
+          "available_time": null
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/plan.json",
+      "bytes": 1606,
+      "sha256": "0cb0a54a6cf17d1f6677781ea1bd5e71525b615f4fa2e79b06a7aac5765d553c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/run.json",
+      "bytes": 30409,
+      "sha256": "9b256cc617872e7ce3b9420f325438711b97878322e5e863e9a57d36cabc8887"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-notices/run.json",
+      "bytes": 166521,
+      "sha256": "a47183d9db18ca538a650bcd1a3c7a1279e8846c1a7d276410afefa00fc12296"
+    },
+    {
+      "path": ".cache/phase1/main-review/collect_dividend_category_gaps.py",
+      "bytes": 6228,
+      "sha256": "cfe33eb545ea604870bb79aa3cde74040696e6d0e4210c8b567a14131e9f8cdf"
+    },
+    {
+      "path": ".cache/phase1/main-review/collect_dividend_notices.py",
+      "bytes": 9482,
+      "sha256": "58a8312382c8aa48ace71c03ef9052171ae3a59208d5ffb7f49d532f40e30f4b"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/stock-map.bin",
+      "bytes": 592485,
+      "sha256": "5682733958a171c9084706da8d74b8b7f96d63cfd99b932c7c7edc58f8b32b72"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/000938-page1.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/000938-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "4a41482c47770094631a04aa772b1a43b571c06cae7246a059bceb0ad59a5173"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/001979-page1.json",
+      "bytes": 815,
+      "sha256": "3733d23247fccfa0da65ba081ef66908af9f5538efda6f17afab23e438afa26c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/001979-page1.metadata.json",
+      "bytes": 1002,
+      "sha256": "9eefd298a2b6ca40e228e414fc9e09de5d4281b62ccb52eb9e809006ecb158fb"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002049-page1.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002049-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "5b69c5f53f5fcbe21f129d81fb33ee35928b1d2bbe768f44a4c2e8d7e8aa94db"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002074-page1.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002074-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "3fc9de4775a3a3ecd33284b0527645d0655359b9019db383c74aac9eb953c1e8"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002129-page1.json",
+      "bytes": 2931,
+      "sha256": "465feea9b51892d44add1d16da0ec947e9a7847046149ac941d3cefb79d4789d"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002129-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "837d4d74d2c99d5eb22e3e50dfe4edcf174af550b61d4cf70a5ff92f617e9a2c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002602-page1.json",
+      "bytes": 823,
+      "sha256": "44a3c0084608042f3427648970ccf9f91571e3c4ab3f3924b8746dacd8f41e37"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002602-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "efb06e6ac4519dddc731225c82317d1a2f80c24efecb68784a03e25514dacc1e"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002648-page1.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002648-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "6a8d1eedcb741eeaddf734b407eb4906ee394bc2a840d2885d296ac8279d5cf3"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002736-page1.json",
+      "bytes": 805,
+      "sha256": "186d3a4d3b8ca9ca60ebf348af34ef21e181e0aeca06c8b4d6edf034305309d3"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002736-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "ab9240d37a3607dbd8bb2aa1b13e97aabab8ba7fd9372c77933be5f82cacfbe6"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002938-page1.json",
+      "bytes": 1644,
+      "sha256": "22751486d553dd0350a2d2969835faf3ff1e94d3113b4fdc5ee623ea9ff87408"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/002938-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "894691b4f6f78e765c01f303cfa4dc4ea5e44180e8e7df16c4b52c9ca38129fa"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300015-page1.json",
+      "bytes": 1529,
+      "sha256": "41b1f676a7802f55dc8268e19fd00c8ff2200f6a4ff2ee9eef38561eaa0c1e27"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300015-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "3f10151ef50652b0bac2ae2fc636f6201a50595f8ed77383fe33ab379b184a3c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300033-page1.json",
+      "bytes": 843,
+      "sha256": "d93a6c486e1e4cdaff67345a63ceaf31ac29c8ce6102ee49a6ced5646aa55764"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300033-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "b083f75bb8551a48abc87987a3666961462cac29a0b6b776cdbdac82d9a82994"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300413-page1.json",
+      "bytes": 1520,
+      "sha256": "078039bf26a95f7492b5c8f108ec2682327e2131b3cf14dd36a04dc1de38508b"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300413-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "3c069ccf92c911f2af7ff27e4e9f6134eff3b1232c0c6f13d9764a77996d4b53"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300454-page1.json",
+      "bytes": 919,
+      "sha256": "18b92c0c65a0c6c09f218a7b3900d5a539fbe6615f0531cb8091f4578c84dff4"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300454-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "c8e7b63f9de42fcbf4dd44514051b39a2f7af55c106ccacb15b8d700087f1701"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300896-page1.json",
+      "bytes": 2860,
+      "sha256": "28f9443f61b54006c6bee28e65d8050d008d29158b4ae61ba268298ad19bcb7b"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-category-gap/300896-page1.metadata.json",
+      "bytes": 1005,
+      "sha256": "8f8a7724ea30bb6051c48d6c425d34599ccbd0057914a6ca22eb712b788c27fd"
+    },
+    {
+      "path": ".cache/phase1/main-review/audit_dividend_supplement.py",
+      "bytes": 13410,
+      "sha256": "5797720da8b041458bacacddda8ce142d56c4f172e8986ebb0906800143fc715"
+    }
+  ],
+  "limits": [
+    "Title classification is discovery only; no annual event-completeness or implementation proof is inferred.",
+    "Zero category matches and proposal-only rows are not proof of no corporate actions.",
+    "This exact one-page 14-query audit is separate from the reusable frozen 95-query auditor."
+  ]
+}

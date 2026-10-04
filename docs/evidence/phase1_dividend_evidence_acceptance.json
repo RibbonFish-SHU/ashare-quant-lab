@@ -1,0 +1,203 @@
+{
+  "schema_version": "phase1-dividend-evidence-acceptance-v1",
+  "reviewed_at_utc": "2026-10-04T09:53:21.214435+00:00",
+  "status": "engineering_and_documentary_batch_accepted_research_blocked",
+  "source_commit": "c0cf017f42b8f3d701cf1ade7dd15ba2f1ca98d5",
+  "build_source_dirty": false,
+  "build_module_file": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-dividend-evidence\\src\\ashare_lab\\dividend_evidence\\claims.py",
+  "build_exit_code": 2,
+  "build_exit_meaning": "Successful retained candidate build; research eligibility remains blocked by design.",
+  "build_manifest": {
+    "path": ".cache/worktrees/phase1-dividend-evidence/datasets/candidates/dividend-reviewed-2023-v1/manifest.json",
+    "bytes": 84483,
+    "sha256": "8e180d9871649b31bfd4b8064741baf16f0a9a58a8b21a6e45425b4e356dfb72"
+  },
+  "build_report": {
+    "path": ".cache/worktrees/phase1-dividend-evidence/.cache/dividend-clean-build-v1.json",
+    "bytes": 84483,
+    "sha256": "8e180d9871649b31bfd4b8064741baf16f0a9a58a8b21a6e45425b4e356dfb72"
+  },
+  "build_log": {
+    "path": ".cache/worktrees/phase1-dividend-evidence/.cache/dividend-clean-build-v1.log",
+    "bytes": 168936,
+    "sha256": "6803781c07a6f0feecb135875119fc3f2edb788a9ac072cbc7761ff362fc8cad"
+  },
+  "reviewed_claims": {
+    "path": "configs/dividend-evidence-2023-reviewed.json",
+    "bytes": 47309,
+    "sha256": "a52b2cf87b09aaf2ad867c2230e5d6619f9fb064d558b25069ad71cd44caaf05"
+  },
+  "outputs": [
+    {
+      "path": ".cache/worktrees/phase1-dividend-evidence/datasets/candidates/dividend-reviewed-2023-v1/candidates.json",
+      "bytes": 64440,
+      "sha256": "666d8f584179ef73d193cee58f9c4abcbcf0f79e2e1af60a2b13ce575fb93326"
+    },
+    {
+      "path": ".cache/worktrees/phase1-dividend-evidence/datasets/candidates/dividend-reviewed-2023-v1/search_audit.json",
+      "bytes": 351032,
+      "sha256": "6b7ab040842e93c3fa66143af16689aaaaaf603f1801812b1deea639a4ed2dca"
+    }
+  ],
+  "input_digests_rechecked": 217,
+  "integration_comparison": {
+    "result": "all_equal_to_reviewed_commit",
+    "comparison": "exact bytes after CRLF-to-LF normalization only",
+    "main_and_worktree_files_compared": 56,
+    "paths": [
+      "src/ashare_lab/__init__.py",
+      "src/ashare_lab/cli.py",
+      "src/ashare_lab/community/__init__.py",
+      "src/ashare_lab/community/archive.py",
+      "src/ashare_lab/community/cli.py",
+      "src/ashare_lab/community/pipeline.py",
+      "src/ashare_lab/community/quality.py",
+      "src/ashare_lab/community/references.py",
+      "src/ashare_lab/community/source.py",
+      "src/ashare_lab/compatibility.py",
+      "src/ashare_lab/config.py",
+      "src/ashare_lab/contracts.py",
+      "src/ashare_lab/data/__init__.py",
+      "src/ashare_lab/data/batch_worker.py",
+      "src/ashare_lab/data/binding.py",
+      "src/ashare_lab/data/candidates.py",
+      "src/ashare_lab/data/cli.py",
+      "src/ashare_lab/data/collect.py",
+      "src/ashare_lab/data/pipeline.py",
+      "src/ashare_lab/data/plans.py",
+      "src/ashare_lab/data/quality.py",
+      "src/ashare_lab/data/queries.py",
+      "src/ashare_lab/data/raw.py",
+      "src/ashare_lab/data/worker.py",
+      "src/ashare_lab/devices.py",
+      "src/ashare_lab/dividend_evidence/__init__.py",
+      "src/ashare_lab/dividend_evidence/__main__.py",
+      "src/ashare_lab/dividend_evidence/claims.py",
+      "src/ashare_lab/dividend_evidence/cli.py",
+      "src/ashare_lab/dividend_evidence/common.py",
+      "src/ashare_lab/dividend_evidence/search.py",
+      "src/ashare_lab/execution/__init__.py",
+      "src/ashare_lab/execution/core.py",
+      "src/ashare_lab/fallback/__init__.py",
+      "src/ashare_lab/fallback/cli.py",
+      "src/ashare_lab/fallback/collect.py",
+      "src/ashare_lab/fallback/compatibility.py",
+      "src/ashare_lab/fallback/evidence.py",
+      "src/ashare_lab/fallback/evidence_quality.py",
+      "src/ashare_lab/fallback/pipeline.py",
+      "src/ashare_lab/fallback/protocol.py",
+      "src/ashare_lab/runtime.py",
+      "src/ashare_lab/state_evidence/__init__.py",
+      "src/ashare_lab/state_evidence/announcements.py",
+      "src/ashare_lab/state_evidence/cli.py",
+      "src/ashare_lab/state_evidence/common.py",
+      "src/ashare_lab/state_evidence/inputs.py",
+      "src/ashare_lab/state_evidence/membership_gaps.py",
+      "src/ashare_lab/state_evidence/names.py",
+      "src/ashare_lab/state_evidence/pipeline.py",
+      "src/ashare_lab/state_evidence/temporal.py",
+      "src/ashare_lab/storage.py",
+      "src/ashare_lab/synthetic.py",
+      "src/ashare_lab/temporal.py",
+      "tests/test_dividend_search_audit.py",
+      "tests/test_dividend_claims.py"
+    ]
+  },
+  "checks": {
+    "pytest": {
+      "passed": 95,
+      "seconds": 43.14,
+      "scope": [
+        "tests/test_dividend_search_audit.py",
+        "tests/test_dividend_claims.py"
+      ],
+      "provenance": "Actual final checks reported by the execution auxiliary agent in its handoff; no local test log was retained. Not independently rerun for this report."
+    },
+    "ruff_check": {
+      "status": "passed",
+      "provenance": "execution auxiliary agent final handoff"
+    },
+    "ruff_format": {
+      "status": "passed",
+      "python_files": 8,
+      "provenance": "execution auxiliary agent final handoff"
+    },
+    "clean_build_and_output_digests": "independently checked by main agent",
+    "prior_532_test_regression_and_model_smoke": "not rerun; unrelated modules unchanged"
+  },
+  "first_search_counts": {
+    "planned_queries": 95,
+    "manifest_requests": 95,
+    "retained_capture_attempts": 95,
+    "complete_queries": 95,
+    "nonempty_queries": 83,
+    "zero_queries": 12,
+    "failed_queries": 0,
+    "incomplete_queries": 0,
+    "not_requested_queries": 0,
+    "invalid_queries": 0,
+    "validated_rows": 101
+  },
+  "candidate_counts": {
+    "claims": 7,
+    "implementation": 6,
+    "proposal": 1,
+    "numerical_conflicts": 2
+  },
+  "supplement": {
+    "queries": 14,
+    "rows": 19,
+    "additional_implementation_title_symbols": 8,
+    "combined_unique_announcement_ids": 119,
+    "combined_implementation_title_symbols": 89,
+    "still_without_implementation_title": [
+      "000938.SZ",
+      "002049.SZ",
+      "002074.SZ",
+      "002602.SZ",
+      "002648.SZ",
+      "300454.SZ"
+    ],
+    "evidence": {
+      "path": "docs/evidence/phase1_dividend_category_gap.json",
+      "bytes": 16200,
+      "sha256": "6ccb94b89e3bbed2b3061158064adc2589b30fdd47731038323b63bb3b560bb6"
+    }
+  },
+  "date_change_case": {
+    "path": "docs/evidence/phase1_dividend_date_change_case.json",
+    "bytes": 14291,
+    "sha256": "86829684687ad76d7b8a26e8cd40a06e0aae4795a3479aa1ea105b9e1b066a67"
+  },
+  "proposal_only_gap_cases": {
+    "path": "docs/evidence/phase1_dividend_proposal_gaps.json",
+    "bytes": 7288,
+    "sha256": "0d5c14a344be726076d4944eb30a5c7a826b72edf06345e4a9602493c0d35cd2"
+  },
+  "acquisition": {
+    "anonymous_search_requests": 109,
+    "new_pdf_downloads": 11,
+    "retained_network_body_bytes": 1958287,
+    "new_pdf_pages_visually_reviewed": 39,
+    "previous_pdf_pages_reused": 4,
+    "retry_count": 0,
+    "redirect_count": 0,
+    "restriction_responses_observed": false,
+    "minimum_serial_interval_seconds": 1
+  },
+  "research_eligible": false,
+  "implementation_eligible": false,
+  "available_time": null,
+  "formal_action_coverage_certified": false,
+  "boundaries": [
+    "Announcement title discovery is not annual implementation or event-completeness proof.",
+    "Unknown historical availability and two numerical conflicts remain explicit; no canonical executable cash is assigned.",
+    "No restricted BaoStock retry, 2024-2025 price read, formal model/backtest, GPU or server work.",
+    "All acquisition/build processes for this dividend-evidence batch exited; retained source worktree and unique artifacts are not removed."
+  ],
+  "acceptance_script": {
+    "path": ".cache/phase1/main-review/accept_dividend_evidence.py",
+    "bytes": 8835,
+    "sha256": "386a4d946050cfa3e1369b000825922356076974808c6b84a123763187432f94"
+  }
+}

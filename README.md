@@ -16,6 +16,10 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 容量、费用和未成交持仓延续。它尚未接入真实候选，输出不代表等权策略回测结果。
 [主审报告与公司行为补证清单](docs/PHASE1_EXECUTION_READINESS.md)记录本批 532 项测试、干净提交 smoke 和剩余数据缺口。
 
+官方分红补证已完成 95 只关键词查询及 14 只类别补查，保留 119 个不同公告 ID；
+7 份所选原件形成独立审阅候选，另核对了 TCL 中环调整分派日期的三份公告。
+数值差异、预案和未知可用时间保留，详见[分红原件审阅](docs/PHASE1_DIVIDEND_EVIDENCE_REVIEW.md)。
+
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
 uv python install 3.11.16 --install-dir .cache/phase0/python --no-bin

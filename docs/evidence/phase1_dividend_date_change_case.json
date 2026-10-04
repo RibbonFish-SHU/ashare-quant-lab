@@ -1,0 +1,347 @@
+{
+  "schema_version": "reviewed-cninfo-dividend-date-change-case-v1",
+  "symbol": "002129.SZ",
+  "reporting_period": "2022年度",
+  "research_eligible": false,
+  "available_time": null,
+  "review_status": "all_three_originals_and_nine_pages_reviewed",
+  "documents": [
+    {
+      "announcement_id": "1216854962",
+      "issuer_announcement_number": "2023-054",
+      "document_role": "earlier_implementation",
+      "search_record": {
+        "id": null,
+        "secCode": "002129",
+        "secName": "TCL中环",
+        "orgId": "9900002703",
+        "announcementId": "1216854962",
+        "announcementTitle": "2022年度分红派息、转增股本实施公告",
+        "announcementTime": 1684425600000,
+        "adjunctUrl": "finalpage/2023-05-19/1216854962.PDF",
+        "adjunctSize": 152,
+        "adjunctType": "PDF",
+        "storageTime": null,
+        "columnId": "09020202||250101||251302||2705",
+        "pageColumn": "SZZB",
+        "announcementType": "01010503||010112||011301",
+        "associateAnnouncement": null,
+        "important": null,
+        "batchNum": null,
+        "announcementContent": "",
+        "orgName": null,
+        "tileSecName": "TCL中环",
+        "shortTitle": "2022年度分红派息、转增股本实施公告",
+        "announcementTypeName": null,
+        "secNameList": null
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1216854962.pdf",
+        "bytes": 154834,
+        "sha256": "c840eca20c50bbc93398b67267c23bd7d5be0136ffc352f8e143d54c6da14a17"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1216854962.metadata.json",
+        "bytes": 778,
+        "sha256": "8ee12445187a97b559ffdff8436dcce0a502527ce5c34fea9617be8a420d7835"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1216854962.extraction.json",
+        "bytes": 10464,
+        "sha256": "73cc8c9a8c632d1543041490b04588b2c7c77dde29eb8d5d4ae396d70820434a"
+      },
+      "signature_date": "2023-05-18",
+      "announced_record_date": "2023-05-25",
+      "announced_ex_date": "2023-05-26",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "citations": [
+        {
+          "page": 2,
+          "quote": "本次权益分派股权登记日：2023年5月25日，本次权益分派除权除息日：2023年5月26日。"
+        },
+        {
+          "page": 2,
+          "quote": "向全体股东每10股派1.000000元人民币现金（含税；"
+        },
+        {
+          "page": 2,
+          "quote": "同时，以资本公积金向全体股东每10股转增2.500000股。"
+        },
+        {
+          "page": 1,
+          "quote": "以上计算结果直接截取小数点后六位，不四舍五入"
+        },
+        {
+          "page": 4,
+          "quote": "TCL中环新能源科技股份有限公司董事会2023年5月18日"
+        }
+      ]
+    },
+    {
+      "announcement_id": "1216865445",
+      "issuer_announcement_number": "2023-055",
+      "document_role": "date_change_new_date_undetermined",
+      "search_record": {
+        "id": null,
+        "secCode": "002129",
+        "secName": "TCL中环",
+        "orgId": "9900002703",
+        "announcementId": "1216865445",
+        "announcementTitle": "关于调整实施公司2022年度分红派息、转增股本日期的公告",
+        "announcementTime": 1684512000000,
+        "adjunctUrl": "finalpage/2023-05-20/1216865445.PDF",
+        "adjunctSize": 97,
+        "adjunctType": "PDF",
+        "storageTime": null,
+        "columnId": "09020202||250101||251302||2705",
+        "pageColumn": "SZZB",
+        "announcementType": "01010501||010112||011301",
+        "associateAnnouncement": null,
+        "important": null,
+        "batchNum": null,
+        "announcementContent": "",
+        "orgName": null,
+        "tileSecName": "TCL中环",
+        "shortTitle": "关于调整实施公司2022年度分红派息、转增股本日期的公告",
+        "announcementTypeName": null,
+        "secNameList": null
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1216865445.pdf",
+        "bytes": 98519,
+        "sha256": "063f6388cc0873137996b88b32e7b6ae61af92554975b5e5eb3c96e36a27be57"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1216865445.metadata.json",
+        "bytes": 776,
+        "sha256": "ec51146fffbc07bbf54d2f4dcc2dab2a08e65f95a1caee09a0a71954fff6980f"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1216865445.extraction.json",
+        "bytes": 3499,
+        "sha256": "b8ceb5701985eebb3ae381830cbe59a319f34e31867b1dd16a7f9cf1a640ae13"
+      },
+      "signature_date": "2023-05-19",
+      "announced_record_date": null,
+      "announced_ex_date": null,
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "citations": [
+        {
+          "page": 1,
+          "quote": "公司于2023年5月19日披露了《2022年度分红派息、转增股本实施公告》（公告编号：2023-054），拟实施2022年度利润分配及资本公积金转增股本方案，权益分派股权登记日2023年5月25日、除权除息日2023年5月26日。"
+        },
+        {
+          "page": 1,
+          "quote": "决定调整实施公司2022年度分红派息、转增股本的日期。"
+        },
+        {
+          "page": 1,
+          "quote": "公司将尽快推进相关安排，另行确定权益分派股权登记日时间，完成2022年度权益分派实施工作。"
+        },
+        {
+          "page": 1,
+          "quote": "TCL中环新能源科技股份有限公司董事会2023年5月19日"
+        }
+      ]
+    },
+    {
+      "announcement_id": "1217029620",
+      "issuer_announcement_number": "2023-065",
+      "document_role": "later_implementation",
+      "search_record": {
+        "id": null,
+        "secCode": "002129",
+        "secName": "TCL中环",
+        "orgId": "9900002703",
+        "announcementId": "1217029620",
+        "announcementTitle": "2022年度分红派息、转增股本实施公告",
+        "announcementTime": 1686326400000,
+        "adjunctUrl": "finalpage/2023-06-10/1217029620.PDF",
+        "adjunctSize": 151,
+        "adjunctType": "PDF",
+        "storageTime": null,
+        "columnId": "09020202||250101||251302||2705",
+        "pageColumn": "SZZB",
+        "announcementType": "01010503||010112||011301",
+        "associateAnnouncement": null,
+        "important": null,
+        "batchNum": null,
+        "announcementContent": "",
+        "orgName": null,
+        "tileSecName": "TCL中环",
+        "shortTitle": "2022年度分红派息、转增股本实施公告",
+        "announcementTypeName": null,
+        "secNameList": null
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1217029620.pdf",
+        "bytes": 153125,
+        "sha256": "0fcd7aef629a88f23e965207ef249ff05052ee25be29d46d5ef4d7a7c8794bd5"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1217029620.metadata.json",
+        "bytes": 778,
+        "sha256": "0ac3b0b20c23ed7f0a1f68738df0c2d8b6589fb55bef7faca8da8efb06b701ba"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-date-changes/1217029620.extraction.json",
+        "bytes": 10430,
+        "sha256": "dcefbc708356e3d975f0baff90a8cd22d5b21190d1c6781fc3926503292bcef2"
+      },
+      "signature_date": "2023-06-09",
+      "announced_record_date": "2023-06-15",
+      "announced_ex_date": "2023-06-16",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "citations": [
+        {
+          "page": 2,
+          "quote": "本次权益分派股权登记日：2023年6月15日，本次权益分派除权除息日：2023年6月16日。"
+        },
+        {
+          "page": 2,
+          "quote": "向全体股东每10股派1.000000元人民币现金（含税；"
+        },
+        {
+          "page": 2,
+          "quote": "同时，以资本公积金向全体股东每10股转增2.500000股。"
+        },
+        {
+          "page": 1,
+          "quote": "以上计算结果直接截取小数点后六位，不四舍五入"
+        },
+        {
+          "page": 4,
+          "quote": "TCL中环新能源科技股份有限公司董事会2023年6月9日"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "1216865445",
+      "to": "1216854962",
+      "kind": "explicitly_changes_prior_implementation_dates"
+    },
+    {
+      "from": "1217029620",
+      "to": "1216865445",
+      "kind": "later_same_period_implementation_after_undetermined_date",
+      "basis": "Main reviewer matches issuer/period and retained sequence; not an explicit citation of notice 2023-055"
+    }
+  ],
+  "application_rules": [
+    "Do not execute or count the superseded May 26 schedule as a second dividend.",
+    "The May 20 website notice says the replacement date is undetermined. Do not retroactively fill June 16 into that notice.",
+    "Preserve all versions; metadata date labels and signature dates are not certified available_time.",
+    "No general correction-lineage adapter or real execution acceptance is claimed by this documentary case."
+  ],
+  "renders": [
+    {
+      "pdf": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-dividend-date-changes\\1216854962.pdf",
+        "bytes": 154834,
+        "sha256": "c840eca20c50bbc93398b67267c23bd7d5be0136ffc352f8e143d54c6da14a17"
+      },
+      "renderer": {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftoppm.exe",
+        "bytes": 3727360,
+        "sha256": "78152c542e195135206419404196ca9457e68929b715024dafd3dff8733b4407"
+      },
+      "dpi": 110,
+      "stdout": "",
+      "stderr": "Syntax Error: No display font for 'Symbol'\r\nSyntax Error: No display font for 'ArialUnicode'\r\n",
+      "images": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1216854962-1.png",
+          "bytes": 300078,
+          "sha256": "104004c7bd9cc22a7c2541bc7fee9ae9afb729030b4f6afc362cbf62c4e4e751"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1216854962-2.png",
+          "bytes": 335721,
+          "sha256": "73846888a9dce2dd7e7d1aa7dfe97663db721cb710d9271aad554e5445d08082"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1216854962-3.png",
+          "bytes": 292622,
+          "sha256": "d554b8cb1676cf212885d843ada9048cb33183188d5e02eb958fde526cfd6f6b"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1216854962-4.png",
+          "bytes": 169253,
+          "sha256": "3bf7d9fa4034f3cb3d846ce79b85966ebd89dd5c96ee3ec2deecab4b1c070f3a"
+        }
+      ]
+    },
+    {
+      "pdf": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-dividend-date-changes\\1216865445.pdf",
+        "bytes": 98519,
+        "sha256": "063f6388cc0873137996b88b32e7b6ae61af92554975b5e5eb3c96e36a27be57"
+      },
+      "renderer": {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftoppm.exe",
+        "bytes": 3727360,
+        "sha256": "78152c542e195135206419404196ca9457e68929b715024dafd3dff8733b4407"
+      },
+      "dpi": 110,
+      "stdout": "",
+      "stderr": "Syntax Error: No display font for 'Symbol'\r\nSyntax Error: No display font for 'ArialUnicode'\r\n",
+      "images": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1216865445-1.png",
+          "bytes": 324816,
+          "sha256": "ba23549ba168f88f64c038c12166b5c6b2ed594dcbc2f279b5339995cbd502d0"
+        }
+      ]
+    },
+    {
+      "pdf": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-dividend-date-changes\\1217029620.pdf",
+        "bytes": 153125,
+        "sha256": "0fcd7aef629a88f23e965207ef249ff05052ee25be29d46d5ef4d7a7c8794bd5"
+      },
+      "renderer": {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftoppm.exe",
+        "bytes": 3727360,
+        "sha256": "78152c542e195135206419404196ca9457e68929b715024dafd3dff8733b4407"
+      },
+      "dpi": 110,
+      "stdout": "",
+      "stderr": "Syntax Error: No display font for 'Symbol'\r\nSyntax Error: No display font for 'ArialUnicode'\r\n",
+      "images": [
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1217029620-1.png",
+          "bytes": 298464,
+          "sha256": "79bf3c38741c937084676f9525333a7b0e7fdfa5e9e60cd965c9cd2eceee363c"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1217029620-2.png",
+          "bytes": 332146,
+          "sha256": "bb98ddc72625d6c8799ae8b64d988f7ddd099ae5d5c22e9c6eca87cdc04ee391"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1217029620-3.png",
+          "bytes": 290607,
+          "sha256": "e2d07efbc486cb394050f2cb6dbbdee879b864a56dd076e2b60e6ef29c42a6c9"
+        },
+        {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\dividend-date-change-pages\\1217029620-4.png",
+          "bytes": 165246,
+          "sha256": "a68d12824a08ac0ec3ed9b0ac5976652c96e46d8d14ec6e04019a32f22d29224"
+        }
+      ]
+    }
+  ],
+  "audit_script": {
+    "path": ".cache/phase1/main-review/audit_dividend_supplement.py",
+    "bytes": 13410,
+    "sha256": "5797720da8b041458bacacddda8ce142d56c4f172e8986ebb0906800143fc715"
+  }
+}
