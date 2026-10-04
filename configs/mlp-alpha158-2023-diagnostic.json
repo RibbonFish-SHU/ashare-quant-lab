@@ -1,0 +1,62 @@
+{
+  "schema_version": "mlp-alpha158-diagnostic-v1",
+  "data_kind": "real_candidate",
+  "research_eligible": false,
+  "backtest_inputs_and_costs": "configs/diagnostic-equal-weight-2023.json",
+  "backtest_config_sha256_lf": "755cee0d3becc6f5c3f87f20203eabbe361a35eec1ff84868713971e3a13db30",
+  "feature_source": "Qlib Alpha158DL.get_feature_config, 158 expressions, same as alpha158-lightgbm-2023-diagnostic",
+  "features": {
+    "count": 158,
+    "raw_fields": ["open", "high", "low", "close", "volume", "vwap"],
+    "warmup_prior_sessions": 60,
+    "first_training_signal": "2023-04-04",
+    "preprocessing": "No fitted transforms; replace feature NaN and infinity with zero before the fixed MLP."
+  },
+  "label": {
+    "definition": "adjusted_open[t+6] / adjusted_open[t+1] - 1",
+    "target": "pandas average rank(pct=True) - 0.5 within eligible signal-day members",
+    "horizon_session_intervals": 5,
+    "training_maturity": "label_exit_index < evaluation_start_index",
+    "missing_endpoint": "exclude the label, never replace with zero"
+  },
+  "windows": [
+    {"name": "2023Q3", "evaluation_start": "2023-07-03", "evaluation_end": "2023-09-28"},
+    {"name": "2023Q4", "evaluation_start": "2023-10-09", "evaluation_end": "2023-12-29"}
+  ],
+  "model": {
+    "architecture": [158, 64, 32, 1],
+    "activation": "ReLU",
+    "loss": "MSELoss",
+    "optimizer": "Adam",
+    "epochs": 40,
+    "batch_size": 2048,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "shuffle": false,
+    "seed": 20261005,
+    "cpu_threads": 1,
+    "early_stopping": false,
+    "parameter_search": false
+  },
+  "portfolio": {
+    "top_k": 30,
+    "rank_order": "descending predicted score, then ascending symbol for ties",
+    "candidate_filter": "signal-day conditional member with finite prediction and finite close",
+    "initial_cash": 10000000,
+    "invest_fraction": 0.99,
+    "rebalance_every": 5,
+    "schedule_origin": "2023-07-03",
+    "execution": "freeze units at signal close, execute next session open",
+    "quarter_boundary": "continue holdings; next scheduled rebalance uses the new model",
+    "control": "all conditional members, same dates, initial cash and costs"
+  },
+  "primary_comparison": "base-cost MLP top30 versus matched equal weight, 2023-07-03 through 2023-12-29",
+  "sealed_price_interval": "2024-2025 not read",
+  "interpretation": [
+    "This is a fixed architecture baseline, not a tuned neural-network result.",
+    "The 2023 interval is a development diagnostic and is not a blind final test.",
+    "The same candidate, adjusted-unit execution, costs, windows and top30 selection as the LightGBM comparison apply.",
+    "A positive relative result or IC would not establish a profitable executable strategy; preserve a negative result.",
+    "Source-native prices and volumes remain uncertified candidates; formal PIT, company-action and tradeability gaps remain."
+  ]
+}
