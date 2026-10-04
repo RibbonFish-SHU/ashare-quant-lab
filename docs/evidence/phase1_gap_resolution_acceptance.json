@@ -1,0 +1,1430 @@
+{
+  "schema_version": "gap-resolution-acceptance-v1",
+  "recorded_at_utc": "2026-10-04T05:31:20.169765+00:00",
+  "owner": "main",
+  "source_commit": "93f018675afff4178a121cb3b35d1f5aaf9772b4",
+  "research_eligible": false,
+  "source_and_candidates_accepted": true,
+  "real_build_counts": {
+    "state": 1,
+    "membership": 1
+  },
+  "outputs": {
+    "state": {
+      "directory": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\state-evidence-2023-gap-resolution-original336-v1",
+      "manifest": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\state-evidence-2023-gap-resolution-original336-v1\\manifest.json",
+        "bytes": 95537,
+        "sha256": "c776d9188799380d5de7c61117b7571305847adf6e6fe1fac8f3c3f2ebcae15a"
+      },
+      "tables": {
+        "events": {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\state-evidence-2023-gap-resolution-original336-v1\\events.parquet",
+          "bytes": 34049,
+          "sha256": "c46490a518c51c95e0cf16a6701ad9866b5d980d944aebce8aaf35a1edb1e47e",
+          "rows": 276,
+          "parquet_roundtrip": true,
+          "duckdb_roundtrip": true
+        },
+        "daily_references": {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\state-evidence-2023-gap-resolution-original336-v1\\daily_references.parquet",
+          "bytes": 6573626,
+          "sha256": "d58dc8594edb3a91f75fc65094ef45324a9224d41fd90c6f87e0d072a1391beb",
+          "rows": 81312,
+          "parquet_roundtrip": true,
+          "duckdb_roundtrip": true
+        }
+      },
+      "elapsed_seconds": 10.468222800001968,
+      "canonical_reader_rejection_after_completion": "unsupported or incomplete dataset manifest",
+      "inputs_reverified": 91
+    },
+    "membership": {
+      "directory": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\membership-gaps-2023-original336-v1",
+      "manifest": {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\membership-gaps-2023-original336-v1\\manifest.json",
+        "bytes": 39944,
+        "sha256": "fa454c4593792a8c921bdc2cf9baee382596f00cddf8531f80c5d10dfd27ede8"
+      },
+      "tables": {
+        "membership": {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\membership-gaps-2023-original336-v1\\membership.parquet",
+          "bytes": 6909,
+          "sha256": "1c6c37e41640e0b2a57e3aa8aaee21e478b7a731f2283252d3b19f5160d08301",
+          "rows": 72600,
+          "parquet_roundtrip": true
+        },
+        "gaps": {
+          "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\membership-gaps-2023-original336-v1\\gaps.parquet",
+          "bytes": 3739,
+          "sha256": "161b338d6eb77c833ecb65fa4ca96453b8f1b06a02326de5411653af626541b2",
+          "rows": 33,
+          "parquet_roundtrip": true
+        }
+      },
+      "elapsed_seconds": 5.003979100030847,
+      "canonical_reader_rejection_after_completion": "unsupported or incomplete dataset manifest",
+      "inputs_reverified": 17
+    }
+  },
+  "independent_duckdb_checks": {
+    "event_kinds": [
+      {
+        "kind": "halt",
+        "n": 3,
+        "known_availability": 0
+      },
+      {
+        "kind": "name_change",
+        "n": 270,
+        "known_availability": 0
+      },
+      {
+        "kind": "resume",
+        "n": 3,
+        "known_availability": 0
+      }
+    ],
+    "classifications": [
+      {
+        "classification": "full_day_halt_reference",
+        "n": 17
+      },
+      {
+        "classification": "no_selected_halt_reference",
+        "n": 81294
+      },
+      {
+        "classification": "partial_day_halt_reference",
+        "n": 1
+      }
+    ],
+    "state_scope": [
+      {
+        "n": 81312,
+        "symbols": 336,
+        "days": 242,
+        "start": "2023-01-03",
+        "finish": "2023-12-29",
+        "certified_trade_rows": 0,
+        "certified_asof_rows": 0
+      }
+    ],
+    "halt_intervals": [
+      {
+        "symbol": "600372.SH",
+        "classification": "full_day_halt_reference",
+        "n": 7,
+        "start": "2023-02-08",
+        "finish": "2023-02-16"
+      },
+      {
+        "symbol": "601916.SH",
+        "classification": "full_day_halt_reference",
+        "n": 6,
+        "start": "2023-06-15",
+        "finish": "2023-06-26"
+      },
+      {
+        "symbol": "688065.SH",
+        "classification": "full_day_halt_reference",
+        "n": 4,
+        "start": "2023-06-16",
+        "finish": "2023-06-21"
+      },
+      {
+        "symbol": "688065.SH",
+        "classification": "partial_day_halt_reference",
+        "n": 1,
+        "start": "2023-06-15",
+        "finish": "2023-06-15"
+      }
+    ],
+    "gap_details": [
+      {
+        "symbol": "600372.SH",
+        "conditional_member": false,
+        "state_classification": "full_day_halt_reference",
+        "n": 7
+      },
+      {
+        "symbol": "601059.SH",
+        "conditional_member": false,
+        "state_classification": "no_selected_halt_reference",
+        "n": 16
+      },
+      {
+        "symbol": "601916.SH",
+        "conditional_member": false,
+        "state_classification": "full_day_halt_reference",
+        "n": 6
+      },
+      {
+        "symbol": "688065.SH",
+        "conditional_member": true,
+        "state_classification": "full_day_halt_reference",
+        "n": 4
+      }
+    ],
+    "conditional_daily_counts": [
+      {
+        "minimum": 300,
+        "maximum": 300,
+        "days": 242
+      }
+    ],
+    "membership_scope": [
+      {
+        "n": 72600,
+        "union_symbols": 323,
+        "known_availability": 0,
+        "eligible_rows": 0
+      }
+    ],
+    "changed_classification_rows": 13,
+    "changed_original_reference_rows": 0,
+    "raw_nulls_absent_from_diagnostic": 0,
+    "diagnostic_gaps_absent_from_raw": 0,
+    "incorrect_membership_flags": 0,
+    "filled_gap_rows": 0
+  },
+  "diagnostic": {
+    "original_plan_symbols": 336,
+    "open_days": 242,
+    "original_plan_rows": 81312,
+    "conditional_membership_rows": 72600,
+    "original_plan_missing_quotes": 33,
+    "conditional_member_missing_quotes": 4,
+    "outside_conditional_membership_missing_quotes": 29,
+    "missing_by_symbol": [
+      {
+        "symbol": "600372.SH",
+        "missing_rows_original_plan": 7,
+        "missing_rows_conditional_members": 0,
+        "original_record_statuses": {
+          "missing_with_suspension_reference": 7
+        },
+        "state_classifications": {
+          "full_day_halt_reference": 7
+        },
+        "dates": [
+          "2023-02-08",
+          "2023-02-09",
+          "2023-02-10",
+          "2023-02-13",
+          "2023-02-14",
+          "2023-02-15",
+          "2023-02-16"
+        ]
+      },
+      {
+        "symbol": "601059.SH",
+        "missing_rows_original_plan": 16,
+        "missing_rows_conditional_members": 0,
+        "original_record_statuses": {
+          "before_ipo_reference": 16
+        },
+        "state_classifications": {
+          "no_selected_halt_reference": 16
+        },
+        "dates": [
+          "2023-01-03",
+          "2023-01-04",
+          "2023-01-05",
+          "2023-01-06",
+          "2023-01-09",
+          "2023-01-10",
+          "2023-01-11",
+          "2023-01-12",
+          "2023-01-13",
+          "2023-01-16",
+          "2023-01-17",
+          "2023-01-18",
+          "2023-01-19",
+          "2023-01-20",
+          "2023-01-30",
+          "2023-01-31"
+        ]
+      },
+      {
+        "symbol": "601916.SH",
+        "missing_rows_original_plan": 6,
+        "missing_rows_conditional_members": 0,
+        "original_record_statuses": {
+          "missing_with_suspension_reference": 6
+        },
+        "state_classifications": {
+          "full_day_halt_reference": 6
+        },
+        "dates": [
+          "2023-06-15",
+          "2023-06-16",
+          "2023-06-19",
+          "2023-06-20",
+          "2023-06-21",
+          "2023-06-26"
+        ]
+      },
+      {
+        "symbol": "688065.SH",
+        "missing_rows_original_plan": 4,
+        "missing_rows_conditional_members": 4,
+        "original_record_statuses": {
+          "missing_with_suspension_reference": 4
+        },
+        "state_classifications": {
+          "full_day_halt_reference": 4
+        },
+        "dates": [
+          "2023-06-16",
+          "2023-06-19",
+          "2023-06-20",
+          "2023-06-21"
+        ]
+      }
+    ],
+    "missing_values_imputed": 0,
+    "research_eligible": false,
+    "available_time": null,
+    "formal_universe": false,
+    "assumptions": [
+      "January 3 vendor set becomes a full baseline after applying the verified December 2022 delta.",
+      "Only the two selected regular events change CSI300 membership during 2023.",
+      "Neither assumption is certified; this is a consistency diagnostic, not a historical universe."
+    ],
+    "conditional_union_symbols": 323,
+    "state_candidate_attached": true,
+    "community_membership_mismatch_days": 27,
+    "membership_mismatches": [
+      {
+        "event_date": "2023-06-12",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-13",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-14",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-15",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-16",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-19",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-20",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-21",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-26",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-27",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-28",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-06-29",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000617.SZ",
+          "000983.SZ",
+          "600732.SH",
+          "600754.SH",
+          "600875.SH",
+          "601607.SH",
+          "601699.SH",
+          "601872.SH",
+          "688223.SH"
+        ],
+        "extra_in_community": [
+          "002008.SZ",
+          "002032.SZ",
+          "002600.SZ",
+          "002602.SZ",
+          "300529.SZ",
+          "300595.SZ",
+          "601966.SH",
+          "603882.SH",
+          "688169.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-11",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-12",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-13",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-14",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-15",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-18",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-19",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-20",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-21",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-22",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-25",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-26",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-27",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-28",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      },
+      {
+        "event_date": "2023-12-29",
+        "observed_count": 300,
+        "conditional_count": 300,
+        "missing_from_community": [
+          "000999.SZ",
+          "002603.SZ",
+          "300308.SZ",
+          "301269.SZ",
+          "600023.SH",
+          "600372.SH",
+          "600489.SH",
+          "600515.SH",
+          "600938.SH",
+          "601059.SH",
+          "601916.SH",
+          "688041.SH",
+          "688256.SH",
+          "688271.SH"
+        ],
+        "extra_in_community": [
+          "000723.SZ",
+          "002064.SZ",
+          "002120.SZ",
+          "002414.SZ",
+          "002756.SZ",
+          "300207.SZ",
+          "300601.SZ",
+          "300769.SZ",
+          "600383.SH",
+          "600763.SH",
+          "600884.SH",
+          "601216.SH",
+          "603185.SH",
+          "688005.SH"
+        ]
+      }
+    ],
+    "community_membership_mismatch_days_by_month": {
+      "2023-06": 12,
+      "2023-12": 15
+    },
+    "source_validation": "prior reviewed event transcription; original artifact hashes verified; no new text extraction",
+    "baseline_certified": false,
+    "temporary_event_coverage_certified": false,
+    "warnings": [
+      "Conditional membership is a diagnostic assumption, not a certified historical universe.",
+      "Outside-conditional gaps remain in the original 336-symbol denominator and raw data.",
+      "Selected halt references do not certify tradeability or unknown historical availability.",
+      "Missing prices are not zero returns; no price, return or execution is imputed.",
+      "Corporate-action cash/share accounting and publication completeness are not certified here."
+    ]
+  },
+  "execution": {
+    "full_tests": {
+      "label": "tests",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+      "log": "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\source\\tests.log",
+      "started_at_utc": "2026-10-04T05:20:33.079846+00:00",
+      "pid": 33528,
+      "status": "passed",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "child_waited_and_exited": true,
+      "finished_at_utc": "2026-10-04T05:21:04.325299+00:00",
+      "elapsed_seconds": 31.245785199978855
+    },
+    "ruff": {
+      "label": "ruff",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+      "log": "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\source\\ruff.log",
+      "started_at_utc": "2026-10-04T05:21:04.330828+00:00",
+      "pid": 65724,
+      "status": "passed",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "child_waited_and_exited": true,
+      "finished_at_utc": "2026-10-04T05:21:04.436920+00:00",
+      "elapsed_seconds": 0.10640009999042377
+    },
+    "format": {
+      "label": "format",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+      "log": "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\source\\format.log",
+      "started_at_utc": "2026-10-04T05:21:04.441828+00:00",
+      "pid": 68364,
+      "status": "passed",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "child_waited_and_exited": true,
+      "finished_at_utc": "2026-10-04T05:21:04.541640+00:00",
+      "elapsed_seconds": 0.10010179999517277
+    },
+    "final_preflight": {
+      "label": "preflight",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.state_evidence.cli",
+        "validate",
+        "--source",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\configs\\state-evidence-2023.json",
+        "--input-root",
+        "E:\\量化\\ashare-quant-lab",
+        "--pdftotext",
+        "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "--project-root",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+        "--report",
+        "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\preflight-final\\validation.json"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+      "log": "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\preflight-final\\preflight.log",
+      "started_at_utc": "2026-10-04T05:25:15.840469+00:00",
+      "pid": 34276,
+      "status": "passed",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "child_waited_and_exited": true,
+      "finished_at_utc": "2026-10-04T05:25:18.881419+00:00",
+      "elapsed_seconds": 3.0407133999979123
+    },
+    "state_build": {
+      "label": "state",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ashare_lab.state_evidence.cli",
+        "build",
+        "--source",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\configs\\state-evidence-2023.json",
+        "--input-root",
+        "E:\\量化\\ashare-quant-lab",
+        "--pdftotext",
+        "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "--project-root",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+        "--output",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\state-evidence-2023-gap-resolution-original336-v1"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+      "log": "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\build\\state.log",
+      "started_at_utc": "2026-10-04T05:27:19.459696+00:00",
+      "pid": 66820,
+      "status": "passed",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "child_waited_and_exited": true,
+      "finished_at_utc": "2026-10-04T05:27:30.429874+00:00",
+      "elapsed_seconds": 10.970751099986956
+    },
+    "membership_build": {
+      "label": "membership",
+      "argv": [
+        "E:\\量化\\ashare-quant-lab\\.venv\\Scripts\\python.exe",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\scripts\\reconcile_membership_gaps.py",
+        "--project-root",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+        "--input-root",
+        "E:\\量化\\ashare-quant-lab",
+        "--reconciliation",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\docs\\evidence\\phase1_membership_conditional_reconciliation.json",
+        "--events",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\configs\\csi-events-2023.json",
+        "--original-plan",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\.cache\\phase1\\plans\\securities-2023.json",
+        "--bao-candidate",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-data\\datasets\\candidates\\phase1-2023-provenance-verified",
+        "--community-candidate",
+        "E:\\量化\\ashare-quant-lab\\datasets\\candidates\\community-2023-main-review-original336-v2",
+        "--state-candidate",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\state-evidence-2023-gap-resolution-original336-v1",
+        "--output",
+        "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\datasets\\candidates\\membership-gaps-2023-original336-v1"
+      ],
+      "cwd": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution",
+      "log": "E:\\量化\\ashare-quant-lab\\artifacts\\gap-resolution\\diagnostic\\membership.log",
+      "started_at_utc": "2026-10-04T05:28:21.081643+00:00",
+      "pid": 54612,
+      "status": "passed",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "child_waited_and_exited": true,
+      "finished_at_utc": "2026-10-04T05:28:26.370946+00:00",
+      "elapsed_seconds": 5.28873550001299
+    }
+  },
+  "final_review_regression": {
+    "command": "python -m pytest tests/test_state_sources.py tests/test_state_temporal.py tests/test_state_pipeline.py tests/test_membership_gaps.py -q",
+    "passed": 123,
+    "pytest_seconds": 9.79,
+    "record": "tool output chunk 1520af and 669dd1; performed after the two final review fixes",
+    "ruff_check": "All checks passed",
+    "format_initial": "2 changed files required formatting; applied Ruff formatter",
+    "format_final": "68 files already formatted; tool output chunk 982f9b",
+    "full_suite_before_final_fixes": {
+      "passed": 450,
+      "pytest_seconds": 30.71
+    }
+  },
+  "old_candidate_protection": {
+    "prior_versioned_evidence": {
+      "path": "E:\\量化\\ashare-quant-lab\\docs\\evidence\\phase1_state_evidence_main_acceptance.json",
+      "bytes": 9179,
+      "sha256": "510e10a13a91f8299f05fbee9d410e3f748941368aa23038ef7680fd0ba3e76d"
+    },
+    "all_four_original_files_unchanged": true,
+    "checked_files": [
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\manifest.json",
+        "bytes": 76503,
+        "sha256": "acfb52a909fca9dc0e4ccbde8cafe77621d2250669254cdfbe60aa5b7fc5cde5"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\quality.json",
+        "bytes": 2007473,
+        "sha256": "1c81035c187bbb104dfb771087c953d4262a3ee1d94377a8008a9632167ff546"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\events.parquet",
+        "bytes": 31112,
+        "sha256": "e03c509163b5010f692cc226b6800ed6a62e4a47d464e66ea3cd5fc1703feb5f"
+      },
+      {
+        "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-state-review\\datasets\\candidates\\state-evidence-2023-main-review-original336-v1\\daily_references.parquet",
+        "bytes": 6572857,
+        "sha256": "51757b2079430086ee7e7099007aa939294c5f65e315dd3bc023545f9592d08e"
+      }
+    ],
+    "pre_snapshot_issue": "Optional old-candidate snapshot command used a PowerShell pipe containing a Chinese path; Windows encoded it as ?? and it failed before opening any old file. New build proceeded once into its distinct immutable output. Final old-file hashes were instead checked against the prior committed acceptance record; no new build or old write occurred."
+  },
+  "review_fixes": [
+    "Final membership manifest is written as built_candidate before checking formal-reader rejection.",
+    "Selected resumption quotes must end the affirmative sentence; qualified/cancelled suffixes and conditional prefixes are rejected."
+  ],
+  "source_audit": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\worktrees\\phase1-gap-resolution\\docs\\evidence\\phase1_gap_source_audit.json",
+    "bytes": 31207,
+    "sha256": "395e9ea985730aaee6bba8df56db95cc84b6c14877d7d459cdc180f64979f7ad"
+  },
+  "audit_script": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\accept_gap_resolution.py",
+    "bytes": 9503,
+    "sha256": "d52bee0a8dba8f16a47c5cc3d275d435b4b45a73689815d6464d1dff39265cc3"
+  },
+  "run_script": {
+    "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\run_gap_checks.py",
+    "bytes": 3785,
+    "sha256": "6e2d2d9b654f6e634a0c077ed2960b435c9a0e7450452e218361429f8e73212c"
+  },
+  "resources": {
+    "public_data_requests": 15,
+    "retries": 0,
+    "model_runs": 0,
+    "gpu_runs": 0,
+    "server_operations": 0,
+    "read_2024_2025_quotes": false,
+    "all_recorded_children_exited": true
+  },
+  "limits": [
+    "Conditional baseline and temporary membership-event completeness remain uncertified.",
+    "All event availability remains unknown. Tradeability, ST/limit states and corporate-action accounting are not certified.",
+    "No formal model, backtest, PIT eligibility or year-wide absence of corporate actions is asserted."
+  ]
+}

@@ -8,6 +8,9 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 另已下载 Qlib 推荐的免费社区历史包，完成原计划 336 只的 2023 价格核对及六只原生 provider 抽样，
 并核实包内历史成分的时间偏差；见[公开数据包实测](docs/PHASE1_OPEN_DATA_REVIEW.md)。
 100 只补充证券的官方上市日期及有限腾讯交叉证据已接入可重放质量报告，旧行情文件保持相同。
+最新已用公告解释 17 个停牌缺价日，并生成独立条件成员日历：33 个原范围缺价日中，
+当日条件成员内有 4 个，均对应已核实停牌；社区调样滞后的 27 个交易日有逐日诊断。
+条件成员的基准与临时调整完整性仍未认证，见[缺口解决与运行证据](docs/PHASE1_GAP_RESOLUTION_REPORT.md)。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
@@ -37,5 +40,6 @@ uv run --frozen --extra dev ashare-lab smoke --config configs/smoke.toml
 - [上市日期与独立价格抽样](docs/PHASE1_METADATA_AND_CROSSCHECK.md)
 - [免费社区历史数据包及成员口径实测](docs/PHASE1_OPEN_DATA_REVIEW.md)
 - [参考证据接入主审](docs/PHASE1_REFERENCE_INTEGRATION_REVIEW.md)与[执行记录](docs/PHASE1_REFERENCE_INTEGRATION_REPORT.md)
+- [停复牌、公司行为原件与条件成员缺口](docs/PHASE1_GAP_RESOLUTION_REPORT.md)
 
 研究、推理、交易和风控保持隔离。当前代码仅有研究工程工具；实盘晋级依照项目方案另行确认。
