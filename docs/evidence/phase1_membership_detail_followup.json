@@ -1,0 +1,1912 @@
+{
+  "schema_version": "csi-membership-detail-followup-v1",
+  "recorded_at_utc": "2026-10-04T11:00:28.411138+00:00",
+  "research_eligible": false,
+  "available_time": null,
+  "status": "partial_archive_review_completed_with_source_restriction_preserved",
+  "capture": {
+    "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/recovered-manifest.json",
+    "bytes": 48873,
+    "sha256": "b9c73db04776ceb054c4b8e9a1d42eb0db9f98c86f2f26dd4e5e7789ec56b5d7"
+  },
+  "failure": {
+    "recorded_at_utc": "2026-10-04T10:46:01.392930+00:00",
+    "status": "stopped_on_http_403",
+    "http_status": 403,
+    "failed_id": 14891,
+    "tool_exec_session_id": 18139,
+    "tool_exit_code": 1,
+    "reported_exception": "urllib.error.HTTPError: HTTP Error 403: Forbidden",
+    "automatic_retry": false,
+    "evidence_basis": "Live tool output and exact collector control flow; original exception response body and headers were not saved.",
+    "request_time_precision": "Original in-memory request start values were lost on exception. File last-write timestamps are local write metadata only, not request start or historical availability.",
+    "collector": {
+      "path": ".cache/phase1/main-review/screen_csi_adjustment_details.py",
+      "bytes": 5188,
+      "sha256": "12822e234a0d10369a675a81615e1f58eb67859a81150cc0ad119d7d100912bc"
+    },
+    "initial_manifest_written": false
+  },
+  "independent_full_body_review": {
+    "path": ".cache/phase1/main-review/csi-detail-independent-review.json",
+    "bytes": 249765,
+    "sha256": "51be6fa6ed38ea348c5a32090e929312de9c7ff0d5dc930c7c9837c1ab2f8a19"
+  },
+  "prior_cumulative_review": {
+    "path": "docs/evidence/phase1_membership_archive_scan.json",
+    "bytes": 33091,
+    "sha256": "b6de4e5f6e6af7162d57bda804fada49e844fee55dfef327f935851487334602"
+  },
+  "attachment_capture": {
+    "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/run.json",
+    "bytes": 10483,
+    "sha256": "c4d31d903a5f1b82d9d7204c187d0f9ac5dd84c710c0a66543781988a201d8c1"
+  },
+  "attachment_extraction": {
+    "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/manifest.json",
+    "bytes": 19540,
+    "sha256": "45f7bb68d30ffe86ada1ca201165b4feec9c449568360f71cc0e28a17dceb2ca"
+  },
+  "main_audit_script": {
+    "path": ".cache/phase1/main-review/audit_csi_followup.py",
+    "bytes": 9554,
+    "sha256": "2d891ec67131eccef405bf84a6cba8de279a6e4ca68ab9638cdccece6c164792"
+  },
+  "network": {
+    "detail_successes": 50,
+    "detail_http_403": 1,
+    "detail_reused": 1,
+    "detail_not_attempted_this_run": 100,
+    "attachment_successes": 6,
+    "http_attempts": 57,
+    "new_success_response_bytes": 1208695,
+    "automatic_retry": false,
+    "detail_redirect_history": "not recorded by first collector; no claim of zero redirects",
+    "attachment_redirects": 0
+  },
+  "full_body_classification_counts": {
+    "other_indices_complete_selected_attachment": 4,
+    "other_index_explicit_body": 39,
+    "other_index_title_and_complete_body_context": 3,
+    "csi300_explicit_body": 2,
+    "partial_attachment_reviewed_open_other_index_scope": 2
+  },
+  "records": [
+    {
+      "id": 15102,
+      "title": "关于中证中票50指数等35条指数2023年四季度定期调整结果的公告",
+      "publish_date": "2023-12-29",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15102.json",
+        "bytes": 1652,
+        "sha256": "8f74d90286822e686ee10df80ac07d6304b1ea90f26d1470888fc853e9e805db"
+      },
+      "classification": "other_indices_complete_selected_attachment",
+      "basis": "正文与附件共同定位；附件 Sheet1 的 A/B/C 指数标识列完整列出 35 条债券指数，无沪深300本体。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15104,
+      "title": "关于上证企债30指数等5条指数2023年四季度定期调整结果的公告",
+      "publish_date": "2023-12-29",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15104.json",
+        "bytes": 1743,
+        "sha256": "09af975ac6cb0749b5c71923118ce39155a8d32948733d8c671ad6c69158e4d5"
+      },
+      "classification": "other_indices_complete_selected_attachment",
+      "basis": "正文与附件共同定位；附件 Sheet1 的 A/B/C 指数标识列完整列出 5 条债券指数，无沪深300本体。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15077,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-12-13",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15077.json",
+        "bytes": 3091,
+        "sha256": "73bfe705d42a2391e1c06386685a373ba60967da597575902e1eaf86a896759d"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文将范围限定为三板指数；完整表格只列899303三板服务、899306三板研发，均调出831175，分别调入873770、830849，且给出各自调出调入日期。依据表格的指数身份判定属于其他指数。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15066,
+      "title": "关于调整三板服务样本股的公告",
+      "publish_date": "2023-12-06",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15066.json",
+        "bytes": 2522,
+        "sha256": "6c8efbdcd9b2a9b84efcff0cc0e842e92e69d1e757a706ae3e45b1c311078d5d"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板服务；完整表格指数为899303，837283于12月7日调出，838240于12月8日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15065,
+      "title": "关于调整三板成指样本股的公告",
+      "publish_date": "2023-12-05",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15065.json",
+        "bytes": 2152,
+        "sha256": "a68471c61c3311971cebae4f46c8fb5544f36ed85c7f69531bbd87be52daab4a"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板成指；完整表格指数为899001，871888于12月6日调出，调入列为明确横线。横线保留为原文标记，不生成沪深300的无变更结论。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15063,
+      "title": "调整中华交易服务互联互通指数系列样本股的公告",
+      "publish_date": "2023-12-04",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15063.json",
+        "bytes": 4669,
+        "sha256": "d7e50abaa9eb54726ab80d41bf035846ed194c6e2a737f1677f3f63e484f9738"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文以“以下指数”列全5条中华交易服务指数，包括中华交易服务沪深港300、港股通精选100、中华港股通优选50、预期高股息、内房股，12月8日所有相关交易所收市后生效。沪深港300是此处明确写出的另一指数，不能等同沪深300。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15060,
+      "title": "关于三板指数样本股定期调整的公告",
+      "publish_date": "2023-12-01",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15060.json",
+        "bytes": 2170,
+        "sha256": "e4fbccff95baa4b42ea8d7a5789ca94f114b82c2a6a7914231c0809f66608731"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文明确由全国股转系统与中证指数对三板指数样本及备选名单作定期调整，12月11日生效，附件同样指向三板指数名单。正文市场与指数系列范围明确。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15055,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "publish_date": "2023-11-30",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15055.json",
+        "bytes": 3709,
+        "sha256": "07d2b2b35e76caffdfe064e05d8f2d9b7f346da5dcb58885a05dbde132a6178a"
+      },
+      "classification": "other_index_title_and_complete_body_context",
+      "basis": "同一官方记录的标题、ID、日期与完整正文共同确定：标题为中证恒生沪港通AH股精明指数，全文唯一实质事项是该指数当月股份类别维持不变，无其他调样条款。正文的‘指数’按完整公告语境解释；不要求机械重复全名，也不推广为全年无变化。元数据图片字节未审阅。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15054,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-11-28",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15054.json",
+        "bytes": 3089,
+        "sha256": "9fb85d524b5ccfe61567349f076b24d92130457ee9a57c4df97c5c5e77b6332d"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格只列899303三板服务、899305三板消费，分别837766转为836688、872117转为837549，调出11月29日、调入11月30日。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15043,
+      "title": "中证指数公司公布沪深300等指数样本定期调整方案",
+      "publish_date": "2023-11-24",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15043.json",
+        "bytes": 2567,
+        "sha256": "4924225aa32d090ce26a1c9d859b1a808069a3ef84f571e3a00197894a5d5df8"
+      },
+      "classification": "csi300_explicit_body",
+      "basis": "正文明确沪深300等定期例行调整12月8日收市后生效；沪深300更换14只，举海光信息、中际旭创调入，并继续讨论该指数行业、市值和估值。是正文确证，不是名称命中推断；具体成分需关联15044附件。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15044,
+      "title": "关于沪深300、中证500、中证1000等指数定期调整结果的公告",
+      "publish_date": "2023-11-24",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15044.json",
+        "bytes": 2552,
+        "sha256": "697aff6dfe1de169d2ac971b17020e5afd3b72c27dad3da9266f4d8fecf24b35"
+      },
+      "classification": "csi300_explicit_body",
+      "basis": "正文明确调整沪深300、中证500、中证1000，12月8日收市后生效，其中沪深300更换14只。明确涉及沪深300本体；正文不提供完整14进14出和备选名单，需查或复用PDF附件，且当前未解析该附件。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15046,
+      "title": "关于上证50、上证180、上证380等指数定期调整结果的公告",
+      "publish_date": "2023-11-24",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15046.json",
+        "bytes": 2132,
+        "sha256": "2f3a2cd045e4b8214dd987638373705e712d737987050036447e130cf5f0e58a"
+      },
+      "classification": "partial_attachment_reviewed_open_other_index_scope",
+      "basis": "全部所选PDF页已提取并视觉核对，仅列科创/上证指数；正文另指向其他指数的拟生效样本，范围仍未闭合。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15048,
+      "title": "关于北证50（899050）样本股定期调整的公告",
+      "publish_date": "2023-11-24",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15048.json",
+        "bytes": 2148,
+        "sha256": "6e166c20c381569f0f4ad2dbdde6ef2a4acfb38c497a3ccb9ef37332dfe80ab9"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文明确指定北证50（899050），北京证券交易所与中证指数调整其样本及备选名单，12月11日生效；附件仍为同一具名指数。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15050,
+      "title": "调整中华交易服务中国跨境指数系列、中国海外民企指数、香港生物科技指数、半导体芯片行业指数等指数样本股的公告",
+      "publish_date": "2023-11-24",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15050.json",
+        "bytes": 5200,
+        "sha256": "a5f1c8e5e9e4e9395d02dd837675ede2daeae5ff29f5ffc1d43860cbd2f8b7a7"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文以“以下指数”列全8条中华交易服务指数：中国120、中国A80、中国香港内地、中国280、中国海外民企、香港生物科技、半导体芯片行业、博彩业，12月8日所有相关交易所收市后生效。范围由正文列举，而非依据标题“等指数”猜测。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15041,
+      "title": "关于调整创新成指样本股的公告",
+      "publish_date": "2023-11-22",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15041.json",
+        "bytes": 2658,
+        "sha256": "2cabf0a8d0083cbe1bc9ac393fe17dc9ecb183f47512f8a405ae00bbb4c6493b"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定创新成指；表格两行指数均899003，因转基础层调出830827、838606，自11月23日起。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15036,
+      "title": "关于调整三板成指样本股的公告",
+      "publish_date": "2023-11-20",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15036.json",
+        "bytes": 2160,
+        "sha256": "0d9a729ccbba3711057f9105430bf0c94422c6c6789577b2209dfddf4b6f41f5"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板成指；表格指数899001，仅列832319于11月21日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15030,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-11-15",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15030.json",
+        "bytes": 3093,
+        "sha256": "ee433ba83ddf6a7820ac55f6d6dee8e310a347f901f19788233018804a67c5b8"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格899003创新成指调出832522，899305三板消费调出873132、调入835833，各行日期明确。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15026,
+      "title": "关于调整三板消费样本股的公告",
+      "publish_date": "2023-11-10",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15026.json",
+        "bytes": 1966,
+        "sha256": "a44bcee42cb91145c0a4f8d3d38fc279fef2ce2634a09fccc73723aca93a2742"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文按三板消费快速进入规则处理874178；完整表格指数899305，调入日期11月13日。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15025,
+      "title": "关于调整三板服务样本股的公告",
+      "publish_date": "2023-11-10",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15025.json",
+        "bytes": 2450,
+        "sha256": "c106290d50c893d49febfe258fde9ba18f806e192548af62104079356dfbf17a"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板服务；表格指数899303，839497于11月13日调出、430470于11月14日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15024,
+      "title": "关于调整三板消费样本股的公告",
+      "publish_date": "2023-11-09",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15024.json",
+        "bytes": 1931,
+        "sha256": "b06d2a387b96df55d7ab4179b49027ffa4c85761a60f41e04664e7d7baeca2fe"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板消费；表格指数899305，仅列873679于11月10日调出，表头本身只有调出列。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15018,
+      "title": "关于调整创新成指样本股的公告",
+      "publish_date": "2023-11-07",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15018.json",
+        "bytes": 2191,
+        "sha256": "70f4bc2f1b4429938608a8ebadc637809f88998ea1291f963fbc40a240887952"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定创新成指；表格指数899003，873833于11月8日调出，调入栏原文为横线。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15017,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "publish_date": "2023-11-02",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15017.json",
+        "bytes": 3633,
+        "sha256": "dbdbb0434ad04ceb4f6ab9f72c253c8a6b65bdafd91705c8ec17e9f563c509cc"
+      },
+      "classification": "other_index_title_and_complete_body_context",
+      "basis": "同一官方记录的标题、ID、日期与完整正文共同确定：标题为中证恒生沪港通AH股精明指数，全文唯一实质事项是该指数当月股份类别维持不变，无其他调样条款。正文的‘指数’按完整公告语境解释；不要求机械重复全名，也不推广为全年无变化。元数据图片字节未审阅。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15013,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-11-01",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15013.json",
+        "bytes": 3056,
+        "sha256": "1beea3ea01ac57befaa473a497b46b2bbc7e1027cd0d950fd4cca21a4c4cc670"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格899303三板服务和899306三板研发均调出833030，分别调入430266、836888，11月2日调出、11月3日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15009,
+      "title": "关于调整三板服务样本股的公告",
+      "publish_date": "2023-10-31",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15009.json",
+        "bytes": 2447,
+        "sha256": "53f3be93b35d84ed2376b9f6d7f271a23f2cd5a446b60144905d2b13c201233f"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板服务；表格指数899303，839493于11月1日调出、831101于11月2日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 15004,
+      "title": "关于调整三板成指样本股的公告",
+      "publish_date": "2023-10-30",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-15004.json",
+        "bytes": 2081,
+        "sha256": "fc5b99e1d33d707b7d5a855d072ea1413556bbc0755769d34e92872d2b03cf86"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板成指；表格指数899001，833458于10月31日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14995,
+      "title": "关于调整三板做市样本股的公告",
+      "publish_date": "2023-10-27",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14995.json",
+        "bytes": 2245,
+        "sha256": "26f30875aeb7dca535e6947ce6b6c764e115153e97058c5be1d4851212008931"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板做市；表格指数899002，因做市改集合竞价，831019于10月30日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14982,
+      "title": "关于补充三板龙头备选名单的公告",
+      "publish_date": "2023-10-23",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14982.json",
+        "bytes": 2231,
+        "sha256": "39f84a03327b990d52af17b722a403baa7228591e8623c08d6afa2c2e050e4ed"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文说明三板龙头特定行业备选名单使用过半，并引用全国股转系统民营龙头指数方案；表格仅899301三板龙头，补充备选832357、838687。是备选补充，不应改写成正式成分调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14981,
+      "title": "关于调整三板龙头样本股的公告",
+      "publish_date": "2023-10-19",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14981.json",
+        "bytes": 2483,
+        "sha256": "77d5f8c951f94a130d19918c1e8f909f51e7835d8f256c3ffa082530d7d786ab"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板龙头；表格指数899301，835359于10月20日调出、835679于10月23日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14980,
+      "title": "关于调整三板制造样本股的公告",
+      "publish_date": "2023-10-18",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14980.json",
+        "bytes": 2450,
+        "sha256": "8efcd3ac6f3f2b0d4056331fed0700c41f6061edf6e1062d3b80752b87ecdea7"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板制造；表格指数899302，873726于10月19日调出、430545于10月20日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14971,
+      "title": "关于调整三板消费样本股的公告",
+      "publish_date": "2023-10-13",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14971.json",
+        "bytes": 2451,
+        "sha256": "465617aa99b946b97640c631fa8b8a763385c1c63e45862d4b75170e5bdf7394"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文按三板消费快速进入情形处理874141；表格指数899305，835833调出、874141调入，均10月16日。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14966,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "publish_date": "2023-10-12",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14966.json",
+        "bytes": 5057,
+        "sha256": "56158e8c45e1d5fb1935c562d633563447fd9a730ef1fea477b38969668f3a2d"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文完整写明中证恒生沪港通AH股精明指数股份类别转换，10月16日生效；表格H转A为2359到603259药明康德，A转H原文为“无”。这种具名指数的股份类别转换不能冒作沪深300调样。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14965,
+      "title": "关于调整创新成指样本股的公告",
+      "publish_date": "2023-10-11",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14965.json",
+        "bytes": 2194,
+        "sha256": "8ad82964ba881df5f785fc4cdcaf74817512d619ba0c5d3f10e298caa4bc77c4"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定创新成指；表格指数899003，831852于10月12日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14962,
+      "title": "关于中证中票50指数等34条指数2023年三季度定期调整结果的公告",
+      "publish_date": "2023-09-28",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14962.json",
+        "bytes": 1652,
+        "sha256": "500a564adf27dfbb0037474127e69d8d5513a6a21fc580802223cf99a94124f7"
+      },
+      "classification": "other_indices_complete_selected_attachment",
+      "basis": "正文与附件共同定位；附件 Sheet1 的 A/B/C 指数标识列完整列出 34 条债券指数，无沪深300本体。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14960,
+      "title": "关于上证企债30指数等5条指数2023年三季度定期调整结果的公告",
+      "publish_date": "2023-09-28",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14960.json",
+        "bytes": 1789,
+        "sha256": "ed6ecdb2fa11d79e4867553240852dcccb737f5bcc67614855b9ad5ff492545b"
+      },
+      "classification": "other_indices_complete_selected_attachment",
+      "basis": "正文与附件共同定位；附件 Sheet1 的 A/B/C 指数标识列完整列出 5 条债券指数，无沪深300本体。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14957,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-09-27",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14957.json",
+        "bytes": 2950,
+        "sha256": "feebdc7507edd894f869dd12f2b830c05507e7f3beeaea75dd1a71bab0b3a072"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格899003创新成指调出834105，899305三板消费调出832978、调入835833。创新成指这一行的3个调入单元格为空，应保留空值，不补横线、无或零；指数身份本身在表中明确。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14954,
+      "title": "关于调整创新成指样本股的公告",
+      "publish_date": "2023-09-25",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14954.json",
+        "bytes": 2191,
+        "sha256": "6e93888815bd6956021177fdbe416b3666d999b3fa83e7e0ad12dee1c80ebba2"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定创新成指；表格指数899003，873665于9月26日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14934,
+      "title": "调整中华交易服务互联互通指数系列样本股的公告",
+      "publish_date": "2023-09-07",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14934.json",
+        "bytes": 3808,
+        "sha256": "7a0523d5ab712979cc92da80c7d819662c0f9303706e09ebef9a536ef636a857"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文以“以下指数”列全中华交易服务港股通精选100和中华交易服务预期高股息两条，9月8日相关交易所收市后生效；不是沪深300本体。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14933,
+      "title": "关于调整三板做市样本股的公告",
+      "publish_date": "2023-09-07",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14933.json",
+        "bytes": 2239,
+        "sha256": "a8c4d245a7ec95124cba5e4aa7fe08143b5eb73a56c4f0a0018e25b9aa327302"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板做市；表格指数899002，因交易方式改变，430358于9月8日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14930,
+      "title": "关于调整三板成指样本股的公告",
+      "publish_date": "2023-09-06",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14930.json",
+        "bytes": 2182,
+        "sha256": "a62fa0c355c2823966171486ca2a48478e282cac26c5351649b45d76b794a0b7"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板成指；表格指数899001，835070于9月7日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14923,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-09-04",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14923.json",
+        "bytes": 2602,
+        "sha256": "3a93f07395599eb4d65b451da53b3551f66bbbcdda70316c0fa631d35c53fc54"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格只列899001三板成指和899003创新成指，两者均430753于9月5日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14920,
+      "title": "关于三板成指、三板做市、三板活跃样本股定期调整的公告",
+      "publish_date": "2023-09-01",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14920.json",
+        "bytes": 2380,
+        "sha256": "484831e1cc159035444fb6a4e15edd2d939f7ac3a670f2d40f6e5d688ee57b64"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文明确列全三板成指899001、三板做市899002、三板活跃899307三条，调整样本及备选名单，9月11日生效；附件同范围。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14915,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "publish_date": "2023-08-31",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14915.json",
+        "bytes": 3697,
+        "sha256": "42920f258b558b94199c2663f42819c0deac673e46c56caabb16fc6667f67c5f"
+      },
+      "classification": "other_index_title_and_complete_body_context",
+      "basis": "同一官方记录的标题、ID、日期与完整正文共同确定：标题为中证恒生沪港通AH股精明指数，全文唯一实质事项是该指数当月股份类别维持不变，无其他调样条款。正文的‘指数’按完整公告语境解释；不要求机械重复全名，也不推广为全年无变化。元数据图片字节未审阅。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14916,
+      "title": "关于调整三板制造样本股的公告",
+      "publish_date": "2023-08-31",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14916.json",
+        "bytes": 2593,
+        "sha256": "c1e1d0c4c3ca39ea5452dacb32006efe5eb60c5fd1ee09f4e775b2e30761a1bc"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板制造；表格指数899302，870976于9月1日调出、870869于9月4日调入。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14913,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-08-30",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14913.json",
+        "bytes": 2610,
+        "sha256": "53a34fa499f0818dcf0c7588b78c756a5e0b4b127dbcb21b0f942fc4a2ee7be7"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格899001三板成指和899003创新成指均调出834874，自8月31日起。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14910,
+      "title": "调整中华交易服务港股通精选100指数样本股的公告",
+      "publish_date": "2023-08-30",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14910.json",
+        "bytes": 3840,
+        "sha256": "943528e055b117dfd60120c86938cd41a4f7ee046b0eaf3b0d3b123614b6914b"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文“以下指数”后只列中华交易服务港股通精选100，8月31日相关交易所收市后生效；正文范围明确，附件为该范围的调入调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14908,
+      "title": "关于调整创新成指样本股的公告",
+      "publish_date": "2023-08-28",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14908.json",
+        "bytes": 2661,
+        "sha256": "6bd8cd676cdaeef6ff201489ace0e892d25aef3392e65798c7b1a89781824726"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定创新成指；表格两行指数均899003，因转基础层调出836734、872747，自8月29日起。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14902,
+      "title": "关于科创50等指数三季度定期调整结果的公告",
+      "publish_date": "2023-08-25",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14902.json",
+        "bytes": 1921,
+        "sha256": "ef4a5f230971524936258fb0cf2f9aa1b64d5819d9d64050c401a5d2a013f770"
+      },
+      "classification": "partial_attachment_reviewed_open_other_index_scope",
+      "basis": "全部所选PDF页已提取并视觉核对，仅列科创/上证指数；正文另指向其他指数的拟生效样本，范围仍未闭合。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14903,
+      "title": "关于北证50（899050）样本股定期调整的公告",
+      "publish_date": "2023-08-25",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14903.json",
+        "bytes": 2148,
+        "sha256": "7bba9646a60c467a97be810740cd576bd7d0f293368a3aa8190094d0c2991cc2"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文明确北证50（899050），调整其样本及备选名单，9月11日生效；不是沪深300。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14900,
+      "title": "关于调整三板成指样本股的公告",
+      "publish_date": "2023-08-24",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14900.json",
+        "bytes": 2191,
+        "sha256": "89f89f9455b4740c0805eb2a434a445dfe6f96af3f2ee086fe5228a782dd2abf"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板成指；表格指数899001，838331于8月25日调出。",
+      "source_available_time": null,
+      "research_eligible": false
+    },
+    {
+      "id": 14895,
+      "title": "关于调整三板指数样本股的公告",
+      "publish_date": "2023-08-22",
+      "source": {
+        "path": "datasets/raw/csi/20261004-csi-adjustment-detail-screen-v1/announcement-14895.json",
+        "bytes": 3013,
+        "sha256": "e3c46aca3079d84b6a808562f20c0c67efcd5676ed5ad9bb24ab52f045b147b9"
+      },
+      "classification": "other_index_explicit_body",
+      "basis": "正文限定三板指数；表格899001三板成指调出870958，899303三板服务调出872953、调入430437，分别8月23日、8月24日。",
+      "source_available_time": null,
+      "research_eligible": false
+    }
+  ],
+  "body_parsing_observations": {
+    "null_or_blank_body_ids": [],
+    "residual_escape_ids": [],
+    "html_only_attachment_ids": [],
+    "metadata_only_enclosure_ids": [],
+    "active_or_hidden_markup_ids": [],
+    "inline_image_count": 0,
+    "metadata_image_count": 12,
+    "metadata_image_ids": [
+      15063,
+      15055,
+      15050,
+      15017,
+      14966,
+      14934,
+      14915,
+      14910
+    ],
+    "enclosure_count": 15,
+    "anchor_count": 19,
+    "table_count": 36,
+    "index_file_url_null_count": 50,
+    "conditional_comment_ids": [
+      15063,
+      15050,
+      14934,
+      14910
+    ],
+    "corrections_not_performed": [
+      "14957 blank inclusion cells retained",
+      "14982 reserve additions not recoded as actual membership",
+      "15063 CES China-HK 300 not renamed CSI300"
+    ]
+  },
+  "workbook_reviews": [
+    {
+      "id": 14962,
+      "source": {
+        "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/attachment-14962.xlsx",
+        "bytes": 402167,
+        "sha256": "c9f557a6829c61fb7e977209d84b5402cf9e05a26450ab6ddb4aca7b0bf4da75"
+      },
+      "cell_extraction": {
+        "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-14962-1-cells.json",
+        "bytes": 4722031,
+        "sha256": "9748ecc1ce6e72ec480d3fc46b40fb9d4b1d078deb27e8cfbc48de0ff7719971"
+      },
+      "sheet": "Sheet1",
+      "index_columns": "A code, B Chinese name, C English name; D/E are bond identifiers",
+      "data_rows": 11270,
+      "index_count": 34,
+      "indices": [
+        {
+          "index_code": "000833",
+          "index_name": "中高企债",
+          "rows": 100,
+          "first_row": 52,
+          "last_row": 151
+        },
+        {
+          "index_code": "000845",
+          "index_name": "中期信用",
+          "rows": 134,
+          "first_row": 295,
+          "last_row": 428
+        },
+        {
+          "index_code": "930780",
+          "index_name": "中证兴业中高债",
+          "rows": 50,
+          "first_row": 933,
+          "last_row": 982
+        },
+        {
+          "index_code": "931174",
+          "index_name": "0-3年央企25",
+          "rows": 778,
+          "first_row": 3484,
+          "last_row": 4261
+        },
+        {
+          "index_code": "931175",
+          "index_name": "银行50金融债",
+          "rows": 517,
+          "first_row": 1901,
+          "last_row": 2417
+        },
+        {
+          "index_code": "931514",
+          "index_name": "央企25债",
+          "rows": 922,
+          "first_row": 2418,
+          "last_row": 3339
+        },
+        {
+          "index_code": "931515",
+          "index_name": "0-5年央企25",
+          "rows": 893,
+          "first_row": 4262,
+          "last_row": 5154
+        },
+        {
+          "index_code": "931516",
+          "index_name": "3-7年央企25",
+          "rows": 144,
+          "first_row": 3340,
+          "last_row": 3483
+        },
+        {
+          "index_code": "931517",
+          "index_name": "0-3年银行50金融债",
+          "rows": 393,
+          "first_row": 983,
+          "last_row": 1375
+        },
+        {
+          "index_code": "931518",
+          "index_name": "0-5年银行50金融债",
+          "rows": 446,
+          "first_row": 1376,
+          "last_row": 1821
+        },
+        {
+          "index_code": "931519",
+          "index_name": "3-7年银行50金融债",
+          "rows": 79,
+          "first_row": 1822,
+          "last_row": 1900
+        },
+        {
+          "index_code": "931636",
+          "index_name": "新基建信用主体",
+          "rows": 377,
+          "first_row": 5155,
+          "last_row": 5531
+        },
+        {
+          "index_code": "931741",
+          "index_name": "中证中诚信胶东国企信用中高等级",
+          "rows": 260,
+          "first_row": 5532,
+          "last_row": 5791
+        },
+        {
+          "index_code": "931754",
+          "index_name": "中证中诚信央企信用债",
+          "rows": 1455,
+          "first_row": 9817,
+          "last_row": 11271
+        },
+        {
+          "index_code": "931779",
+          "index_name": "中证中诚信广西城投债",
+          "rows": 117,
+          "first_row": 9700,
+          "last_row": 9816
+        },
+        {
+          "index_code": "931795",
+          "index_name": "碳中和主题债",
+          "rows": 396,
+          "first_row": 5792,
+          "last_row": 6187
+        },
+        {
+          "index_code": "931796",
+          "index_name": "0-3年碳中和主题债",
+          "rows": 457,
+          "first_row": 6188,
+          "last_row": 6644
+        },
+        {
+          "index_code": "931797",
+          "index_name": "0-5年碳中和主题债",
+          "rows": 534,
+          "first_row": 6645,
+          "last_row": 7178
+        },
+        {
+          "index_code": "931804",
+          "index_name": "华夏银行ESG优选债",
+          "rows": 490,
+          "first_row": 7179,
+          "last_row": 7668
+        },
+        {
+          "index_code": "931988",
+          "index_name": "高端装备央企信用债",
+          "rows": 37,
+          "first_row": 9663,
+          "last_row": 9699
+        },
+        {
+          "index_code": "932001",
+          "index_name": "中证央企债",
+          "rows": 726,
+          "first_row": 7669,
+          "last_row": 8394
+        },
+        {
+          "index_code": "932002",
+          "index_name": "中证0-3年央企债",
+          "rows": 587,
+          "first_row": 8395,
+          "last_row": 8981
+        },
+        {
+          "index_code": "932003",
+          "index_name": "中证0-5年央企债",
+          "rows": 681,
+          "first_row": 8982,
+          "last_row": 9662
+        },
+        {
+          "index_code": "H11016",
+          "index_name": "中证50债",
+          "rows": 50,
+          "first_row": 192,
+          "last_row": 241
+        },
+        {
+          "index_code": "H11019",
+          "index_name": "中证企债100",
+          "rows": 100,
+          "first_row": 771,
+          "last_row": 870
+        },
+        {
+          "index_code": "H11070",
+          "index_name": "中证短融50",
+          "rows": 50,
+          "first_row": 871,
+          "last_row": 920
+        },
+        {
+          "index_code": "H11071",
+          "index_name": "中证1-10国债",
+          "rows": 40,
+          "first_row": 152,
+          "last_row": 191
+        },
+        {
+          "index_code": "H11072",
+          "index_name": "中证中票50",
+          "rows": 50,
+          "first_row": 2,
+          "last_row": 51
+        },
+        {
+          "index_code": "H11075",
+          "index_name": "长期国债",
+          "rows": 12,
+          "first_row": 921,
+          "last_row": 932
+        },
+        {
+          "index_code": "H11076",
+          "index_name": "中期综合",
+          "rows": 92,
+          "first_row": 529,
+          "last_row": 620
+        },
+        {
+          "index_code": "H11094",
+          "index_name": "中票L50",
+          "rows": 50,
+          "first_row": 721,
+          "last_row": 770
+        },
+        {
+          "index_code": "H11096",
+          "index_name": "中期信用L100",
+          "rows": 100,
+          "first_row": 429,
+          "last_row": 528
+        },
+        {
+          "index_code": "H11097",
+          "index_name": "中期中高收益L",
+          "rows": 53,
+          "first_row": 242,
+          "last_row": 294
+        },
+        {
+          "index_code": "H30521",
+          "index_name": "中证中票100",
+          "rows": 100,
+          "first_row": 621,
+          "last_row": 720
+        }
+      ],
+      "formula_count": 0,
+      "csi300_index_rows": [],
+      "scope": "complete explicit index-code column in this selected attachment"
+    },
+    {
+      "id": 15102,
+      "source": {
+        "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/attachment-15102.xlsx",
+        "bytes": 419352,
+        "sha256": "ae0558cfbb0a6a2ed0bd10c7b708d8c8c6ac1e7e1dec384bf78b43999c592a32"
+      },
+      "cell_extraction": {
+        "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-15102-1-cells.json",
+        "bytes": 5113410,
+        "sha256": "09f5708002981165b7f1a9a4fc3a9580239042dca57f3249edd46b15d73e46f0"
+      },
+      "sheet": "Sheet1",
+      "index_columns": "A code, B Chinese name, C English name; D/E are bond identifiers",
+      "data_rows": 12197,
+      "index_count": 35,
+      "indices": [
+        {
+          "index_code": "000833",
+          "index_name": "中高企债",
+          "rows": 100,
+          "first_row": 52,
+          "last_row": 151
+        },
+        {
+          "index_code": "000845",
+          "index_name": "中期信用",
+          "rows": 129,
+          "first_row": 286,
+          "last_row": 414
+        },
+        {
+          "index_code": "930780",
+          "index_name": "中证兴业中高债",
+          "rows": 50,
+          "first_row": 922,
+          "last_row": 971
+        },
+        {
+          "index_code": "931174",
+          "index_name": "0-3年央企25",
+          "rows": 793,
+          "first_row": 3523,
+          "last_row": 4315
+        },
+        {
+          "index_code": "931175",
+          "index_name": "银行50金融债",
+          "rows": 535,
+          "first_row": 1925,
+          "last_row": 2459
+        },
+        {
+          "index_code": "931223",
+          "index_name": "智选央企质量信用债",
+          "rows": 830,
+          "first_row": 11369,
+          "last_row": 12198
+        },
+        {
+          "index_code": "931514",
+          "index_name": "央企25债",
+          "rows": 928,
+          "first_row": 2460,
+          "last_row": 3387
+        },
+        {
+          "index_code": "931515",
+          "index_name": "0-5年央企25",
+          "rows": 900,
+          "first_row": 4316,
+          "last_row": 5215
+        },
+        {
+          "index_code": "931516",
+          "index_name": "3-7年央企25",
+          "rows": 135,
+          "first_row": 3388,
+          "last_row": 3522
+        },
+        {
+          "index_code": "931517",
+          "index_name": "0-3年银行50金融债",
+          "rows": 410,
+          "first_row": 972,
+          "last_row": 1381
+        },
+        {
+          "index_code": "931518",
+          "index_name": "0-5年银行50金融债",
+          "rows": 462,
+          "first_row": 1382,
+          "last_row": 1843
+        },
+        {
+          "index_code": "931519",
+          "index_name": "3-7年银行50金融债",
+          "rows": 81,
+          "first_row": 1844,
+          "last_row": 1924
+        },
+        {
+          "index_code": "931636",
+          "index_name": "新基建信用主体",
+          "rows": 427,
+          "first_row": 5216,
+          "last_row": 5642
+        },
+        {
+          "index_code": "931741",
+          "index_name": "中证中诚信胶东国企信用中高等级",
+          "rows": 238,
+          "first_row": 5643,
+          "last_row": 5880
+        },
+        {
+          "index_code": "931754",
+          "index_name": "中证中诚信央企信用债",
+          "rows": 1429,
+          "first_row": 5994,
+          "last_row": 7422
+        },
+        {
+          "index_code": "931779",
+          "index_name": "中证中诚信广西城投债",
+          "rows": 113,
+          "first_row": 5881,
+          "last_row": 5993
+        },
+        {
+          "index_code": "931795",
+          "index_name": "碳中和主题债",
+          "rows": 403,
+          "first_row": 9480,
+          "last_row": 9882
+        },
+        {
+          "index_code": "931796",
+          "index_name": "0-3年碳中和主题债",
+          "rows": 485,
+          "first_row": 9883,
+          "last_row": 10367
+        },
+        {
+          "index_code": "931797",
+          "index_name": "0-5年碳中和主题债",
+          "rows": 559,
+          "first_row": 10368,
+          "last_row": 10926
+        },
+        {
+          "index_code": "931804",
+          "index_name": "华夏银行ESG优选债",
+          "rows": 442,
+          "first_row": 10927,
+          "last_row": 11368
+        },
+        {
+          "index_code": "931988",
+          "index_name": "高端装备央企信用债",
+          "rows": 32,
+          "first_row": 9448,
+          "last_row": 9479
+        },
+        {
+          "index_code": "932001",
+          "index_name": "中证央企债",
+          "rows": 730,
+          "first_row": 7423,
+          "last_row": 8152
+        },
+        {
+          "index_code": "932002",
+          "index_name": "中证0-3年央企债",
+          "rows": 605,
+          "first_row": 8153,
+          "last_row": 8757
+        },
+        {
+          "index_code": "932003",
+          "index_name": "中证0-5年央企债",
+          "rows": 690,
+          "first_row": 8758,
+          "last_row": 9447
+        },
+        {
+          "index_code": "H11016",
+          "index_name": "中证50债",
+          "rows": 50,
+          "first_row": 194,
+          "last_row": 243
+        },
+        {
+          "index_code": "H11019",
+          "index_name": "中证企债100",
+          "rows": 100,
+          "first_row": 760,
+          "last_row": 859
+        },
+        {
+          "index_code": "H11070",
+          "index_name": "中证短融50",
+          "rows": 50,
+          "first_row": 860,
+          "last_row": 909
+        },
+        {
+          "index_code": "H11071",
+          "index_name": "中证1-10国债",
+          "rows": 42,
+          "first_row": 152,
+          "last_row": 193
+        },
+        {
+          "index_code": "H11072",
+          "index_name": "中证中票50",
+          "rows": 50,
+          "first_row": 2,
+          "last_row": 51
+        },
+        {
+          "index_code": "H11075",
+          "index_name": "长期国债",
+          "rows": 12,
+          "first_row": 910,
+          "last_row": 921
+        },
+        {
+          "index_code": "H11076",
+          "index_name": "中期综合",
+          "rows": 95,
+          "first_row": 515,
+          "last_row": 609
+        },
+        {
+          "index_code": "H11094",
+          "index_name": "中票L50",
+          "rows": 50,
+          "first_row": 710,
+          "last_row": 759
+        },
+        {
+          "index_code": "H11096",
+          "index_name": "中期信用L100",
+          "rows": 100,
+          "first_row": 415,
+          "last_row": 514
+        },
+        {
+          "index_code": "H11097",
+          "index_name": "中期中高收益L",
+          "rows": 42,
+          "first_row": 244,
+          "last_row": 285
+        },
+        {
+          "index_code": "H30521",
+          "index_name": "中证中票100",
+          "rows": 100,
+          "first_row": 610,
+          "last_row": 709
+        }
+      ],
+      "formula_count": 0,
+      "csi300_index_rows": [],
+      "scope": "complete explicit index-code column in this selected attachment"
+    },
+    {
+      "id": 14960,
+      "source": {
+        "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/attachment-14960.xlsx",
+        "bytes": 36013,
+        "sha256": "d55701732cf482ac621b7a18d8374daac23849490a50cae2ba8acc8863825c6e"
+      },
+      "cell_extraction": {
+        "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-14960-1-cells.json",
+        "bytes": 293812,
+        "sha256": "36a1571c2a933d13f50eaf27a8315481d180492bfad9d2d22d49dbf3520f1c47"
+      },
+      "sheet": "Sheet1",
+      "index_columns": "A code, B Chinese name, C English name; D/E are bond identifiers",
+      "data_rows": 750,
+      "index_count": 5,
+      "indices": [
+        {
+          "index_code": "000061",
+          "index_name": "沪企债30",
+          "rows": 30,
+          "first_row": 2,
+          "last_row": 31
+        },
+        {
+          "index_code": "000116",
+          "index_name": "信用100",
+          "rows": 100,
+          "first_row": 32,
+          "last_row": 131
+        },
+        {
+          "index_code": "950240",
+          "index_name": "上证央企债",
+          "rows": 246,
+          "first_row": 132,
+          "last_row": 377
+        },
+        {
+          "index_code": "950241",
+          "index_name": "上证0-3年央企债",
+          "rows": 163,
+          "first_row": 378,
+          "last_row": 540
+        },
+        {
+          "index_code": "950242",
+          "index_name": "上证0-5年央企债",
+          "rows": 211,
+          "first_row": 541,
+          "last_row": 751
+        }
+      ],
+      "formula_count": 0,
+      "csi300_index_rows": [],
+      "scope": "complete explicit index-code column in this selected attachment"
+    },
+    {
+      "id": 15104,
+      "source": {
+        "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/attachment-15104.xlsx",
+        "bytes": 35578,
+        "sha256": "0ec37e1193d2f26950eb9aaf6a0cd0cdc2356a73dce67ad4deb5a32ed1331f9b"
+      },
+      "cell_extraction": {
+        "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-15104-1-cells.json",
+        "bytes": 292675,
+        "sha256": "6a06e249faef6174324e601edef63fbd7f13ae7304fcb15d3fe71850cefa64aa"
+      },
+      "sheet": "Sheet1",
+      "index_columns": "A code, B Chinese name, C English name; D/E are bond identifiers",
+      "data_rows": 747,
+      "index_count": 5,
+      "indices": [
+        {
+          "index_code": "000061",
+          "index_name": "沪企债30",
+          "rows": 30,
+          "first_row": 2,
+          "last_row": 31
+        },
+        {
+          "index_code": "000116",
+          "index_name": "信用100",
+          "rows": 100,
+          "first_row": 32,
+          "last_row": 131
+        },
+        {
+          "index_code": "950240",
+          "index_name": "上证央企债",
+          "rows": 239,
+          "first_row": 132,
+          "last_row": 370
+        },
+        {
+          "index_code": "950241",
+          "index_name": "上证0-3年央企债",
+          "rows": 168,
+          "first_row": 371,
+          "last_row": 538
+        },
+        {
+          "index_code": "950242",
+          "index_name": "上证0-5年央企债",
+          "rows": 210,
+          "first_row": 539,
+          "last_row": 748
+        }
+      ],
+      "formula_count": 0,
+      "csi300_index_rows": [],
+      "scope": "complete explicit index-code column in this selected attachment"
+    }
+  ],
+  "pdf_reviews": [
+    {
+      "id": 14902,
+      "source": {
+        "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/attachment-14902.pdf",
+        "bytes": 71768,
+        "sha256": "bd9f953a62a66975e54c16b3cbe3f45d9bd7a4b98aef393f27d5718d7c3329a1"
+      },
+      "text": {
+        "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-14902.txt",
+        "bytes": 762,
+        "sha256": "b5b9e2ebf522f412287247954b3db900820f34582f04bbecf299ba3978808b7b"
+      },
+      "renders": [
+        {
+          "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-14902-1.png",
+          "bytes": 67442,
+          "sha256": "8b26c4a510ea77a05d03168b2a73d7491df1523ff56801686b347ba76fec442a"
+        }
+      ],
+      "pages_extracted_and_visually_reviewed": [
+        1
+      ],
+      "main_visual_review": "complete relevant original pages viewed at 110 dpi; headings and complete tables reconciled with text",
+      "indices_in_attachment": [
+        "科创50"
+      ],
+      "contains_csi300": false,
+      "whole_notice_scope_closed": false,
+      "remaining_issue": "Body refers to other index-page prospective sample lists outside this partial attachment."
+    },
+    {
+      "id": 15046,
+      "source": {
+        "path": "datasets/raw/csi/20261004-selected-adjustment-attachments/attachment-15046.pdf",
+        "bytes": 111177,
+        "sha256": "5b2b30383dc13c090b713755ae5ab4401de00e0dfb356c570d9145ac0f32fdc2"
+      },
+      "text": {
+        "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-15046.txt",
+        "bytes": 5105,
+        "sha256": "a366f1ed5929fc1c0a19d1da0a7b545610907b22448527760721ea8b12351923"
+      },
+      "renders": [
+        {
+          "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-15046-1.png",
+          "bytes": 170558,
+          "sha256": "db30541743aea762a98b3007f54753933c831f16915ab20546b8cd25cd30f209"
+        },
+        {
+          "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-15046-2.png",
+          "bytes": 237261,
+          "sha256": "4b1195f5f73b3753b66064f60924b3367035524fd68b604b0740397f148421ec"
+        },
+        {
+          "path": ".cache/phase1/main-review/csi-selected-attachment-extractions/attachment-15046-3.png",
+          "bytes": 55512,
+          "sha256": "0a3ce00f4c4e683f8576505596352bd60b47b34ac13d8658bf4e169f243f3dcb"
+        }
+      ],
+      "pages_extracted_and_visually_reviewed": [
+        1,
+        2,
+        3
+      ],
+      "main_visual_review": "complete relevant original pages viewed at 110 dpi; headings and complete tables reconciled with text",
+      "indices_in_attachment": [
+        "上证50",
+        "上证180",
+        "上证380",
+        "科创50"
+      ],
+      "contains_csi300": false,
+      "whole_notice_scope_closed": false,
+      "remaining_issue": "Body refers to other index-page prospective sample lists outside this partial attachment."
+    }
+  ],
+  "prior_15044_raw": {
+    "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/announcement-15044.json",
+    "bytes": 2552,
+    "sha256": "697aff6dfe1de169d2ac971b17020e5afd3b72c27dad3da9266f4d8fecf24b35"
+  },
+  "new_15044_is_byte_identical_to_retained_version": true,
+  "cumulative_scope": {
+    "retained_index_records": 349,
+    "records_with_some_detail_or_attachment_review": 64,
+    "reviewed_ids": [
+      14555,
+      14574,
+      14599,
+      14631,
+      14651,
+      14654,
+      14662,
+      14666,
+      14722,
+      14770,
+      14796,
+      14806,
+      14842,
+      14895,
+      14900,
+      14902,
+      14903,
+      14908,
+      14910,
+      14913,
+      14915,
+      14916,
+      14920,
+      14923,
+      14930,
+      14933,
+      14934,
+      14954,
+      14957,
+      14960,
+      14962,
+      14965,
+      14966,
+      14971,
+      14980,
+      14981,
+      14982,
+      14995,
+      15004,
+      15009,
+      15013,
+      15017,
+      15018,
+      15019,
+      15024,
+      15025,
+      15026,
+      15030,
+      15036,
+      15041,
+      15043,
+      15044,
+      15046,
+      15048,
+      15050,
+      15054,
+      15055,
+      15060,
+      15063,
+      15065,
+      15066,
+      15077,
+      15102,
+      15104
+    ],
+    "remaining_without_such_review": 285,
+    "remaining_ids": [
+      14554,
+      14557,
+      14558,
+      14560,
+      14562,
+      14564,
+      14567,
+      14568,
+      14569,
+      14570,
+      14571,
+      14572,
+      14576,
+      14577,
+      14578,
+      14579,
+      14581,
+      14583,
+      14584,
+      14586,
+      14588,
+      14589,
+      14590,
+      14592,
+      14593,
+      14595,
+      14597,
+      14600,
+      14602,
+      14603,
+      14604,
+      14607,
+      14608,
+      14610,
+      14611,
+      14612,
+      14613,
+      14614,
+      14615,
+      14617,
+      14619,
+      14621,
+      14623,
+      14624,
+      14625,
+      14626,
+      14627,
+      14629,
+      14633,
+      14635,
+      14637,
+      14643,
+      14645,
+      14646,
+      14648,
+      14650,
+      14653,
+      14656,
+      14657,
+      14660,
+      14661,
+      14664,
+      14668,
+      14670,
+      14672,
+      14674,
+      14676,
+      14677,
+      14678,
+      14680,
+      14681,
+      14682,
+      14683,
+      14684,
+      14685,
+      14686,
+      14688,
+      14689,
+      14691,
+      14692,
+      14693,
+      14694,
+      14695,
+      14696,
+      14697,
+      14698,
+      14699,
+      14700,
+      14701,
+      14703,
+      14705,
+      14707,
+      14708,
+      14709,
+      14710,
+      14712,
+      14714,
+      14716,
+      14717,
+      14719,
+      14720,
+      14724,
+      14725,
+      14727,
+      14729,
+      14730,
+      14731,
+      14733,
+      14734,
+      14735,
+      14737,
+      14739,
+      14740,
+      14742,
+      14743,
+      14744,
+      14745,
+      14746,
+      14747,
+      14748,
+      14751,
+      14755,
+      14757,
+      14758,
+      14759,
+      14760,
+      14761,
+      14763,
+      14765,
+      14766,
+      14768,
+      14772,
+      14774,
+      14775,
+      14777,
+      14778,
+      14779,
+      14781,
+      14783,
+      14784,
+      14786,
+      14787,
+      14789,
+      14790,
+      14792,
+      14793,
+      14794,
+      14799,
+      14800,
+      14808,
+      14809,
+      14811,
+      14813,
+      14814,
+      14816,
+      14817,
+      14821,
+      14822,
+      14824,
+      14825,
+      14826,
+      14830,
+      14832,
+      14834,
+      14836,
+      14840,
+      14841,
+      14844,
+      14846,
+      14847,
+      14849,
+      14850,
+      14852,
+      14853,
+      14855,
+      14857,
+      14858,
+      14860,
+      14861,
+      14863,
+      14864,
+      14866,
+      14867,
+      14869,
+      14870,
+      14871,
+      14873,
+      14875,
+      14877,
+      14878,
+      14880,
+      14882,
+      14883,
+      14885,
+      14888,
+      14889,
+      14890,
+      14891,
+      14892,
+      14893,
+      14896,
+      14898,
+      14905,
+      14907,
+      14917,
+      14919,
+      14921,
+      14924,
+      14926,
+      14928,
+      14931,
+      14932,
+      14936,
+      14938,
+      14940,
+      14942,
+      14944,
+      14946,
+      14948,
+      14950,
+      14952,
+      14955,
+      14958,
+      14964,
+      14968,
+      14970,
+      14972,
+      14974,
+      14976,
+      14977,
+      14979,
+      14983,
+      14986,
+      14988,
+      14990,
+      14991,
+      14993,
+      14996,
+      14998,
+      15002,
+      15005,
+      15006,
+      15008,
+      15010,
+      15011,
+      15014,
+      15021,
+      15023,
+      15028,
+      15029,
+      15031,
+      15032,
+      15033,
+      15034,
+      15037,
+      15039,
+      15040,
+      15052,
+      15057,
+      15059,
+      15061,
+      15067,
+      15068,
+      15070,
+      15072,
+      15073,
+      15075,
+      15076,
+      15078,
+      15080,
+      15082,
+      15083,
+      15085,
+      15087,
+      15089,
+      15090,
+      15091,
+      15093,
+      15094,
+      15095,
+      15097,
+      15098,
+      15099,
+      15101,
+      15106
+    ],
+    "whole_scope_open_in_new_batch": [
+      14902,
+      15046
+    ],
+    "no_new_csi300_event_identified_in_this_batch": true
+  },
+  "input_reconciliation": {
+    "unique_file_references_verified": 131,
+    "all_sha256_and_declared_sizes_match": true
+  },
+  "limits": [
+    "This is not a complete 2023 archive, temporary-adjustment certificate, or official opening member roster.",
+    "50 new JSON bodies and six attachments only; no 2024-2025 quotes, formal model/backtest, server or GPU operation.",
+    "The first collector failed before saving its in-memory manifest; request times, HTTP headers and 403 body were not retained. Recovery records do not fabricate them.",
+    "Twelve metadata image references were enumerated; their image bytes were not fetched or visually reviewed.",
+    "A fully read announcement title and body can establish a specific referent; broad titles alone and token absence do not establish complete scope.",
+    "Historic revision and publication availability remain unverified; original 336-code plan and conditional 323-code union unchanged."
+  ],
+  "processes": "Capture, extraction and body audit processes exited. Raw files and failures retained; no API retry scheduled."
+}
