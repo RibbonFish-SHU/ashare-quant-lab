@@ -1,0 +1,738 @@
+{
+  "schema_version": "gap-source-audit-v1",
+  "recorded_at_utc": "2026-10-04T05:20:09.590302+00:00",
+  "owner": "main",
+  "research_eligible": false,
+  "public_anonymous_requests": 15,
+  "search_requests": 9,
+  "pdf_downloads": 6,
+  "failed_requests": 0,
+  "retries": 0,
+  "requests": [
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\000938-annual-meeting-decision.metadata.json",
+        "bytes": 889,
+        "sha256": "a24e0c72b8067cc9c44a27bfc686612c81736ce72f165532f711138d3166087e"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "000938,gssz0000938",
+        "searchkey": "年度股东大会决议",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-04-01~2023-06-30",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T05:15:59.129320+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/000938-annual-meeting-decision.json",
+      "bytes": 800,
+      "sha256": "11911bfa95e730a5a00e365a83f6aa73a0c30d74b260d715fe56907af23af6ce",
+      "completed_at_utc": "2026-10-04T05:15:59.336770+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\000938-implementation.metadata.json",
+        "bytes": 863,
+        "sha256": "33441a2fcaa219f098d938470ac90e2c2a74c9fad474c57be10d1ca219f9cf1a"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "000938,gssz0000938",
+        "searchkey": "实施",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-01-01~2023-12-31",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:52:35.188426+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/000938-implementation.json",
+      "bytes": 1052,
+      "sha256": "e2dc0476a6b250df1e69ba99b8b7ee8cfd3d196a83e2371285bab393cd50b468",
+      "completed_at_utc": "2026-10-04T04:52:35.377068+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\000938-profit-distribution.metadata.json",
+        "bytes": 873,
+        "sha256": "0032b7c0d09683c53849109c63878a129b2a83d4a3ce34a8e954b1118bf063ed"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "000938,gssz0000938",
+        "searchkey": "利润分配",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-01-01~2023-12-31",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:54:26.822749+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/000938-profit-distribution.json",
+      "bytes": 842,
+      "sha256": "facb0f18a44cc40745a94a3ab2ad428eaa99f9e3eaf03207ec88276bd098ead6",
+      "completed_at_utc": "2026-10-04T04:54:27.079503+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1215727423.metadata.json",
+        "bytes": 729,
+        "sha256": "39493c68d6ce97db00764760d0ab9edb7eea32d4befddadcc89990441c38f3b4"
+      },
+      "url": "https://static.cninfo.com.cn/finalpage/2023-01-31/1215727423.PDF",
+      "payload": {
+        "announcement_id": "1215727423",
+        "title": "中航电子关于公司换股吸收合并中航工业机电系统股份有限公司并募集配套资金暨关联交易事项异议股东收购请求权申报公告"
+      },
+      "started_at_utc": "2026-10-04T04:54:39.360682+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/pdf",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1215727423.pdf",
+      "bytes": 211232,
+      "sha256": "8a13fd980618b8e8cba936de9370e137f7ff234ea16df08cf847c60160de294c",
+      "completed_at_utc": "2026-10-04T04:54:39.574030+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1215880020.metadata.json",
+        "bytes": 618,
+        "sha256": "2af8fba03635b9414efa7b6b62d772f38710cb0077619a50a2772c97661f3379"
+      },
+      "url": "https://static.cninfo.com.cn/finalpage/2023-02-17/1215880020.PDF",
+      "payload": {
+        "announcement_id": "1215880020",
+        "title": "中航电子关于公司股票复牌的提示性公告"
+      },
+      "started_at_utc": "2026-10-04T04:52:55.517243+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/pdf",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1215880020.pdf",
+      "bytes": 133313,
+      "sha256": "096938ecef6238033b95b80775fe194bfe13433e90e1dd32656a00e39676697b",
+      "completed_at_utc": "2026-10-04T04:52:55.853528+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1216274105.metadata.json",
+        "bytes": 619,
+        "sha256": "96f512d3f98229a497eccbaea45ec893b890316e9a9d3f0800303edbb21f80f8"
+      },
+      "url": "https://static.cninfo.com.cn/finalpage/2023-03-31/1216274105.PDF",
+      "payload": {
+        "announcement_id": "1216274105",
+        "title": "关于2022年度拟不进行利润分配的专项说明"
+      },
+      "started_at_utc": "2026-10-04T04:54:41.334918+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/pdf",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1216274105.pdf",
+      "bytes": 153383,
+      "sha256": "b9dda612c3e2996cd157a7fde9a477aa26a6bf50ffb1a4e3372033b1c7c24cec",
+      "completed_at_utc": "2026-10-04T04:54:41.492629+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1216832384.metadata.json",
+        "bytes": 598,
+        "sha256": "1a3de613a174a7d9757b3cd73f7a70984845251306e1c8e9862aaec666322c62"
+      },
+      "url": "https://static.cninfo.com.cn/finalpage/2023-05-17/1216832384.PDF",
+      "payload": {
+        "announcement_id": "1216832384",
+        "title": "2022年度股东大会决议公告"
+      },
+      "started_at_utc": "2026-10-04T05:16:15.836940+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/pdf",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1216832384.pdf",
+      "bytes": 167126,
+      "sha256": "b496e165dcb51ebb6ff9e21d9371abe8cc57e03502c6797e275f43c8f910e225",
+      "completed_at_utc": "2026-10-04T05:16:16.047747+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1217034933.metadata.json",
+        "bytes": 628,
+        "sha256": "8ab76083477a82a9199a1a6fdb19602ddccadc8a79c41b29aa24c2fc8a04f057"
+      },
+      "url": "https://static.cninfo.com.cn/finalpage/2023-06-12/1217034933.PDF",
+      "payload": {
+        "announcement_id": "1217034933",
+        "title": "浙商银行股份有限公司A股股票停复牌提示性公告"
+      },
+      "started_at_utc": "2026-10-04T04:52:56.604504+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/pdf",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1217034933.pdf",
+      "bytes": 236755,
+      "sha256": "a8390ed1cd93772ee26454abce5c0e5f8d4ae2ab39fbe29768af27c974969329",
+      "completed_at_utc": "2026-10-04T04:52:56.840782+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1217140784.metadata.json",
+        "bytes": 622,
+        "sha256": "c53c5ecb6ecd2e98fc20d0b0bd50751adf15d87bbec821078eee987d9de97c6a"
+      },
+      "url": "https://static.cninfo.com.cn/finalpage/2023-06-27/1217140784.PDF",
+      "payload": {
+        "announcement_id": "1217140784",
+        "title": "浙商银行股份有限公司A股配股发行结果公告"
+      },
+      "started_at_utc": "2026-10-04T04:54:40.325679+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/pdf",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1217140784.pdf",
+      "bytes": 933713,
+      "sha256": "2e8822d20c8f50284b75111ce4e8a23327d675a3d82caed398a758e958ca2e92",
+      "completed_at_utc": "2026-10-04T04:54:40.582957+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\600372-halt.metadata.json",
+        "bytes": 852,
+        "sha256": "78a70f5362be705e9e55189bcdcd74a4a9eda737c31b0bcbd16803d96bfa9451"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "600372,gssh0600372",
+        "searchkey": "停牌",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-02-01~2023-02-20",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:52:31.135845+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/600372-halt.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114",
+      "completed_at_utc": "2026-10-04T04:52:31.581448+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\600372-request-rights.metadata.json",
+        "bytes": 863,
+        "sha256": "2b4143c4d5c7a97c271e31964a37afee2683a0fc082adf6b0dfb0a6b1a42f6d5"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "600372,gssh0600372",
+        "searchkey": "申报",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-01-25~2023-02-07",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:54:24.668594+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/600372-request-rights.json",
+      "bytes": 1060,
+      "sha256": "ac37f54e3054e120b1f605044b70912fb5f08900e64571003fe48d8c122999ba",
+      "completed_at_utc": "2026-10-04T04:54:24.864480+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\600372-resume.metadata.json",
+        "bytes": 854,
+        "sha256": "4d6266f28ec79ce69ca9074d08b37ea546517ea0d82f9189f7ee6db4477de229"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "600372,gssh0600372",
+        "searchkey": "复牌",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-02-01~2023-02-20",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:52:32.332538+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/600372-resume.json",
+      "bytes": 838,
+      "sha256": "20343defe3b924da9b4e6a56468fd552ca7850065c28fe51399b554671ed2d0d",
+      "completed_at_utc": "2026-10-04T04:52:32.533790+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\601916-halt.metadata.json",
+        "bytes": 851,
+        "sha256": "309abf69cc079a238933f0deb39858c3604e69d336127884e4c7392dafcfba3e"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "601916,9900007207",
+        "searchkey": "停牌",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-06-01~2023-06-30",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:52:33.284579+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/601916-halt.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114",
+      "completed_at_utc": "2026-10-04T04:52:33.444532+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\601916-resume.metadata.json",
+        "bytes": 853,
+        "sha256": "5d94e85c42127250c87127751d2f5c169a2e45e03efadb78093c5976a22ab3ea"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "601916,9900007207",
+        "searchkey": "复牌",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-06-01~2023-06-30",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:52:34.196809+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/601916-resume.json",
+      "bytes": 849,
+      "sha256": "834c388b768cfe9848e42eb0b8f3c22fc018e9e8b801e1123569e8b115daaef2",
+      "completed_at_utc": "2026-10-04T04:52:34.437344+00:00"
+    },
+    {
+      "metadata": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\601916-rights-result.metadata.json",
+        "bytes": 866,
+        "sha256": "d5467ad77119a9f5dda87bb263588f19559503f1bab7e94f87ece8f7388a6d66"
+      },
+      "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+      "payload": {
+        "pageNum": "1",
+        "pageSize": "30",
+        "column": "szse",
+        "tabName": "fulltext",
+        "plate": "",
+        "stock": "601916,9900007207",
+        "searchkey": "发行结果",
+        "secid": "",
+        "category": "",
+        "trade": "",
+        "seDate": "2023-06-22~2023-06-30",
+        "sortName": "",
+        "sortType": "",
+        "isHLtitle": "false"
+      },
+      "started_at_utc": "2026-10-04T04:54:25.615277+00:00",
+      "complete": true,
+      "request_count": 1,
+      "retries": 0,
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "path": "datasets/raw/cninfo/20261004-gap-notices/601916-rights-result.json",
+      "bytes": 843,
+      "sha256": "7c1641985484b145f922e301777e20348b3bf50b766adbdf39b6b02e814336bd",
+      "completed_at_utc": "2026-10-04T04:54:26.072252+00:00"
+    }
+  ],
+  "state_event_selections": [
+    {
+      "pdf": "datasets/raw/cninfo/20261004-gap-notices/1215727423.pdf",
+      "metadata": "datasets/raw/cninfo/20261004-gap-notices/1215727423.metadata.json",
+      "search": "datasets/raw/cninfo/20261004-gap-notices/600372-request-rights.json",
+      "search_metadata": "datasets/raw/cninfo/20261004-gap-notices/600372-request-rights.metadata.json",
+      "extraction": "datasets/raw/cninfo/20261004-gap-notices/1215727423.extracted.json",
+      "reviewed_claim": {
+        "symbol": "600372.SH",
+        "kind": "halt",
+        "announcement_number": "临2023-007",
+        "security_name": "中航电子",
+        "pdf_title": "关于公司换股吸收合并中航工业机电系统股份有限公司并募集配套资金暨关联交易事项异议股东收购请求权申报公告",
+        "clause_format": "request_rights_continuous_halt",
+        "effective_date": "2023-02-08",
+        "body_page": 1,
+        "body_quote": "公司A股股票自2023年2月8日开市起连续停牌",
+        "signature_page": 6,
+        "signature_date": "2023-01-31",
+        "signature_quote": "2023年1月31日",
+        "review_basis": "PDF pages 1,5,6 visually reviewed. The estimate 2-5 trading days after application closure is not a resume event; keep halt open pending a separate notice.",
+        "announcement_id": "1215727423",
+        "title": "中航电子关于公司换股吸收合并中航工业机电系统股份有限公司并募集配套资金暨关联交易事项异议股东收购请求权申报公告",
+        "adjunct_url": "finalpage/2023-01-31/1215727423.PDF",
+        "source_timestamp_ms": 1675094400000,
+        "source_timestamp_precision": "date_label",
+        "effective_session": "morning_open",
+        "signature_date_conflict": false
+      }
+    },
+    {
+      "pdf": "datasets/raw/cninfo/20261004-gap-notices/1215880020.pdf",
+      "metadata": "datasets/raw/cninfo/20261004-gap-notices/1215880020.metadata.json",
+      "search": "datasets/raw/cninfo/20261004-gap-notices/600372-resume.json",
+      "search_metadata": "datasets/raw/cninfo/20261004-gap-notices/600372-resume.metadata.json",
+      "extraction": "datasets/raw/cninfo/20261004-gap-notices/1215880020.extracted.json",
+      "reviewed_claim": {
+        "symbol": "600372.SH",
+        "kind": "resume",
+        "announcement_number": "临2023-012",
+        "security_name": "中航电子",
+        "pdf_title": "关于公司股票复牌的提示性公告",
+        "clause_format": "open_resume_notice",
+        "effective_date": "2023-02-17",
+        "body_page": 1,
+        "body_quote": "公司A股股票将于2023年2月17日开市起复牌",
+        "signature_page": 1,
+        "signature_date": "2023-02-17",
+        "signature_quote": "2023年2月17日",
+        "review_basis": "Single page visually reviewed; same-day resumption, retrospective halt text is not a new halt source.",
+        "announcement_id": "1215880020",
+        "title": "中航电子关于公司股票复牌的提示性公告",
+        "adjunct_url": "finalpage/2023-02-17/1215880020.PDF",
+        "source_timestamp_ms": 1676563200000,
+        "source_timestamp_precision": "date_label",
+        "effective_session": "morning_open",
+        "signature_date_conflict": false
+      }
+    },
+    {
+      "pdf": "datasets/raw/cninfo/20261004-gap-notices/1217034933.pdf",
+      "metadata": "datasets/raw/cninfo/20261004-gap-notices/1217034933.metadata.json",
+      "search": "datasets/raw/cninfo/20261004-gap-notices/601916-resume.json",
+      "search_metadata": "datasets/raw/cninfo/20261004-gap-notices/601916-resume.metadata.json",
+      "extraction": "datasets/raw/cninfo/20261004-gap-notices/1217034933.extracted.json",
+      "reviewed_claim": {
+        "symbol": "601916.SH",
+        "kind": "halt",
+        "announcement_number": "2023-038",
+        "security_name": "浙商银行",
+        "pdf_title": "浙商银行股份有限公司A股股票停复牌提示性公告",
+        "clause_format": "rights_subscription_halt",
+        "effective_date": "2023-06-15",
+        "body_page": 1,
+        "body_quote": "2023年6月15日至2023年6月21日（T+1日至T+5日）为本次A股配股缴款期，缴款期公司A股股票全天停牌；2023年6月26日（T+6日）为登记公司网上清算期，公司A股股票继续停牌一天",
+        "signature_page": 1,
+        "signature_date": "2023-06-12",
+        "signature_quote": "2023年6月12日",
+        "review_basis": "Both pages visually reviewed. Scheduled 6/27 resumption is not ingested; a separate issuance-result notice confirms it. Page 2 is a no-body stamp page with handwritten date.",
+        "announcement_id": "1217034933",
+        "title": "浙商银行股份有限公司A股股票停复牌提示性公告",
+        "adjunct_url": "finalpage/2023-06-12/1217034933.PDF",
+        "source_timestamp_ms": 1686499200000,
+        "source_timestamp_precision": "date_label",
+        "effective_session": "morning_open",
+        "signature_date_conflict": false
+      }
+    },
+    {
+      "pdf": "datasets/raw/cninfo/20261004-gap-notices/1217140784.pdf",
+      "metadata": "datasets/raw/cninfo/20261004-gap-notices/1217140784.metadata.json",
+      "search": "datasets/raw/cninfo/20261004-gap-notices/601916-rights-result.json",
+      "search_metadata": "datasets/raw/cninfo/20261004-gap-notices/601916-rights-result.metadata.json",
+      "extraction": "datasets/raw/cninfo/20261004-gap-notices/1217140784.extracted.json",
+      "reviewed_claim": {
+        "symbol": "601916.SH",
+        "kind": "resume",
+        "announcement_number": "2023-047",
+        "security_name": "浙商银行",
+        "pdf_title": "浙商银行股份有限公司A股配股发行结果公告",
+        "clause_format": "rights_result_resume",
+        "effective_date": "2023-06-27",
+        "body_page": 3,
+        "body_quote": "自2023年6月27日开市起，浙商银行A股股票复牌并恢复交易",
+        "signature_page": 6,
+        "signature_date": "2023-06-27",
+        "signature_quote": "2023年6月27日",
+        "review_basis": "Pages 1,2,3,6 and no-body stamp appendix visually reviewed. Rights ratio 10:3, subscription price CNY2.02; ex-right date is not acquired-share listing date, which is to be announced separately. No cash-dividend or holdings event is created.",
+        "announcement_id": "1217140784",
+        "title": "浙商银行股份有限公司A股配股发行结果公告",
+        "adjunct_url": "finalpage/2023-06-27/1217140784.PDF",
+        "source_timestamp_ms": 1687795200000,
+        "source_timestamp_precision": "date_label",
+        "effective_session": "morning_open",
+        "signature_date_conflict": false
+      }
+    }
+  ],
+  "additional_corporate_action_references": [
+    {
+      "announcement_id": "1217140784",
+      "symbol": "601916.SH",
+      "announcement_number": "2023-047",
+      "title": "浙商银行股份有限公司A股配股发行结果公告",
+      "original": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1217140784.pdf",
+        "bytes": 933713,
+        "sha256": "2e8822d20c8f50284b75111ce4e8a23327d675a3d82caed398a758e958ca2e92"
+      },
+      "page_count": 15,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "tool": {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "bytes": 3501056,
+        "sha256": "bccedf2c2219b34700df5d8edb61940921c1ddfb263cf51892cfae82c8c0fea6",
+        "version": "pdftotext version 25.02.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011 Glyph & Cog, LLC",
+        "mode": "UTF-8 default reading order; whitespace-only normalization",
+        "stderr": ""
+      },
+      "selected_quotes": [
+        {
+          "page": 2,
+          "quote": "每股人民币2.02元的价格",
+          "interpretation": "subscription price, not a cash dividend"
+        },
+        {
+          "page": 2,
+          "quote": "每10股配售3股的比例",
+          "interpretation": "rights entitlement ratio"
+        },
+        {
+          "page": 3,
+          "quote": "本公告刊登当日（2023年6月27日，T+7日）即为A股配股发行成功的除权基准日（A股配股除权日）",
+          "interpretation": "ex-right reference date"
+        },
+        {
+          "page": 3,
+          "quote": "本次A股配股的获配股份上市时间将另行公告",
+          "interpretation": "new-share listing date remains unconfirmed by this document"
+        }
+      ],
+      "available_time": null
+    },
+    {
+      "announcement_id": "1216274105",
+      "symbol": "000938.SZ",
+      "announcement_number": "2023－007",
+      "title": "关于2022年度拟不进行利润分配的专项说明",
+      "original": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1216274105.pdf",
+        "bytes": 153383,
+        "sha256": "b9dda612c3e2996cd157a7fde9a477aa26a6bf50ffb1a4e3372033b1c7c24cec"
+      },
+      "page_count": 3,
+      "visually_reviewed_pages": [
+        1,
+        3
+      ],
+      "tool": {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "bytes": 3501056,
+        "sha256": "bccedf2c2219b34700df5d8edb61940921c1ddfb263cf51892cfae82c8c0fea6",
+        "version": "pdftotext version 25.02.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011 Glyph & Cog, LLC",
+        "mode": "UTF-8 default reading order; whitespace-only normalization",
+        "stderr": ""
+      },
+      "selected_quotes": [
+        {
+          "page": 1,
+          "quote": "该议案尚需提交公司2022年度股东大会审议",
+          "interpretation": "board proposal only at publication"
+        },
+        {
+          "page": 1,
+          "quote": "2022年度不派发现金红利，不送红股，不以公积金转增股本",
+          "interpretation": "FY2022 proposal; not evidence of no actions throughout calendar 2023"
+        }
+      ],
+      "available_time": null
+    },
+    {
+      "announcement_id": "1216832384",
+      "symbol": "000938.SZ",
+      "announcement_number": "2023－021",
+      "title": "2022年度股东大会决议公告",
+      "original": {
+        "path": "E:\\量化\\ashare-quant-lab\\datasets\\raw\\cninfo\\20261004-gap-notices\\1216832384.pdf",
+        "bytes": 167126,
+        "sha256": "b496e165dcb51ebb6ff9e21d9371abe8cc57e03502c6797e275f43c8f910e225"
+      },
+      "page_count": 5,
+      "visually_reviewed_pages": [
+        1,
+        3,
+        5
+      ],
+      "tool": {
+        "path": "D:\\texlive\\2025\\bin\\windows\\pdftotext.exe",
+        "bytes": 3501056,
+        "sha256": "bccedf2c2219b34700df5d8edb61940921c1ddfb263cf51892cfae82c8c0fea6",
+        "version": "pdftotext version 25.02.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011 Glyph & Cog, LLC",
+        "mode": "UTF-8 default reading order; whitespace-only normalization",
+        "stderr": ""
+      },
+      "selected_quotes": [
+        {
+          "page": 1,
+          "quote": "2023年5月16日（星期二）下午2时30分",
+          "interpretation": "meeting date/time; not historical publication time"
+        },
+        {
+          "page": 3,
+          "quote": "审议通过公司2022年度利润分配方案",
+          "interpretation": "named annual distribution plan approved; this resolution does not restate its cash amount"
+        },
+        {
+          "page": 5,
+          "quote": "2023年5月17日",
+          "interpretation": "signature date; not precise historical availability"
+        }
+      ],
+      "available_time": null
+    }
+  ],
+  "scripts": [
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\probe_gap_notices.py",
+      "bytes": 4744,
+      "sha256": "78832f7ee9d1745629b98d0b1c2cc407d4120d265b970ed9d8c8881033d699d2"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\record_gap_sources.py",
+      "bytes": 5307,
+      "sha256": "f07f2a9ec313613f2a5fbe2920063ce45843891312e6a26cde45e28a4948291b"
+    },
+    {
+      "path": "E:\\量化\\ashare-quant-lab\\.cache\\phase1\\main-review\\integrate_gap_notices.py",
+      "bytes": 5842,
+      "sha256": "6c89735cb33053fdf34ccc1c90bff1e6b5f2211b124834f1915b08be9ea137b7"
+    }
+  ],
+  "findings": [
+    "600372: halted from 2023-02-08 open; resumed 2023-02-17 open by separate same-day notice.",
+    "601916: halted from 2023-06-15 through subscription and clearing; actual resume confirmed 2023-06-27. Subscription is a rights issue, not a cash dividend.",
+    "000938: no-distribution FY2022 proposal and subsequent approval of the named annual plan now retained. Approval resolution does not repeat amounts; no calendar-year absence or cash/share event is inferred."
+  ],
+  "limits": [
+    "Selected public documents do not establish completeness of all historical announcements.",
+    "Historical availability remains unknown; source midnight labels are not release instants.",
+    "Empty halt queries are retained as search outcomes, never evidence of normal trading.",
+    "No rights cash/holdings accounting, annual zero-action row or formal PIT input is generated.",
+    "PDF 1216832384 renderer emitted missing Symbol/ArialUnicode font notices; selected rendered Chinese text was visually legible and matched extraction."
+  ]
+}

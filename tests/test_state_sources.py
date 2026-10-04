@@ -419,6 +419,215 @@ def test_raw_is_not_pdf(tmp_path):
         pdf_text(p, TOOL)
 
 
+GAP_FORMS = [
+    "request_rights_continuous_halt",
+    "open_resume_notice",
+    "rights_subscription_halt",
+    "rights_result_resume",
+]
+
+
+def gap_claim(form):
+    c = halt_claim()
+    c.update(
+        symbol="600001.SH",
+        security_name="测试公司",
+        announcement_number="2023-001",
+        clause_format=form,
+        effective_session="morning_open",
+        signature_date_conflict=False,
+        signature_date="2023-06-12",
+        signature_quote="2023年6月12日",
+    )
+    if form == "request_rights_continuous_halt":
+        title, quote, effective, kind = (
+            "关于异议股东收购请求权申报公告",
+            "公司A股股票自2023年6月15日开市起连续停牌",
+            "2023-06-15",
+            "halt",
+        )
+    elif form == "open_resume_notice":
+        title, quote, effective, kind = (
+            "关于公司股票复牌的提示性公告",
+            "公司A股股票将于2023年6月27日开市起复牌",
+            "2023-06-27",
+            "resume",
+        )
+    elif form == "rights_subscription_halt":
+        title, quote, effective, kind = (
+            "测试公司股份有限公司A股股票停复牌提示性公告",
+            "2023年6月15日至2023年6月21日（T+1日至T+5日）为本次A股配股缴款期，"
+            "缴款期公司A股股票全天停牌；2023年6月26日（T+6日）为登记公司网上清算期，"
+            "公司A股股票继续停牌一天",
+            "2023-06-15",
+            "halt",
+        )
+    else:
+        title, quote, effective, kind = (
+            "测试公司股份有限公司A股配股发行结果公告",
+            "自2023年6月27日开市起，测试公司A股股票复牌并恢复交易",
+            "2023-06-27",
+            "resume",
+        )
+    c.update(
+        title=("测试公司" if form in GAP_FORMS[:2] else "") + title,
+        pdf_title=title,
+        body_quote=quote,
+        effective_date=effective,
+        kind=kind,
+    )
+    if kind == "resume":
+        c.update(signature_date="2023-06-27", signature_quote="2023年6月27日")
+    return c
+
+
+def gap_pages(c):
+    pages = [
+        f"股票代码：{c['symbol'][:6]} 股票简称：{c['security_name']} "
+        f"编号：{c['announcement_number']} {c['pdf_title']}。"
+        f"{c['body_quote']}。公司董事会 {c['signature_quote']}"
+    ]
+    if c["clause_format"] in GAP_FORMS[2:]:
+        pages += [
+            f"（本页无正文，为《{c['pdf_title']}》之盖章页）发行人：测试公司股份有限公司年月日",
+            f"（此页无正文，为《{c['pdf_title']}》之盖章页）"
+            "联席主承销商：测试证券有限责任公司年月日",
+        ]
+    return pages
+
+
+@pytest.mark.parametrize("form", GAP_FORMS)
+def test_new_issuer_clauses_bind_to_actual_synthetic_pdf(announcement_bundle, form):
+    paths, selection = announcement_bundle
+    c = gap_claim(form)
+    selection["reviewed_claim"] = c
+    pages = gap_pages(c)
+    make_pdf(paths["pdf"], pages)
+    save_json(paths["extraction"], [{"page": i, "text": t} for i, t in enumerate(pages, 1)])
+    s = read_json(paths["search"])
+    s["announcements"][0].update(
+        secCode=c["symbol"][:6], secName=c["security_name"], announcementTitle=c["title"]
+    )
+    save_json(paths["search"], s)
+    for raw, md in [("pdf", "metadata"), ("search", "search_metadata")]:
+        m = read_json(paths[md])
+        m.update(sha256=digest(paths[raw]), bytes=paths[raw].stat().st_size)
+        if md == "search_metadata":
+            m["payload"]["stock"] = c["symbol"][:6] + ",org"
+        save_json(paths[md], m)
+    result, _ = parse_announcement(
+        paths, selection, {c["symbol"]}, date(2023, 1, 1), date(2023, 12, 31), TOOL
+    )
+    assert result["effective_date"] == date.fromisoformat(c["effective_date"])
+    assert result["kind"] == c["kind"]
+    assert result["available_time"] is None and result["research_eligible"] is False
+    assert json.loads(result["locator_json"])["trailing_stamp_pages"] == list(
+        range(2, len(pages) + 1)
+    )
+
+
+@pytest.mark.parametrize("form", GAP_FORMS)
+def test_new_issuer_event_date_cannot_be_manually_changed(form):
+    c = gap_claim(form)
+    pages = gap_pages(c)
+    c["effective_date"] = "2023-06-16"
+    with pytest.raises(ValueError, match="event date"):
+        validate_claim(pages, c)
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        "search_title",
+        "short_name",
+        "number",
+        "body_page",
+        "issuer",
+        "result_date",
+        "tail_body",
+        "stamp_title",
+        "stamp_number",
+    ],
+)
+def test_result_notice_identity_and_appendix_cannot_hide_changes(change):
+    c = gap_claim("rights_result_resume")
+    pages = gap_pages(c)
+    if change == "search_title":
+        c["title"] = "另一公司" + c["pdf_title"]
+    elif change == "short_name":
+        c["security_name"] = "另一公司"
+    elif change == "number":
+        c["announcement_number"] = "2023-002"
+    elif change == "body_page":
+        c["body_page"] = 2
+    elif change == "issuer":
+        c["body_quote"] = c["body_quote"].replace("测试公司", "另一公司")
+        pages = gap_pages(c)
+    elif change == "result_date":
+        c.update(signature_date="2023-06-12", signature_quote="2023年6月12日")
+        pages = gap_pages(c)
+    elif change == "tail_body":
+        pages.append("补充正文：原复牌日期变更。")
+    elif change == "stamp_title":
+        pages[-1] = pages[-1].replace(c["pdf_title"], "别的公告")
+    elif change == "stamp_number":
+        pages[-1] += "\n99\n"
+    with pytest.raises(ValueError):
+        validate_claim(pages, c)
+
+
+def test_printed_page_numbers_only_removed_as_exact_standalone_lines():
+    c = gap_claim("rights_result_resume")
+    pages = gap_pages(c)
+    pages[0] += "\n1\n"
+    pages[1] += "\n2\n"
+    pages[2] = pages[2].replace("年月日", "年\n3\n月日")
+    assert validate_claim(pages, c)[0] == date(2023, 6, 27)
+
+
+@pytest.mark.parametrize("prefix", ["预计", "原定", "计划于", "暂拟："])
+def test_estimate_cannot_be_hidden_by_selecting_a_substring(prefix):
+    c = gap_claim("open_resume_notice")
+    pages = [p.replace(c["body_quote"], prefix + c["body_quote"]) for p in gap_pages(c)]
+    with pytest.raises(ValueError, match="estimated/planned"):
+        validate_claim(pages, c)
+
+
+@pytest.mark.parametrize("suffix", ["（暂定，仍需审批）", "的原计划已取消", "，原计划已取消"])
+def test_qualified_or_cancelled_resume_suffix_is_rejected(suffix):
+    c = gap_claim("open_resume_notice")
+    pages = [p.replace(c["body_quote"], c["body_quote"] + suffix) for p in gap_pages(c)]
+    with pytest.raises(ValueError, match="end the sentence"):
+        validate_claim(pages, c)
+
+
+@pytest.mark.parametrize("prefix", ["如经批准，", "原计划已取消：", "争取获批，"])
+def test_conditional_resume_prefix_is_rejected(prefix):
+    c = gap_claim("open_resume_notice")
+    pages = [p.replace(c["body_quote"], prefix + c["body_quote"]) for p in gap_pages(c)]
+    with pytest.raises(ValueError, match="conditional/cancelled"):
+        validate_claim(pages, c)
+
+
+def test_subscription_notice_cannot_be_relabelled_as_confirmed_resume():
+    c = gap_claim("rights_subscription_halt")
+    c.update(
+        kind="resume",
+        clause_format="rights_result_resume",
+        effective_date="2023-06-27",
+        body_quote="自2023年6月27日开市起，测试公司A股股票复牌并恢复交易",
+    )
+    with pytest.raises(ValueError, match="action differs"):
+        validate_claim(gap_pages(c), c)
+
+
+def test_invalid_subscription_date_order_is_rejected():
+    c = gap_claim("rights_subscription_halt")
+    c["body_quote"] = c["body_quote"].replace("6月21日", "6月28日")
+    with pytest.raises(ValueError, match="subscription/clearing"):
+        validate_claim(gap_pages(c), c)
+
+
 def test_calendar_rejects_mixed_sources_even_without_overlapping_dates():
     rows = [
         {
