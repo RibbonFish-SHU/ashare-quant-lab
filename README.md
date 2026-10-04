@@ -12,6 +12,9 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 当日条件成员内有 4 个，均对应已核实停牌；社区调样滞后的 27 个交易日有逐日诊断。
 条件成员的基准与临时调整完整性仍未认证，见[缺口解决与运行证据](docs/PHASE1_GAP_RESOLUTION_REPORT.md)。
 
+另有独立的[合成执行账本](docs/EXECUTION_CONTRACT.md)，验证次交易日订单、T+1、交易单位、
+容量、费用和未成交持仓延续。它尚未接入真实候选，输出不代表等权策略回测结果。
+
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv
 uv python install 3.11.16 --install-dir .cache/phase0/python --no-bin
