@@ -314,6 +314,13 @@ def test_last_representable_date_is_recorded_as_unavailable_not_wrapped():
     assert result["scenario_assumed_at_utc"] is None
 
 
+def test_observation_with_unrepresentable_shanghai_date_is_an_explicit_input_error():
+    item = evidence(observed_at=datetime.max.replace(tzinfo=UTC))
+    for mode in ("date_upper_bound", "observed_at"):
+        with pytest.raises(PublicationTimingError, match="supported Shanghai date range"):
+            diagnose(item, mode=mode, knowledge_time=datetime.max.replace(tzinfo=UTC))
+
+
 def test_input_is_not_mutated_and_result_is_json_serializable_and_independent():
     item = evidence()
     before = asdict(item)

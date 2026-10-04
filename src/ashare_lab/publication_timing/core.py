@@ -104,7 +104,12 @@ def _date_conflicts(evidence, observed):
     ):
         problems.append("document_date_after_publication_date")
     if observed is not None:
-        observation_day = observed.astimezone(SHANGHAI).date()
+        try:
+            observation_day = observed.astimezone(SHANGHAI).date()
+        except (OverflowError, ValueError) as exc:
+            raise PublicationTimingError(
+                "observed_at is outside the supported Shanghai date range"
+            ) from exc
         for name in ("publication_date", "source_version_date", "document_date"):
             value = getattr(evidence, name)
             if value is not None and value > observation_day:
