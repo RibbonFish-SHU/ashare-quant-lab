@@ -1,0 +1,1637 @@
+{
+  "schema_version": "reviewed-dividend-resolution-gap-followup-v1",
+  "recorded_at_utc": "2026-10-04T10:09:05.834421+00:00",
+  "research_eligible": false,
+  "implementation_eligible": false,
+  "available_time": null,
+  "annual_zero_event_certified": false,
+  "counts": {
+    "complete_queries": 10,
+    "query_rows": 26,
+    "new_pdf_downloads": 8,
+    "new_pdf_pages_extracted_and_rendered": 41,
+    "new_pdf_pages_visually_reviewed": 25,
+    "selected_symbols": 6,
+    "specific_annual_distribution_approval_chains": 5,
+    "report_approval_without_standalone_distribution_motion": 1,
+    "retained_network_body_bytes": 2246862
+  },
+  "queries": [
+    {
+      "symbol": "002049.SZ",
+      "keyword": "利润分配",
+      "query_complete": true,
+      "rows": 1,
+      "announcement_ids": [
+        "1216262364"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002049-page1.json",
+        "bytes": 842,
+        "sha256": "4e851a65c32fd2942700d34406f5eb5d6ea44234f7a4b7048692415ff1b5fb99"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002049-page1.metadata.json",
+        "bytes": 998,
+        "sha256": "3b9c3eb6eb15ef73b218064895a206d23b338828f01160d613be1dbe54d5913c"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002074.SZ",
+      "keyword": "利润分配",
+      "query_complete": true,
+      "rows": 1,
+      "announcement_ids": [
+        "1216662625"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002074-page1.json",
+        "bytes": 841,
+        "sha256": "3b4e9ddcb9dad88d93dab5fde03399c036d39a02932b891ab601d1eebf533b09"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002074-page1.metadata.json",
+        "bytes": 997,
+        "sha256": "6a49a3cd699eba9c4fedb7016a1a24f45867f8aedaf37d4fa44ec400bd86823e"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002648.SZ",
+      "keyword": "利润分配",
+      "query_complete": true,
+      "rows": 0,
+      "announcement_ids": [],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002648-page1.json",
+        "bytes": 165,
+        "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002648-page1.metadata.json",
+        "bytes": 997,
+        "sha256": "3bdb2107e4e694c78e6e7276e2e0902133e834cd18eea909e3504804173df612"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002602.SZ",
+      "keyword": "股东大会决议",
+      "query_complete": true,
+      "rows": 8,
+      "announcement_ids": [
+        "1218767967",
+        "1217734437",
+        "1217431905",
+        "1217314985",
+        "1216863889",
+        "1216316335",
+        "1215726528",
+        "1215626201"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002602-page1.json",
+        "bytes": 5426,
+        "sha256": "06a64c00f57c97f389f171c7f7b6c73ad3c1395f44c80e3907f462aae68bdc56"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002602-page1.metadata.json",
+        "bytes": 1004,
+        "sha256": "53ae818cf6fd62d71e7e40d6b821b86ea914387d12efdf198cfc80e589471d4e"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "300454.SZ",
+      "keyword": "股东大会决议",
+      "query_complete": true,
+      "rows": 2,
+      "announcement_ids": [
+        "1218522761",
+        "1216831997"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/300454-page1.json",
+        "bytes": 1618,
+        "sha256": "061c185ef0aa9818274697b28fcd7a317605799c18f7d9ec1a7dcdce416b2453"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/300454-page1.metadata.json",
+        "bytes": 1004,
+        "sha256": "7d3ed437748bf192ba01ab23374e18267140881c28fe787c683165135ab717b0"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002049.SZ",
+      "keyword": "股东大会决议",
+      "query_complete": true,
+      "rows": 3,
+      "announcement_ids": [
+        "1217469780",
+        "1216494162",
+        "1215592595"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002049-q1-page1.json",
+        "bytes": 2124,
+        "sha256": "d630414e7cc8be9af0e30a5fb4d5cf4c4c9d5c2569b439b61bb87df89d9d3c6c"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002049-q1-page1.metadata.json",
+        "bytes": 1011,
+        "sha256": "cfe0e75ba6b26624e1a15999188aee6b821f4a804d6988ffaf8f966993ddbacc"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002074.SZ",
+      "keyword": "股东大会决议",
+      "query_complete": true,
+      "rows": 0,
+      "announcement_ids": [],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002074-q2-page1.json",
+        "bytes": 165,
+        "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002074-q2-page1.metadata.json",
+        "bytes": 1009,
+        "sha256": "e2b118e5a4b197b3172b56f0bc15cc13585c61b97442310680c132ad7062eee7"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002648.SZ",
+      "keyword": "股东大会决议",
+      "query_complete": true,
+      "rows": 5,
+      "announcement_ids": [
+        "1218767318",
+        "1217979988",
+        "1217452118",
+        "1217207938",
+        "1216864301"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q3-page1.json",
+        "bytes": 3443,
+        "sha256": "15fd4430691a9549ffe2e64fe8627b00fa51eb696b62ad1f5fc2c6d87a6c54d2"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q3-page1.metadata.json",
+        "bytes": 1010,
+        "sha256": "0b1d583c5b1536d04ae2c706e7d3295fd4e1697b950aba330cf73b4e21757c05"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002648.SZ",
+      "keyword": "年度报告摘要",
+      "query_complete": true,
+      "rows": 2,
+      "announcement_ids": [
+        "1217316726",
+        "1216687000"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q4-page1.json",
+        "bytes": 1406,
+        "sha256": "dd1f356382a4b851ebd0eddd25a4afbb7e6900e91eec06d1f560a2cdb04ecd5f"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q4-page1.metadata.json",
+        "bytes": 1010,
+        "sha256": "83dc264af62a410fff1ee4d61c2aca11fc39d6a6eb042b73ec3266e3ec0abbb9"
+      },
+      "annual_zero_event_certified": false
+    },
+    {
+      "symbol": "002074.SZ",
+      "keyword": "年度股东大会",
+      "query_complete": true,
+      "rows": 4,
+      "announcement_ids": [
+        "1216909166",
+        "1216909165",
+        "1216844374",
+        "1216662616"
+      ],
+      "raw": {
+        "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/002074-q1-page1.json",
+        "bytes": 2860,
+        "sha256": "a4a731bbca68eb88154a14e2caa0029710107c6ee6ee1fdba1f70e1149875158"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/002074-q1-page1.metadata.json",
+        "bytes": 1006,
+        "sha256": "606311cefe706d4434f3c6d91cf3933044cd018e8a78d08e112386d758537255"
+      },
+      "annual_zero_event_certified": false
+    }
+  ],
+  "documents": [
+    {
+      "announcement_id": "1216262364",
+      "symbol": "002049.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002049",
+          "secName": "紫光国微",
+          "orgId": "gssz0002049",
+          "announcementId": "1216262364",
+          "announcementTitle": "关于2022年度拟不进行利润分配的专项说明",
+          "announcementTime": 1680105600000,
+          "adjunctUrl": "finalpage/2023-03-30/1216262364.PDF",
+          "adjunctSize": 179,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010503||010112||012399",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "紫光国微",
+          "shortTitle": "关于2022年度拟不进行利润分配的专项说明",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002049-page1.json",
+          "bytes": 842,
+          "sha256": "4e851a65c32fd2942700d34406f5eb5d6ea44234f7a4b7048692415ff1b5fb99"
+        },
+        "row_index": 0,
+        "query_keyword": "利润分配"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216262364.pdf",
+        "bytes": 182620,
+        "sha256": "3ef6ac60831c8a9fa40f08d541f27e6c0e849b1f35139f2ad86da1eb3c8fc5cb"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216262364.metadata.json",
+        "bytes": 781,
+        "sha256": "769e32be89b649adb0817017048bf09ab05fd4dea26ebd0b60dffbf97e723006"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216262364.extraction.json",
+        "bytes": 6491,
+        "sha256": "ce534f20bc5facc4153062365a374bf1cecc85d567c06076469b1e7170f9d379"
+      },
+      "page_count": 2,
+      "visually_reviewed_pages": [
+        1,
+        2
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-resolution-pages/manifest.json",
+        "bytes": 7381,
+        "sha256": "f08e8a509648f7ee282268f01615dff8d5fcb0db676729368dfb23de1c3ede1d"
+      },
+      "citations": [
+        {
+          "page": 1,
+          "quote": "拟定2022年度利润分配预案为：不派发现金红利，不送红股，不以公积金转增股本。未分配利润结转至下一年度。",
+          "meaning": "FY2022 proposed terms only"
+        },
+        {
+          "page": 1,
+          "quote": "本议案尚需提交公司2022年年度股东大会审议",
+          "meaning": "approval still pending in this document"
+        },
+        {
+          "page": 2,
+          "quote": "紫光国芯微电子股份有限公司董事会2023年3月30日",
+          "meaning": "signature; not availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null
+    },
+    {
+      "announcement_id": "1216662625",
+      "symbol": "002074.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002074",
+          "secName": "国轩高科",
+          "orgId": "9900001001",
+          "announcementId": "1216662625",
+          "announcementTitle": "关于2022年度拟不进行利润分配的专项说明",
+          "announcementTime": 1682611200000,
+          "adjunctUrl": "finalpage/2023-04-28/1216662625.PDF",
+          "adjunctSize": 329,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010503||010112||012399",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "国轩高科",
+          "shortTitle": "关于2022年度拟不进行利润分配的专项说明",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002074-page1.json",
+          "bytes": 841,
+          "sha256": "3b4e9ddcb9dad88d93dab5fde03399c036d39a02932b891ab601d1eebf533b09"
+        },
+        "row_index": 0,
+        "query_keyword": "利润分配"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216662625.pdf",
+        "bytes": 336127,
+        "sha256": "1bfc6a368c6f2d6091eabb0ed4a315788adc95be7d321c069b6516a0965ac4c8"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216662625.metadata.json",
+        "bytes": 781,
+        "sha256": "434a4cc56e36d4e8369ea14c10aad294038ebf7226dbe88560f4471f87381a3a"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216662625.extraction.json",
+        "bytes": 6246,
+        "sha256": "43dde73e728c9c6c28a9c398ff95bd86246daa972550acda62fd0fdae48a8cf0"
+      },
+      "page_count": 3,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-resolution-pages/manifest.json",
+        "bytes": 7381,
+        "sha256": "f08e8a509648f7ee282268f01615dff8d5fcb0db676729368dfb23de1c3ede1d"
+      },
+      "citations": [
+        {
+          "page": 1,
+          "quote": "公司董事会拟定2022年度利润分配方案为：不派发现金红利、不送红股、不以公积金转增股本。",
+          "meaning": "FY2022 proposed terms only"
+        },
+        {
+          "page": 1,
+          "quote": "于2022年4月26日分别召开第九届董事会第二次会议和第九届监事会第二次会议",
+          "meaning": "source literally states 2022; not repaired to 2023"
+        },
+        {
+          "page": 2,
+          "quote": "本预案尚需提交2022年年度股东大会审议，存在不确定性",
+          "meaning": "approval still pending in this document"
+        },
+        {
+          "page": 3,
+          "quote": "国轩高科股份有限公司董事会二〇二三年四月二十八日",
+          "meaning": "2023 signature; conflict with source meeting-year retained"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null
+    },
+    {
+      "announcement_id": "1216863889",
+      "symbol": "002602.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002602",
+          "secName": "世纪华通",
+          "orgId": "9900021007",
+          "announcementId": "1216863889",
+          "announcementTitle": "2022年度股东大会决议公告",
+          "announcementTime": 1684512000000,
+          "adjunctUrl": "finalpage/2023-05-20/1216863889.PDF",
+          "adjunctSize": 134,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010501||010112||011905",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "世纪华通",
+          "shortTitle": "2022年度股东大会决议公告",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002602-page1.json",
+          "bytes": 5426,
+          "sha256": "06a64c00f57c97f389f171c7f7b6c73ad3c1395f44c80e3907f462aae68bdc56"
+        },
+        "row_index": 4,
+        "query_keyword": "股东大会决议"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216863889.pdf",
+        "bytes": 136618,
+        "sha256": "a3dabb30c70db49fc37c52d7c214b7ece57d5af5117db432e0d54903f55918f9"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216863889.metadata.json",
+        "bytes": 781,
+        "sha256": "7bbd68c0460a389cfea996171b5c249ca18bdcd46ee82a02e201263087e23a55"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216863889.extraction.json",
+        "bytes": 13416,
+        "sha256": "01664f05b871f14108badbd036c49ac8a7a3fb05aef907800695c0238b0d1ea7"
+      },
+      "page_count": 6,
+      "visually_reviewed_pages": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-resolution-pages/manifest.json",
+        "bytes": 7381,
+        "sha256": "f08e8a509648f7ee282268f01615dff8d5fcb0db676729368dfb23de1c3ede1d"
+      },
+      "citations": [
+        {
+          "page": 3,
+          "quote": "5、审议通过了《关于2022年度利润分配预案的议案》",
+          "meaning": "named motion approval; amounts are not restated here"
+        },
+        {
+          "page": 6,
+          "quote": "浙江世纪华通集团股份有限公司董事会二〇二三年五月十九日",
+          "meaning": "signature; not availability"
+        },
+        {
+          "page": 1,
+          "quote": "2023年5月19日",
+          "meaning": "meeting date; not publication availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null,
+      "issuer_announcement_number": "2023-031",
+      "meeting_date": "2023-05-19",
+      "signature_date": "2023-05-19"
+    },
+    {
+      "announcement_id": "1216831997",
+      "symbol": "300454.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "300454",
+          "secName": "深信服",
+          "orgId": "9900035739",
+          "announcementId": "1216831997",
+          "announcementTitle": "深信服科技股份有限公司2022年年度股东大会决议公告",
+          "announcementTime": 1684239505000,
+          "adjunctUrl": "finalpage/2023-05-16/1216831997.PDF",
+          "adjunctSize": 322,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||160203||250301||251302",
+          "pageColumn": "SZCY",
+          "announcementType": "01010501||010112||010115||011905",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "深信服",
+          "shortTitle": "深信服科技股份有限公司2022年年度股东大会决议公告",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/300454-page1.json",
+          "bytes": 1618,
+          "sha256": "061c185ef0aa9818274697b28fcd7a317605799c18f7d9ec1a7dcdce416b2453"
+        },
+        "row_index": 1,
+        "query_keyword": "股东大会决议"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216831997.pdf",
+        "bytes": 328769,
+        "sha256": "a9a7bb4a4184151c4b2eb10fff197b92b31eef955517e905c2d37592cccd98ae"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216831997.metadata.json",
+        "bytes": 781,
+        "sha256": "9266645ce656f8bfc2885dde1311d47527b65dd20546c628aeb4eb74637a7c85"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216831997.extraction.json",
+        "bytes": 17976,
+        "sha256": "8d12ae40a3116ce3ab045295278e031a43d0d20adb658754786ee19b22727f34"
+      },
+      "page_count": 8,
+      "visually_reviewed_pages": [
+        1,
+        3,
+        8
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-resolution-pages/manifest.json",
+        "bytes": 7381,
+        "sha256": "f08e8a509648f7ee282268f01615dff8d5fcb0db676729368dfb23de1c3ede1d"
+      },
+      "citations": [
+        {
+          "page": 3,
+          "quote": "(五)审议通过了《公司2022年度利润分配预案》",
+          "meaning": "named motion approval; amounts are not restated here"
+        },
+        {
+          "page": 8,
+          "quote": "深信服科技股份有限公司董事会二〇二三年五月十六日",
+          "meaning": "signature; not availability"
+        },
+        {
+          "page": 1,
+          "quote": "2023年5月16日",
+          "meaning": "meeting date; not publication availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null,
+      "issuer_announcement_number": "2023-050",
+      "meeting_date": "2023-05-16",
+      "signature_date": "2023-05-16"
+    },
+    {
+      "announcement_id": "1216494162",
+      "symbol": "002049.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002049",
+          "secName": "紫光国微",
+          "orgId": "gssz0002049",
+          "announcementId": "1216494162",
+          "announcementTitle": "2022年度股东大会决议公告",
+          "announcementTime": 1682006400000,
+          "adjunctUrl": "finalpage/2023-04-21/1216494162.PDF",
+          "adjunctSize": 158,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010501||010112||011905",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "紫光国微",
+          "shortTitle": "2022年度股东大会决议公告",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002049-q1-page1.json",
+          "bytes": 2124,
+          "sha256": "d630414e7cc8be9af0e30a5fb4d5cf4c4c9d5c2569b439b61bb87df89d9d3c6c"
+        },
+        "row_index": 1,
+        "query_keyword": "股东大会决议"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216494162.pdf",
+        "bytes": 160758,
+        "sha256": "891871b2480bebdf506fa4920c1236ea6f101d2fea98a254a53d6d1c21421abd"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216494162.metadata.json",
+        "bytes": 788,
+        "sha256": "93ac6d9746451003dafa70d50cc681d379a12b3ab6f654f2d95b16643bf64a58"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216494162.extraction.json",
+        "bytes": 9933,
+        "sha256": "e871895383c41307017374ad0de46b643421eba02343a3568eb211a1f57c2315"
+      },
+      "page_count": 4,
+      "visually_reviewed_pages": [
+        1,
+        3,
+        4
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/manifest.json",
+        "bytes": 5853,
+        "sha256": "c4e91f18b1289a82456c76bd02143372cff1ea164c698dd220b74de091d77dbf"
+      },
+      "citations": [
+        {
+          "page": 3,
+          "quote": "4、审议通过《2022年度利润分配预案》。",
+          "meaning": "named motion approval; amounts are not restated here"
+        },
+        {
+          "page": 4,
+          "quote": "紫光国芯微电子股份有限公司董事会2023年4月21日",
+          "meaning": "signature; not availability"
+        },
+        {
+          "page": 1,
+          "quote": "2023年4月20日",
+          "meaning": "meeting date; not publication availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null,
+      "issuer_announcement_number": "2023-031",
+      "meeting_date": "2023-04-20",
+      "signature_date": "2023-04-21"
+    },
+    {
+      "announcement_id": "1216864301",
+      "symbol": "002648.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002648",
+          "secName": "卫星化学",
+          "orgId": "9900021886",
+          "announcementId": "1216864301",
+          "announcementTitle": "2022年度股东大会决议公告",
+          "announcementTime": 1684512000000,
+          "adjunctUrl": "finalpage/2023-05-20/1216864301.PDF",
+          "adjunctSize": 227,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010501||010112||011905",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "卫星化学",
+          "shortTitle": "2022年度股东大会决议公告",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q3-page1.json",
+          "bytes": 3443,
+          "sha256": "15fd4430691a9549ffe2e64fe8627b00fa51eb696b62ad1f5fc2c6d87a6c54d2"
+        },
+        "row_index": 4,
+        "query_keyword": "股东大会决议"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216864301.pdf",
+        "bytes": 231281,
+        "sha256": "7679422266c1901ce9d55d3c07035fa3ec93bcbfe8fa3dac0193b116843013ea"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216864301.metadata.json",
+        "bytes": 788,
+        "sha256": "db20eb4e1128f09f1e2440e8d234825d74b4fe8a4cc617bed946e19e0346382c"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216864301.extraction.json",
+        "bytes": 10660,
+        "sha256": "bb5aadc777f98010433befdbc3f539693798507274d2913bf9a2a544f69a3dc6"
+      },
+      "page_count": 5,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/manifest.json",
+        "bytes": 5853,
+        "sha256": "c4e91f18b1289a82456c76bd02143372cff1ea164c698dd220b74de091d77dbf"
+      },
+      "citations": [
+        {
+          "page": 3,
+          "quote": "4、审议通过了《关于2022年年度报告及摘要的议案》",
+          "meaning": "named motion approval; amounts are not restated here"
+        },
+        {
+          "page": 5,
+          "quote": "卫星化学股份有限公司董事会二〇二三年五月二十日",
+          "meaning": "signature; not availability"
+        },
+        {
+          "page": 1,
+          "quote": "2023年5月19日",
+          "meaning": "meeting date; not publication availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null,
+      "issuer_announcement_number": "2023-021",
+      "meeting_date": "2023-05-19",
+      "signature_date": "2023-05-20"
+    },
+    {
+      "announcement_id": "1216687000",
+      "symbol": "002648.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002648",
+          "secName": "卫星化学",
+          "orgId": "9900021886",
+          "announcementId": "1216687000",
+          "announcementTitle": "2022年年度报告摘要",
+          "announcementTime": 1682697600000,
+          "adjunctUrl": "finalpage/2023-04-29/1216687000.PDF",
+          "adjunctSize": 504,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010503||010112||010301",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "卫星化学",
+          "shortTitle": "2022年年度报告摘要",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q4-page1.json",
+          "bytes": 1406,
+          "sha256": "dd1f356382a4b851ebd0eddd25a4afbb7e6900e91eec06d1f560a2cdb04ecd5f"
+        },
+        "row_index": 1,
+        "query_keyword": "年度报告摘要"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216687000.pdf",
+        "bytes": 515331,
+        "sha256": "c9537924e2efb25d76a1e6650e8783ae352e1cf79cdb52d0847b135e74d38466"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216687000.metadata.json",
+        "bytes": 788,
+        "sha256": "a5c2379e211817d7e4e700d855660f346d26725b79557f4dde88dd32299b3822"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216687000.extraction.json",
+        "bytes": 16533,
+        "sha256": "865ec36bf8dc03d0cde67a77425aa4e9644441734addf64be72a691503bd7fd7"
+      },
+      "page_count": 6,
+      "visually_reviewed_pages": [
+        1,
+        6
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/manifest.json",
+        "bytes": 5853,
+        "sha256": "c4e91f18b1289a82456c76bd02143372cff1ea164c698dd220b74de091d77dbf"
+      },
+      "citations": [
+        {
+          "page": 1,
+          "quote": "公司计划不派发现金红利，不送红股，不以公积金转增股本。",
+          "meaning": "annual report states intended distribution; not a standalone shareholder distribution resolution"
+        },
+        {
+          "page": 6,
+          "quote": "卫星化学股份有限公司董事会2023年04月29日",
+          "meaning": "signature; not availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null
+    },
+    {
+      "announcement_id": "1216909165",
+      "symbol": "002074.SZ",
+      "source_locator": {
+        "record": {
+          "id": null,
+          "secCode": "002074",
+          "secName": "国轩高科",
+          "orgId": "9900001001",
+          "announcementId": "1216909165",
+          "announcementTitle": "2022年年度股东大会会议决议公告",
+          "announcementTime": 1685030400000,
+          "adjunctUrl": "finalpage/2023-05-26/1216909165.PDF",
+          "adjunctSize": 330,
+          "adjunctType": "PDF",
+          "storageTime": null,
+          "columnId": "09020202||250101||251302",
+          "pageColumn": "SZZB",
+          "announcementType": "01010501||010112||011905",
+          "associateAnnouncement": null,
+          "important": null,
+          "batchNum": null,
+          "announcementContent": "",
+          "orgName": null,
+          "tileSecName": "国轩高科",
+          "shortTitle": "2022年年度股东大会会议决议公告",
+          "announcementTypeName": null,
+          "secNameList": null
+        },
+        "raw": {
+          "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/002074-q1-page1.json",
+          "bytes": 2860,
+          "sha256": "a4a731bbca68eb88154a14e2caa0029710107c6ee6ee1fdba1f70e1149875158"
+        },
+        "row_index": 1,
+        "query_keyword": "年度股东大会"
+      },
+      "pdf": {
+        "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/1216909165.pdf",
+        "bytes": 336468,
+        "sha256": "7e306806911bda40c10ce7448162dc7cec99b1aa8967a47f921babf2f664e4b1"
+      },
+      "metadata": {
+        "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/1216909165.metadata.json",
+        "bytes": 776,
+        "sha256": "8da60dcd959d9260983d98b6ae33dd96deccad05efb6e6393de66ad1aba5bb41"
+      },
+      "extraction": {
+        "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/1216909165.extraction.json",
+        "bytes": 15452,
+        "sha256": "96af1929a54c94bd6b5b689c6ee39bf7a2eab6ad4bc4a405877f464a4f2817b1"
+      },
+      "page_count": 7,
+      "visually_reviewed_pages": [
+        1,
+        4,
+        7
+      ],
+      "render_manifest": {
+        "path": ".cache/phase1/main-review/dividend-gotion-pages/manifest.json",
+        "bytes": 2388,
+        "sha256": "0fda6acf90733a4be2db0b95d6415e7575ab649756b3bea18894b94554a08515"
+      },
+      "citations": [
+        {
+          "page": 4,
+          "quote": "6、审议通过《关于2022年年度利润分配预案的议案》",
+          "meaning": "named motion approval; amounts are not restated here"
+        },
+        {
+          "page": 7,
+          "quote": "国轩高科股份有限公司董事会二〇二三年五月二十六日",
+          "meaning": "signature; not availability"
+        },
+        {
+          "page": 1,
+          "quote": "2023年5月25日",
+          "meaning": "meeting date; not publication availability"
+        }
+      ],
+      "research_eligible": false,
+      "available_time": null,
+      "issuer_announcement_number": "2023-047",
+      "meeting_date": "2023-05-25",
+      "signature_date": "2023-05-26"
+    }
+  ],
+  "records": [
+    {
+      "symbol": "000938.SZ",
+      "reporting_period": "2022年度",
+      "terms_document": "1216274105",
+      "later_document": "1216832384",
+      "status": "specific_annual_distribution_motion_approved",
+      "provenance": "reused_prior_review",
+      "terms": "no_cash_no_stock_bonus_no_capital_reserve_conversion_for_named_plan",
+      "relation_basis": "manual match of issuer, fiscal year, motion/report title and retained sequence; later document does not restate distribution amounts",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "annual_zero_event_certified": false,
+      "calendar_2023_corporate_action_coverage_certified": false
+    },
+    {
+      "symbol": "002049.SZ",
+      "reporting_period": "2022年度",
+      "terms_document": "1216262364",
+      "later_document": "1216494162",
+      "status": "specific_annual_distribution_motion_approved",
+      "provenance": "new_originals",
+      "terms": "no_cash_no_stock_bonus_no_capital_reserve_conversion_for_named_plan",
+      "relation_basis": "manual match of issuer, fiscal year, motion/report title and retained sequence; later document does not restate distribution amounts",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "annual_zero_event_certified": false,
+      "calendar_2023_corporate_action_coverage_certified": false
+    },
+    {
+      "symbol": "002074.SZ",
+      "reporting_period": "2022年度",
+      "terms_document": "1216662625",
+      "later_document": "1216909165",
+      "status": "specific_annual_distribution_motion_approved_source_year_conflict_retained",
+      "provenance": "new_originals",
+      "terms": "no_cash_no_stock_bonus_no_capital_reserve_conversion_for_named_plan",
+      "relation_basis": "manual match of issuer, fiscal year, motion/report title and retained sequence; later document does not restate distribution amounts",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "annual_zero_event_certified": false,
+      "calendar_2023_corporate_action_coverage_certified": false
+    },
+    {
+      "symbol": "002602.SZ",
+      "reporting_period": "2022年度",
+      "terms_document": "1216693256",
+      "later_document": "1216863889",
+      "status": "specific_annual_distribution_motion_approved",
+      "provenance": "prior_proposal_new_approval",
+      "terms": "no_cash_no_stock_bonus_no_capital_reserve_conversion_for_named_plan",
+      "relation_basis": "manual match of issuer, fiscal year, motion/report title and retained sequence; later document does not restate distribution amounts",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "annual_zero_event_certified": false,
+      "calendar_2023_corporate_action_coverage_certified": false
+    },
+    {
+      "symbol": "002648.SZ",
+      "reporting_period": "2022年度",
+      "terms_document": "1216687000",
+      "later_document": "1216864301",
+      "status": "annual_report_approved_no_standalone_distribution_motion_verified",
+      "provenance": "new_originals",
+      "terms": "no_cash_no_stock_bonus_no_capital_reserve_conversion_for_named_plan",
+      "relation_basis": "manual match of issuer, fiscal year, motion/report title and retained sequence; later document does not restate distribution amounts",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "annual_zero_event_certified": false,
+      "calendar_2023_corporate_action_coverage_certified": false
+    },
+    {
+      "symbol": "300454.SZ",
+      "reporting_period": "2022年度",
+      "terms_document": "1216403724",
+      "later_document": "1216831997",
+      "status": "specific_annual_distribution_motion_approved",
+      "provenance": "prior_proposal_new_approval",
+      "terms": "no_cash_no_stock_bonus_no_capital_reserve_conversion_for_named_plan",
+      "relation_basis": "manual match of issuer, fiscal year, motion/report title and retained sequence; later document does not restate distribution amounts",
+      "available_time": null,
+      "research_eligible": false,
+      "implementation_eligible": false,
+      "annual_zero_event_certified": false,
+      "calendar_2023_corporate_action_coverage_certified": false
+    }
+  ],
+  "source_ambiguities": [
+    {
+      "announcement_id": "1216662625",
+      "field": "board_meeting_date",
+      "literal_source_value": "2022-04-26",
+      "signature_date": "2023-04-28",
+      "corrected_value": null,
+      "resolution": "Preserve original wording. Later shareholder meeting provides its own separate 2023 date."
+    }
+  ],
+  "reused_evidence": [
+    {
+      "path": "docs/evidence/phase1_dividend_proposal_gaps.json",
+      "bytes": 7288,
+      "sha256": "0d5c14a344be726076d4944eb30a5c7a826b72edf06345e4a9602493c0d35cd2"
+    },
+    {
+      "path": "docs/evidence/phase1_gap_source_audit.json",
+      "bytes": 31207,
+      "sha256": "395e9ea985730aaee6bba8df56db95cc84b6c14877d7d459cdc180f64979f7ad"
+    }
+  ],
+  "limits": [
+    "Annual distribution-plan approval is not proof of no corporate actions throughout calendar 2023.",
+    "Repurchases counted as dividends for a regulatory ratio are not cash credits to portfolio holders.",
+    "002648 approval names the annual report and summary; no standalone distribution motion is invented.",
+    "Zero exact-keyword matches are not absence evidence: 002074 uses an intervening meeting word in its title.",
+    "All dates are documentary facts, not certified available_time; no real execution input or zero-action guard is created.",
+    "Only 25 relevant original pages were visually reviewed; all 41 pages were extracted and rendered."
+  ],
+  "network": {
+    "retries": 0,
+    "redirects": 0,
+    "restriction_response_observed": false,
+    "audit_network_requests": 0
+  },
+  "audit_script": {
+    "path": ".cache/phase1/main-review/audit_dividend_resolution_gaps.py",
+    "bytes": 18489,
+    "sha256": "cc8ed69f3c48389f3d76602bca2b9b166d7e2014e4df0fb1d238ac1a2cc7c400"
+  },
+  "inputs": [
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/run.json",
+      "bytes": 16496,
+      "sha256": "79635fb00a84c5f97103b69f3f426a9239d6257bf7de5dcea1244d226a0fa84e"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/plan.json",
+      "bytes": 1714,
+      "sha256": "fcbbcf9e4016dd2a7d4dd65570ccff9ee9684d4bbfec4179c98eceab59812e85"
+    },
+    {
+      "path": ".cache/phase1/main-review/collect_dividend_resolution_gaps.py",
+      "bytes": 6348,
+      "sha256": "1e86242b6e23fe7f535125c7699864a52d6241aa05fc26ff1cfac96847adddb3"
+    },
+    {
+      "path": ".cache/phase1/main-review/collect_dividend_notices.py",
+      "bytes": 9482,
+      "sha256": "58a8312382c8aa48ace71c03ef9052171ae3a59208d5ffb7f49d532f40e30f4b"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261003-actions-probe/stock-map.bin",
+      "bytes": 592485,
+      "sha256": "5682733958a171c9084706da8d74b8b7f96d63cfd99b932c7c7edc58f8b32b72"
+    },
+    {
+      "path": "docs/evidence/phase1_dividend_category_gap.json",
+      "bytes": 16200,
+      "sha256": "6ccb94b89e3bbed2b3061158064adc2589b30fdd47731038323b63bb3b560bb6"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002049-page1.json",
+      "bytes": 842,
+      "sha256": "4e851a65c32fd2942700d34406f5eb5d6ea44234f7a4b7048692415ff1b5fb99"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002049-page1.metadata.json",
+      "bytes": 998,
+      "sha256": "3b9c3eb6eb15ef73b218064895a206d23b338828f01160d613be1dbe54d5913c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002074-page1.json",
+      "bytes": 841,
+      "sha256": "3b4e9ddcb9dad88d93dab5fde03399c036d39a02932b891ab601d1eebf533b09"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002074-page1.metadata.json",
+      "bytes": 997,
+      "sha256": "6a49a3cd699eba9c4fedb7016a1a24f45867f8aedaf37d4fa44ec400bd86823e"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002648-page1.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002648-page1.metadata.json",
+      "bytes": 997,
+      "sha256": "3bdb2107e4e694c78e6e7276e2e0902133e834cd18eea909e3504804173df612"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002602-page1.json",
+      "bytes": 5426,
+      "sha256": "06a64c00f57c97f389f171c7f7b6c73ad3c1395f44c80e3907f462aae68bdc56"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/002602-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "53ae818cf6fd62d71e7e40d6b821b86ea914387d12efdf198cfc80e589471d4e"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/300454-page1.json",
+      "bytes": 1618,
+      "sha256": "061c185ef0aa9818274697b28fcd7a317605799c18f7d9ec1a7dcdce416b2453"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-gaps/300454-page1.metadata.json",
+      "bytes": 1004,
+      "sha256": "7d3ed437748bf192ba01ab23374e18267140881c28fe787c683165135ab717b0"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/run.json",
+      "bytes": 13524,
+      "sha256": "049abdd54667c3df6944a4f1ecfc26b196fafaa918abc74e19ddeabbe6cad234"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/plan.json",
+      "bytes": 1650,
+      "sha256": "875b7b62ed0c13d43ed41572bea5cb8ff85913a9b4d7bd1a9116c63845ff6610"
+    },
+    {
+      "path": ".cache/phase1/main-review/collect_dividend_annual_resolutions.py",
+      "bytes": 6519,
+      "sha256": "6e724bdc39170a543bcb15aa0b6341644f6f3dc94dc8149f2e6fd07e66676f88"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002049-q1-page1.json",
+      "bytes": 2124,
+      "sha256": "d630414e7cc8be9af0e30a5fb4d5cf4c4c9d5c2569b439b61bb87df89d9d3c6c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002049-q1-page1.metadata.json",
+      "bytes": 1011,
+      "sha256": "cfe0e75ba6b26624e1a15999188aee6b821f4a804d6988ffaf8f966993ddbacc"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002074-q2-page1.json",
+      "bytes": 165,
+      "sha256": "c2a890bbf3a6a53ab02ddc6c1794bf1c72ba45799fe9f59dcc5ba2cc18467114"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002074-q2-page1.metadata.json",
+      "bytes": 1009,
+      "sha256": "e2b118e5a4b197b3172b56f0bc15cc13585c61b97442310680c132ad7062eee7"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q3-page1.json",
+      "bytes": 3443,
+      "sha256": "15fd4430691a9549ffe2e64fe8627b00fa51eb696b62ad1f5fc2c6d87a6c54d2"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q3-page1.metadata.json",
+      "bytes": 1010,
+      "sha256": "0b1d583c5b1536d04ae2c706e7d3295fd4e1697b950aba330cf73b4e21757c05"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q4-page1.json",
+      "bytes": 1406,
+      "sha256": "dd1f356382a4b851ebd0eddd25a4afbb7e6900e91eec06d1f560a2cdb04ecd5f"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolutions/002648-q4-page1.metadata.json",
+      "bytes": 1010,
+      "sha256": "83dc264af62a410fff1ee4d61c2aca11fc39d6a6eb042b73ec3266e3ec0abbb9"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/run.json",
+      "bytes": 5333,
+      "sha256": "ead900144dc975bd373cccf88e6a074b3ea1aa3a4b35899d237dc040db433071"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/plan.json",
+      "bytes": 1394,
+      "sha256": "c8c481588918431a7f5c26b13e52e3290447c8bab8e2350f1b633dbecdbcb7ef"
+    },
+    {
+      "path": ".cache/phase1/main-review/collect_dividend_gotion_meeting.py",
+      "bytes": 6368,
+      "sha256": "56aed2797417f9f4f76c321fffe80ff45b6050359b390a8f6f9cb6cadf8f9eef"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/002074-q1-page1.json",
+      "bytes": 2860,
+      "sha256": "a4a731bbca68eb88154a14e2caa0029710107c6ee6ee1fdba1f70e1149875158"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-meeting/002074-q1-page1.metadata.json",
+      "bytes": 1006,
+      "sha256": "606311cefe706d4434f3c6d91cf3933044cd018e8a78d08e112386d758537255"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/run.json",
+      "bytes": 7267,
+      "sha256": "c3dee9be2e1cde6474e6c99d0d37595c920613769f367b4ce67435ee5b2c04fd"
+    },
+    {
+      "path": ".cache/phase1/main-review/download_dividend_resolution_pdfs.py",
+      "bytes": 7059,
+      "sha256": "eb29e7379770c77f95a7169e4535d3ed09b2dcc154d412f061089036bd8ed28d"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/manifest.json",
+      "bytes": 7381,
+      "sha256": "f08e8a509648f7ee282268f01615dff8d5fcb0db676729368dfb23de1c3ede1d"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216262364.pdf",
+      "bytes": 182620,
+      "sha256": "3ef6ac60831c8a9fa40f08d541f27e6c0e849b1f35139f2ad86da1eb3c8fc5cb"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216262364.metadata.json",
+      "bytes": 781,
+      "sha256": "769e32be89b649adb0817017048bf09ab05fd4dea26ebd0b60dffbf97e723006"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216262364.extraction.json",
+      "bytes": 6491,
+      "sha256": "ce534f20bc5facc4153062365a374bf1cecc85d567c06076469b1e7170f9d379"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216262364-1.png",
+      "bytes": 387885,
+      "sha256": "ccdc038880559effcd30d823d10aba31b6acf0b20c504c86ef01ba627159c832"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216262364-2.png",
+      "bytes": 285223,
+      "sha256": "55db0ef3ba19b207af943795c8dde49b36668c18680c95730981fd3fdbaca7fb"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216662625.pdf",
+      "bytes": 336127,
+      "sha256": "1bfc6a368c6f2d6091eabb0ed4a315788adc95be7d321c069b6516a0965ac4c8"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216662625.metadata.json",
+      "bytes": 781,
+      "sha256": "434a4cc56e36d4e8369ea14c10aad294038ebf7226dbe88560f4471f87381a3a"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216662625.extraction.json",
+      "bytes": 6246,
+      "sha256": "43dde73e728c9c6c28a9c398ff95bd86246daa972550acda62fd0fdae48a8cf0"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216662625-1.png",
+      "bytes": 292555,
+      "sha256": "f44c2cf43c92c93a724c239fafbfa5d9a8168301327fc5ebc58797f744d4bebe"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216662625-2.png",
+      "bytes": 306999,
+      "sha256": "6571c7860eae6a4c56a7c7ba2b205a156600885d4d86c083d59d90cbf5d1a0d7"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216662625-3.png",
+      "bytes": 47048,
+      "sha256": "23bc92a8cc232a8f288d366ba64a4d09922af3c1a4de6d4fe3d7cb5bf86a4711"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216863889.pdf",
+      "bytes": 136618,
+      "sha256": "a3dabb30c70db49fc37c52d7c214b7ece57d5af5117db432e0d54903f55918f9"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216863889.metadata.json",
+      "bytes": 781,
+      "sha256": "7bbd68c0460a389cfea996171b5c249ca18bdcd46ee82a02e201263087e23a55"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216863889.extraction.json",
+      "bytes": 13416,
+      "sha256": "01664f05b871f14108badbd036c49ac8a7a3fb05aef907800695c0238b0d1ea7"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216863889-1.png",
+      "bytes": 233181,
+      "sha256": "16687c9e5ce43f60edff4e2e0a8288b6c48dc9a0acf286685bfad58e89ad6e17"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216863889-2.png",
+      "bytes": 279495,
+      "sha256": "8eda594b8c1619583a1914bc65ffec319533f8eeff83072f9c06c1e4ceca00e9"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216863889-3.png",
+      "bytes": 272673,
+      "sha256": "d2c377e226a5eff8a9fa5acfb343e0e3fbd0122aa52b9f65da35da760e52c2a2"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216863889-4.png",
+      "bytes": 244799,
+      "sha256": "5c36d212636e320cf00f24a1e7bbca7ab55087dc31106c716229a38d75c2a107"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216863889-5.png",
+      "bytes": 273596,
+      "sha256": "408d8366cd5a4f669ac5251dec9365af2d18a80793074deeb9f005f3bc72ec5e"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216863889-6.png",
+      "bytes": 122148,
+      "sha256": "82d0c87576956a82a7ced9407181f311b9c65ece1244d38905f2b71976e8f71a"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216831997.pdf",
+      "bytes": 328769,
+      "sha256": "a9a7bb4a4184151c4b2eb10fff197b92b31eef955517e905c2d37592cccd98ae"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216831997.metadata.json",
+      "bytes": 781,
+      "sha256": "9266645ce656f8bfc2885dde1311d47527b65dd20546c628aeb4eb74637a7c85"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-resolution-pdfs/1216831997.extraction.json",
+      "bytes": 17976,
+      "sha256": "8d12ae40a3116ce3ab045295278e031a43d0d20adb658754786ee19b22727f34"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-1.png",
+      "bytes": 224763,
+      "sha256": "9351fabae60a3d83402c792dcc40023f1bab0b91fffc8ace900255351577c47d"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-2.png",
+      "bytes": 318539,
+      "sha256": "1934d9e1e43dda7860cdf59c274b83c316ffac8b4178d3b2411a4cd9006edecd"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-3.png",
+      "bytes": 269622,
+      "sha256": "79fb4e99c90c4fab2239481af000741b94d0c596486c47cab3833ffee3b7bcd2"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-4.png",
+      "bytes": 306090,
+      "sha256": "41d00cdeb31fb43d2f3292b6ae5961ad24e61e4d4e466e7be7713f7181a0ae66"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-5.png",
+      "bytes": 320909,
+      "sha256": "1b32561ca8bea9c510b3d60abb833eb1745d7b437f3a6a84391a5d53521481e5"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-6.png",
+      "bytes": 271938,
+      "sha256": "2a09fef7e6818c2c9228ced60bfcac566b1276259a15223709f9922a05f2bd27"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-7.png",
+      "bytes": 267548,
+      "sha256": "14093d9572e2059fa39b5a654aff29a68a396edaab7cf64fdbbc4194f6e07efd"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-resolution-pages/1216831997-8.png",
+      "bytes": 50507,
+      "sha256": "e2e76154d706e841aef393fd3c4c7845a08b673d72fe5d88f325c2b3bf84e0e8"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/run.json",
+      "bytes": 5524,
+      "sha256": "e3c7fb75ba813383facd0559076dd33129eb352d0f3911d7f77de12afa897bf7"
+    },
+    {
+      "path": ".cache/phase1/main-review/download_dividend_annual_resolution_pdfs.py",
+      "bytes": 6899,
+      "sha256": "c5ca2cd437f25d62772b024e30ca997b091ddfc21228f3ed327d8f1d6c90bcba"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/manifest.json",
+      "bytes": 5853,
+      "sha256": "c4e91f18b1289a82456c76bd02143372cff1ea164c698dd220b74de091d77dbf"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216494162.pdf",
+      "bytes": 160758,
+      "sha256": "891871b2480bebdf506fa4920c1236ea6f101d2fea98a254a53d6d1c21421abd"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216494162.metadata.json",
+      "bytes": 788,
+      "sha256": "93ac6d9746451003dafa70d50cc681d379a12b3ab6f654f2d95b16643bf64a58"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216494162.extraction.json",
+      "bytes": 9933,
+      "sha256": "e871895383c41307017374ad0de46b643421eba02343a3568eb211a1f57c2315"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216494162-1.png",
+      "bytes": 228405,
+      "sha256": "b504ba68c9395731293bb5cabc12bcca55260ad14a6ab9de77b247fa3887eaf4"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216494162-2.png",
+      "bytes": 286693,
+      "sha256": "7cdc3f98afba6159fb62980d8422934f79b90d16904d198d3aae90e1e6fee610"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216494162-3.png",
+      "bytes": 316012,
+      "sha256": "4e919779ee999298c00f34da682039ef8649546947c4ca09223324de014da47d"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216494162-4.png",
+      "bytes": 264294,
+      "sha256": "c94d51eec303d11963e3edd48f6ac7fffa89a4e46f6fe78c305792e06e08aa50"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216864301.pdf",
+      "bytes": 231281,
+      "sha256": "7679422266c1901ce9d55d3c07035fa3ec93bcbfe8fa3dac0193b116843013ea"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216864301.metadata.json",
+      "bytes": 788,
+      "sha256": "db20eb4e1128f09f1e2440e8d234825d74b4fe8a4cc617bed946e19e0346382c"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216864301.extraction.json",
+      "bytes": 10660,
+      "sha256": "bb5aadc777f98010433befdbc3f539693798507274d2913bf9a2a544f69a3dc6"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216864301-1.png",
+      "bytes": 221976,
+      "sha256": "c89e61602e5c4a863b3978a4854eb5fb9670d931a3f1668b947994e84b81a376"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216864301-2.png",
+      "bytes": 285554,
+      "sha256": "80b69f6dfa417c25bb1c39319d85131cb87b7ee5393ecef1d622b6bca3c548e0"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216864301-3.png",
+      "bytes": 289935,
+      "sha256": "7c75f98fa8d6471575692f6cfd2ebbf666c94284dc46cd6e5463e4865498e5e7"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216864301-4.png",
+      "bytes": 261945,
+      "sha256": "e92366db52cc287160918b87cb70357f4717545b5b2c590099f4a9e89e4bccad"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216864301-5.png",
+      "bytes": 71622,
+      "sha256": "94b33c18744b2a982c0c44e394c554cd5711194ed2c2ee3db9a5e20cf7ee7898"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216687000.pdf",
+      "bytes": 515331,
+      "sha256": "c9537924e2efb25d76a1e6650e8783ae352e1cf79cdb52d0847b135e74d38466"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216687000.metadata.json",
+      "bytes": 788,
+      "sha256": "a5c2379e211817d7e4e700d855660f346d26725b79557f4dde88dd32299b3822"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-annual-resolution-pdfs/1216687000.extraction.json",
+      "bytes": 16533,
+      "sha256": "865ec36bf8dc03d0cde67a77425aa4e9644441734addf64be72a691503bd7fd7"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216687000-1.png",
+      "bytes": 208888,
+      "sha256": "a0f475b12f7b07e9e4acbd7ac774b88da04a408805e4f04289408365218aac61"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216687000-2.png",
+      "bytes": 480961,
+      "sha256": "2e72f24b8eb778cb0ea2c40efa421ab23d7ca3a1252323a0a331bdaf3ab52f64"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216687000-3.png",
+      "bytes": 312681,
+      "sha256": "65a8c1018314c678b2e574abf57e780f0cab07004337341942bc467d07138492"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216687000-4.png",
+      "bytes": 182497,
+      "sha256": "0f188513b43e917fb02d5e7f17e554fd70a3733e20bbcd804599082aaabf634b"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216687000-5.png",
+      "bytes": 168422,
+      "sha256": "c70383e0d41fcf087dceef18101525c1f29b3b8b5221e5771a41be2a97be077b"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-annual-resolution-pages/1216687000-6.png",
+      "bytes": 20711,
+      "sha256": "fa6cf54c8d7b3837140a177863bd6665e46b42c3a3467ae10299bda5e038fcc4"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/run.json",
+      "bytes": 2437,
+      "sha256": "5560a89800b1af8bde75f760543f10fc022f35fff156f22b989234ffe40f896b"
+    },
+    {
+      "path": ".cache/phase1/main-review/download_dividend_gotion_pdf.py",
+      "bytes": 6703,
+      "sha256": "a58b866aa4e21aa9fecc5a919a3f3bc3d40ef456b313a5e9a9a86ceefd969cf7"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/manifest.json",
+      "bytes": 2388,
+      "sha256": "0fda6acf90733a4be2db0b95d6415e7575ab649756b3bea18894b94554a08515"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/1216909165.pdf",
+      "bytes": 336468,
+      "sha256": "7e306806911bda40c10ce7448162dc7cec99b1aa8967a47f921babf2f664e4b1"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/1216909165.metadata.json",
+      "bytes": 776,
+      "sha256": "8da60dcd959d9260983d98b6ae33dd96deccad05efb6e6393de66ad1aba5bb41"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-gotion-pdf/1216909165.extraction.json",
+      "bytes": 15452,
+      "sha256": "96af1929a54c94bd6b5b689c6ee39bf7a2eab6ad4bc4a405877f464a4f2817b1"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-1.png",
+      "bytes": 186247,
+      "sha256": "3a1f23a04c8557d1460eae3c8ee781e384007af1d185930992912e8128293cbe"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-2.png",
+      "bytes": 268675,
+      "sha256": "c3f7d0707c506841c3e4baa332d4c12033efc841471525c637c2c2ed010f6e87"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-3.png",
+      "bytes": 258017,
+      "sha256": "eef4f85f45ad4735d548028aeee1b36748961b4562cc1f60282c5fc68d4cd5e9"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-4.png",
+      "bytes": 282691,
+      "sha256": "9948ea1bef45fea474e2d9f46fb6570ba145f72e90c9a902499c635f965e7b0c"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-5.png",
+      "bytes": 285576,
+      "sha256": "1d0bc73e267bd89fa885a208a5d9a948c51d68fc30cb5bd72cfac728a5dfe52c"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-6.png",
+      "bytes": 272436,
+      "sha256": "2c542d797e88c58fdc97587fe3d109c135a576bd7767cb6ba277be5bc6d7900b"
+    },
+    {
+      "path": ".cache/phase1/main-review/dividend-gotion-pages/1216909165-7.png",
+      "bytes": 197799,
+      "sha256": "6058a93e924a08aaa97f6c11484b9e71b4ec1ae692e371fac3829c7728207cf5"
+    },
+    {
+      "path": "docs/evidence/phase1_dividend_proposal_gaps.json",
+      "bytes": 7288,
+      "sha256": "0d5c14a344be726076d4944eb30a5c7a826b72edf06345e4a9602493c0d35cd2"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216693256.pdf",
+      "bytes": 179158,
+      "sha256": "0deacbaa8043032eeb01e74381ea7bc4e093bd8ce1e744bbefa1f3315de12cb2"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216693256.metadata.json",
+      "bytes": 779,
+      "sha256": "5dc3232b07230e668c3c8509280e788976017f52991f5ac800d3459326970e30"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216693256.extraction.json",
+      "bytes": 5978,
+      "sha256": "0bc7bf2ec937c7b9315c9c19f013f733a15fb1061b0beeaf4c7b49ffc65f07a7"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216403724.pdf",
+      "bytes": 264586,
+      "sha256": "f1a81f9758702011031db2eedc41661a23407d2a6996d7b2ca8344b763e4835d"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216403724.metadata.json",
+      "bytes": 779,
+      "sha256": "d2f435022386ad7f64e8dde6399003847f1135d1c8d77d7b9b3941fffc01a712"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-dividend-proposal-gaps/1216403724.extraction.json",
+      "bytes": 5499,
+      "sha256": "df465b0d8eff8f1e7d235e9fc4759a5cb4ca86268ecc6e7e5260343325afc91f"
+    },
+    {
+      "path": "docs/evidence/phase1_gap_source_audit.json",
+      "bytes": 31207,
+      "sha256": "395e9ea985730aaee6bba8df56db95cc84b6c14877d7d459cdc180f64979f7ad"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1216274105.pdf",
+      "bytes": 153383,
+      "sha256": "b9dda612c3e2996cd157a7fde9a477aa26a6bf50ffb1a4e3372033b1c7c24cec"
+    },
+    {
+      "path": "datasets/raw/cninfo/20261004-gap-notices/1216832384.pdf",
+      "bytes": 167126,
+      "sha256": "b496e165dcb51ebb6ff9e21d9371abe8cc57e03502c6797e275f43c8f910e225"
+    },
+    {
+      "path": ".cache/phase1/main-review/audit_dividend_resolution_gaps.py",
+      "bytes": 18489,
+      "sha256": "cc8ed69f3c48389f3d76602bca2b9b166d7e2014e4df0fb1d238ac1a2cc7c400"
+    }
+  ]
+}
