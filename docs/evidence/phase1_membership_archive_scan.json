@@ -1,0 +1,1083 @@
+{
+  "schema_version": "membership-archive-scan-v2",
+  "recorded_at_utc": "2026-10-04T08:24:59.820054+00:00",
+  "research_eligible": false,
+  "scope": "offline retained 2023 index and digest revalidation of previous attachment reviews",
+  "network_requests": 0,
+  "script": {
+    "path": ".cache/phase1/readiness/audit_retained_membership.py",
+    "sha256": "4f7dff42e859e6020b66bd9058c0ecbdb8b2017efa5e10cc795df8118630b6f9",
+    "bytes": 6538
+  },
+  "index": {
+    "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/2023-announcement-index.json",
+    "sha256": "77656badcc158f467c92c660584ed3258089432a7ce772129e73567cb578e676",
+    "bytes": 100430,
+    "items": 349,
+    "published_year": 2023,
+    "notice_type_counts": {
+      "news": 88,
+      "announcement": 261
+    }
+  },
+  "pages": [
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page32.json",
+      "sha256": "1edec0b2cf683e9d1cd92453349ef8f650108ff1b26a66e5bb2281ab283e239e",
+      "bytes": 4058
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page33.json",
+      "sha256": "10cbc6ca98078e256d30da02f19ab88ac1d2f24c8d8498abd4bbfae9246df58a",
+      "bytes": 4024
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page34.json",
+      "sha256": "14847a2f94bea7f66a42360caba6569398fc17a023c8d2899d8f7a400279eafc",
+      "bytes": 4143
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page35.json",
+      "sha256": "7d61fc49037177822eba407ab45a2788abc58b670fa755340920bfc5ef895b3a",
+      "bytes": 4032
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page36.json",
+      "sha256": "1c6fb25e8034da3ac46fb2174f21e3ac748a97970777f219dd047e0daf91ee8d",
+      "bytes": 4119
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page37.json",
+      "sha256": "5ae06a13133d0548ff48b7563bcf3dd724e3efac11c5e83e6225343c4674707a",
+      "bytes": 4081
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page38.json",
+      "sha256": "f0ca2318c7244e695fc738f8cd6d954b575a8399a1b22edd7cc32df34bc1bf89",
+      "bytes": 4011
+    },
+    {
+      "path": ".cache/phase0/data-probe/csi-announcement-page-39.json",
+      "sha256": "483b057776a0a4910fa04508a27a9e9e381a04cd948ed4333a73c9db30e6862a",
+      "bytes": 3984
+    },
+    {
+      "path": ".cache/phase0/data-probe/csi-announcement-page-40.json",
+      "sha256": "95ba308e0bf297fc801f769ed5e866112e2f50e85dc6062ade85f21e0a347b86",
+      "bytes": 4058
+    },
+    {
+      "path": ".cache/phase0/data-probe/csi-announcement-page-41.json",
+      "sha256": "9e1c6ae82094fa1f6a488ff50fb0a380404888376572a1de62fb51252b2bfe24",
+      "bytes": 4038
+    },
+    {
+      "path": ".cache/phase0/data-probe/csi-announcement-page-42.json",
+      "sha256": "2894c1b6fa96693e29895cc6e76999b43a179edab1f6a316302af472236abae6",
+      "bytes": 4068
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page43.json",
+      "sha256": "33bc2124228035455367548b680f2f9dca6dd3d9a69026b2fc3cf23e684b1133",
+      "bytes": 4060
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page44.json",
+      "sha256": "c9b9ef480e7a06631b10ff5b4f110b4b43da3803c3af3c4f929a89bcb470747b",
+      "bytes": 3957
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page45.json",
+      "sha256": "6c603fb665efa41a8a46d6010a2bae9bba86b482d7a22189a0266b8c6775505d",
+      "bytes": 4085
+    },
+    {
+      "path": ".cache/phase0/data-probe/csi-announcement-page-46.json",
+      "sha256": "c962b906431205a62d238bb41813fca23a4d3095680377257241025858f3360b",
+      "bytes": 4127
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page47.json",
+      "sha256": "8bedb14d4386e3009192bcfd00fc693b61b1cf187b29b9f3589c5173299907ae",
+      "bytes": 3942
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page48.json",
+      "sha256": "42c57c15a0c88c4ac53694e1c3db293ff2be1ae9fe639fec82cc66d725ffb012",
+      "bytes": 3777
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page49.json",
+      "sha256": "4121ebdddd888374ad3426b195a6a343cac4cf11b3718b54babcd31f299c4c96",
+      "bytes": 3709
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/list-page50.json",
+      "sha256": "4f49e3bd424b939f9415c7f42c26ec50d3c126299182b7c2633b800f12b07faa",
+      "bytes": 3835
+    }
+  ],
+  "page_reconstruction_matches_index": true,
+  "selected_events_config": {
+    "path": "configs/csi-events-2023.json",
+    "sha256": "f9d19df82a55355fc8a2f4a3f3ef7cc664bbcb889bcc5686ace81b95fdb018c5",
+    "bytes": 3597
+  },
+  "identified_csi300_periodic_pairs": [
+    {
+      "plan": {
+        "id": 14806,
+        "title": "中证指数公司公布沪深300等指数样本定期调整方案",
+        "theme": "指数调样",
+        "publishDate": "2023-05-26",
+        "noticeType": "news",
+        "fileUrl": null,
+        "fileName": null
+      },
+      "result": {
+        "id": 14796,
+        "title": "关于沪深300、中证500、中证1000等指数定期调整结果的公告",
+        "theme": "指数调样",
+        "publishDate": "2023-05-26",
+        "noticeType": "announcement",
+        "fileUrl": null,
+        "fileName": null
+      },
+      "effective_after_close": "2023-06-09",
+      "first_trading_date": "2023-06-12",
+      "review_basis": "selected official event configuration and prior review; no new PDF interpretation"
+    },
+    {
+      "plan": {
+        "id": 15043,
+        "title": "中证指数公司公布沪深300等指数样本定期调整方案",
+        "theme": "指数调样",
+        "publishDate": "2023-11-24",
+        "noticeType": "news",
+        "fileUrl": null,
+        "fileName": null
+      },
+      "result": {
+        "id": 15044,
+        "title": "关于沪深300、中证500、中证1000等指数定期调整结果的公告",
+        "theme": "指数调样",
+        "publishDate": "2023-11-24",
+        "noticeType": "announcement",
+        "fileUrl": null,
+        "fileName": null
+      },
+      "effective_after_close": "2023-12-08",
+      "first_trading_date": "2023-12-11",
+      "review_basis": "selected official event configuration and prior review; no new PDF interpretation"
+    }
+  ],
+  "reused_attachment_reviews": [
+    {
+      "id": 14599,
+      "title": "关于调整中证全指等指数样本的公告",
+      "publish_date": "2023-02-03",
+      "attachment_create_date": "2023-03-16",
+      "attachment": {
+        "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/attachment-14599.xlsx",
+        "sha256": "59a5445d0478d498378ed57f291120b170f1027e6f241e6a6497f83be9494b03",
+        "bytes": 12486
+      },
+      "prior_audit": {
+        "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/temporary-notice-screen.json",
+        "sha256": "ba91c34f5843b77c6faf1fa9646fc8094a534c3e1a4af586b107275147886313",
+        "bytes": 1405
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes match earlier attachment audit; workbook not re-parsed"
+    },
+    {
+      "id": 14651,
+      "title": "关于调整中证全指等指数样本的公告",
+      "publish_date": "2023-03-06",
+      "attachment_create_date": "2023-03-06",
+      "attachment": {
+        "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/attachment-14651.xlsx",
+        "sha256": "94a51cceb659f7049a70014cf9d931705dc1752c366994c362de5c08af4253c8",
+        "bytes": 11642
+      },
+      "prior_audit": {
+        "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/temporary-notice-screen.json",
+        "sha256": "ba91c34f5843b77c6faf1fa9646fc8094a534c3e1a4af586b107275147886313",
+        "bytes": 1405
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes match earlier attachment audit; workbook not re-parsed"
+    },
+    {
+      "id": 14722,
+      "title": "关于调整中证全指等指数样本的公告",
+      "publish_date": "2023-04-10",
+      "attachment_create_date": "2023-04-10",
+      "attachment": {
+        "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/attachment-14722.xlsx",
+        "sha256": "745f785b13d91a6dab1cd537f13525e8eb4b8fa39276d7d1e83fa4a1a3742424",
+        "bytes": 12090
+      },
+      "prior_audit": {
+        "path": ".cache/worktrees/phase1-data/datasets/raw/csi/phase1-2023-review/temporary-notice-screen.json",
+        "sha256": "ba91c34f5843b77c6faf1fa9646fc8094a534c3e1a4af586b107275147886313",
+        "bytes": 1405
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes match earlier attachment audit; workbook not re-parsed"
+    },
+    {
+      "id": 14555,
+      "title": "关于调整全指信息等指数样本的公告",
+      "publish_date": "2023-01-05",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14555-0.xlsx",
+        "sha256": "c13b60802207ac8c169c401b869b521da6ec62a057127e87e5fa1a23480466b7",
+        "bytes": 11753
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14555-0-1-cells.json",
+          "sha256": "6d2861dbbda780ecfd96849406ef07483a3f6b4f2abfcf201e112a8db6e3b8b6",
+          "bytes": 1356
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14555-0-2-cells.json",
+          "sha256": "cc524056d0c19791bc78ed9cb017854aba61460cb1eecd6a2aed93a14df4f13b",
+          "bytes": 2214
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14574,
+      "title": "关于调整300精明指数等指数样本的公告",
+      "publish_date": "2023-01-12",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14574-0.xlsx",
+        "sha256": "7b87ae27a1ab68fb1ee78bc05e032315d5bace6f3e0a64c209d241c8aa4a2dab",
+        "bytes": 15441
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14574-0-1-cells.json",
+          "sha256": "12a50eea2f7ce3e1ae30cc4f2551da4cea5e2b3c39bba156e62c8b1fb42dad16",
+          "bytes": 44642
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14574-0-2-cells.json",
+          "sha256": "94669f81f8c8b4e999d43efaee0ef9ea94d15187fbefe02ebffeb781998468ca",
+          "bytes": 70092
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14631,
+      "title": "关于中证红利低波动100等指数定期调整结果的公告",
+      "publish_date": "2023-02-24",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14631-0.xlsx",
+        "sha256": "b66529b434919732bc1840845a3e6706975ed8b87e699488664472ca279f34e0",
+        "bytes": 26208
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14631-0-1-cells.json",
+          "sha256": "5da20098bafb6f93af8134e9ee3ec5e4e48c36f52414f01f5ff33ad8e6a87efa",
+          "bytes": 102969
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14631-0-2-cells.json",
+          "sha256": "0f8e95fc8777a65a30bbddb7b9970a27bcbbb40a48711b50d57ea824860dc4f8",
+          "bytes": 90930
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14654,
+      "title": "关于中证消费低波动等指数定期调整结果的公告",
+      "publish_date": "2023-03-06",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14654-0.xlsx",
+        "sha256": "869b509d9a56509d1c9b246e255deb8f14915de7dfbe18eef10fa03025dc689f",
+        "bytes": 32394
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14654-0-1-cells.json",
+          "sha256": "20932a4c206515cf8feba91993783acb5d6693bfa724f48c5b593de1ec7e0914",
+          "bytes": 136107
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14654-0-2-cells.json",
+          "sha256": "6a3ec2d6e7ae6f23a9c3144c9ece061b1907b4fb362ef8f33243e68a3e34e59f",
+          "bytes": 136094
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14662,
+      "title": "关于调整深圳科技等指数样本的公告",
+      "publish_date": "2023-03-09",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14662-0.xlsx",
+        "sha256": "ef28f253060d08a402c2bd45e22f33e2b0219078a5e888684e2bfcb81811ecdd",
+        "bytes": 19546
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14662-0-1-cells.json",
+          "sha256": "a7550d6acc121bc64bb661cc7bd15fb96d09be03cb0d5ad570d3a96ea161628a",
+          "bytes": 45491
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14662-0-2-cells.json",
+          "sha256": "69b3355886ac7aee90b869c6dfea46cbfee72cd942a9fde7e35c7de057de120e",
+          "bytes": 45674
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14666,
+      "title": "关于调整中证沪港深互联互通综合指数等指数样本的公告",
+      "publish_date": "2023-03-09",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14666-0.xlsx",
+        "sha256": "2c7c45d25bb6ea9df9bbd63869728d95bc06aba1d22865da9fdbc7ddaefcf07a",
+        "bytes": 193791
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14666-0-1-cells.json",
+          "sha256": "ff4ec1f441bf5f5ba2aa32a4cd4919ff60c37d06a73a4d3d6a871619b1ac98e7",
+          "bytes": 3363036
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14666-0-2-cells.json",
+          "sha256": "f9110b5f56c84ae7651cd2bbf15c348218ce89f5530d7235634967e4cd6a3da8",
+          "bytes": 138552
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14770,
+      "title": "关于调整中证沪港深互联互通综合指数等指数样本的公告",
+      "publish_date": "2023-05-11",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14770-0.xlsx",
+        "sha256": "adc7d9299e7874cbfff888fb09c02557f3a9de4ac555ad05b0823aaedc7bd24b",
+        "bytes": 23879
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14770-0-1-cells.json",
+          "sha256": "aedaf786b22040577bf71619b3f62023c33e9ebdaa063082aada35b563f997a7",
+          "bytes": 281696
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14770-0-2-cells.json",
+          "sha256": "55177a0bd7ca8a378b71afd5dde65b7c5fc4963216eb8f1997af678977ac232e",
+          "bytes": 37515
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 14842,
+      "title": "关于临时调整中证1000指数样本的公告",
+      "publish_date": "2023-07-07",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14842-0.xlsx",
+        "sha256": "e5324df580bc48fc66ba781d45e88ba4922a36abb6580c140b5159feb985a0eb",
+        "bytes": 12330
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14842-0-1-cells.json",
+          "sha256": "cccb86d9375b3e8b81c95ac4bded055e0155bff42d3a73e053741043a0be8aa7",
+          "bytes": 914
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-14842-0-2-cells.json",
+          "sha256": "77c00fa2c511570ae969a500329e4e122d41e4ae2aab1498755cb0d6a3db894c",
+          "bytes": 915
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    },
+    {
+      "id": 15019,
+      "title": "关于临时调整中证1000指数样本的公告",
+      "publish_date": "2023-11-08",
+      "attachment": {
+        "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-15019-0.xlsx",
+        "sha256": "4f3d1ab7ad1ea46ad8f2fd20da6bd8d4a43b679d4bee7713c5ef92f0a036bc72",
+        "bytes": 10099
+      },
+      "retained_cell_extractions": [
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-15019-0-1-cells.json",
+          "sha256": "c9dd64e582a53e5d07c71a24f795858ee0f751b34fbaaa7df4d79c761b6cdea7",
+          "bytes": 918
+        },
+        {
+          "path": "datasets/raw/csi/20261003-main-notice-audit/attachment-15019-0-2-cells.json",
+          "sha256": "78de7dfa934a94ef836c0478dff1a98a0c60de97fb56c9a07dfcf073920524ee",
+          "bytes": 914
+        }
+      ],
+      "prior_audit": {
+        "path": "docs/evidence/phase1_additional_membership_notices.json",
+        "sha256": "1603c98aa2ce4458c60aea570ae8f3a52da95f86a6a3c1658fc6d6d1359b78ef",
+        "bytes": 27613
+      },
+      "prior_audit_match_count": 0,
+      "this_check": "retained bytes and cell extraction digests match earlier review; workbook not re-parsed"
+    }
+  ],
+  "counts": {
+    "periodic_plan_and_result_records": 4,
+    "nonperiodic_attachment_reviews": 12,
+    "other_index_records_without_detail_or_attachment_review_in_this_cumulative_map": 333
+  },
+  "remaining_index_ids": [
+    14554,
+    14557,
+    14558,
+    14560,
+    14562,
+    14564,
+    14567,
+    14568,
+    14569,
+    14570,
+    14571,
+    14572,
+    14576,
+    14577,
+    14578,
+    14579,
+    14581,
+    14583,
+    14584,
+    14586,
+    14588,
+    14589,
+    14590,
+    14592,
+    14593,
+    14595,
+    14597,
+    14600,
+    14602,
+    14603,
+    14604,
+    14607,
+    14608,
+    14610,
+    14611,
+    14612,
+    14613,
+    14614,
+    14615,
+    14617,
+    14619,
+    14621,
+    14623,
+    14624,
+    14625,
+    14626,
+    14627,
+    14629,
+    14633,
+    14635,
+    14637,
+    14643,
+    14645,
+    14646,
+    14648,
+    14650,
+    14653,
+    14656,
+    14657,
+    14660,
+    14661,
+    14664,
+    14668,
+    14670,
+    14672,
+    14674,
+    14676,
+    14677,
+    14678,
+    14680,
+    14681,
+    14682,
+    14683,
+    14684,
+    14685,
+    14686,
+    14688,
+    14689,
+    14691,
+    14692,
+    14693,
+    14694,
+    14695,
+    14696,
+    14697,
+    14698,
+    14699,
+    14700,
+    14701,
+    14703,
+    14705,
+    14707,
+    14708,
+    14709,
+    14710,
+    14712,
+    14714,
+    14716,
+    14717,
+    14719,
+    14720,
+    14724,
+    14725,
+    14727,
+    14729,
+    14730,
+    14731,
+    14733,
+    14734,
+    14735,
+    14737,
+    14739,
+    14740,
+    14742,
+    14743,
+    14744,
+    14745,
+    14746,
+    14747,
+    14748,
+    14751,
+    14755,
+    14757,
+    14758,
+    14759,
+    14760,
+    14761,
+    14763,
+    14765,
+    14766,
+    14768,
+    14772,
+    14774,
+    14775,
+    14777,
+    14778,
+    14779,
+    14781,
+    14783,
+    14784,
+    14786,
+    14787,
+    14789,
+    14790,
+    14792,
+    14793,
+    14794,
+    14799,
+    14800,
+    14808,
+    14809,
+    14811,
+    14813,
+    14814,
+    14816,
+    14817,
+    14821,
+    14822,
+    14824,
+    14825,
+    14826,
+    14830,
+    14832,
+    14834,
+    14836,
+    14840,
+    14841,
+    14844,
+    14846,
+    14847,
+    14849,
+    14850,
+    14852,
+    14853,
+    14855,
+    14857,
+    14858,
+    14860,
+    14861,
+    14863,
+    14864,
+    14866,
+    14867,
+    14869,
+    14870,
+    14871,
+    14873,
+    14875,
+    14877,
+    14878,
+    14880,
+    14882,
+    14883,
+    14885,
+    14888,
+    14889,
+    14890,
+    14891,
+    14892,
+    14893,
+    14895,
+    14896,
+    14898,
+    14900,
+    14902,
+    14903,
+    14905,
+    14907,
+    14908,
+    14910,
+    14913,
+    14915,
+    14916,
+    14917,
+    14919,
+    14920,
+    14921,
+    14923,
+    14924,
+    14926,
+    14928,
+    14930,
+    14931,
+    14932,
+    14933,
+    14934,
+    14936,
+    14938,
+    14940,
+    14942,
+    14944,
+    14946,
+    14948,
+    14950,
+    14952,
+    14954,
+    14955,
+    14957,
+    14958,
+    14960,
+    14962,
+    14964,
+    14965,
+    14966,
+    14968,
+    14970,
+    14971,
+    14972,
+    14974,
+    14976,
+    14977,
+    14979,
+    14980,
+    14981,
+    14982,
+    14983,
+    14986,
+    14988,
+    14990,
+    14991,
+    14993,
+    14995,
+    14996,
+    14998,
+    15002,
+    15004,
+    15005,
+    15006,
+    15008,
+    15009,
+    15010,
+    15011,
+    15013,
+    15014,
+    15017,
+    15018,
+    15021,
+    15023,
+    15024,
+    15025,
+    15026,
+    15028,
+    15029,
+    15030,
+    15031,
+    15032,
+    15033,
+    15034,
+    15036,
+    15037,
+    15039,
+    15040,
+    15041,
+    15046,
+    15048,
+    15050,
+    15052,
+    15054,
+    15055,
+    15057,
+    15059,
+    15060,
+    15061,
+    15063,
+    15065,
+    15066,
+    15067,
+    15068,
+    15070,
+    15072,
+    15073,
+    15075,
+    15076,
+    15077,
+    15078,
+    15080,
+    15082,
+    15083,
+    15085,
+    15087,
+    15089,
+    15090,
+    15091,
+    15093,
+    15094,
+    15095,
+    15097,
+    15098,
+    15099,
+    15101,
+    15102,
+    15104,
+    15106
+  ],
+  "priority_candidates_from_titles_only": [
+    {
+      "id": 14558,
+      "title": "关于中证定向增发事件指数月度调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-01-05",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14560,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-01-05",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14572,
+      "title": "关于中证ECPI ESG可持续发展40等指数样本定期调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-01-12",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14583,
+      "title": "中证恒生沪港通AH股精明指数半年度指数检讨结果",
+      "theme": "指数调样",
+      "publishDate": "2023-01-20",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14584,
+      "title": "关于调整中证香港物业管理与服务主题指数样本的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-01-27",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14590,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-02-02",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14600,
+      "title": "关于中证定向增发事件指数月度调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-02-03",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14604,
+      "title": "关于调整中证沪港深互联互通综合指数等指数样本的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-02-09",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14648,
+      "title": "关于中证定向增发事件指数月度调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-03-03",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14668,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-03-09",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14688,
+      "title": "关于中证商品期货成份等指数定期调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-03-21",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14703,
+      "title": "关于中证中票50指数等34条指数2023年一季度定期调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-03-31",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14712,
+      "title": "关于中证定向增发事件指数月度调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-04-06",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14727,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-04-13",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14761,
+      "title": "关于中证定向增发事件指数月度调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-05-08",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14772,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-05-11",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14817,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-06-01",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14836,
+      "title": "关于中证中票50指数等34条指数2023年二季度定期调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-06-30",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14840,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-07-06",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14860,
+      "title": "中证恒生沪港通AH股精明指数半年度指数检讨结果",
+      "theme": "指数调样",
+      "publishDate": "2023-07-28",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14869,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-08-03",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14915,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-08-31",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14962,
+      "title": "关于中证中票50指数等34条指数2023年三季度定期调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-09-28",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 14966,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-10-12",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 15017,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-11-02",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 15055,
+      "title": "中证恒生沪港通AH股精明指数每月股份类别转换结果",
+      "theme": "指数调样",
+      "publishDate": "2023-11-30",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    },
+    {
+      "id": 15102,
+      "title": "关于中证中票50指数等35条指数2023年四季度定期调整结果的公告",
+      "theme": "指数调样",
+      "publishDate": "2023-12-29",
+      "noticeType": "announcement",
+      "fileUrl": null,
+      "fileName": null
+    }
+  ],
+  "limitations": [
+    "Prior reviews cover selected artifacts, not the entire archive or all possible temporary changes.",
+    "Titles can omit index names; titles cannot exclude an event or certify PIT availability.",
+    "The 14599 attachment creation date is later than publication; historical revision uncertainty remains.",
+    "19 retained pages include 2022/2024 announcement metadata only for year boundaries; no quotes read.",
+    "All event available_time values remain unknown; no universe or research qualification changed."
+  ]
+}
