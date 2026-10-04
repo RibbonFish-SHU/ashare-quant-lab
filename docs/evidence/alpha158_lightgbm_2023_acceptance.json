@@ -1,0 +1,347 @@
+{
+  "status": "completed_development_diagnostic_not_blind_test",
+  "data_kind": "real_candidate",
+  "research_eligible": false,
+  "source": {
+    "commit": "2839a63264d4d0f5869e7b97bde81b2d5ffcd29f",
+    "dirty": false,
+    "files_sha256": {
+      "scripts/run_diagnostic_backtest.py": "aca1d81a3d826f4d43765c36e50a2152da31f38ae1f5f1a65b32813be3187e6d",
+      "src/ashare_lab/diagnostic_backtest.py": "3d1b7cd99c5774eb178ff23c2b61b865b6a2a3037f0c3822eb0010a31a99ea54",
+      "configs/alpha158-lightgbm-2023-diagnostic.json": "2e7fc50781d759488f00872f26350dab9a2d660fe291bead0f00d9c44bdc83c4",
+      "uv.lock": "e92a4023f51a8d9079195034b33ab5a54902f6e0eb8b0e06894a95f3a9f04f4a",
+      "scripts/run_alpha158_diagnostic.py": "38c14f7ec0a37f2bdef9e1ff754276563c2e6bdb54b59a905e2a2457577dfe1d",
+      "src/ashare_lab/alpha158_diagnostic.py": "d89c34e4c65e86a4900733194cb6713f02bc8856949850a4f7cef0e678b224cc",
+      "configs/diagnostic-equal-weight-2023.json": "755cee0d3becc6f5c3f87f20203eabbe361a35eec1ff84868713971e3a13db30"
+    },
+    "python": "3.11.16",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1",
+      "matplotlib": "3.11.2",
+      "pyqlib": "0.9.7",
+      "lightgbm": "4.6.0"
+    }
+  },
+  "config": {
+    "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/frozen_model_config.json",
+    "bytes": 3645,
+    "sha256": "2e7fc50781d759488f00872f26350dab9a2d660fe291bead0f00d9c44bdc83c4"
+  },
+  "output_manifest": {
+    "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/manifest.json",
+    "bytes": 376749,
+    "sha256": "970402f23585ab1c9f68f3d2b2c8253766a70b1a4298e04658f7fa87b8840008"
+  },
+  "input_summary": null,
+  "run": {
+    "output": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1",
+    "started_at_utc": "2026-10-04T17:29:47.386646+00:00",
+    "finished_at_utc": "2026-10-04T17:30:20.484395+00:00",
+    "elapsed_seconds": 33.09788539999863,
+    "feature_seconds": 28.837017499958165,
+    "model_seconds": 1.5509858999866992,
+    "online_requests": 0,
+    "gpu_used": false,
+    "sealed_2024_2025_prices_read": false
+  },
+  "training": {
+    "windows": [
+      {
+        "name": "2023Q3",
+        "training_rows": 15592,
+        "prediction_rows": 19200,
+        "first_training_signal": "2023-04-04",
+        "last_training_signal": "2023-06-20",
+        "maximum_training_label_exit": "2023-06-30",
+        "fit_as_of": "2023-06-30",
+        "evaluation_start": "2023-07-03",
+        "evaluation_end": "2023-09-28",
+        "prediction_reproduction_max_abs_error": 0.0,
+        "training_mask_verified": true,
+        "maturity_verified": true
+      },
+      {
+        "name": "2023Q4",
+        "training_rows": 34791,
+        "prediction_rows": 18000,
+        "first_training_signal": "2023-04-04",
+        "last_training_signal": "2023-09-20",
+        "maximum_training_label_exit": "2023-09-28",
+        "fit_as_of": "2023-09-28",
+        "evaluation_start": "2023-10-09",
+        "evaluation_end": "2023-12-29",
+        "prediction_reproduction_max_abs_error": 0.0,
+        "training_mask_verified": true,
+        "maturity_verified": true
+      }
+    ],
+    "model_fits_in_this_audit": 0,
+    "native_feature_checks": [
+      "OPEN0",
+      "HIGH0",
+      "LOW0",
+      "VWAP0",
+      "KMID",
+      "ROC60"
+    ],
+    "label_formula_verified": true,
+    "same_day_top30_verified": true
+  },
+  "information_coefficients": {
+    "all": {
+      "days": 118,
+      "mean_ic": 0.0839614130912754,
+      "mean_rank_ic": 0.10830513612786469,
+      "rank_ic_std": 0.14699701742146493,
+      "positive_rank_ic_fraction": 0.7711864406779662
+    },
+    "2023Q3": {
+      "days": 64,
+      "mean_ic": 0.06981402861399051,
+      "mean_rank_ic": 0.09738680481361417,
+      "rank_ic_std": 0.13366272893105843,
+      "positive_rank_ic_fraction": 0.734375
+    },
+    "2023Q4": {
+      "days": 54,
+      "mean_ic": 0.10072868358287236,
+      "mean_rank_ic": 0.12124538064845793,
+      "rank_ic_std": 0.16170891570553345,
+      "positive_rank_ic_fraction": 0.8148148148148148
+    }
+  },
+  "comparison": {
+    "gross": {
+      "equal_weight": {
+        "metrics": {
+          "total_return": -0.11349633654754065,
+          "annualized_return": -0.21871605428653415,
+          "annualized_volatility": 0.1357925872649076,
+          "sharpe_rf0": -1.7494766355407956,
+          "max_drawdown": -0.17951412997448768,
+          "return_observations": 123,
+          "final_cash": 85197.5574504897,
+          "final_holdings_market_value": 8779839.077074103,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4113805.514831116,
+          "cumulative_turnover": 1.6785970749581822,
+          "cumulative_one_way_turnover": 0.8392985374790911
+        },
+        "costs": {
+          "commission": 0.0,
+          "transfer_fee": 0.0,
+          "stamp_tax": 0.0,
+          "slippage": 0.0,
+          "explicit_fees": 0.0,
+          "including_slippage": 0.0
+        }
+      },
+      "lightgbm_top30": {
+        "metrics": {
+          "total_return": -0.03670161106270686,
+          "annualized_return": -0.07374724343750196,
+          "annualized_volatility": 0.10754288132996243,
+          "sharpe_rf0": -0.6588937785316011,
+          "max_drawdown": -0.08104672570288174,
+          "return_observations": 123,
+          "final_cash": 102340.88731800305,
+          "final_holdings_market_value": 9530643.002054928,
+          "final_holding_count": 30,
+          "final_adjusted_units": 5626780.5778342,
+          "cumulative_turnover": 24.44913524084443,
+          "cumulative_one_way_turnover": 12.224567620422215
+        },
+        "costs": {
+          "commission": 0.0,
+          "transfer_fee": 0.0,
+          "stamp_tax": 0.0,
+          "slippage": 0.0,
+          "explicit_fees": 0.0,
+          "including_slippage": 0.0
+        }
+      },
+      "return_difference_percentage_points": 7.679472548483379
+    },
+    "base": {
+      "equal_weight": {
+        "metrics": {
+          "total_return": -0.11813087732187344,
+          "annualized_return": -0.2270612854498626,
+          "annualized_volatility": 0.13579255003864532,
+          "sharpe_rf0": -1.8284784489537742,
+          "max_drawdown": -0.18242044161946636,
+          "return_observations": 123,
+          "final_cash": 83068.53495973926,
+          "final_holdings_market_value": 8735622.691821527,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4093087.867514221,
+          "cumulative_turnover": 1.679114097965225,
+          "cumulative_one_way_turnover": 0.8395570489826125
+        },
+        "costs": {
+          "commission": 39141.491204716905,
+          "transfer_fee": 163.50382753833,
+          "stamp_tax": 2062.629327136031,
+          "slippage": 8172.72452913654,
+          "explicit_fees": 41367.624359391266,
+          "including_slippage": 49540.348888527806
+        }
+      },
+      "lightgbm_top30": {
+        "metrics": {
+          "total_return": -0.06295970047151667,
+          "annualized_return": -0.12473634929300788,
+          "annualized_volatility": 0.10666331933318898,
+          "sharpe_rf0": -1.195809665894457,
+          "max_drawdown": -0.09958272904748422,
+          "return_observations": 123,
+          "final_cash": 89212.92659139284,
+          "final_holdings_market_value": 9281190.06869344,
+          "final_holding_count": 30,
+          "final_adjusted_units": 5479506.472590771,
+          "cumulative_turnover": 24.46520273799394,
+          "cumulative_one_way_turnover": 12.23260136899697
+        },
+        "costs": {
+          "commission": 71832.75887029154,
+          "transfer_fee": 2350.1277412242794,
+          "stamp_tax": 74026.39531789068,
+          "slippage": 117503.97579274638,
+          "explicit_fees": 148209.2819294065,
+          "including_slippage": 265713.25772215286
+        }
+      },
+      "return_difference_percentage_points": 5.517117685035677
+    },
+    "higher": {
+      "equal_weight": {
+        "metrics": {
+          "total_return": -0.12255646206118653,
+          "annualized_return": -0.23498744314425515,
+          "annualized_volatility": 0.13580850516841372,
+          "sharpe_rf0": -1.9040637265821312,
+          "max_drawdown": -0.18519890519482096,
+          "return_observations": 123,
+          "final_cash": 81028.7763138156,
+          "final_holdings_market_value": 8693406.60307432,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4073307.4618395446,
+          "cumulative_turnover": 1.6796621132447649,
+          "cumulative_one_way_turnover": 0.8398310566223824
+        },
+        "costs": {
+          "commission": 78283.86236498122,
+          "transfer_fee": 163.373108402881,
+          "stamp_tax": 2072.347800611131,
+          "slippage": 16327.488716134914,
+          "explicit_fees": 80519.58327399523,
+          "including_slippage": 96847.07199013015
+        }
+      },
+      "lightgbm_top30": {
+        "metrics": {
+          "total_return": -0.08129715389438497,
+          "annualized_return": -0.1594689038479651,
+          "annualized_volatility": 0.10639740234334626,
+          "sharpe_rf0": -1.5793841350150744,
+          "max_drawdown": -0.11378568145471402,
+          "return_observations": 123,
+          "final_cash": 79782.41151352227,
+          "final_holdings_market_value": 9107246.049542628,
+          "final_holding_count": 30,
+          "final_adjusted_units": 5376811.950471206,
+          "cumulative_turnover": 24.477235686432625,
+          "cumulative_one_way_turnover": 12.238617843216312
+        },
+        "costs": {
+          "commission": 142420.42490305114,
+          "transfer_fee": 2329.4542078793156,
+          "stamp_tax": 73482.15720089972,
+          "slippage": 232935.95173831767,
+          "explicit_fees": 218232.03631183016,
+          "including_slippage": 451167.98805014783
+        }
+      },
+      "return_difference_percentage_points": 4.125930816680157
+    }
+  },
+  "interpretation": {
+    "model_gross_return": -0.03670161106270686,
+    "model_base_return": -0.06295970047151667,
+    "model_higher_return": -0.08129715389438497,
+    "model_base_vs_matched_equal_weight_percentage_points": 5.517117685035677,
+    "model_base_total_cost_cny": 265713.25772215286,
+    "model_base_turnover_two_sided": 24.46520273799394,
+    "model_base_vs_equal_weight_turnover_multiple": 14.570303928506842,
+    "mean_rank_ic_all": 0.10830513612786469,
+    "mean_rank_ic_q3": 0.09738680481361417,
+    "mean_rank_ic_q4": 0.12124538064845793,
+    "gross_still_negative": true,
+    "base_still_negative": true,
+    "higher_still_negative": true,
+    "profitable_strategy_claim": false,
+    "official_csi300_benchmark_loaded": false,
+    "formal_PIT_certification": false,
+    "final_test_interval_used": false,
+    "parameter_search": false
+  },
+  "artifact_refs": {
+    "plot": {
+      "path": "docs/evidence/alpha158-lightgbm-2023-h2.png",
+      "bytes": 221434,
+      "sha256": "ef679bec30c5813ddab90b6ad53f7db3adbdefd488b1e60125dfe2ff960925fe"
+    },
+    "independent_model_audit": {
+      "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/independent_model_audit.json",
+      "bytes": 13334,
+      "sha256": "cba2806ee7e53a930076cde2c787187e74734aba599a82ae1ad7262335069766"
+    },
+    "accounting_audit_equal_weight": {
+      "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/equal_weight/independent_audit.json",
+      "bytes": 4949,
+      "sha256": "ae92cbe4c8a9eb3990513e0cabcb5b46e4f1bc85340935ed773e7e1278b436cd"
+    },
+    "accounting_audit_lightgbm_top30": {
+      "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/lightgbm_top30/independent_audit.json",
+      "bytes": 4949,
+      "sha256": "f2f936c55ca9c1be5e30e2df94ba0bda6be66ce62c8a3a5d59b3e3301e532e31"
+    },
+    "training_evidence": {
+      "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/training_evidence.json",
+      "bytes": 53424,
+      "sha256": "d330a8055f7bb7b6735b672db3520df771226ed68150b5a1aac43c59ca26793a"
+    },
+    "ic_summary": {
+      "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/ic_summary.json",
+      "bytes": 625,
+      "sha256": "a0fa815bd1649f02f323cccd950da670a2544b9b4a1f777adbfabcbc823468ca"
+    },
+    "comparison": {
+      "path": "artifacts/experiments/diagnostic/alpha158-lightgbm-2023-h2-v1/comparison.json",
+      "bytes": 5674,
+      "sha256": "68725353d0a7afcd5327201648df671edf8aef76ec0daf2087e1696c458e4e0d"
+    }
+  },
+  "checks": {
+    "model_tests": "7 passed in 3.32s",
+    "runner_tests": "16 passed in 0.50s",
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "git_diff_check": "passed",
+    "independent_model_audit": "passed",
+    "accounting_audit": "gross/base/higher for both variants passed",
+    "figure_visually_reviewed": true,
+    "candidate_inputs_unchanged_after_run": true
+  },
+  "limitations": [
+    "2023 aggregate and daily equal-weight outcomes were already inspected; all model results here are development diagnostics, not a blind final test.",
+    "The half-year evaluation allows 60 prior sessions for Alpha158 followed by approximately one quarter of initial training; it is not a substitute for the planned multi-year walk-forward study.",
+    "Quarterly expanding-window fitting is fixed before model results. Q4 may use matured Q3 labels under this predetermined schedule.",
+    "No tuning or selection among models, seeds, stock counts or cost rules after observing this run. Keep negative results.",
+    "Source-native prices and volumes are uncertified adjustment/normalization candidates; no claim of formal historical availability or adjustment accuracy.",
+    "All equal-weight diagnostic execution limitations also apply: fractional adjusted units, incomplete ST/limit/capacity/rights modeling, no official index benchmark.",
+    "Evaluate return, excess versus matched equal weight, drawdown, turnover, costs and IC; an improvement can still lose money and does not establish a profitable strategy."
+  ]
+}
