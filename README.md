@@ -26,6 +26,9 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 不同批准范围与原文年份冲突单独保留，见[分红缺口补证](docs/PHASE1_DIVIDEND_GAP_FOLLOWUP.md)。
 成员公告后续新增 50 份完整正文及 6 份附件核验，累计 64 条索引记录已有选择性审阅；
 接口限制与仍缺的历史覆盖见[成员公告补审](docs/PHASE1_MEMBERSHIP_DETAIL_FOLLOWUP.md)。
+新增独立公告时间诊断，分别查询日期假设与实际捕获事实；83 项专测和 17 个真实原件案例通过。
+三份复牌公告的同日开盘缺口及晚附件影响见[公告时间主审](docs/PHASE1_PUBLICATION_TIMING_REVIEW.md)，
+诊断不会解除真实数据的研究门禁。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv

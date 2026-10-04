@@ -1,0 +1,284 @@
+{
+  "schema_version": "publication-timing-main-acceptance-v1",
+  "accepted_at_utc": "2026-10-04T11:23:29.842906+00:00",
+  "status": "independent_diagnostic_batch_accepted",
+  "source_commit": "08027fbf30a85ed61407d2393065419288450f5a",
+  "integrated_at_commit": "1702178a0116cdccc93944dfc3783dc516cb8790",
+  "research_eligible": false,
+  "available_time": null,
+  "historical_revision_history_verified": false,
+  "source_comparison": {
+    "files": 4,
+    "result": "main and worktree equal to reviewed commit after CRLF-to-LF normalization only"
+  },
+  "tests": {
+    "scope": [
+      "tests/test_publication_timing.py"
+    ],
+    "passed": 83,
+    "seconds": 0.12,
+    "log": {
+      "path": ".cache/worktrees/phase1-publication-timing/.cache/publication-timing-validation/pytest-review-fix.txt",
+      "bytes": 366,
+      "sha256": "71cba7d5dc27571572045409cf30298eb7e5c716cccb012888076e754fb12b07"
+    }
+  },
+  "ruff": {
+    "check": "passed",
+    "format": "3 Python files already formatted",
+    "check_log": {
+      "path": ".cache/worktrees/phase1-publication-timing/.cache/publication-timing-validation/ruff-review-fix.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    "format_log": {
+      "path": ".cache/worktrees/phase1-publication-timing/.cache/publication-timing-validation/ruff-format-review-fix.txt",
+      "bytes": 56,
+      "sha256": "f8db66624dca1692f16e9e88db61386f2e7352235dac883aa085892fffc1a5ac"
+    }
+  },
+  "real_case_audit": {
+    "cases": 17,
+    "input_references_verified_before_and_after": 50,
+    "seconds": 0.09352920000674203,
+    "counts": {
+      "scenario_ready_at_comparison": 11,
+      "observed_completion_unknown": 4,
+      "observed_only_after_2026_capture": 13,
+      "no_event_comparison_for_proposal": 1,
+      "date_conflict_blocked": 1,
+      "scenario_late_at_comparison": 4
+    },
+    "input": {
+      "path": ".cache/phase1/main-review/publication-timing-cases.json",
+      "bytes": 28819,
+      "sha256": "496a6e24e0980574561e4f7ef2676f6f6e8953a682ad7d87e7d3d825b087d7d2"
+    },
+    "full_result": {
+      "path": ".cache/phase1/main-review/publication-timing-real-case-result.json",
+      "bytes": 98292,
+      "sha256": "48023ab3ace3b371b5693b64f6bfe24069f5e76daaa9eec47f3007306fdffce9"
+    },
+    "audit_script": {
+      "path": ".cache/phase1/main-review/audit_publication_timing_cases.py",
+      "bytes": 8260,
+      "sha256": "ff40a47dae15d7653a91718a20a186f1d634e02af412ee1d76f3eb9d6dc1e978"
+    },
+    "case_results": [
+      {
+        "evidence_id": "csi-14497",
+        "kind": "membership",
+        "symbol": null,
+        "query_time": "2022-12-12T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2022-11-25T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "csi-14796",
+        "kind": "membership",
+        "symbol": null,
+        "query_time": "2023-06-12T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-05-26T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "csi-15044",
+        "kind": "membership",
+        "symbol": null,
+        "query_time": "2023-12-11T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-11-24T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1217012955",
+        "kind": "dividend",
+        "symbol": "000963.SZ",
+        "query_time": "2023-06-13T15:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-06-08T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1216371154",
+        "kind": "dividend",
+        "symbol": "300059.SZ",
+        "query_time": "2023-04-17T15:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-04-11T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1216457838",
+        "kind": "dividend",
+        "symbol": "300750.SZ",
+        "query_time": "2023-04-25T15:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-04-18T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1217534367",
+        "kind": "dividend",
+        "symbol": "002812.SZ",
+        "query_time": "2023-08-18T15:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-08-15T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1217859384",
+        "kind": "dividend",
+        "symbol": "002812.SZ",
+        "query_time": "2023-09-20T15:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-09-15T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1216935954",
+        "kind": "dividend",
+        "symbol": "300308.SZ",
+        "query_time": "2023-06-05T15:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-05-30T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1216585626",
+        "kind": "dividend",
+        "symbol": "300015.SZ",
+        "query_time": "2023-12-31T23:59:00+08:00",
+        "scenario_assumed_at_utc": "2023-04-26T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1217071606",
+        "kind": "halt",
+        "symbol": "688065.SH",
+        "query_time": "2023-06-15T13:00:00+08:00",
+        "scenario_assumed_at_utc": null,
+        "visible_by_knowledge_time": null,
+        "blocked_reasons": [
+          "explicit_date_conflict"
+        ]
+      },
+      {
+        "evidence_id": "cninfo-1217133087",
+        "kind": "resume",
+        "symbol": "688065.SH",
+        "query_time": "2023-06-26T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-06-26T16:00:00+00:00",
+        "visible_by_knowledge_time": false,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1215727423",
+        "kind": "halt",
+        "symbol": "600372.SH",
+        "query_time": "2023-02-08T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-01-31T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1215880020",
+        "kind": "resume",
+        "symbol": "600372.SH",
+        "query_time": "2023-02-17T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-02-17T16:00:00+00:00",
+        "visible_by_knowledge_time": false,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1217034933",
+        "kind": "halt",
+        "symbol": "601916.SH",
+        "query_time": "2023-06-15T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-06-12T16:00:00+00:00",
+        "visible_by_knowledge_time": true,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "cninfo-1217140784",
+        "kind": "resume",
+        "symbol": "601916.SH",
+        "query_time": "2023-06-27T09:30:00+08:00",
+        "scenario_assumed_at_utc": "2023-06-27T16:00:00+00:00",
+        "visible_by_knowledge_time": false,
+        "blocked_reasons": []
+      },
+      {
+        "evidence_id": "csi-14599-attachment",
+        "kind": "late_attachment_metadata",
+        "symbol": null,
+        "query_time": "2023-02-04T00:00:00+08:00",
+        "scenario_assumed_at_utc": "2023-03-16T16:00:00+00:00",
+        "visible_by_knowledge_time": false,
+        "blocked_reasons": []
+      }
+    ]
+  },
+  "source_files": [
+    {
+      "path": ".cache/worktrees/phase1-publication-timing/src/ashare_lab/publication_timing/core.py",
+      "bytes": 8552,
+      "sha256": "7588d8d1144df400bd702888e97dc8acf0ffb176f4fa06f6618e68ec152cab57"
+    },
+    {
+      "path": ".cache/worktrees/phase1-publication-timing/src/ashare_lab/publication_timing/__init__.py",
+      "bytes": 228,
+      "sha256": "ef9d306cda26253faaa43f2f9939b94e1d9d4439c6a9b0584848e47617c3810f"
+    },
+    {
+      "path": ".cache/worktrees/phase1-publication-timing/tests/test_publication_timing.py",
+      "bytes": 14555,
+      "sha256": "b8759b4358f1fcbf8fc7c6c493b652aa62426dc5316e3e360b3d2c3c4c14d2af"
+    },
+    {
+      "path": ".cache/worktrees/phase1-publication-timing/docs/PUBLICATION_TIMING_CONTRACT.md",
+      "bytes": 6209,
+      "sha256": "cd4377376851ce8aa473f4eef6daceb4e15a7034f5075945900f69f6ba26ca22"
+    }
+  ],
+  "handoff": {
+    "path": ".cache/worktrees/phase1-publication-timing/.cache/publication-timing-validation/handoff-review-fix.json",
+    "bytes": 2152,
+    "sha256": "360378d82a3de911b1f5dcb405fd1dcddc09d0f3ef0a0a95355066bc4812660a"
+  },
+  "review_fix": {
+    "finding": "UTC maximum observation overflowed conversion to Shanghai date",
+    "resolution": "PublicationTimingError in both views, covered by one added test",
+    "reproduction": {
+      "path": ".cache/phase1/main-review/publication-timing-range-review.json",
+      "bytes": 393,
+      "sha256": "4e5cada006541e13751254daffda61ec8b640311df79cca2ae1833d6c737b7a7"
+    }
+  },
+  "audit_label_failure": {
+    "observation": {
+      "path": ".cache/phase1/main-review/publication-timing-label-failure-observation.json",
+      "bytes": 946,
+      "sha256": "3ce69220c5ae6766b95644a82bb0ea54486caba8cf19f90a38c96c1009f31b63"
+    },
+    "first_script": {
+      "path": ".cache/phase1/main-review/audit_publication_timing_cases.first-pass.py",
+      "bytes": 7836,
+      "sha256": "e6c3a3c500dcb36b5f2d1b8d0a4055ccd6ccabbff76fe76c2f6b76a192b4f349"
+    },
+    "resolution": "Explicit mapping from retained timestamp_label_unverified to minute_label_unverified; no historical timestamp promotion.",
+    "original_full_console_log_retained": false
+  },
+  "limits": [
+    "Scenario dates are conditional assumptions, not certified PIT availability.",
+    "Three same-day resume notices miss the effective opening session under the declared date scenario.",
+    "CSI attachment creation metadata is an assumed lower date bound, not a verified historical release time.",
+    "Thirteen captures are observed in 2026; four completion times remain unknown.",
+    "No canonical candidate, original configuration, data gate or historical source bytes changed.",
+    "No network requests, sealed-period prices, models, backtest, server or GPU operation in this diagnostic batch."
+  ],
+  "preservation": "Worktree, original sources, diagnostic outputs and failure records retained; validation processes exited."
+}
