@@ -1,0 +1,82 @@
+{
+  "schema_version": "diagnostic-equal-weight-2023-v1",
+  "data_kind": "real_candidate",
+  "research_eligible": false,
+  "date_start": "2023-01-03",
+  "date_end": "2023-12-29",
+  "expected_sessions": 242,
+  "expected_symbols": 336,
+  "expected_members_per_day": 300,
+  "price_basis": "source_native_adjusted_normalized_units",
+  "open_column": "raw_open",
+  "close_column": "raw_close",
+  "inputs": {
+    "quotes": {
+      "path": "datasets/candidates/community-2023-main-review-original336-v2/quotes.parquet",
+      "sha256": "36d32fcf091dcbafe3d360b6b966931860f67f0f32b121ccaa40be6951f16705"
+    },
+    "membership": {
+      "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/membership-gaps-2023-original336-v1/membership.parquet",
+      "sha256": "1c6c37e41640e0b2a57e3aa8aaee21e478b7a731f2283252d3b19f5160d08301"
+    },
+    "states": {
+      "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/state-evidence-2023-gap-resolution-original336-v1/daily_references.parquet",
+      "sha256": "d58dc8594edb3a91f75fc65094ef45324a9224d41fd90c6f87e0d072a1391beb"
+    }
+  },
+  "strategy": {
+    "initial_cash": 10000000,
+    "invest_fraction": 0.99,
+    "rebalance_every": 5
+  },
+  "scenarios": [
+    {
+      "scenario_name": "gross",
+      "commission_rate": 0,
+      "commission_minimum": 0,
+      "transfer_fee_rate": 0,
+      "buy_slippage_bps": 0,
+      "sell_slippage_bps": 0,
+      "stamp_tax_schedule": [{"effective_date": "2023-01-01", "rate": 0}]
+    },
+    {
+      "scenario_name": "base",
+      "commission_rate": 0.0003,
+      "commission_minimum": 5,
+      "transfer_fee_rate": 0.00001,
+      "buy_slippage_bps": 5,
+      "sell_slippage_bps": 5,
+      "stamp_tax_schedule": [
+        {"effective_date": "2023-01-01", "rate": 0.001},
+        {"effective_date": "2023-08-28", "rate": 0.0005}
+      ]
+    },
+    {
+      "scenario_name": "higher",
+      "commission_rate": 0.0006,
+      "commission_minimum": 10,
+      "transfer_fee_rate": 0.00001,
+      "buy_slippage_bps": 10,
+      "sell_slippage_bps": 10,
+      "stamp_tax_schedule": [
+        {"effective_date": "2023-01-01", "rate": 0.001},
+        {"effective_date": "2023-08-28", "rate": 0.0005}
+      ]
+    }
+  ],
+  "assumptions": [
+    "Diagnostic only: all input candidates remain research_eligible=false; unknown historical available_time is not certified.",
+    "Conditional membership uses the retained baseline and official regular-change dates; baseline and full temporary-change coverage remain unverified.",
+    "Assume same-day close and conditional membership are known at each after-close signal. Freeze target units using that close; execute only at the next session open.",
+    "Use source-native normalized/adjusted OHLC as fractional adjusted units. restored_price = raw_price / raw_factor. Do not treat raw_* as unadjusted exchange prices.",
+    "Adopt the source adjustment/reinvestment proxy without certifying its corporate-action method or revision history; do not add dividends or rights again.",
+    "No integer-share/board-lot rules, subscription cashflows, investor-specific dividend tax or corporate-action settlement delays in this adjusted-unit proxy.",
+    "Known full-day halts block trading. Missing held close is carried only on a referenced full-day halt and is explicitly logged as stale. Missing held close otherwise fails.",
+    "The selected afternoon-only halt does not block the morning opening auction. Unknown ST, price-limit and opening-volume constraints are not enforced.",
+    "Assume positive observed opening quotes can fill at the declared slippage without capacity limits. Unfilled orders expire; no automatic next-day retry.",
+    "Each security has at most one buy or sell per rebalance. No same-session round trip is requested; full real-share T+1 inventory and corporate-action rights are not modeled.",
+    "Costs are declared scenarios applied to adjusted-unit notional, not a broker-specific fee certification. Terminal holdings are marked to close, not liquidated.",
+    "No official CSI300 index benchmark is loaded. This is conditional constituent equal weight, not the published CSI300 index.",
+    "2023 is an inspected diagnostic development interval, not a blind final test. Do not read 2024-2025 price data or tune after seeing this result."
+  ]
+}
