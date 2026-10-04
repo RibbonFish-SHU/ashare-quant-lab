@@ -1,0 +1,79 @@
+{
+  "schema_version": "alpha158-lightgbm-diagnostic-v1",
+  "data_kind": "real_candidate",
+  "research_eligible": false,
+  "backtest_inputs_and_costs": "configs/diagnostic-equal-weight-2023.json",
+  "backtest_config_sha256_lf": "755cee0d3becc6f5c3f87f20203eabbe361a35eec1ff84868713971e3a13db30",
+  "features": {
+    "library": "Qlib Alpha158DL.get_feature_config",
+    "count": 158,
+    "raw_fields": ["open", "high", "low", "close", "volume", "vwap"],
+    "warmup_prior_sessions": 60,
+    "first_training_signal": "2023-04-04",
+    "preprocessing": "No fitted transforms; preserve NaN, convert infinities to NaN."
+  },
+  "label": {
+    "definition": "adjusted_open[t+6] / adjusted_open[t+1] - 1",
+    "target": "pandas average rank(pct=True) - 0.5 within eligible signal-day members",
+    "horizon_session_intervals": 5,
+    "training_maturity": "label_exit_index < evaluation_start_index",
+    "missing_endpoint": "exclude the label, never replace with zero"
+  },
+  "windows": [
+    {
+      "name": "2023Q3",
+      "evaluation_start": "2023-07-03",
+      "evaluation_end": "2023-09-28"
+    },
+    {
+      "name": "2023Q4",
+      "evaluation_start": "2023-10-09",
+      "evaluation_end": "2023-12-29"
+    }
+  ],
+  "model": {
+    "objective": "regression",
+    "n_estimators": 150,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "max_depth": -1,
+    "min_child_samples": 200,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 1.0,
+    "n_jobs": 4,
+    "random_state": 20261004,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "portfolio": {
+    "top_k": 30,
+    "rank_order": "descending predicted score, then ascending symbol for ties",
+    "candidate_filter": "signal-day conditional member with finite prediction and finite close",
+    "initial_cash": 10000000,
+    "invest_fraction": 0.99,
+    "rebalance_every": 5,
+    "schedule_origin": "2023-07-03",
+    "execution": "freeze units at signal close, execute next session open",
+    "quarter_boundary": "continue holdings; next scheduled rebalance uses the new model",
+    "control": "all conditional members, same dates, initial cash and costs"
+  },
+  "primary_comparison": "base-cost model portfolio versus base-cost equal weight, on 2023-07-03 through 2023-12-29",
+  "planned_hyperparameter_sets": 1,
+  "planned_seeds": 1,
+  "planned_top_k_values": 1,
+  "early_stopping": false,
+  "parameter_search": false,
+  "sealed_price_interval": "2024-2025 not read",
+  "interpretation": [
+    "2023 aggregate and daily equal-weight outcomes were already inspected; all model results here are development diagnostics, not a blind final test.",
+    "The half-year evaluation allows 60 prior sessions for Alpha158 followed by approximately one quarter of initial training; it is not a substitute for the planned multi-year walk-forward study.",
+    "Quarterly expanding-window fitting is fixed before model results. Q4 may use matured Q3 labels under this predetermined schedule.",
+    "No tuning or selection among models, seeds, stock counts or cost rules after observing this run. Keep negative results.",
+    "Source-native prices and volumes are uncertified adjustment/normalization candidates; no claim of formal historical availability or adjustment accuracy.",
+    "All equal-weight diagnostic execution limitations also apply: fractional adjusted units, incomplete ST/limit/capacity/rights modeling, no official index benchmark.",
+    "Evaluate return, excess versus matched equal weight, drawdown, turnover, costs and IC; an improvement can still lose money and does not establish a profitable strategy."
+  ]
+}
