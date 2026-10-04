@@ -1,0 +1,200 @@
+{
+  "schema_version": "synthetic-valuation-main-acceptance-v1",
+  "accepted_at_utc": "2026-10-04T12:09:19.430248+00:00",
+  "status": "synthetic_engineering_batch_accepted",
+  "source_commit": "4d8661fc6c3b108770886e48f333c499b9370525",
+  "integrated_at_commit": "e86d040045696a862b21b392757f1b6653e95dbe",
+  "research_eligible": false,
+  "complete_portfolio_valuation_available": false,
+  "source_comparison": {
+    "changed_files": 4,
+    "result": "main and worktree equal to tested commit after CRLF-to-LF normalization only"
+  },
+  "source_files": [
+    {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/src/ashare_lab/valuation/core.py",
+      "bytes": 12955,
+      "sha256": "264c2f70882c1bbdde9337be82122f019722a00639bc07f467b973aa749cbec0"
+    },
+    {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/src/ashare_lab/valuation/__init__.py",
+      "bytes": 317,
+      "sha256": "1d9ac5c160ffedf6e260439ad80bbbde2e85fbf6517fd49bcee1be295d9e9cb6"
+    },
+    {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/tests/test_valuation.py",
+      "bytes": 23109,
+      "sha256": "aff0bca7bd261a4abb3e1c118e730f98a98c1b711284482c117a9238299840a8"
+    },
+    {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/docs/VALUATION_CONTRACT.md",
+      "bytes": 7520,
+      "sha256": "f8b97ef71edc4b5c2260ca84c4aba890e5eb04a9a1aefa76db600bc7be502819"
+    }
+  ],
+  "tests": {
+    "passed": 253,
+    "seconds": 0.49,
+    "new_valuation_tests": 82,
+    "scope": [
+      "tests/test_valuation.py",
+      "tests/test_corporate_actions.py",
+      "tests/test_execution.py"
+    ],
+    "log": {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/.cache/checks/valuation-final-pytest.log",
+      "bytes": 692,
+      "sha256": "da8f211911e5f0f7114bc6a854ea474d1cf05fdb9ce76e6479085e8d7eb2311c"
+    }
+  },
+  "ruff": {
+    "check": "passed",
+    "check_log": {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/.cache/checks/valuation-ruff-numeric-final.log",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    "format": "passed, three Python files",
+    "format_log": {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/.cache/checks/valuation-format-numeric-final.log",
+      "bytes": 56,
+      "sha256": "f8db66624dca1692f16e9e88db61386f2e7352235dac883aa085892fffc1a5ac"
+    }
+  },
+  "numeric_review": {
+    "finding": "Ambient Decimal precision truncated long prices and could change total value when pending shares became credited.",
+    "observed_at_precision_6": {
+      "before_credit": "41.8671",
+      "after_credit": "41.8670"
+    },
+    "resolution": "Explicit 128-digit coefficient, +/-128 exponent and integer bounds; sufficiently precise independent arithmetic context covers restore, claims and valuation.",
+    "regression_before": {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/.cache/checks/valuation-decimal-before.log",
+      "bytes": 9042,
+      "sha256": "767080e8922c16d5f66551011c7530ea6af5193d339fed7916a6b546d5886146"
+    },
+    "regression_after": {
+      "path": ".cache/worktrees/phase1-synthetic-valuation/.cache/checks/valuation-decimal-after.log",
+      "bytes": 232,
+      "sha256": "a87b105db67d701d6e2bedb49b783ae955b4230bb6b305878ccfeeb5e16f7609"
+    },
+    "added_final_coverage": [
+      "strict caller precision and rounding traps unchanged",
+      "supported numeric endpoints",
+      "state and integer range rejection"
+    ]
+  },
+  "independent_lifecycle_audit": {
+    "status": "passed",
+    "clean_source": true,
+    "checkpoints": 6,
+    "seconds": 0.11011849995702505,
+    "scope": "new valuation only; no repeated legacy model or ledger smoke",
+    "fixture": {
+      "path": ".cache/phase1/main-review/valuation-lifecycle-case.json",
+      "bytes": 52538,
+      "sha256": "1486d52953ebca42b1ef958d54fcf4b31727293ed6dba3764d07addb4dd98c15"
+    },
+    "full_result": {
+      "path": ".cache/phase1/main-review/valuation-lifecycle-audit.json",
+      "bytes": 16133,
+      "sha256": "1572d72fa77f37224c050b6d12844e1c961761f1f15321c51bd6a28a306d4202"
+    },
+    "script": {
+      "path": ".cache/phase1/main-review/audit_valuation_lifecycle.py",
+      "bytes": 6572,
+      "sha256": "ef39717b89e3582e7cd48034fb90bc5082bc7ea2038d3d8cf819fdb0f5bc05da"
+    },
+    "boundary_rejections": [
+      {
+        "case": "pending_shares_require_price",
+        "exception_type": "ValuationInputError",
+        "message": "missing close price for 600000.SH"
+      },
+      {
+        "case": "pending_shares_require_policy",
+        "exception_type": "ValuationInputError",
+        "message": "uncredited shares for 600000.SH require an explicit synthetic price assumption"
+      },
+      {
+        "case": "unknown_action_scope",
+        "exception_type": "ValuationInputError",
+        "message": "corporate-action scope must be explicitly declared complete for this synthetic scenario"
+      },
+      {
+        "case": "processing_declaration_cannot_lag",
+        "exception_type": "ValuationInputError",
+        "message": "state_processed_through must equal valuation asof"
+      }
+    ],
+    "asset_rows": [
+      {
+        "stage": "registered_before_ex",
+        "spendable_cash": "1000.00",
+        "credited_shares_market_value": "4000.00",
+        "uncredited_shares_market_value": "0.00",
+        "net_cash_receivable": "0",
+        "nav": "5000.00",
+        "state_integrity": "5b582a0a356e3beeca9e39573a26941fb085293a9c2f0e062f92aac02321fbd5"
+      },
+      {
+        "stage": "accrued_before_settlement",
+        "spendable_cash": "1000.00",
+        "credited_shares_market_value": "3120.00",
+        "uncredited_shares_market_value": "780.00",
+        "net_cash_receivable": "90.00",
+        "nav": "4990.00",
+        "state_integrity": "3ddae8db6624d3e9dab6b48c7ac1317b7319d20126eb8cc791c972a470eadef5"
+      },
+      {
+        "stage": "old_shares_sold_rights_retained",
+        "spendable_cash": "4120.00",
+        "credited_shares_market_value": "0.00",
+        "uncredited_shares_market_value": "780.00",
+        "net_cash_receivable": "90.00",
+        "nav": "4990.00",
+        "state_integrity": "ae844c808351cdc752b7a97501f30526083a996a32c8676b254f8d2df476141d"
+      },
+      {
+        "stage": "cash_paid_later_than_declared",
+        "spendable_cash": "4210.00",
+        "credited_shares_market_value": "0.00",
+        "uncredited_shares_market_value": "780.00",
+        "net_cash_receivable": "0",
+        "nav": "4990.00",
+        "state_integrity": "eb220c0cf618c36a3247e7ffe63ad895cda79af4e23feee94048d30225be6a78"
+      },
+      {
+        "stage": "bonus_credited_but_locked",
+        "spendable_cash": "4210.00",
+        "credited_shares_market_value": "780.00",
+        "uncredited_shares_market_value": "0.00",
+        "net_cash_receivable": "0",
+        "nav": "4990.00",
+        "state_integrity": "4eec8b56cba5556beafc98c008c584f926b3985b76ba438f550eb5b7d2c27b75"
+      },
+      {
+        "stage": "released_bonus_sold_cash_only",
+        "spendable_cash": "4990.00",
+        "credited_shares_market_value": "0",
+        "uncredited_shares_market_value": "0",
+        "net_cash_receivable": "0",
+        "nav": "4990.00",
+        "state_integrity": "a697ee3495f70f972dbbf272199ed494ce6dfc9884ccb05486a977d0ecca2d50"
+      }
+    ]
+  },
+  "limits": [
+    "Synthetic values verify accounting, not real strategy return or profitability.",
+    "Fixed withholding is not real A-share holding-period taxation.",
+    "Uncredited shares use an explicit same-security unadjusted-close assumption, not certified restricted-share fair value.",
+    "No real-data adapter, rights subscription, full action completeness or eligibility promotion.",
+    "No network requests, 2024-2025 quote reads, model/backtest, server or GPU operation in this engineering batch."
+  ],
+  "processes": "All implementation tests and main audit exited; no background service. Worktree, original sources and failed logs retained.",
+  "main_acceptance_script": {
+    "path": ".cache/phase1/main-review/accept_synthetic_valuation.py",
+    "bytes": 5569,
+    "sha256": "c629d29260431b4e8e243d54e617b959a873a1b72eb15e5ae990c81a966e0020"
+  }
+}

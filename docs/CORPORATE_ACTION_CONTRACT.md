@@ -126,3 +126,8 @@ restored = restore_state(checkpoint, expected_integrity=trusted_digest)
 应收阶段买单因无现金拒绝，送股锁定时只卖出旧股；原持仓卖出后仍收到分红，延迟到账按实际时刻记录。
 保存恢复和重复处理均不二次入账，随后只在明确可卖日卖出送股。最终现金 3125 元仅用于核对账本，
 不输出收益率、NAV 或真实策略绩效。
+
+2026-10-04 后续：独立的[合成收盘估值层](VALUATION_CONTRACT.md)现已集成，可将本账本的
+现金应收和待到账股与已到账资产一起分解核算；[主审](PHASE1_VALUATION_REVIEW.md)核对了权益转换守恒。
+本账本自身的 `cash_claims`、导出结构及 `complete_portfolio_valuation_available=false` 含义不变；
+新层也不构成完整真实公司行为估值或策略回测。

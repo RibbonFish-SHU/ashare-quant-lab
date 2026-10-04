@@ -17,7 +17,8 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 [主审报告与公司行为补证清单](docs/PHASE1_EXECUTION_READINESS.md)记录本批 532 项测试、干净提交 smoke 和剩余数据缺口。
 后续已接入[合成公司行为账本](docs/CORPORATE_ACTION_CONTRACT.md)，将登记权益、除息应收、现金支付、
 送转股到账和可卖日分开处理；181 项相关测试及独立产物核对通过，见[公司行为主审](docs/PHASE1_CORPORATE_ACTION_REVIEW.md)。
-真实税制、配股与完整收益核算仍待补齐。
+后续[合成估值层](docs/VALUATION_CONTRACT.md)已计入现金应收和待到账股份，253 项相关测试与
+六阶段资产核对通过，见[估值主审](docs/PHASE1_VALUATION_REVIEW.md)。真实税制、配股与真实收益核算仍待补齐。
 
 官方分红补证已完成 95 只关键词查询及 14 只类别补查，保留 119 个不同公告 ID；
 7 份所选原件形成独立审阅候选，另核对了 TCL 中环调整分派日期的三份公告。
