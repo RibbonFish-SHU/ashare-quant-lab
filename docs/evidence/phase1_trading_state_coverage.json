@@ -1,0 +1,134 @@
+{
+  "schema_version": "retained-trading-state-coverage-v1",
+  "recorded_at_utc": "2026-10-04T11:31:08.533687+00:00",
+  "status": "offline_diagnostic_passed",
+  "research_eligible": false,
+  "network_requests": 0,
+  "start": "2023-01-03",
+  "end": "2023-12-29",
+  "open_days": 242,
+  "scopes": {
+    "original336": {
+      "rows": 81312,
+      "symbols": 336,
+      "source_st_reference_known": 57096,
+      "source_st_reference_missing": 24216,
+      "symbols_with_missing_st_reference": 101,
+      "source_st_true": 0,
+      "source_trading_active_true": 57078,
+      "source_trading_active_false": 18,
+      "source_trading_active_missing": 24216,
+      "historical_name_reference_rows": 31218,
+      "name_contains_st_true": 0,
+      "community_price_missing_rows": 33,
+      "classifications": {
+        "full_day_halt_reference": 17,
+        "no_selected_halt_reference": 81294,
+        "partial_day_halt_reference": 1
+      },
+      "certified_st_rows": 0,
+      "certified_can_trade_rows": 0
+    },
+    "conditional323_member_days_only": {
+      "rows": 72600,
+      "symbols": 323,
+      "source_st_reference_known": 51550,
+      "source_st_reference_missing": 21050,
+      "symbols_with_missing_st_reference": 95,
+      "source_st_true": 0,
+      "source_trading_active_true": 51545,
+      "source_trading_active_false": 5,
+      "source_trading_active_missing": 21050,
+      "historical_name_reference_rows": 27464,
+      "name_contains_st_true": 0,
+      "community_price_missing_rows": 4,
+      "classifications": {
+        "full_day_halt_reference": 4,
+        "no_selected_halt_reference": 72595,
+        "partial_day_halt_reference": 1
+      },
+      "certified_st_rows": 0,
+      "certified_can_trade_rows": 0
+    }
+  },
+  "source_flags_reconciled_to_baostock_rows": 57096,
+  "conditional_missing_reference_day_distribution": {
+    "15": 4,
+    "105": 6,
+    "137": 1,
+    "227": 7,
+    "242": 77
+  },
+  "partial_missing_original_symbol": {
+    "symbol": "601059.SH",
+    "original_missing_days": 16,
+    "first_missing_date": "2023-01-03",
+    "last_missing_date": "2023-01-31",
+    "conditional_member_days": 15,
+    "conditional_missing_days": 0,
+    "conditional_missing_with_name_reference": 0
+  },
+  "all_inactive_flags_have_selected_halt_references": true,
+  "source_limit_price_fields_present_in_evaluated_daily_tables": false,
+  "independent_python_and_duckdb_counts_agree": true,
+  "input_references_verified_before_and_after": [
+    {
+      "path": "docs/evidence/phase1_gap_resolution_acceptance.json",
+      "bytes": 42430,
+      "sha256": "48b9d18172139ee1db84858c9f45daf9aa764c3bddf0ede25c119be237ddfb7c"
+    },
+    {
+      "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/state-evidence-2023-gap-resolution-original336-v1/daily_references.parquet",
+      "bytes": 6573626,
+      "sha256": "d58dc8594edb3a91f75fc65094ef45324a9224d41fd90c6f87e0d072a1391beb"
+    },
+    {
+      "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/membership-gaps-2023-original336-v1/membership.parquet",
+      "bytes": 6909,
+      "sha256": "1c6c37e41640e0b2a57e3aa8aaee21e478b7a731f2283252d3b19f5160d08301"
+    },
+    {
+      "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/state-evidence-2023-gap-resolution-original336-v1/manifest.json",
+      "bytes": 95537,
+      "sha256": "c776d9188799380d5de7c61117b7571305847adf6e6fe1fac8f3c3f2ebcae15a"
+    },
+    {
+      "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/membership-gaps-2023-original336-v1/manifest.json",
+      "bytes": 39944,
+      "sha256": "fa454c4593792a8c921bdc2cf9baee382596f00cddf8531f80c5d10dfd27ede8"
+    },
+    {
+      "path": "configs/state-evidence-2023.json",
+      "bytes": 32555,
+      "sha256": "1022da9616a2cbd664f25963ffd7d295ca087235ce86f8ce9499d88cd71ef3a3"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/.cache/phase1/plans/securities-2023.json",
+      "bytes": 281838,
+      "sha256": "6ffe0252eae7f306312aac9711ff02ad93b05ee95205dfe872a3a906b432e0df"
+    },
+    {
+      "path": ".cache/worktrees/phase1-data/datasets/candidates/phase1-2023-provenance-verified/bars.parquet",
+      "bytes": 3903548,
+      "sha256": "836a1c93385e4ac0118d4ef770322ca3ab2ba667a161578f954d4e949e6d5145"
+    }
+  ],
+  "details": {
+    "path": ".cache/phase1/main-review/trading-state-coverage-details.json",
+    "bytes": 39247,
+    "sha256": "e37fc30d2cb0424a6855f70c3fe9a58c051f2a7c1f6ea497b7c0dce501e02348"
+  },
+  "audit_script": {
+    "path": ".cache/phase1/main-review/audit_trading_state_coverage.py",
+    "sha256": "09f2de9cc0bc092b94608a7a5a705699d05ea1b8e1980e20b5edb4350d62fc01"
+  },
+  "limits": [
+    "Original 336-code denominator is unchanged; conditional member days are a diagnostic, not a certified historical universe.",
+    "Known source flags and historical names do not independently certify ST status or order executability.",
+    "The extra 16 original-scope missing flag rows are the already identified pre-IPO slots; do not query them as missing post-listing status.",
+    "No selected halt notice is not proof of normal trading. Partial-day halts remain distinct.",
+    "No accepted limit-price fields exist in these tables; do not infer limits from zero ST counts, board-code heuristics or a default 10 percent.",
+    "Existing source restrictions, candidate gates and raw sources remain unchanged; no sealed-period quotes or model/backtest were read."
+  ],
+  "seconds": 3.222073300043121
+}
