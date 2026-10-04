@@ -14,6 +14,7 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 
 另有独立的[合成执行账本](docs/EXECUTION_CONTRACT.md)，验证次交易日订单、T+1、交易单位、
 容量、费用和未成交持仓延续。它尚未接入真实候选，输出不代表等权策略回测结果。
+[主审报告与公司行为补证清单](docs/PHASE1_EXECUTION_READINESS.md)记录本批 532 项测试、干净提交 smoke 和剩余数据缺口。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv

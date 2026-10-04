@@ -1,0 +1,142 @@
+{
+  "schema_version": "execution-readiness-acceptance-v1",
+  "recorded_at_utc": "2026-10-04T08:41:09.573005+00:00",
+  "owner": "main",
+  "research_eligible": false,
+  "tested_source_commit": "7cbee49b9c6c313f695e48beaa75a112232fa714",
+  "integration_commit": "d635d0103d40f650566984d8194e3eaffdaab45d",
+  "integrated_engine_scripts_and_tests_match_tested_commit": true,
+  "checks": {
+    "pytest": {
+      "log": {
+        "path": ".cache/worktrees/phase1-readiness/.cache/review-final/pytest.log",
+        "sha256": "b192a8ebb2b0203a0f0feb61ec5652eef198e4ab25386da3f1d451b4bf061a0c",
+        "bytes": 1342
+      },
+      "output": "........................................................................ [ 13%]\r\n........................................................................ [ 27%]\r\n........................................................................ [ 40%]\r\n........................................................................ [ 54%]\r\n........................................................................ [ 67%]\r\n........................................................................ [ 81%]\r\n........................................................................ [ 94%]\r\n............................                                             [100%]\r\n532 passed in 43.86s"
+    },
+    "ruff-check": {
+      "log": {
+        "path": ".cache/worktrees/phase1-readiness/.cache/review-final/ruff-check.log",
+        "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+        "bytes": 42
+      },
+      "output": "All checks passed!"
+    },
+    "ruff-format": {
+      "log": {
+        "path": ".cache/worktrees/phase1-readiness/.cache/review-final/ruff-format.log",
+        "sha256": "0203474084ada3a521351d075be8b2cfdecdd9f6464b9fb318bbd2ed391f8de8",
+        "bytes": 58
+      },
+      "output": "67 files already formatted"
+    }
+  },
+  "pytest": {
+    "passed": 532,
+    "seconds": 43.86,
+    "scope": "complete local suite including 72 execution and 3 smoke tests"
+  },
+  "synthetic_smoke": {
+    "directory": ".cache/worktrees/phase1-readiness/artifacts/experiments/synthetic/20261004T083619.371178Z-f3773fdd",
+    "manifest": {
+      "path": ".cache/worktrees/phase1-readiness/artifacts/experiments/synthetic/20261004T083619.371178Z-f3773fdd/manifest.json",
+      "sha256": "e784bb6a56d8916d3f6bee2b33b798f5ed298b35e55cc7b360ff405b402eaa91",
+      "bytes": 23832
+    },
+    "source_dirty": false,
+    "started_at_utc": "2026-10-04T08:36:19.371178+00:00",
+    "finished_at_utc": "2026-10-04T08:36:19.564805+00:00",
+    "duration_seconds": 0.19285089999902993,
+    "artifacts": [
+      {
+        "path": ".cache/worktrees/phase1-readiness/artifacts/experiments/synthetic/20261004T083619.371178Z-f3773fdd/inputs.json",
+        "sha256": "a248d8d6710096f3bb2da234a3f4ed1df45663d2cb024588ae5af6fd6f485d37",
+        "bytes": 4702
+      },
+      {
+        "path": ".cache/worktrees/phase1-readiness/artifacts/experiments/synthetic/20261004T083619.371178Z-f3773fdd/ledger.json",
+        "sha256": "908a29a96e8aa2299523ab4ceb728a0137fdcd59057311d84b9c9784d1d8fce8",
+        "bytes": 1613
+      },
+      {
+        "path": ".cache/worktrees/phase1-readiness/artifacts/experiments/synthetic/20261004T083619.371178Z-f3773fdd/orders.json",
+        "sha256": "2f0ce4898c58d9aef5367cc772d481d6d02d88c256fb4e2b6616dfdefadd4e09",
+        "bytes": 694
+      },
+      {
+        "path": ".cache/worktrees/phase1-readiness/artifacts/experiments/synthetic/20261004T083619.371178Z-f3773fdd/result.json",
+        "sha256": "c49dfde606ae3942a961028de85173a84611d9e58fe6a02b0c0ba252c56f07be",
+        "bytes": 2554
+      }
+    ],
+    "checks": [
+      "sell_first",
+      "capacity_partial",
+      "board_lots",
+      "cent_rounded_costs",
+      "cash_ledger",
+      "t_plus_one",
+      "complete_close_valuation",
+      "suspended_position_preserved"
+    ],
+    "ledger_count": 3,
+    "ending_cash_cny": "2481.56",
+    "all_artifact_hashes_reverified": true
+  },
+  "source_files": [
+    {
+      "path": ".cache/worktrees/phase1-readiness/src/ashare_lab/execution/core.py",
+      "sha256": "81217c9fb0945d2d19e37d3fd0be6d22e18e1d08bd1584217f842962eb9d4242",
+      "bytes": 34331
+    },
+    {
+      "path": ".cache/worktrees/phase1-readiness/src/ashare_lab/execution/__init__.py",
+      "sha256": "54aae2ede8656465e6a8b1337cab74d4df8d1efd33b9e7c7d8e016ba7ef9ed24",
+      "bytes": 807
+    },
+    {
+      "path": ".cache/worktrees/phase1-readiness/scripts/run_execution_smoke.py",
+      "sha256": "d20f1d6c47feb023e50cb649ad9fb8688e1b94326febb52c417167caf32faaa3",
+      "bytes": 10305
+    },
+    {
+      "path": ".cache/worktrees/phase1-readiness/tests/test_execution.py",
+      "sha256": "57d7af765d835c29dfa18c4eba482a6a3a3ddd4eb62664b1d9663617322b00e6",
+      "bytes": 31205
+    },
+    {
+      "path": ".cache/worktrees/phase1-readiness/tests/test_execution_smoke.py",
+      "sha256": "f989be5ae456eac0d25a28a6d1aaeeaf9a28510441ea7946415f9ba91d18a27d",
+      "bytes": 3002
+    }
+  ],
+  "review_fixes": [
+    "Direct orders enforce next trading date and unique identity; close times use Shanghai dates.",
+    "Session capacity is consumed across all orders and sides; missing limits/capacity/state reject.",
+    "Lot rules apply to order differences, preserve locked T+1 lots and permit complete odd-lot exits.",
+    "Rounded execution prices obey limits; all fees reconcile and cannot create negative cash.",
+    "Account clone retains data_kind; unknown corporate actions block the complete affected session.",
+    "Smoke requires verified ledger outcomes and persists source/input/failure evidence."
+  ],
+  "data_followup": [
+    "docs/evidence/phase1_membership_archive_scan.json",
+    "docs/evidence/phase1_dividend_readiness.json"
+  ],
+  "resources_and_scope": {
+    "public_data_requests": 0,
+    "formal_model_runs": 0,
+    "formal_backtests": 0,
+    "gpu_runs": 0,
+    "server_operations": 0,
+    "read_2024_2025_quotes": false,
+    "real_candidates_sent_to_execution": false,
+    "dependencies": "worktree environment created from unchanged uv.lock; project bootstrap uv used because uv was absent from PATH",
+    "herdr": "not controlled: current tools lack HERDR_ENV=1; existing helper used only as a temporary assistant"
+  },
+  "limits": [
+    "Synthetic accounting checks are not strategy returns or a formal equal-weight baseline.",
+    "No corporate-action cash/share processor, real candidate adapter or persistent exchange order queue exists yet.",
+    "Conditional membership and event availability remain uncertified; original 336 scope and missing prices are preserved."
+  ]
+}
