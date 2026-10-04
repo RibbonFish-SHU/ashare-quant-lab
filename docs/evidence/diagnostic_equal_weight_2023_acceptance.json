@@ -1,0 +1,325 @@
+{
+  "status": "completed_diagnostic_not_certified_research",
+  "data_kind": "real_candidate",
+  "research_eligible": false,
+  "source": {
+    "commit": "431fa12fd462a9a5d5ea030b9f9651795cd2dd17",
+    "dirty": false,
+    "files_sha256": {
+      "scripts/run_diagnostic_backtest.py": "aca1d81a3d826f4d43765c36e50a2152da31f38ae1f5f1a65b32813be3187e6d",
+      "src/ashare_lab/diagnostic_backtest.py": "3d1b7cd99c5774eb178ff23c2b61b865b6a2a3037f0c3822eb0010a31a99ea54",
+      "configs/diagnostic-equal-weight-2023.json": "755cee0d3becc6f5c3f87f20203eabbe361a35eec1ff84868713971e3a13db30",
+      "uv.lock": "e92a4023f51a8d9079195034b33ab5a54902f6e0eb8b0e06894a95f3a9f04f4a"
+    },
+    "python": "3.11.16",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "frozen_config": {
+    "path": "artifacts/experiments/diagnostic/equal-weight-2023-first-v1/frozen_config.json",
+    "bytes": 4310,
+    "sha256": "755cee0d3becc6f5c3f87f20203eabbe361a35eec1ff84868713971e3a13db30"
+  },
+  "inputs": {
+    "references": {
+      "quotes": {
+        "path": "datasets/candidates/community-2023-main-review-original336-v2/quotes.parquet",
+        "sha256": "36d32fcf091dcbafe3d360b6b966931860f67f0f32b121ccaa40be6951f16705",
+        "bytes": 20313756,
+        "rows": 81312
+      },
+      "membership": {
+        "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/membership-gaps-2023-original336-v1/membership.parquet",
+        "sha256": "1c6c37e41640e0b2a57e3aa8aaee21e478b7a731f2283252d3b19f5160d08301",
+        "bytes": 6909,
+        "rows": 72600
+      },
+      "states": {
+        "path": ".cache/worktrees/phase1-gap-resolution/datasets/candidates/state-evidence-2023-gap-resolution-original336-v1/daily_references.parquet",
+        "sha256": "d58dc8594edb3a91f75fc65094ef45324a9224d41fd90c6f87e0d072a1391beb",
+        "bytes": 6573626,
+        "rows": 81312
+      }
+    },
+    "first_date": "2023-01-03",
+    "last_date": "2023-12-29",
+    "sessions": 242,
+    "symbols": 336,
+    "conditional_member_union": 323,
+    "conditional_member_days": 72600,
+    "missing_open": 33,
+    "missing_close": 33,
+    "referenced_full_day_halts": 17,
+    "member_halt_days": 4,
+    "classification_counts": {
+      "no_selected_halt_reference": 81294,
+      "full_day_halt_reference": 17,
+      "partial_day_halt_reference": 1
+    },
+    "data_kind": "real_candidate",
+    "research_eligible": false,
+    "available_time": null,
+    "raw_candidate_files_modified": false
+  },
+  "run": {
+    "output": "artifacts/experiments/diagnostic/equal-weight-2023-first-v1",
+    "started_at_utc": "2026-10-04T12:27:08.759969+00:00",
+    "finished_at_utc": "2026-10-04T12:27:11.889770+00:00",
+    "elapsed_seconds": 3.129062999971211,
+    "online_requests": 0,
+    "gpu_used": false,
+    "price_interval_read": "2023 only",
+    "result_runs": 1
+  },
+  "artifact_manifest": {
+    "path": "artifacts/experiments/diagnostic/equal-weight-2023-first-v1/manifest.json",
+    "bytes": 8017,
+    "sha256": "193b7c2f2871a59271e399d70aedcf1450460ea1768231617e94e98f709a6d42"
+  },
+  "plot": {
+    "path": "docs/evidence/diagnostic-equal-weight-2023.png",
+    "bytes": 265116,
+    "sha256": "f5a9e0b298e469decb137e3fdf7d8ebe5c7cd1fbd9446cdbfd4c9daa3a0e778d"
+  },
+  "independent_audit_source": {
+    "path": "scripts/audit_diagnostic_backtest.py",
+    "bytes": 9237,
+    "sha256": "05fe97724eb32c8ef20c0ae73c2f29af7d1174f62cca937c9960af0d0e8f2a35"
+  },
+  "independent_audit_output": {
+    "path": "artifacts/experiments/diagnostic/equal-weight-2023-first-v1/independent_audit.json",
+    "bytes": 6064,
+    "sha256": "9fddd14df248a2c42ac8b3c2cb28c21476b8ba1c11835618044cf625327ed1f8"
+  },
+  "checks": {
+    "targeted_tests": "13 passed in 0.17s",
+    "ruff": "passed",
+    "ruff_format": "3 files already formatted",
+    "git_diff_check": "passed",
+    "figure_visually_reviewed": true,
+    "inputs_unchanged_after_run": true
+  },
+  "independent_audit": {
+    "status": "passed",
+    "method": "independent reconciliation from persisted fills and source matrices",
+    "scenarios": {
+      "gross": {
+        "passed": true,
+        "sessions": 242,
+        "signals": 49,
+        "execution_sessions": 49,
+        "orders": 14722,
+        "fills": 14722,
+        "first_signal": "2023-01-03",
+        "first_execution": "2023-01-04",
+        "last_execution": "2023-12-29",
+        "order_status_counts": {
+          "filled": 14722
+        },
+        "order_reason_counts": {},
+        "rejected_signal_targets": 1,
+        "stale_records": [
+          {
+            "date": "2023-06-16",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-19",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-20",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-21",
+            "symbol": "688065.SH"
+          }
+        ],
+        "minimum_cash": 89175.05066931178,
+        "max_daily_cash_difference": 1.2922100722789764e-08,
+        "max_daily_nav_difference": 1.6763806343078613e-08,
+        "max_per_fill_cash_difference": 0.0,
+        "pre_tax_cut_sell_fills": 4377,
+        "post_tax_cut_sell_fills": 2440,
+        "costs": {
+          "commission": 0.0,
+          "transfer_fee": 0.0,
+          "stamp_tax": 0.0,
+          "slippage": 0.0,
+          "explicit_fees": 0.0,
+          "including_slippage": 0.0
+        },
+        "metrics": {
+          "total_return": -0.08101214271486734,
+          "annualized_return": -0.08454897480969657,
+          "annualized_volatility": 0.13384136108341302,
+          "sharpe_rf0": -0.5933287558491351,
+          "max_drawdown": -0.19689577250619905,
+          "return_observations": 241,
+          "final_cash": 91815.75025270879,
+          "final_holdings_market_value": 9098062.822598618,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4267516.233378146,
+          "cumulative_turnover": 2.5076584239361663,
+          "cumulative_one_way_turnover": 1.2538292119680832
+        }
+      },
+      "base": {
+        "passed": true,
+        "sessions": 242,
+        "signals": 49,
+        "execution_sessions": 49,
+        "orders": 14722,
+        "fills": 14722,
+        "first_signal": "2023-01-03",
+        "first_execution": "2023-01-04",
+        "last_execution": "2023-12-29",
+        "order_status_counts": {
+          "filled": 14722
+        },
+        "order_reason_counts": {},
+        "rejected_signal_targets": 1,
+        "stale_records": [
+          {
+            "date": "2023-06-16",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-19",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-20",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-21",
+            "symbol": "688065.SH"
+          }
+        ],
+        "minimum_cash": 86722.74647665619,
+        "max_daily_cash_difference": 2.7939677238464355e-09,
+        "max_daily_nav_difference": 5.587935447692871e-09,
+        "max_per_fill_cash_difference": 0.0,
+        "pre_tax_cut_sell_fills": 4401,
+        "post_tax_cut_sell_fills": 2456,
+        "costs": {
+          "commission": 75275.73407992862,
+          "transfer_fee": 251.58674220173987,
+          "stamp_tax": 6409.17809721709,
+          "slippage": 12576.883059495627,
+          "explicit_fees": 81936.49891934745,
+          "including_slippage": 94513.38197884307
+        },
+        "metrics": {
+          "total_return": -0.08961086022533127,
+          "annualized_return": -0.09350364299270024,
+          "annualized_volatility": 0.13389894159361584,
+          "sharpe_rf0": -0.6664009333278575,
+          "max_drawdown": -0.20173262033174555,
+          "return_observations": 241,
+          "final_cash": 89284.25851900292,
+          "final_holdings_market_value": 9014607.139227685,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4228370.704214677,
+          "cumulative_turnover": 2.5078936474018616,
+          "cumulative_one_way_turnover": 1.2539468237009308
+        }
+      },
+      "higher": {
+        "passed": true,
+        "sessions": 242,
+        "signals": 49,
+        "execution_sessions": 49,
+        "orders": 14722,
+        "fills": 14722,
+        "first_signal": "2023-01-03",
+        "first_execution": "2023-01-04",
+        "last_execution": "2023-12-29",
+        "order_status_counts": {
+          "filled": 14722
+        },
+        "order_reason_counts": {},
+        "rejected_signal_targets": 1,
+        "stale_records": [
+          {
+            "date": "2023-06-16",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-19",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-20",
+            "symbol": "688065.SH"
+          },
+          {
+            "date": "2023-06-21",
+            "symbol": "688065.SH"
+          }
+        ],
+        "minimum_cash": 84380.69885941966,
+        "max_daily_cash_difference": 4.612957127392292e-09,
+        "max_daily_nav_difference": 5.587935447692871e-09,
+        "max_per_fill_cash_difference": 0.0,
+        "pre_tax_cut_sell_fills": 4433,
+        "post_tax_cut_sell_fills": 2471,
+        "costs": {
+          "commission": 150549.06760921978,
+          "transfer_fee": 250.9296711358977,
+          "stamp_tax": 6415.5098496850815,
+          "slippage": 25083.236292247482,
+          "explicit_fees": 157215.50713004076,
+          "including_slippage": 182298.74342228824
+        },
+        "metrics": {
+          "total_return": -0.09760451473570264,
+          "annualized_return": -0.10182474006025145,
+          "annualized_volatility": 0.13396581849357928,
+          "sharpe_rf0": -0.7348098754839905,
+          "max_drawdown": -0.20623902770029623,
+          "return_observations": 241,
+          "final_cash": 86879.91645135828,
+          "final_holdings_market_value": 8937074.936191615,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4192003.6289902464,
+          "cumulative_turnover": 2.5081889959835855,
+          "cumulative_one_way_turnover": 1.2540944979917927
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "base_minimum_commission_fills": 14376,
+    "base_total_fills": 14722,
+    "base_minimum_commission_fraction": 0.9764977584567314,
+    "base_costs_including_slippage_cny": 94513.38197884307,
+    "base_versus_gross_return_gap_percentage_points": -0.8598717510463927,
+    "cost_gap_is_not_equal_to_fee_sum": "Scenarios maintain separate cash, quantities and compounding paths.",
+    "official_csi300_benchmark_loaded": false,
+    "formal_PIT_certification": false,
+    "final_test_interval_used": false,
+    "strategy_tuned_after_result": false
+  },
+  "limitations": [
+    "Diagnostic only: all input candidates remain research_eligible=false; unknown historical available_time is not certified.",
+    "Conditional membership uses the retained baseline and official regular-change dates; baseline and full temporary-change coverage remain unverified.",
+    "Assume same-day close and conditional membership are known at each after-close signal. Freeze target units using that close; execute only at the next session open.",
+    "Use source-native normalized/adjusted OHLC as fractional adjusted units. restored_price = raw_price / raw_factor. Do not treat raw_* as unadjusted exchange prices.",
+    "Adopt the source adjustment/reinvestment proxy without certifying its corporate-action method or revision history; do not add dividends or rights again.",
+    "No integer-share/board-lot rules, subscription cashflows, investor-specific dividend tax or corporate-action settlement delays in this adjusted-unit proxy.",
+    "Known full-day halts block trading. Missing held close is carried only on a referenced full-day halt and is explicitly logged as stale. Missing held close otherwise fails.",
+    "The selected afternoon-only halt does not block the morning opening auction. Unknown ST, price-limit and opening-volume constraints are not enforced.",
+    "Assume positive observed opening quotes can fill at the declared slippage without capacity limits. Unfilled orders expire; no automatic next-day retry.",
+    "Each security has at most one buy or sell per rebalance. No same-session round trip is requested; full real-share T+1 inventory and corporate-action rights are not modeled.",
+    "Costs are declared scenarios applied to adjusted-unit notional, not a broker-specific fee certification. Terminal holdings are marked to close, not liquidated.",
+    "No official CSI300 index benchmark is loaded. This is conditional constituent equal weight, not the published CSI300 index.",
+    "2023 is an inspected diagnostic development interval, not a blind final test. Do not read 2024-2025 price data or tune after seeing this result."
+  ]
+}
