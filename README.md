@@ -15,10 +15,15 @@ BaoStock 访问受限后已停止该来源；东方财富补充 100 只的 24,20
 另有独立的[合成执行账本](docs/EXECUTION_CONTRACT.md)，验证次交易日订单、T+1、交易单位、
 容量、费用和未成交持仓延续。它尚未接入真实候选，输出不代表等权策略回测结果。
 [主审报告与公司行为补证清单](docs/PHASE1_EXECUTION_READINESS.md)记录本批 532 项测试、干净提交 smoke 和剩余数据缺口。
+后续已接入[合成公司行为账本](docs/CORPORATE_ACTION_CONTRACT.md)，将登记权益、除息应收、现金支付、
+送转股到账和可卖日分开处理；181 项相关测试及独立产物核对通过，见[公司行为主审](docs/PHASE1_CORPORATE_ACTION_REVIEW.md)。
+真实税制、配股与完整收益核算仍待补齐。
 
 官方分红补证已完成 95 只关键词查询及 14 只类别补查，保留 119 个不同公告 ID；
 7 份所选原件形成独立审阅候选，另核对了 TCL 中环调整分派日期的三份公告。
 数值差异、预案和未知可用时间保留，详见[分红原件审阅](docs/PHASE1_DIVIDEND_EVIDENCE_REVIEW.md)。
+后续又完成 10 次查询、8 份原件核验，为六只标题缺口证券连接年度不分配或年报批准证据；
+不同批准范围与原文年份冲突单独保留，见[分红缺口补证](docs/PHASE1_DIVIDEND_GAP_FOLLOWUP.md)。
 
 ```powershell
 # Windows，已安装 uv 时：使用本项目独立的 Python 3.11.16 和 .venv

@@ -1,0 +1,130 @@
+{
+  "schema_version": "synthetic-corporate-action-main-acceptance-v1",
+  "accepted_at_utc": "2026-10-04T10:30:41.354620+00:00",
+  "status": "synthetic_engineering_batch_accepted",
+  "source_commit": "d4bf2f967f9d1f28f0d5b3855e7734ed3958dcd2",
+  "integrated_at_commit": "20d9125d66a45c98825ec0aa8905b4de6df69370",
+  "research_eligible": false,
+  "complete_portfolio_valuation_available": false,
+  "source_dirty_at_smoke": false,
+  "source_comparison": {
+    "files": 60,
+    "result": "all equal to reviewed source commit after CRLF-to-LF normalization only",
+    "scope": "all source files plus new smoke, tests and contract"
+  },
+  "tests": {
+    "passed": 181,
+    "seconds": 2.62,
+    "new_corporate_action_tests": 106,
+    "prior_execution_tests": 75,
+    "scope": [
+      "tests/test_corporate_actions.py",
+      "tests/test_corporate_action_smoke.py",
+      "tests/test_execution.py",
+      "tests/test_execution_smoke.py"
+    ],
+    "log": {
+      "path": ".cache/worktrees/phase1-corporate-actions/.cache/corporate-actions-validation/pytest.txt",
+      "bytes": 530,
+      "sha256": "668b3188f95c32fdeb2c01ea40a9f4095834bad34755738f40299a683cb1eef1"
+    }
+  },
+  "ruff": {
+    "check": "passed",
+    "check_log": {
+      "path": ".cache/worktrees/phase1-corporate-actions/.cache/corporate-actions-validation/ruff.txt",
+      "bytes": 42,
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    "format": "passed, five Python files; reported in execution auxiliary agent final handoff; no separate format log"
+  },
+  "clean_smoke": {
+    "status": "passed",
+    "duration_seconds": 5.341798799985554,
+    "manifest": {
+      "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/manifest.json",
+      "bytes": 41222,
+      "sha256": "be1ed7fb0a37041bc43da0aafe9a1e1160d01daac05771b8242844421c78e1b3"
+    },
+    "log": {
+      "path": ".cache/worktrees/phase1-corporate-actions/.cache/corporate-actions-validation/smoke.txt",
+      "bytes": 406,
+      "sha256": "646c58e1320e834b29fde688581cbcd80c9ec60824fe851dfa067bbea24a53a0"
+    },
+    "artifacts": [
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/checkpoint.json",
+        "bytes": 9741,
+        "sha256": "c0653f1bf122b4a684113c5e5ca38ff4832dacf05f6e2ded280ecb4e250f068f"
+      },
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/checkpoint.sha256",
+        "bytes": 66,
+        "sha256": "7f263161fcf873ed2e1b164c296a34f04236b898b3a882dd1c69ff66284ac9ab"
+      },
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/final_state.json",
+        "bytes": 11231,
+        "sha256": "1a7f58448e217d27f823a8d4c2c499f490ccf2a9a1ea314ade265f67e0671908"
+      },
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/inputs.json",
+        "bytes": 7119,
+        "sha256": "565732abe537d64ac92d5d4493065110b00782d51476de1d299845bf105e7480"
+      },
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/journal.json",
+        "bytes": 7660,
+        "sha256": "ab0a0c9c97f13acf61b6bf3cd524faad5540bee0f0c0b67999d12e434a4fad59"
+      },
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/result.json",
+        "bytes": 991,
+        "sha256": "59718719cad5915528eadada30d1692886bbce80c7ac6aff352d430a368594c6"
+      },
+      {
+        "path": ".cache/worktrees/phase1-corporate-actions/artifacts/experiments/synthetic/20261004T102200.170697Z-corporate-actions-03595f4d/trace.json",
+        "bytes": 82885,
+        "sha256": "714b53a6079f5d8468f7d5c33f9a859d3babccb43d778c3c5f9805a33ac0f9cf"
+      }
+    ]
+  },
+  "main_readonly_reconciliation": {
+    "status": "passed",
+    "original_eligible_shares": 200,
+    "gross_cash": "250.00",
+    "synthetic_withholding": "25.00",
+    "net_cash": "225.00",
+    "new_shares": 100,
+    "final_cash": "3125.00",
+    "journal_entries": 7,
+    "trace_entries": 11,
+    "checked": [
+      "cash and share stage balances",
+      "receivable cannot fund a purchase",
+      "bonus cannot be sold before release",
+      "sale after record does not erase entitlement",
+      "actual delayed payment timestamp",
+      "restored and replayed state exactly unchanged",
+      "final journal cash, withholding and receivable conservation"
+    ]
+  },
+  "limits": [
+    "Only synthetic inputs; no real candidate adapter or research gate promotion.",
+    "Fixed withholding and zero-cost new lots are explicit synthetic assumptions, not A-share taxation or tax basis.",
+    "No complete NAV, rights subscriptions, fractional allocation, correction reversal or concurrent state writer.",
+    "Overlapping later record snapshots with uncredited share entitlements are rejected.",
+    "No model/backtest, network data fetch, server or GPU job in this engineering batch."
+  ],
+  "processes": "All tests, checks and smoke processes exited; no background service. Worktree and unique artifacts retained.",
+  "handoff": {
+    "path": ".cache/worktrees/phase1-corporate-actions/.cache/corporate-actions-validation/handoff.json",
+    "bytes": 782,
+    "sha256": "dc2b1495f5b7cc8449ed35896b69a660d693cabc682f085bffd41c6547117846"
+  },
+  "main_audit_script": {
+    "path": ".cache/phase1/main-review/accept_corporate_actions.py",
+    "bytes": 8822,
+    "sha256": "aac224dbb96812ea0e3b751c05411c1dc54d0a372d198fcf915260471b8f34d1"
+  }
+}
