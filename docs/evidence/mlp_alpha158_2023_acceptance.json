@@ -1,0 +1,327 @@
+{
+  "status": "completed_development_diagnostic_not_blind_test",
+  "data_kind": "real_candidate",
+  "research_eligible": false,
+  "source": {
+    "commit": "96e1beb5040fa080d2c0b7458e46af4cdfcc7d98",
+    "dirty": false,
+    "files_sha256": {
+      "scripts/run_diagnostic_backtest.py": "aca1d81a3d826f4d43765c36e50a2152da31f38ae1f5f1a65b32813be3187e6d",
+      "src/ashare_lab/diagnostic_backtest.py": "3d1b7cd99c5774eb178ff23c2b61b865b6a2a3037f0c3822eb0010a31a99ea54",
+      "configs/mlp-alpha158-2023-diagnostic.json": "a6c4dac11d0606d5e3efba15dd0f276a9a546bde45cb47f0737557822f15f9c2",
+      "uv.lock": "e92a4023f51a8d9079195034b33ab5a54902f6e0eb8b0e06894a95f3a9f04f4a",
+      "src/ashare_lab/alpha158_diagnostic.py": "d89c34e4c65e86a4900733194cb6713f02bc8856949850a4f7cef0e678b224cc",
+      "src/ashare_lab/mlp_diagnostic.py": "694d5c84633390e1c3d2b919d02d97030543fd8672d2bdb35c1f4ce5ced90f74"
+    },
+    "python": "3.11.16",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1",
+      "matplotlib": "3.11.2",
+      "pyqlib": "0.9.7",
+      "torch": "2.7.1+cpu"
+    }
+  },
+  "config": {
+    "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/frozen_model_config.json",
+    "bytes": 2900,
+    "sha256": "a6c4dac11d0606d5e3efba15dd0f276a9a546bde45cb47f0737557822f15f9c2"
+  },
+  "output_manifest": {
+    "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/manifest.json",
+    "bytes": 376474,
+    "sha256": "590afd4316cfc14a240263813ac2d6c8ca371fec98e110343d0d6c96e40f2117"
+  },
+  "run": {
+    "output": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1",
+    "started_at_utc": "2026-10-04T17:48:07.159094+00:00",
+    "finished_at_utc": "2026-10-04T17:48:36.907234+00:00",
+    "elapsed_seconds": 29.74829720001435,
+    "feature_seconds": 22.818562600004952,
+    "model_seconds": 4.678733200009447,
+    "online_requests": 0,
+    "gpu_used": false,
+    "sealed_2024_2025_prices_read": false
+  },
+  "training": {
+    "windows": [
+      {
+        "window": "2023Q3",
+        "training_rows": 15592,
+        "prediction_rows": 19200,
+        "fit_as_of": "2023-06-30",
+        "maximum_training_label_exit": "2023-06-30",
+        "prediction_reproduction_max_abs_error": 0.0,
+        "maturity_verified": true
+      },
+      {
+        "window": "2023Q4",
+        "training_rows": 34791,
+        "prediction_rows": 18000,
+        "fit_as_of": "2023-09-28",
+        "maximum_training_label_exit": "2023-09-28",
+        "prediction_reproduction_max_abs_error": 0.0,
+        "maturity_verified": true
+      }
+    ],
+    "native_feature_checks": [
+      "OPEN0",
+      "HIGH0",
+      "LOW0",
+      "ROC60"
+    ],
+    "label_formula_verified": true,
+    "top30_selection_verified": true,
+    "model_fits_in_this_audit": 0
+  },
+  "information_coefficients": {
+    "all": {
+      "days": 118,
+      "mean_ic": 0.04849762553303165,
+      "mean_rank_ic": 0.0671806660325449,
+      "rank_ic_std": 0.14880840722617172,
+      "positive_rank_ic_fraction": 0.711864406779661
+    },
+    "2023Q3": {
+      "days": 64,
+      "mean_ic": 0.01635969793244526,
+      "mean_rank_ic": 0.033426688069659004,
+      "rank_ic_std": 0.12808846309935362,
+      "positive_rank_ic_fraction": 0.640625
+    },
+    "2023Q4": {
+      "days": 54,
+      "mean_ic": 0.0865870212078007,
+      "mean_rank_ic": 0.10718538065522447,
+      "rank_ic_std": 0.16240436611671005,
+      "positive_rank_ic_fraction": 0.7962962962962963
+    }
+  },
+  "comparison": {
+    "gross": {
+      "equal_weight": {
+        "metrics": {
+          "total_return": -0.11349633654754065,
+          "annualized_return": -0.21871605428653415,
+          "annualized_volatility": 0.1357925872649076,
+          "sharpe_rf0": -1.7494766355407956,
+          "max_drawdown": -0.17951412997448768,
+          "return_observations": 123,
+          "final_cash": 85197.5574504897,
+          "final_holdings_market_value": 8779839.077074103,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4113805.514831116,
+          "cumulative_turnover": 1.6785970749581822,
+          "cumulative_one_way_turnover": 0.8392985374790911
+        },
+        "costs": {
+          "commission": 0.0,
+          "transfer_fee": 0.0,
+          "stamp_tax": 0.0,
+          "slippage": 0.0,
+          "explicit_fees": 0.0,
+          "including_slippage": 0.0
+        }
+      },
+      "mlp_top30": {
+        "metrics": {
+          "total_return": -0.05270787667481136,
+          "annualized_return": -0.10500475735555909,
+          "annualized_volatility": 0.1385497080614505,
+          "sharpe_rf0": -0.7319301700406706,
+          "max_drawdown": -0.10430955304955791,
+          "return_observations": 123,
+          "final_cash": 100716.68460044765,
+          "final_holdings_market_value": 9372204.548651438,
+          "final_holding_count": 30,
+          "final_adjusted_units": 2869287.3890821403,
+          "cumulative_turnover": 35.74626152410663,
+          "cumulative_one_way_turnover": 17.873130762053314
+        },
+        "costs": {
+          "commission": 0.0,
+          "transfer_fee": 0.0,
+          "stamp_tax": 0.0,
+          "slippage": 0.0,
+          "explicit_fees": 0.0,
+          "including_slippage": 0.0
+        }
+      },
+      "return_difference_percentage_points": 6.0788459872729295
+    },
+    "base": {
+      "equal_weight": {
+        "metrics": {
+          "total_return": -0.11813087732187344,
+          "annualized_return": -0.2270612854498626,
+          "annualized_volatility": 0.13579255003864532,
+          "sharpe_rf0": -1.8284784489537742,
+          "max_drawdown": -0.18242044161946636,
+          "return_observations": 123,
+          "final_cash": 83068.53495973926,
+          "final_holdings_market_value": 8735622.691821527,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4093087.867514221,
+          "cumulative_turnover": 1.679114097965225,
+          "cumulative_one_way_turnover": 0.8395570489826125
+        },
+        "costs": {
+          "commission": 39141.491204716905,
+          "transfer_fee": 163.50382753833,
+          "stamp_tax": 2062.629327136031,
+          "slippage": 8172.72452913654,
+          "explicit_fees": 41367.624359391266,
+          "including_slippage": 49540.348888527806
+        }
+      },
+      "mlp_top30": {
+        "metrics": {
+          "total_return": -0.09001811522431036,
+          "annualized_return": -0.17573456001520363,
+          "annualized_volatility": 0.13807418270875008,
+          "sharpe_rf0": -1.3307814074754765,
+          "max_drawdown": -0.12845982944610546,
+          "return_observations": 123,
+          "final_cash": 83172.68876546214,
+          "final_holdings_market_value": 9016646.158991434,
+          "final_holding_count": 30,
+          "final_adjusted_units": 2760433.682546189,
+          "cumulative_turnover": 35.773638980500266,
+          "cumulative_one_way_turnover": 17.886819490250133
+        },
+        "costs": {
+          "commission": 102660.66801529637,
+          "transfer_fee": 3400.493960466473,
+          "stamp_tax": 106026.40534173192,
+          "slippage": 170022.3143439476,
+          "explicit_fees": 212087.56731749477,
+          "including_slippage": 382109.88166144234
+        }
+      },
+      "return_difference_percentage_points": 2.811276209756308
+    },
+    "higher": {
+      "equal_weight": {
+        "metrics": {
+          "total_return": -0.12255646206118653,
+          "annualized_return": -0.23498744314425515,
+          "annualized_volatility": 0.13580850516841372,
+          "sharpe_rf0": -1.9040637265821312,
+          "max_drawdown": -0.18519890519482096,
+          "return_observations": 123,
+          "final_cash": 81028.7763138156,
+          "final_holdings_market_value": 8693406.60307432,
+          "final_holding_count": 300,
+          "final_adjusted_units": 4073307.4618395446,
+          "cumulative_turnover": 1.6796621132447649,
+          "cumulative_one_way_turnover": 0.8398310566223824
+        },
+        "costs": {
+          "commission": 78283.86236498122,
+          "transfer_fee": 163.373108402881,
+          "stamp_tax": 2072.347800611131,
+          "slippage": 16327.488716134914,
+          "explicit_fees": 80519.58327399523,
+          "including_slippage": 96847.07199013015
+        }
+      },
+      "mlp_top30": {
+        "metrics": {
+          "total_return": -0.11586929048726069,
+          "annualized_return": -0.22299466818799882,
+          "annualized_volatility": 0.13830563533130774,
+          "sharpe_rf0": -1.7548497997496766,
+          "max_drawdown": -0.15051968764601187,
+          "return_observations": 123,
+          "final_cash": 70808.54089277086,
+          "final_holdings_market_value": 8770498.554234622,
+          "final_holding_count": 30,
+          "final_adjusted_units": 2685075.935655879,
+          "cumulative_turnover": 35.79421243309999,
+          "cumulative_one_way_turnover": 17.897106216549997
+        },
+        "costs": {
+          "commission": 202710.83631111222,
+          "transfer_fee": 3356.866342623184,
+          "stamp_tax": 104879.61977968611,
+          "slippage": 335677.35169551533,
+          "explicit_fees": 310947.3224334215,
+          "including_slippage": 646624.6741289368
+        }
+      },
+      "return_difference_percentage_points": 0.6687171573925843
+    }
+  },
+  "interpretation": {
+    "mlp_gross_return": -0.05270787667481136,
+    "mlp_base_return": -0.09001811522431036,
+    "mlp_higher_return": -0.11586929048726069,
+    "mlp_base_vs_matched_equal_weight_percentage_points": 2.811276209756308,
+    "mlp_base_vs_lightgbm_base_percentage_points": -2.705841475279369,
+    "mlp_base_total_cost_cny": 382109.88166144234,
+    "mlp_base_turnover_two_sided": 35.773638980500266,
+    "mean_rank_ic_all": 0.0671806660325449,
+    "mean_rank_ic_q3": 0.033426688069659004,
+    "mean_rank_ic_q4": 0.10718538065522447,
+    "profitable_strategy_claim": false,
+    "official_csi300_benchmark_loaded": false,
+    "formal_PIT_certification": false,
+    "final_test_interval_used": false,
+    "parameter_search": false
+  },
+  "artifact_refs": {
+    "plot": {
+      "path": "docs/evidence/mlp-alpha158-2023-h2.png",
+      "bytes": 224989,
+      "sha256": "4fe573bea2bc384e0d4de7d43cf5f2d386ffbd00a2e303bfdcf6372bafae369e"
+    },
+    "independent_mlp_audit": {
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/independent_mlp_audit.json",
+      "bytes": 11924,
+      "sha256": "649c789baaad39023c403bf80ad801629d6b13de14bab5db3cdec9ec3649935d"
+    },
+    "accounting_audit_equal_weight": {
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/equal_weight/independent_audit.json",
+      "bytes": 4949,
+      "sha256": "ae92cbe4c8a9eb3990513e0cabcb5b46e4f1bc85340935ed773e7e1278b436cd"
+    },
+    "accounting_audit_mlp_top30": {
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/mlp_top30/independent_audit.json",
+      "bytes": 4957,
+      "sha256": "dc4c8d57bb8e215c1b4ce03682cc7016426c6dedc4bfa02d7878c7cba2d080dc"
+    },
+    "training_evidence": {
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/training_evidence.json",
+      "bytes": 55606,
+      "sha256": "3afa4be844271f9037860d9527524c28ab613964e5ef336ce87af8eb9f7be0e8"
+    },
+    "ic_summary": {
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/ic_summary.json",
+      "bytes": 624,
+      "sha256": "96d0f3b807e44e3f27221eaaf57e0c70809b215e64ba74b97753291763251eb6"
+    },
+    "comparison": {
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/comparison.json",
+      "bytes": 5666,
+      "sha256": "fdc7841b8be2c16610b8c2b0bad1562dbfa18c4168ec5095e6e0b82100ae3bfc"
+    }
+  },
+  "checks": {
+    "mlp_tests": "2 passed in 3.02s",
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "git_diff_check": "passed",
+    "independent_mlp_audit": "passed",
+    "accounting_audit": "gross/base/higher for both variants passed",
+    "figure_visually_reviewed": true,
+    "candidate_inputs_unchanged_after_run": true
+  },
+  "limitations": [
+    "This is a fixed architecture baseline, not a tuned neural-network result.",
+    "The 2023 interval is a development diagnostic and is not a blind final test.",
+    "The same candidate, adjusted-unit execution, costs, windows and top30 selection as the LightGBM comparison apply.",
+    "A positive relative result or IC would not establish a profitable executable strategy; preserve a negative result.",
+    "Source-native prices and volumes remain uncertified candidates; formal PIT, company-action and tradeability gaps remain."
+  ]
+}

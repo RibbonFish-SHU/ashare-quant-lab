@@ -126,12 +126,18 @@ def train_mlp_diagnostic(
         y_tensor = torch.from_numpy(y_train[:, None])
         losses = []
         for _ in range(MODEL_PARAMETERS["epochs"]):
-            optimizer.zero_grad(set_to_none=True)
-            prediction = model(x_tensor)
-            loss = loss_fn(prediction, y_tensor)
-            loss.backward()
-            optimizer.step()
-            losses.append(float(loss.detach()))
+            epoch_loss = 0.0
+            batches = 0
+            for batch_start in range(0, len(x_tensor), MODEL_PARAMETERS["batch_size"]):
+                batch_end = batch_start + MODEL_PARAMETERS["batch_size"]
+                optimizer.zero_grad(set_to_none=True)
+                prediction = model(x_tensor[batch_start:batch_end])
+                loss = loss_fn(prediction, y_tensor[batch_start:batch_end])
+                loss.backward()
+                optimizer.step()
+                epoch_loss += float(loss.detach())
+                batches += 1
+            losses.append(epoch_loss / batches)
         with torch.no_grad():
             predicted = model(torch.from_numpy(clean[prediction_mask])).squeeze(1).numpy()
         _require(np.isfinite(predicted).all(), "nonfinite MLP predictions")
