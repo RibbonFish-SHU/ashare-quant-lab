@@ -3,7 +3,7 @@
   "data_kind": "real_candidate",
   "research_eligible": false,
   "source": {
-    "commit": "96e1beb5040fa080d2c0b7458e46af4cdfcc7d98",
+    "commit": "f60ab0d69e9251544c7b98f329c4ca0c327fa0a6",
     "dirty": false,
     "files_sha256": {
       "scripts/run_diagnostic_backtest.py": "aca1d81a3d826f4d43765c36e50a2152da31f38ae1f5f1a65b32813be3187e6d",
@@ -11,7 +11,7 @@
       "configs/mlp-alpha158-2023-diagnostic.json": "a6c4dac11d0606d5e3efba15dd0f276a9a546bde45cb47f0737557822f15f9c2",
       "uv.lock": "e92a4023f51a8d9079195034b33ab5a54902f6e0eb8b0e06894a95f3a9f04f4a",
       "src/ashare_lab/alpha158_diagnostic.py": "d89c34e4c65e86a4900733194cb6713f02bc8856949850a4f7cef0e678b224cc",
-      "src/ashare_lab/mlp_diagnostic.py": "694d5c84633390e1c3d2b919d02d97030543fd8672d2bdb35c1f4ce5ced90f74"
+      "src/ashare_lab/mlp_diagnostic.py": "2da3f037f323b67e3d715c1dcfdb749da854eed2c323008f4d17ec0c717dfc1a"
     },
     "python": "3.11.16",
     "packages": {
@@ -24,22 +24,22 @@
     }
   },
   "config": {
-    "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/frozen_model_config.json",
+    "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/frozen_model_config.json",
     "bytes": 2900,
     "sha256": "a6c4dac11d0606d5e3efba15dd0f276a9a546bde45cb47f0737557822f15f9c2"
   },
   "output_manifest": {
-    "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/manifest.json",
-    "bytes": 376474,
-    "sha256": "590afd4316cfc14a240263813ac2d6c8ca371fec98e110343d0d6c96e40f2117"
+    "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/manifest.json",
+    "bytes": 376462,
+    "sha256": "50b93efb28942873691fa32a73deb504d971cd82c2c3b11a62facee77a3b5457"
   },
   "run": {
-    "output": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1",
-    "started_at_utc": "2026-10-04T17:48:07.159094+00:00",
-    "finished_at_utc": "2026-10-04T17:48:36.907234+00:00",
-    "elapsed_seconds": 29.74829720001435,
-    "feature_seconds": 22.818562600004952,
-    "model_seconds": 4.678733200009447,
+    "output": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2",
+    "started_at_utc": "2026-10-04T18:02:39.434240+00:00",
+    "finished_at_utc": "2026-10-04T18:03:12.001199+00:00",
+    "elapsed_seconds": 32.567311999970116,
+    "feature_seconds": 25.292576400039252,
+    "model_seconds": 5.02294019999681,
     "online_requests": 0,
     "gpu_used": false,
     "sealed_2024_2025_prices_read": false
@@ -78,24 +78,24 @@
   "information_coefficients": {
     "all": {
       "days": 118,
-      "mean_ic": 0.04849762553303165,
-      "mean_rank_ic": 0.0671806660325449,
-      "rank_ic_std": 0.14880840722617172,
-      "positive_rank_ic_fraction": 0.711864406779661
+      "mean_ic": 0.07018828194116372,
+      "mean_rank_ic": 0.08330008443851865,
+      "rank_ic_std": 0.14189638852418612,
+      "positive_rank_ic_fraction": 0.7288135593220338
     },
     "2023Q3": {
       "days": 64,
-      "mean_ic": 0.01635969793244526,
-      "mean_rank_ic": 0.033426688069659004,
-      "rank_ic_std": 0.12808846309935362,
-      "positive_rank_ic_fraction": 0.640625
+      "mean_ic": 0.0610088506693671,
+      "mean_rank_ic": 0.0728241817671807,
+      "rank_ic_std": 0.13080200927072969,
+      "positive_rank_ic_fraction": 0.71875
     },
     "2023Q4": {
       "days": 54,
-      "mean_ic": 0.0865870212078007,
-      "mean_rank_ic": 0.10718538065522447,
-      "rank_ic_std": 0.16240436611671005,
-      "positive_rank_ic_fraction": 0.7962962962962963
+      "mean_ic": 0.08106760789292272,
+      "mean_rank_ic": 0.09571596908603033,
+      "rank_ic_std": 0.15434102418563767,
+      "positive_rank_ic_fraction": 0.7407407407407407
     }
   },
   "comparison": {
@@ -126,18 +126,18 @@
       },
       "mlp_top30": {
         "metrics": {
-          "total_return": -0.05270787667481136,
-          "annualized_return": -0.10500475735555909,
-          "annualized_volatility": 0.1385497080614505,
-          "sharpe_rf0": -0.7319301700406706,
-          "max_drawdown": -0.10430955304955791,
+          "total_return": -0.07020018358196056,
+          "annualized_return": -0.13853639442370866,
+          "annualized_volatility": 0.1170982268932401,
+          "sharpe_rf0": -1.2150233100838659,
+          "max_drawdown": -0.11341297445245546,
           "return_observations": 123,
-          "final_cash": 100716.68460044765,
-          "final_holdings_market_value": 9372204.548651438,
+          "final_cash": 89352.94476445293,
+          "final_holdings_market_value": 9208645.219415942,
           "final_holding_count": 30,
-          "final_adjusted_units": 2869287.3890821403,
-          "cumulative_turnover": 35.74626152410663,
-          "cumulative_one_way_turnover": 17.873130762053314
+          "final_adjusted_units": 6358859.112976613,
+          "cumulative_turnover": 31.62708450958156,
+          "cumulative_one_way_turnover": 15.81354225479078
         },
         "costs": {
           "commission": 0.0,
@@ -148,7 +148,7 @@
           "including_slippage": 0.0
         }
       },
-      "return_difference_percentage_points": 6.0788459872729295
+      "return_difference_percentage_points": 4.329615296558009
     },
     "base": {
       "equal_weight": {
@@ -177,29 +177,29 @@
       },
       "mlp_top30": {
         "metrics": {
-          "total_return": -0.09001811522431036,
-          "annualized_return": -0.17573456001520363,
-          "annualized_volatility": 0.13807418270875008,
-          "sharpe_rf0": -1.3307814074754765,
-          "max_drawdown": -0.12845982944610546,
+          "total_return": -0.10290607555305264,
+          "annualized_return": -0.19947436940086152,
+          "annualized_volatility": 0.11664010712451817,
+          "sharpe_rf0": -1.848743805819985,
+          "max_drawdown": -0.13831254882563893,
           "return_observations": 123,
-          "final_cash": 83172.68876546214,
-          "final_holdings_market_value": 9016646.158991434,
+          "final_cash": 72703.94000497722,
+          "final_holdings_market_value": 8898235.304464497,
           "final_holding_count": 30,
-          "final_adjusted_units": 2760433.682546189,
-          "cumulative_turnover": 35.773638980500266,
-          "cumulative_one_way_turnover": 17.886819490250133
+          "final_adjusted_units": 6144511.30508349,
+          "cumulative_turnover": 31.65104417177441,
+          "cumulative_one_way_turnover": 15.825522085887204
         },
         "costs": {
-          "commission": 102660.66801529637,
-          "transfer_fee": 3400.493960466473,
-          "stamp_tax": 106026.40534173192,
-          "slippage": 170022.3143439476,
-          "explicit_fees": 212087.56731749477,
-          "including_slippage": 382109.88166144234
+          "commission": 90614.5762950155,
+          "transfer_fee": 2990.2296518407093,
+          "stamp_tax": 95151.43139142792,
+          "slippage": 149509.0853343346,
+          "explicit_fees": 188756.23733828415,
+          "including_slippage": 338265.3226726188
         }
       },
-      "return_difference_percentage_points": 2.811276209756308
+      "return_difference_percentage_points": 1.5224801768820795
     },
     "higher": {
       "equal_weight": {
@@ -228,94 +228,97 @@
       },
       "mlp_top30": {
         "metrics": {
-          "total_return": -0.11586929048726069,
-          "annualized_return": -0.22299466818799882,
-          "annualized_volatility": 0.13830563533130774,
-          "sharpe_rf0": -1.7548497997496766,
-          "max_drawdown": -0.15051968764601187,
+          "total_return": -0.1255308173516616,
+          "annualized_return": -0.24029097304307026,
+          "annualized_volatility": 0.11684652269460133,
+          "sharpe_rf0": -2.29269454569396,
+          "max_drawdown": -0.15582471658767338,
           "return_observations": 123,
-          "final_cash": 70808.54089277086,
-          "final_holdings_market_value": 8770498.554234622,
+          "final_cash": 60885.787500733684,
+          "final_holdings_market_value": 8683806.03898265,
           "final_holding_count": 30,
-          "final_adjusted_units": 2685075.935655879,
-          "cumulative_turnover": 35.79421243309999,
-          "cumulative_one_way_turnover": 17.897106216549997
+          "final_adjusted_units": 5996441.154001636,
+          "cumulative_turnover": 31.66866515744465,
+          "cumulative_one_way_turnover": 15.834332578722325
         },
         "costs": {
-          "commission": 202710.83631111222,
-          "transfer_fee": 3356.866342623184,
-          "stamp_tax": 104879.61977968611,
-          "slippage": 335677.35169551533,
-          "explicit_fees": 310947.3224334215,
-          "including_slippage": 646624.6741289368
+          "commission": 179195.86506219397,
+          "transfer_fee": 2956.3374366223575,
+          "stamp_tax": 94252.7611298812,
+          "slippage": 295624.3765773487,
+          "explicit_fees": 276404.96362869756,
+          "including_slippage": 572029.3402060462
         }
       },
-      "return_difference_percentage_points": 0.6687171573925843
+      "return_difference_percentage_points": -0.29743552904750725
     }
   },
   "interpretation": {
-    "mlp_gross_return": -0.05270787667481136,
-    "mlp_base_return": -0.09001811522431036,
-    "mlp_higher_return": -0.11586929048726069,
-    "mlp_base_vs_matched_equal_weight_percentage_points": 2.811276209756308,
-    "mlp_base_vs_lightgbm_base_percentage_points": -2.705841475279369,
-    "mlp_base_total_cost_cny": 382109.88166144234,
-    "mlp_base_turnover_two_sided": 35.773638980500266,
-    "mean_rank_ic_all": 0.0671806660325449,
-    "mean_rank_ic_q3": 0.033426688069659004,
-    "mean_rank_ic_q4": 0.10718538065522447,
+    "mlp_gross_return": -0.07020018358196056,
+    "mlp_base_return": -0.10290607555305264,
+    "mlp_higher_return": -0.1255308173516616,
+    "mlp_base_vs_matched_equal_weight_percentage_points": 1.5224801768820795,
+    "mlp_base_vs_lightgbm_base_percentage_points": -3.994637508153598,
+    "mlp_base_total_cost_cny": 338265.3226726188,
+    "mlp_base_turnover_two_sided": 31.65104417177441,
+    "mlp_base_vs_equal_weight_turnover_multiple": 18.849847196286188,
+    "mean_rank_ic_all": 0.08330008443851865,
+    "mean_rank_ic_q3": 0.0728241817671807,
+    "mean_rank_ic_q4": 0.09571596908603033,
     "profitable_strategy_claim": false,
     "official_csi300_benchmark_loaded": false,
     "formal_PIT_certification": false,
     "final_test_interval_used": false,
-    "parameter_search": false
+    "parameter_search": false,
+    "superseded_local_run": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1 used full-batch despite the declared batch_size and is not this acceptance result"
   },
   "artifact_refs": {
     "plot": {
       "path": "docs/evidence/mlp-alpha158-2023-h2.png",
-      "bytes": 224989,
-      "sha256": "4fe573bea2bc384e0d4de7d43cf5f2d386ffbd00a2e303bfdcf6372bafae369e"
+      "bytes": 218721,
+      "sha256": "ff5bf9e379d7ba39bc8dd2fb0d1cf0767d073cde013c51c97bbd4e96f7790d05"
     },
     "independent_mlp_audit": {
-      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/independent_mlp_audit.json",
-      "bytes": 11924,
-      "sha256": "649c789baaad39023c403bf80ad801629d6b13de14bab5db3cdec9ec3649935d"
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/independent_mlp_audit.json",
+      "bytes": 11911,
+      "sha256": "14be7fc840280798841b2c5512a5670050df6be9ae222ebfd27bc5a636471c81"
     },
     "accounting_audit_equal_weight": {
-      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/equal_weight/independent_audit.json",
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/equal_weight/independent_audit.json",
       "bytes": 4949,
       "sha256": "ae92cbe4c8a9eb3990513e0cabcb5b46e4f1bc85340935ed773e7e1278b436cd"
     },
     "accounting_audit_mlp_top30": {
-      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/mlp_top30/independent_audit.json",
-      "bytes": 4957,
-      "sha256": "dc4c8d57bb8e215c1b4ce03682cc7016426c6dedc4bfa02d7878c7cba2d080dc"
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/mlp_top30/independent_audit.json",
+      "bytes": 4944,
+      "sha256": "e6d2cc37d43245b6af8f73a97212fffda4e00890e1a44269e64833aa6abc9fbf"
     },
     "training_evidence": {
-      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/training_evidence.json",
-      "bytes": 55606,
-      "sha256": "3afa4be844271f9037860d9527524c28ab613964e5ef336ce87af8eb9f7be0e8"
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/training_evidence.json",
+      "bytes": 55601,
+      "sha256": "a19f544bc36bce0e01ec59df07421875c81911914a68362510c7b7570cef1709"
     },
     "ic_summary": {
-      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/ic_summary.json",
-      "bytes": 624,
-      "sha256": "96d0f3b807e44e3f27221eaaf57e0c70809b215e64ba74b97753291763251eb6"
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/ic_summary.json",
+      "bytes": 623,
+      "sha256": "6710da120c9143023354c40d9aabab0cca5c4380912f49a2ede8849a268043ec"
     },
     "comparison": {
-      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v1/comparison.json",
-      "bytes": 5666,
-      "sha256": "fdc7841b8be2c16610b8c2b0bad1562dbfa18c4168ec5095e6e0b82100ae3bfc"
+      "path": "artifacts/experiments/diagnostic/mlp-alpha158-2023-h2-v2/comparison.json",
+      "bytes": 5655,
+      "sha256": "4cfced5d32bcade75c49d7bf0f5862ba29f903187538bc24579d3bfd46b87d1f"
     }
   },
   "checks": {
-    "mlp_tests": "2 passed in 3.02s",
+    "mlp_tests": "2 passed in 3.34s",
     "ruff": "passed",
     "ruff_format": "passed",
     "git_diff_check": "passed",
     "independent_mlp_audit": "passed",
     "accounting_audit": "gross/base/higher for both variants passed",
     "figure_visually_reviewed": true,
-    "candidate_inputs_unchanged_after_run": true
+    "candidate_inputs_unchanged_after_run": true,
+    "declared_batch_size_used": true
   },
   "limitations": [
     "This is a fixed architecture baseline, not a tuned neural-network result.",
